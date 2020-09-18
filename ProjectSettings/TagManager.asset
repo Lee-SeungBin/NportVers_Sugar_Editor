@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Map
+  - TileSet
+  - Tile
+  - Jelly
+  - MapCenterPoint
+  - FrogSoup
+  - UpDownTile
+  - Box
+  - WoodenFence
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Map
+  - TileSet
+  - Tile
+  - Character
+  - WoodenFenceShadow
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: TileSet
+    uniqueID: 3396538687
+    locked: 0
+  - name: Charactor
+    uniqueID: 3119065795
+    locked: 0
+  - name: Rail
+    uniqueID: 3455193065
+    locked: 0
+  - name: MapCenterPoint
+    uniqueID: 752717661
+    locked: 0

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="game_2.png">
+	<!-- Created with Adobe Flash Professional version 15.0.0.173 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="BR 인스턴스 10000" x="164" y="410" width="80" height="92" pivotX="38.9" pivotY="53.05"/>
+	<SubTexture name="BR 인스턴스 10001" x="246" y="410" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10002" x="3768" y="428" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10003" x="1764" y="433" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10004" x="1846" y="433" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10005" x="1928" y="433" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10006" x="2010" y="433" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10007" x="790" y="438" width="80" height="92"/>
+	<SubTexture name="BR 인스턴스 10008" x="872" y="438" width="80" height="92"/>
+	<SubTexture name="BR_Body.png 인스턴스 1" x="3961" y="262" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Boll.png 인스턴스 1" x="1957" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Ear.png 인스턴스 1" x="2202" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Bomb.png 인스턴스 1" x="1364" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Closs0001.png 인스턴스 1" x="2368" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Closs0002.png 인스턴스 1" x="2027" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Closs0003.png 인스턴스 1" x="3339" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Closs0004.png 인스턴스 1" x="2333" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_L_Eye_Closs0005.png 인스턴스 1" x="2625" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_Mouse.png 인스턴스 1" x="1330" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_Nose.png 인스턴스 1" x="1161" y="468" width="16" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Boll.png 인스턴스 1" x="2097" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Ear.png 인스턴스 1" x="1296" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Bomb.png 인스턴스 1" x="1027" y="586" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Closs0001.png 인스턴스 1" x="1992" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Closs0002.png 인스턴스 1" x="2132" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Closs0003.png 인스턴스 1" x="2062" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Closs0004.png 인스턴스 1" x="1922" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="BR_R_Eye_Closs0005.png 인스턴스 1" x="2167" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="Box_Ani 인스턴스 10000" x="2857" y="0" width="136" height="138" pivotX="68.35" pivotY="67.9"/>
+	<SubTexture name="Box_Ani 인스턴스 10001" x="2995" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10002" x="3133" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10003" x="3271" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10004" x="3409" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10005" x="3547" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10006" x="3685" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10007" x="3823" y="0" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10008" x="496" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10009" x="634" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10010" x="772" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10011" x="910" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10012" x="1048" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10013" x="1186" y="136" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10014" x="2857" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10015" x="2995" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10016" x="3133" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10017" x="3271" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10018" x="3409" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10019" x="3547" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10020" x="3685" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10021" x="3823" y="140" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10022" x="2714" y="143" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10023" x="1874" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10024" x="2012" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10025" x="2150" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10026" x="2288" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10027" x="2426" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10028" x="2564" y="145" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10029" x="1657" y="146" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10030" x="1324" y="147" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10031" x="1462" y="147" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10032" x="0" y="189" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10033" x="138" y="189" width="136" height="138"/>
+	<SubTexture name="Box_Ani 인스턴스 10034" x="276" y="189" width="136" height="138"/>
+	<SubTexture name="Box_Down 인스턴스 10000" x="1179" y="456" width="99" height="71" pivotX="49.15" pivotY="39.7"/>
+	<SubTexture name="Box_UP 인스턴스 10000" x="2373" y="366" width="99" height="81" pivotX="49.15" pivotY="39.7"/>
+	<SubTexture name="CH 인스턴스 10000" x="2474" y="366" width="83" height="92" pivotX="40.85" pivotY="53.9"/>
+	<SubTexture name="CH 인스턴스 10001" x="2559" y="366" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10002" x="2644" y="366" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10003" x="2729" y="366" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10004" x="1594" y="367" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10005" x="1679" y="367" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10006" x="1281" y="368" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10007" x="1366" y="368" width="83" height="92"/>
+	<SubTexture name="CH 인스턴스 10008" x="3899" y="393" width="83" height="92"/>
+	<SubTexture name="CH_Body.png 인스턴스 1" x="3961" y="131" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_Boll.png 인스턴스 1" x="2660" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_Hair.png 인스턴스 1" x="430" y="502" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_Closseye_0001.png 인스턴스 1" x="1535" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_Closseye_0002.png 인스턴스 1" x="1852" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_Closseye_0003.png 인스턴스 1" x="1160" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_Closseye_0004.png 인스턴스 1" x="1262" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_Ear.png 인스턴스 1" x="1500" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_L_eye_Bomb_Ready.png 인스턴스 1" x="1061" y="586" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_Mouse.png 인스턴스 1" x="2800" y="584" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_Closseye_0001.png 인스턴스 1" x="3681" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_Closseye_0002.png 인스턴스 1" x="3374" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_Closseye_0003.png 인스턴스 1" x="1228" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_Closseye_0004.png 인스턴스 1" x="1194" y="585" width="32" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_Ear.png 인스턴스 1" x="2827" y="318" width="17" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CH_R_eye_Bomb_Ready.png 인스턴스 1" x="2695" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01.png 인스턴스 1" x="1360" y="462" width="79" height="78" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_Body.png 인스턴스 1" x="1078" y="468" width="81" height="76" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_Down_hair.png 인스턴스 1" x="4066" y="444" width="17" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_Face.png 인스턴스 1" x="1600" y="202" width="51" height="40" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_L_Boomeye.png 인스턴스 1" x="328" y="464" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_R_Boomeye.png 인스턴스 1" x="1059" y="469" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_Up_hair.png 인스턴스 1" x="2899" y="460" width="17" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR01_ear.png 인스턴스 1" x="2702" y="161" width="9" height="14" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR02.png 인스턴스 1" x="3639" y="445" width="79" height="92" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR03.png 인스턴스 1" x="3558" y="445" width="79" height="92" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR04.png 인스턴스 1" x="2928" y="454" width="79" height="91" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR05 인스턴스 10000" x="1533" y="461" width="79" height="81" pivotX="38.85" pivotY="42.9"/>
+	<SubTexture name="CR06 인스턴스 10000" x="2818" y="460" width="79" height="82" pivotX="38.85" pivotY="43.6"/>
+	<SubTexture name="CR07.png 인스턴스 1" x="2568" y="460" width="79" height="87" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR08.png 인스턴스 1" x="3850" y="487" width="78" height="78" pivotX="0" pivotY="0"/>
+	<SubTexture name="CR09.png 인스턴스 1" x="414" y="189" width="79" height="82" pivotX="0" pivotY="0"/>
+	<SubTexture name="Candle_0001.png 인스턴스 1" x="3884" y="280" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Candle_0002.png 인스턴스 1" x="4031" y="488" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Candle_0003.png 인스턴스 1" x="3272" y="520" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Candle_0004.png 인스턴스 1" x="3720" y="522" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Candle_0005.png 인스턴스 1" x="3272" y="453" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Change.png 인스턴스 1" x="1614" y="524" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Cross.png 인스턴스 1" x="280" y="577" width="32" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Cross_explosion.png 인스턴스 1" x="1681" y="524" width="64" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG 인스턴스 10000" x="3984" y="393" width="80" height="93" pivotX="39.5" pivotY="54.15"/>
+	<SubTexture name="EG 인스턴스 10001" x="1451" y="401" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10002" x="544" y="406" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10003" x="626" y="406" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10004" x="708" y="406" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10005" x="344" y="407" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10006" x="426" y="407" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10007" x="0" y="410" width="80" height="93"/>
+	<SubTexture name="EG 인스턴스 10008" x="82" y="410" width="80" height="93"/>
+	<SubTexture name="EG_Body.png 인스턴스 1" x="3961" y="0" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_EggLight.png 인스턴스 1" x="3576" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_Hair.png 인스턴스 1" x="3506" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_Head.png 인스턴스 1" x="3768" y="361" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LBoll_.png 인스턴스 1" x="175" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LEye_0001.png 인스턴스 1" x="2995" y="581" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LEye_0002.png 인스턴스 1" x="1125" y="581" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LEye_0003.png 인스턴스 1" x="140" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LEye_0004.png 인스턴스 1" x="3065" y="581" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_LEye_0005.png 인스턴스 1" x="1747" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_Mouse.png 인스턴스 1" x="3471" y="577" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_RBoll_.png 인스턴스 1" x="3646" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_REye_0001.png 인스턴스 1" x="3541" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_REye_0002.png 인스턴스 1" x="3205" y="581" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_REye_0003.png 인스턴스 1" x="1570" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_REye_0004.png 인스턴스 1" x="1887" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_REye_0005.png 인스턴스 1" x="2433" y="582" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_White.png 인스턴스 1" x="3205" y="547" width="65" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="EG_Yolk.png 인스턴스 1" x="3437" y="543" width="65" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="FenceAnimation1.png 인스턴스 1" x="0" y="0" width="246" height="187" pivotX="0" pivotY="0"/>
+	<SubTexture name="FenceAnimation2.png 인스턴스 1" x="248" y="0" width="246" height="187" pivotX="0" pivotY="0"/>
+	<SubTexture name="FrogSoupFront 인스턴스 10000" x="1521" y="544" width="91" height="32" pivotX="43.15" pivotY="13.35"/>
+	<SubTexture name="FrogSoupTile 인스턴스 10000" x="328" y="502" width="100" height="58" pivotX="49.45" pivotY="28.8"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10000" x="3510" y="539" width="96" height="38" pivotX="47.85" pivotY="18.5"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10001" x="3608" y="539" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10002" x="3009" y="541" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10003" x="2335" y="543" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10004" x="2649" y="543" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10005" x="3339" y="543" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10006" x="2039" y="544" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10007" x="2137" y="544" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10008" x="2235" y="544" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10009" x="2747" y="544" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10010" x="1234" y="545" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10011" x="1332" y="545" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10012" x="1027" y="546" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10013" x="2845" y="547" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10014" x="3107" y="547" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_1 인스턴스 10015" x="2527" y="549" width="96" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10000" x="3850" y="428" width="41" height="38" pivotX="20.4" pivotY="19.35"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10001" x="3720" y="445" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10002" x="3510" y="449" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10003" x="1720" y="461" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10004" x="3510" y="489" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10005" x="376" y="562" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10006" x="609" y="562" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10007" x="652" y="562" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Idle_2 인스턴스 10008" x="497" y="564" width="41" height="38"/>
+	<SubTexture name="FrogSoupTile_Souce1 인스턴스 10000" x="1614" y="461" width="104" height="61" pivotX="56.05" pivotY="27.45"/>
+	<SubTexture name="FrogSoupTile_Souce2 인스턴스 10000" x="609" y="501" width="99" height="59" pivotX="48.65" pivotY="28.05"/>
+	<SubTexture name="FrogSoupTile_Souce3 인스턴스 10000" x="3720" y="485" width="44" height="27" pivotX="21.45" pivotY="13"/>
+	<SubTexture name="FrogSoupTile_Souce4 인스턴스 10000" x="3899" y="347" width="58" height="33" pivotX="28.75" pivotY="15.95"/>
+	<SubTexture name="FrogSoupTile_Souce5 인스턴스 10000" x="2734" y="460" width="82" height="81" pivotX="40.4" pivotY="40"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10000" x="1795" y="221" width="71" height="54" pivotX="36.25" pivotY="27.55"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10001" x="2454" y="526" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10002" x="1747" y="527" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10003" x="1820" y="527" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10004" x="1893" y="527" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10005" x="1966" y="527" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10006" x="1161" y="529" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10007" x="954" y="531" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10008" x="777" y="532" width="71" height="54"/>
+	<SubTexture name="FrogSoupTile_Souce6_ 인스턴스 10009" x="850" y="532" width="71" height="54"/>
+	<SubTexture name="Frogmon 인스턴스 10000" x="1280" y="462" width="78" height="81" pivotX="38.6" pivotY="40.5"/>
+	<SubTexture name="GummyBear 인스턴스 10000" x="2649" y="460" width="83" height="81" pivotX="41.2" pivotY="41.3"/>
+	<SubTexture name="GummyBearDummy 인스턴스 10000" x="1533" y="401" width="56" height="54" pivotX="27.25" pivotY="24.8"/>
+	<SubTexture name="GummyBear_Body 인스턴스 10000" x="1795" y="146" width="76" height="73" pivotX="37.6" pivotY="36.25"/>
+	<SubTexture name="GummyBear_BodyLine 인스턴스 10000" x="1441" y="496" width="78" height="77" pivotX="38.7" pivotY="38.1"/>
+	<SubTexture name="GummyBear_Body_Light 인스턴스 10000" x="2702" y="177" width="7" height="17" pivotX="2.85" pivotY="8.55"/>
+	<SubTexture name="GummyBear_Candel 인스턴스 10000" x="4092" y="0" width="4" height="9" pivotX="1.85" pivotY="4.8"/>
+	<SubTexture name="GummyBear_Head1 인스턴스 10000" x="1451" y="368" width="32" height="22" pivotX="15.25" pivotY="11.1"/>
+	<SubTexture name="GummyBear_Head2 인스턴스 10000" x="1379" y="136" width="7" height="4" pivotX="2.95" pivotY="1.9"/>
+	<SubTexture name="GummyBear_Head_Light 인스턴스 10000" x="2702" y="196" width="9" height="13" pivotX="3.8" pivotY="6.45"/>
+	<SubTexture name="GummyBear_Head_Shadow 인스턴스 10000" x="2335" y="450" width="33" height="33" pivotX="16.1" pivotY="16.1"/>
+	<SubTexture name="GummyBear_Left_ear 인스턴스 10000" x="790" y="406" width="13" height="19" pivotX="5.8" pivotY="9.8"/>
+	<SubTexture name="GummyBear_Left_eye 인스턴스 10000" x="3951" y="304" width="8" height="10" pivotX="4.35" pivotY="4.8"/>
+	<SubTexture name="GummyBear_Left_eye 인스턴스 10001" x="3951" y="316" width="8" height="10"/>
+	<SubTexture name="GummyBear_Left_eye 인스턴스 10002" x="3951" y="328" width="8" height="10"/>
+	<SubTexture name="GummyBear_Left_eye 인스턴스 10003" x="2814" y="366" width="8" height="10"/>
+	<SubTexture name="GummyBear_Left_eye 인스턴스 10004" x="2814" y="378" width="8" height="10"/>
+	<SubTexture name="GummyBear_Left_hand 인스턴스 10000" x="2702" y="237" width="9" height="10" pivotX="4.25" pivotY="4.25"/>
+	<SubTexture name="GummyBear_Mouse 인스턴스 10000" x="328" y="410" width="14" height="16" pivotX="6.4" pivotY="7.75"/>
+	<SubTexture name="GummyBear_Nose 인스턴스 10000" x="1371" y="136" width="6" height="6" pivotX="2.5" pivotY="2.7"/>
+	<SubTexture name="GummyBear_Right_ear 인스턴스 10000" x="954" y="438" width="17" height="20" pivotX="8.05" pivotY="9.9"/>
+	<SubTexture name="GummyBear_Right_eye 인스턴스 10000" x="2702" y="249" width="8" height="10" pivotX="4.25" pivotY="4.75"/>
+	<SubTexture name="GummyBear_Right_eye 인스턴스 10001" x="2702" y="261" width="8" height="10"/>
+	<SubTexture name="GummyBear_Right_eye 인스턴스 10002" x="2702" y="273" width="8" height="10"/>
+	<SubTexture name="GummyBear_Right_eye 인스턴스 10003" x="3951" y="280" width="8" height="10"/>
+	<SubTexture name="GummyBear_Right_eye 인스턴스 10004" x="3951" y="292" width="8" height="10"/>
+	<SubTexture name="GummyBear_Right_hand 인스턴스 10000" x="2702" y="145" width="10" height="14" pivotX="4.3" pivotY="6.85"/>
+	<SubTexture name="IceEffect_0001.png 인스턴스 1" x="805" y="276" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0001.png 인스턴스 2" x="2852" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0002.png 인스턴스 1" x="1600" y="286" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0002.png 인스턴스 2" x="977" y="276" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0003.png 인스턴스 1" x="2139" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0003.png 인스턴스 2" x="3540" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0004.png 인스턴스 1" x="1321" y="287" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0004.png 인스턴스 2" x="805" y="357" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0005.png 인스턴스 1" x="0" y="329" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0005.png 인스턴스 2" x="3196" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0006.png 인스턴스 1" x="2655" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0006.png 인스턴스 2" x="1149" y="276" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0007.png 인스턴스 1" x="2311" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0007.png 인스턴스 2" x="3368" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0008.png 인스턴스 1" x="172" y="329" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0008.png 인스턴스 2" x="1795" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0009.png 인스턴스 1" x="1967" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0009.png 인스턴스 2" x="3712" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0010.png 인스턴스 1" x="2483" y="285" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="IceEffect_0010.png 인스턴스 2" x="3024" y="280" width="170" height="79" pivotX="0" pivotY="0"/>
+	<SubTexture name="JellyBubble 인스턴스 10000" x="2714" y="0" width="141" height="141" pivotX="71.6" pivotY="34.2"/>
+	<SubTexture name="JumpItem.png 인스턴스 1" x="0" y="505" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="L_eye_close_0001.png 인스턴스 1" x="3009" y="472" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="L_eye_close_0002.png 인스턴스 1" x="328" y="482" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="L_eye_close_0003.png 인스턴스 1" x="328" y="446" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="L_eye_close_0004.png 인스턴스 1" x="3869" y="468" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="L_eye_close_0005.png 인스턴스 1" x="2899" y="478" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="Line.png 인스턴스 1" x="2827" y="283" width="17" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Line_White.png 인스턴스 1" x="1772" y="286" width="17" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Line_explosion.png 인스턴스 1" x="344" y="329" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="MY_Tile_Theme_1 인스턴스 10000" x="2269" y="366" width="102" height="82" pivotX="50.65" pivotY="40.55"/>
+	<SubTexture name="MoveItem.png 인스턴스 1" x="710" y="501" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="MyTeamTile.png 인스턴스 1" x="1874" y="0" width="208" height="143" pivotX="0" pivotY="0"/>
+	<SubTexture name="MyTile_2.png 인스턴스 1" x="2084" y="0" width="208" height="143" pivotX="0" pivotY="0"/>
+	<SubTexture name="My_Rail_Theme_1 인스턴스 10000" x="3138" y="361" width="107" height="84" pivotX="51" pivotY="40.55"/>
+	<SubTexture name="My_Tile_Theme_2 인스턴스 10000" x="3663" y="361" width="103" height="82" pivotX="50.65" pivotY="40.55"/>
+	<SubTexture name="New_Star01.png 인스턴스 1" x="414" y="276" width="128" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="R_eye_close_0001.png 인스턴스 1" x="3884" y="468" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="R_eye_close_0002.png 인스턴스 1" x="508" y="477" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="R_eye_close_0003.png 인스턴스 1" x="1161" y="486" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="R_eye_close_0004.png 인스턴스 1" x="328" y="428" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="R_eye_close_0005.png 인스턴스 1" x="523" y="477" width="13" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="Rail_Theme_1 인스턴스 10000" x="3029" y="361" width="107" height="84" pivotX="51" pivotY="40.55"/>
+	<SubTexture name="ST 인스턴스 10000" x="3029" y="447" width="79" height="92" pivotX="39.1" pivotY="54.2"/>
+	<SubTexture name="ST 인스턴스 10001" x="3110" y="447" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10002" x="2373" y="449" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10003" x="3348" y="449" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10004" x="3429" y="449" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10005" x="2092" y="450" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10006" x="2173" y="450" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10007" x="2254" y="450" width="79" height="92"/>
+	<SubTexture name="ST 인스턴스 10008" x="3191" y="453" width="79" height="92"/>
+	<SubTexture name="ST_Body.png 인스턴스 1" x="675" y="276" width="128" height="128" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_Boll.png 인스턴스 1" x="4066" y="462" width="17" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_Boll_1.png 인스턴스 1" x="3009" y="454" width="17" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_Ear.png 인스턴스 1" x="1772" y="321" width="17" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_Head.png 인스턴스 1" x="544" y="276" width="129" height="128" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Boom_eye.png 인스턴스 1" x="105" y="572" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Boom_eye.png 인스턴스 2" x="1817" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0001.png 인스턴스 1" x="454" y="569" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0001.png 인스턴스 2" x="2272" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0002.png 인스턴스 1" x="1430" y="575" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0002.png 인스턴스 2" x="2237" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0003.png 인스턴스 1" x="1465" y="575" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0003.png 인스턴스 2" x="2730" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0004.png 인스턴스 1" x="730" y="568" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_L_Closs_Eye0004.png 인스턴스 2" x="1782" y="583" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_Mouse.png 인스턴스 1" x="3850" y="468" width="17" height="16" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Boom_eye.png 인스턴스 1" x="70" y="572" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Boom_eye.png 인스턴스 2" x="3030" y="581" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0001.png 인스턴스 1" x="35" y="572" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0001.png 인스턴스 2" x="3611" y="579" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0002.png 인스턴스 1" x="0" y="572" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0002.png 인스턴스 2" x="210" y="578" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0003.png 인스턴스 1" x="245" y="577" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0003.png 인스턴스 2" x="2468" y="582" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0004.png 인스턴스 1" x="419" y="569" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="ST_R_Closs_Eye0004.png 인스턴스 2" x="2765" y="584" width="33" height="32" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sp01_Body 인스턴스 10000" x="245" y="504" width="79" height="71" pivotX="38.85" pivotY="35.65"/>
+	<SubTexture name="Sp01_Body_Line 인스턴스 10000" x="164" y="504" width="79" height="72" pivotX="38.85" pivotY="35.65"/>
+	<SubTexture name="Sp01_Hand 인스턴스 10000" x="2108" y="433" width="12" height="11" pivotX="5.55" pivotY="5.55"/>
+	<SubTexture name="Sp01_Left_Eye 인스턴스 10000" x="4066" y="420" width="24" height="22" pivotX="11.75" pivotY="11.25"/>
+	<SubTexture name="Sp01_Left_Eye1 인스턴스 10000" x="3884" y="347" width="13" height="11" pivotX="6" pivotY="5.75"/>
+	<SubTexture name="Sp01_Left_Eye2 인스턴스 10000" x="1360" y="136" width="9" height="7" pivotX="4" pivotY="3.85"/>
+	<SubTexture name="Sp01_Left_Eye3 인스턴스 10000" x="1324" y="136" width="11" height="9" pivotX="4.85" pivotY="4.65"/>
+	<SubTexture name="Sp01_Left_arm 인스턴스 10000" x="2702" y="223" width="8" height="12" pivotX="4.1" pivotY="6.35"/>
+	<SubTexture name="Sp01_Mouse 인스턴스 10000" x="2702" y="211" width="10" height="10" pivotX="4.85" pivotY="4.65"/>
+	<SubTexture name="Sp01_Mouse1 인스턴스 10000" x="1059" y="487" width="13" height="16" pivotX="6" pivotY="8.7"/>
+	<SubTexture name="Sp01_Right_Eye 인스턴스 10000" x="4066" y="393" width="27" height="25" pivotX="12.65" pivotY="12.15"/>
+	<SubTexture name="Sp01_Right_Eye1 인스턴스 10000" x="2092" y="433" width="14" height="12" pivotX="6.3" pivotY="6.05"/>
+	<SubTexture name="Sp01_Right_Eye2 인스턴스 10000" x="1349" y="136" width="9" height="8" pivotX="4" pivotY="3.85"/>
+	<SubTexture name="Sp01_Right_Eye3 인스턴스 10000" x="1337" y="136" width="10" height="9" pivotX="4.85" pivotY="5"/>
+	<SubTexture name="Sp01_Right_arm 인스턴스 10000" x="2122" y="433" width="12" height="10" pivotX="5.5" pivotY="4.6"/>
+	<SubTexture name="Tile_0001.png 인스턴스 1" x="1772" y="366" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_0002.png 인스턴스 1" x="1903" y="366" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_0003.png 인스턴스 1" x="2034" y="366" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_1.png 인스턴스 1" x="2294" y="0" width="208" height="143" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_2.png 인스턴스 1" x="2504" y="0" width="208" height="143" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_Point.png 인스턴스 1" x="954" y="469" width="103" height="60" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tile_Theme_1 인스턴스 10000" x="2165" y="366" width="102" height="82" pivotX="50.65" pivotY="40.55"/>
+	<SubTexture name="Tile_Theme_2 인스턴스 10000" x="3558" y="361" width="103" height="82" pivotX="50.65" pivotY="40.55"/>
+	<SubTexture name="Triangle.png 인스턴스 1" x="3837" y="567" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle.png 인스턴스 2" x="1125" y="546" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_Back.png 인스턴스 1" x="508" y="407" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_Back.png 인스턴스 2" x="575" y="564" width="32" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_BackLight.png 인스턴스 1" x="3437" y="577" width="32" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_BackLight.png 인스턴스 2" x="2335" y="485" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_BackWhite.png 인스턴스 1" x="508" y="442" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_Light.png 인스턴스 1" x="540" y="564" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_Light.png 인스턴스 2" x="3872" y="567" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="Triangle_White.png 인스턴스 1" x="695" y="568" width="33" height="33" pivotX="0" pivotY="0"/>
+	<SubTexture name="WhistleItem.png 인스턴스 1" x="67" y="505" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="WoodenFence 인스턴스 10000" x="1600" y="147" width="54" height="53" pivotX="27.85" pivotY="29"/>
+	<SubTexture name="di e1 인스턴스 10000" x="1600" y="244" width="50" height="37" pivotX="24.8" pivotY="18.2"/>
+	<SubTexture name="di e1 인스턴스 10001" x="3787" y="522" width="50" height="37"/>
+	<SubTexture name="di e1 인스턴스 10002" x="2943" y="547" width="50" height="37"/>
+	<SubTexture name="di e1 인스턴스 10003" x="3930" y="551" width="50" height="37"/>
+	<SubTexture name="di e2 인스턴스 10000" x="3982" y="555" width="48" height="35" pivotX="23.8" pivotY="17.2"/>
+	<SubTexture name="di e2 인스턴스 10001" x="4032" y="555" width="48" height="35"/>
+	<SubTexture name="di e2 인스턴스 10002" x="3787" y="561" width="48" height="35"/>
+	<SubTexture name="di e2 인스턴스 10003" x="326" y="562" width="48" height="35"/>
+	<SubTexture name="ice1 인스턴스 10000" x="977" y="357" width="99" height="110" pivotX="48.75" pivotY="51.9"/>
+	<SubTexture name="ice1 인스턴스 20000" x="1078" y="357" width="99" height="109" pivotX="48.75" pivotY="51.9"/>
+	<SubTexture name="ice2 인스턴스 10000" x="3348" y="361" width="103" height="86" pivotX="48.7" pivotY="24.1"/>
+	<SubTexture name="ice2 인스턴스 20000" x="3453" y="361" width="103" height="86" pivotX="48.7" pivotY="24.1"/>
+	<SubTexture name="ice2_1 인스턴스 10000" x="2827" y="361" width="99" height="97" pivotX="48.7" pivotY="55.7"/>
+	<SubTexture name="ice2_1 인스턴스 20000" x="1179" y="357" width="100" height="97" pivotX="48.7" pivotY="55.7"/>
+	<SubTexture name="ice3 인스턴스 10000" x="508" y="501" width="99" height="61" pivotX="48.7" pivotY="3.5"/>
+	<SubTexture name="ice3 인스턴스 20000" x="3930" y="488" width="99" height="61" pivotX="48.7" pivotY="3.5"/>
+	<SubTexture name="ice3_1 인스턴스 10000" x="2928" y="361" width="99" height="91" pivotX="48.7" pivotY="48.95"/>
+	<SubTexture name="ice3_1 인스턴스 20000" x="3247" y="361" width="99" height="90" pivotX="48.7" pivotY="48.95"/>
+	<SubTexture name="jelly 인스턴스 10000" x="1493" y="287" width="99" height="112" pivotX="49.1" pivotY="53.55"/>
+	<SubTexture name="myRailbox.png 인스턴스 1" x="1440" y="0" width="215" height="145" pivotX="0" pivotY="0"/>
+	<SubTexture name="rail direction.png.png.png 인스턴스 1" x="2454" y="460" width="112" height="64" pivotX="0" pivotY="0"/>
+	<SubTexture name="rail1.png.png 인스턴스 1" x="496" y="0" width="234" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="rail2.png.png 인스턴스 1" x="968" y="0" width="234" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="rail3.png.png 인스턴스 1" x="1204" y="0" width="234" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="rail4.png.png 인스턴스 1" x="732" y="0" width="234" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="railbox.png 인스턴스 1" x="1657" y="0" width="215" height="144" pivotX="0" pivotY="0"/>
+</TextureAtlas>
