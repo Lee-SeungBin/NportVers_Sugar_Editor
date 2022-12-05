@@ -1,157 +1,453 @@
 fileFormatVersion: 2
 guid: 86bcf1c8b2d865a4d915869e738ef0ec
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: "Bread.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300002: "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300004: "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300006: "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300008: "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300010: "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300012: "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300014: "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300016: "Combo_txt.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300018: "Cream.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300020: "Cycle.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300022: "Dim.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300024: "Egg.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300026: "Hammer.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300028: "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300030: "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300032: "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300034: "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300036: "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300038: "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300040: "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300042: "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300044: "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300046: "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300048: "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300050: "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300052: "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300054: "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300056: "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300058: "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300060: "Ice.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300062: "Item_Effect.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300064: "Jump.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300066: "JumpItem.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300068: "Move.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300070: "MoveItem.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300072: "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300074: "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300076: "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300078: "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300080: "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300082: "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300084: "Shadow.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300086: "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300088: "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300090: "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300092: "Title.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300094: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300096: "WhistleItem.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300098: "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000"
-    21300100: "change 4 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300102: "change 5 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300104: "change1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300106: "change2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300108: "change3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300110: "character_01.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300112: "character_02.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300114: "character_03.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300116: "character_04.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300118: "close button \uC778\uC2A4\uD134\uC2A4 10000"
-    21300120: "coin \uC778\uC2A4\uD134\uC2A4 10000"
-    21300122: "continue bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300124: "continue button1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300126: "continue button2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300128: "continue check1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300130: "continue check2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300132: "continue item bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300134: "continue1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300136: "continue2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300138: "deadlock \uC778\uC2A4\uD134\uC2A4 10000"
-    21300140: "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300142: "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300144: "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300146: "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300148: "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300150: "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300152: "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300154: "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000"
-    21300156: "gage \uC778\uC2A4\uD134\uC2A4 10000"
-    21300158: "game item1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300160: "game item1_1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300162: "game item2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300164: "game item2_1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300166: "game item3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300168: "game item3_1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300170: "game item4 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300172: "game item4_1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300174: "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000"
-    21300176: "game stage mission bar2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300178: "game stage mission bar3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300180: "game stage move bar \uC778\uC2A4\uD134\uC2A4 10000"
-    21300182: "gameover1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300184: "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300186: "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300188: "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300190: "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300192: "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300194: "heart m \uC778\uC2A4\uD134\uC2A4 10000"
-    21300196: "iceje \uC778\uC2A4\uD134\uC2A4 10000"
-    21300198: "item anima \uC778\uC2A4\uD134\uC2A4 10000"
-    21300200: "item plus \uC778\uC2A4\uD134\uC2A4 10000"
-    21300202: "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300204: "itembg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300206: "jump \uC778\uC2A4\uD134\uC2A4 10000"
-    21300208: "mission check b \uC778\uC2A4\uD134\uC2A4 10000"
-    21300210: "mission check \uC778\uC2A4\uD134\uC2A4 10000"
-    21300212: "mission number bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300214: "mission1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300216: "mission2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300218: "move \uC778\uC2A4\uD134\uC2A4 10000"
-    21300220: "next button \uC778\uC2A4\uD134\uC2A4 10000"
-    21300222: "next \uC778\uC2A4\uD134\uC2A4 10000"
-    21300224: "next2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300226: "no \uC778\uC2A4\uD134\uC2A4 10000"
-    21300228: "no2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300230: "pause bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300232: "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300234: "pause botton \uC778\uC2A4\uD134\uC2A4 10000"
-    21300236: "pause effect button off \uC778\uC2A4\uD134\uC2A4 10000"
-    21300238: "pause effect button on \uC778\uC2A4\uD134\uC2A4 10000"
-    21300240: "pause roby button \uC778\uC2A4\uD134\uC2A4 10000"
-    21300242: "pause sound button off \uC778\uC2A4\uD134\uC2A4 10000"
-    21300244: "pause sound button on \uC778\uC2A4\uD134\uC2A4 10000"
-    21300246: "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300248: "price button1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300250: "retry1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300252: "retry2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300254: "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000"
-    21300256: "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300258: "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300260: "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300262: "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300264: "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300266: "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300268: "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000"
-    21300270: "stage1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300272: "stage2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300274: "star gage b \uC778\uC2A4\uD134\uC2A4 10000"
-    21300276: "star3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300278: "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1"
-    21300280: "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300282: "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300284: "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300286: "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300288: "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300290: "x3 \uC778\uC2A4\uD134\uC2A4 10000"
-    21300292: "yes \uC778\uC2A4\uD134\uC2A4 10000"
-    21300294: "yes2 \uC778\uC2A4\uD134\uC2A4 10000"
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: "Bread.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300002
+    second: "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300004
+    second: "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300006
+    second: "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300008
+    second: "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300010
+    second: "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300012
+    second: "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300014
+    second: "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300016
+    second: "Combo_txt.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300018
+    second: "Cream.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300020
+    second: "Cycle.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300022
+    second: "Dim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300024
+    second: "Egg.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300026
+    second: "Hammer.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300028
+    second: "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300030
+    second: "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300032
+    second: "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300034
+    second: "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300036
+    second: "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300038
+    second: "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300040
+    second: "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300042
+    second: "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300044
+    second: "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300046
+    second: "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300048
+    second: "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300050
+    second: "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300052
+    second: "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300054
+    second: "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300056
+    second: "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300058
+    second: "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300060
+    second: "Ice.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300062
+    second: "Item_Effect.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300064
+    second: "Jump.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300066
+    second: "JumpItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300068
+    second: "Move.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300070
+    second: "MoveItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300072
+    second: "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300074
+    second: "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300076
+    second: "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300078
+    second: "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300080
+    second: "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300082
+    second: "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300084
+    second: "Shadow.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300086
+    second: "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300088
+    second: "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300090
+    second: "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300092
+    second: "Title.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300094
+    second: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300096
+    second: "WhistleItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300098
+    second: "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300100
+    second: "change 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300102
+    second: "change 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300104
+    second: "change1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300106
+    second: "change2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300108
+    second: "change3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300110
+    second: "character_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300112
+    second: "character_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300114
+    second: "character_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300116
+    second: "character_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300118
+    second: "close button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300120
+    second: "coin \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300122
+    second: "continue bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300124
+    second: "continue button1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300126
+    second: "continue button2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300128
+    second: "continue check1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300130
+    second: "continue check2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300132
+    second: "continue item bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300134
+    second: "continue1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300136
+    second: "continue2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300138
+    second: "deadlock \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300140
+    second: "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300142
+    second: "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300144
+    second: "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300146
+    second: "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300148
+    second: "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300150
+    second: "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300152
+    second: "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300154
+    second: "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300156
+    second: "gage \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300158
+    second: "game item1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300160
+    second: "game item1_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300162
+    second: "game item2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300164
+    second: "game item2_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300166
+    second: "game item3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300168
+    second: "game item3_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300170
+    second: "game item4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300172
+    second: "game item4_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300174
+    second: "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300176
+    second: "game stage mission bar2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300178
+    second: "game stage mission bar3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300180
+    second: "game stage move bar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300182
+    second: "gameover1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300184
+    second: "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300186
+    second: "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300188
+    second: "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300190
+    second: "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300192
+    second: "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300194
+    second: "heart m \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300196
+    second: "iceje \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300198
+    second: "item anima \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300200
+    second: "item plus \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300202
+    second: "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300204
+    second: "itembg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300206
+    second: "jump \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300208
+    second: "mission check b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300210
+    second: "mission check \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300212
+    second: "mission number bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300214
+    second: "mission1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300216
+    second: "mission2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300218
+    second: "move \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300220
+    second: "next button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300222
+    second: "next \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300224
+    second: "next2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300226
+    second: "no \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300228
+    second: "no2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300230
+    second: "pause bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300232
+    second: "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300234
+    second: "pause botton \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300236
+    second: "pause effect button off \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300238
+    second: "pause effect button on \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300240
+    second: "pause roby button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300242
+    second: "pause sound button off \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300244
+    second: "pause sound button on \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300246
+    second: "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300248
+    second: "price button1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300250
+    second: "retry1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300252
+    second: "retry2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300254
+    second: "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300256
+    second: "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300258
+    second: "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300260
+    second: "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300262
+    second: "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300264
+    second: "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300266
+    second: "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300268
+    second: "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300270
+    second: "stage1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300272
+    second: "stage2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300274
+    second: "star gage b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300276
+    second: "star3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300278
+    second: "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300280
+    second: "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300282
+    second: "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300284
+    second: "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300286
+    second: "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300288
+    second: "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300290
+    second: "x3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300292
+    second: "yes \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300294
+    second: "yes2 \uC778\uC2A4\uD134\uC2A4 10000"
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -171,6 +467,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -179,9 +477,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -202,11 +500,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -217,7 +519,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
     resizeAlgorithm: 0
@@ -228,7 +531,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 1
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -239,7 +543,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -250,6 +555,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -269,6 +575,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 949be993fd897e348a13912c14159f9f
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -289,6 +596,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 51a49e9bef4334b49a2bc8e554f84d06
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -309,6 +617,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: cde058181f7261f4c874922d9551bfe3
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -329,6 +638,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 940b92301b997f34dad5bd496fb15ed7
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -349,6 +659,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3b7dbd72aa44f0d4cbe1c44ee78cc3ef
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -369,6 +680,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d5e3e548d12d99745bedcede5a65a890
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -389,6 +701,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c46200f8b6effd248afd9b7b78ffb964
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -409,6 +722,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 876f915eb96617e429eff06005a732b5
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -429,6 +743,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 30591dc5d1657e749a30e0eeb575c961
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -449,6 +764,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3e5427fe3ed91db46a5c653aafcc446d
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -469,6 +785,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 44d01410966385b4cb32ab38d379cf95
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -489,6 +806,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 16b01aca72e9b7f48979892a4e9c9563
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -509,6 +827,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a7a3b0b3d4ae11f43bea8dfa8cc1fd89
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -529,6 +848,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: bfaea669ca4fa3f41b73771954b87cee
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -549,6 +869,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 371b7c1382a94b04ab7e730949c64512
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -569,6 +890,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1b1b985b98916ca49933854ca4e5a714
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -589,6 +911,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 58c38b387c3521d49a311a2649976da9
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -609,6 +932,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 77421edfd763d4542ab3073079daac34
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -629,6 +953,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 396aa72b67ca8d14bb30636f02379bef
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
@@ -649,6 +974,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: b6582b3d45d8cb34fa528eb8d9ea3405
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
@@ -669,6 +995,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5f66cb173d2ae634e85e38c3cf7b8f4d
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
@@ -689,6 +1016,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 85c71902940db9744b15e34c22e6d0b9
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
@@ -709,6 +1037,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 467cd67d42c95484dbd3398e037629f6
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
@@ -729,6 +1058,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 928f3f0ed2c9b754da84199409e0ac5c
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
@@ -749,6 +1079,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a7257600e20aac14aa3717b9b23a6ef9
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -769,6 +1100,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 380ef713189480540b4ed51d073c60f9
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
@@ -789,6 +1121,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ab719b740f416f6429f588e1c5dd6197
+      internalID: 21300052
       vertices: []
       indices: 
       edges: []
@@ -809,6 +1142,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3c0a692632a90d8409296c29a5a6b981
+      internalID: 21300054
       vertices: []
       indices: 
       edges: []
@@ -829,6 +1163,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5f2b04dd33ac158448016d85d447135c
+      internalID: 21300056
       vertices: []
       indices: 
       edges: []
@@ -849,6 +1184,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: b753776ff8af30b438200d0cc62e4fa3
+      internalID: 21300058
       vertices: []
       indices: 
       edges: []
@@ -869,6 +1205,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ab783811fbbad6346a8ff2640bbf1b25
+      internalID: 21300060
       vertices: []
       indices: 
       edges: []
@@ -889,6 +1226,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1fb2f484ab57cb54c8c666ada1c67233
+      internalID: 21300062
       vertices: []
       indices: 
       edges: []
@@ -909,6 +1247,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1a97e8a7bfa1fff4e9647eb359b11157
+      internalID: 21300064
       vertices: []
       indices: 
       edges: []
@@ -929,6 +1268,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f97343299f551874f9af1f7f642c9af3
+      internalID: 21300066
       vertices: []
       indices: 
       edges: []
@@ -949,6 +1289,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: dfe941bd7010e1d438c6868ff4af9caf
+      internalID: 21300068
       vertices: []
       indices: 
       edges: []
@@ -969,6 +1310,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 700eb1280381d314786f5ea0f075397e
+      internalID: 21300070
       vertices: []
       indices: 
       edges: []
@@ -989,6 +1331,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a38d23e8c9c3f6a47a03dd178fd83528
+      internalID: 21300072
       vertices: []
       indices: 
       edges: []
@@ -1009,6 +1352,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 41e51a17f29f50744a6ed75d3ed85e90
+      internalID: 21300074
       vertices: []
       indices: 
       edges: []
@@ -1029,6 +1373,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5c7e5b551a7f60b40a0b44585b5b2e62
+      internalID: 21300076
       vertices: []
       indices: 
       edges: []
@@ -1049,6 +1394,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 8d10162de1fa9aa4dbd9fdf6578aad99
+      internalID: 21300078
       vertices: []
       indices: 
       edges: []
@@ -1069,6 +1415,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 240d6f4208767b4499f3c4b81ff72f58
+      internalID: 21300080
       vertices: []
       indices: 
       edges: []
@@ -1089,6 +1436,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a290a9d25e3b9c84990444ccd4a19e02
+      internalID: 21300082
       vertices: []
       indices: 
       edges: []
@@ -1109,6 +1457,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2fd3710520f5b744483aa3d92b07f93d
+      internalID: 21300084
       vertices: []
       indices: 
       edges: []
@@ -1129,6 +1478,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 46aa4e2016236954189c04a060e8dd0c
+      internalID: 21300086
       vertices: []
       indices: 
       edges: []
@@ -1149,6 +1499,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f785addf3e6eaaa46a65fe677130718d
+      internalID: 21300088
       vertices: []
       indices: 
       edges: []
@@ -1169,6 +1520,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 286f6aea4910eec49913ac98147cec82
+      internalID: 21300090
       vertices: []
       indices: 
       edges: []
@@ -1189,6 +1541,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 9e2c44f0e67e7444c8260bbb12188c16
+      internalID: 21300092
       vertices: []
       indices: 
       edges: []
@@ -1209,6 +1562,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2ad0c0f70af45a646a4e944d379d45b8
+      internalID: 21300094
       vertices: []
       indices: 
       edges: []
@@ -1229,6 +1583,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d55b4fb450d291840889f6e2c4dd907f
+      internalID: 21300096
       vertices: []
       indices: 
       edges: []
@@ -1249,6 +1604,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3b204d4397af9ed43848791c458743b4
+      internalID: 21300098
       vertices: []
       indices: 
       edges: []
@@ -1269,6 +1625,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3dfcea24b193f1b45b27359e6862bbba
+      internalID: 21300100
       vertices: []
       indices: 
       edges: []
@@ -1289,6 +1646,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ee995be6eb20a094c834cdf3e66154b2
+      internalID: 21300102
       vertices: []
       indices: 
       edges: []
@@ -1309,6 +1667,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 9bddea4f55d39e446aa4989e6db4c45c
+      internalID: 21300104
       vertices: []
       indices: 
       edges: []
@@ -1329,6 +1688,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 562433b46be92684aaad1513dcb25a21
+      internalID: 21300106
       vertices: []
       indices: 
       edges: []
@@ -1349,6 +1709,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: dd82656bd74894a45a5c364bffd0a98a
+      internalID: 21300108
       vertices: []
       indices: 
       edges: []
@@ -1369,6 +1730,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1152e1071d50a874bbca8d390dbdab14
+      internalID: 21300110
       vertices: []
       indices: 
       edges: []
@@ -1389,6 +1751,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0379b911d16df65469aaa4842a316833
+      internalID: 21300112
       vertices: []
       indices: 
       edges: []
@@ -1409,6 +1772,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 38d4c93b2a688d84994fa3a7c158fb1b
+      internalID: 21300114
       vertices: []
       indices: 
       edges: []
@@ -1429,6 +1793,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: debb26044ee7d1f4e87b5b01ed304854
+      internalID: 21300116
       vertices: []
       indices: 
       edges: []
@@ -1449,6 +1814,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f9e543ef7a7f04247a983da2fe049052
+      internalID: 21300118
       vertices: []
       indices: 
       edges: []
@@ -1469,6 +1835,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c45492186d2bdba448cfa3eb7c832a50
+      internalID: 21300120
       vertices: []
       indices: 
       edges: []
@@ -1489,6 +1856,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d33bd47f3cf7fef40aecbe2a5ce86802
+      internalID: 21300122
       vertices: []
       indices: 
       edges: []
@@ -1509,6 +1877,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ef0e124334615694693a79dd84c8e793
+      internalID: 21300124
       vertices: []
       indices: 
       edges: []
@@ -1529,6 +1898,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f462a15b270ea0c4ca2d6df741faa323
+      internalID: 21300126
       vertices: []
       indices: 
       edges: []
@@ -1549,6 +1919,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a51be8aff87d7d746906fb7a2c89e906
+      internalID: 21300128
       vertices: []
       indices: 
       edges: []
@@ -1569,6 +1940,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: e5ed872595997174883ec36d98cf20da
+      internalID: 21300130
       vertices: []
       indices: 
       edges: []
@@ -1589,6 +1961,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2e9c939f60af5574a81e00c122e74b3b
+      internalID: 21300132
       vertices: []
       indices: 
       edges: []
@@ -1609,6 +1982,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 63ff40d68f77ab94e9e95b8c14cf4e66
+      internalID: 21300134
       vertices: []
       indices: 
       edges: []
@@ -1629,6 +2003,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: e220a5cc6f46f934bbde87ca5410e6b5
+      internalID: 21300136
       vertices: []
       indices: 
       edges: []
@@ -1649,6 +2024,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 07e6e729fc9b7694c8fdaa3631cb2e7b
+      internalID: 21300138
       vertices: []
       indices: 
       edges: []
@@ -1669,6 +2045,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d86e7a0b611a8364093043a59a8fbb7b
+      internalID: 21300140
       vertices: []
       indices: 
       edges: []
@@ -1689,6 +2066,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c89152d5e8a979f4c94a255a2959bdd7
+      internalID: 21300142
       vertices: []
       indices: 
       edges: []
@@ -1709,6 +2087,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 79d05f83fff616d4a95668807cba97a5
+      internalID: 21300144
       vertices: []
       indices: 
       edges: []
@@ -1729,6 +2108,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 4956426a70f71c5429a785f4f3f26978
+      internalID: 21300146
       vertices: []
       indices: 
       edges: []
@@ -1749,6 +2129,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ba1e30f012c8d794bbceae3635c06601
+      internalID: 21300148
       vertices: []
       indices: 
       edges: []
@@ -1769,6 +2150,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a826ed2ed42090448bdcfa761325bed8
+      internalID: 21300150
       vertices: []
       indices: 
       edges: []
@@ -1789,6 +2171,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 42e2b7d8e2e4bc0499e01b07d05ecfd4
+      internalID: 21300152
       vertices: []
       indices: 
       edges: []
@@ -1809,6 +2192,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: fa7c46ac131b08a44966a323e74e43d8
+      internalID: 21300154
       vertices: []
       indices: 
       edges: []
@@ -1829,6 +2213,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 4d4b50b5cc84bff47878127f62333d32
+      internalID: 21300156
       vertices: []
       indices: 
       edges: []
@@ -1849,6 +2234,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 7669ed9cb32331c4d9fae5068497cb93
+      internalID: 21300158
       vertices: []
       indices: 
       edges: []
@@ -1869,6 +2255,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 7fd2261a176dede4ca4d5a3cf6cc010b
+      internalID: 21300160
       vertices: []
       indices: 
       edges: []
@@ -1889,6 +2276,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2fd0e96973834b44ab51ee7266b33ff1
+      internalID: 21300162
       vertices: []
       indices: 
       edges: []
@@ -1909,6 +2297,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2110ec49f1b0204429627e6a3f863933
+      internalID: 21300164
       vertices: []
       indices: 
       edges: []
@@ -1929,6 +2318,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: feaefdd62b7753a4ab18fde555edd195
+      internalID: 21300166
       vertices: []
       indices: 
       edges: []
@@ -1949,6 +2339,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2f9de544961c80f45b9924f349a8a7f0
+      internalID: 21300168
       vertices: []
       indices: 
       edges: []
@@ -1969,6 +2360,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 82713eaaa03b6c742bea337f0cd39a63
+      internalID: 21300170
       vertices: []
       indices: 
       edges: []
@@ -1989,6 +2381,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 8d3767d7710190640b79f7fde46e0038
+      internalID: 21300172
       vertices: []
       indices: 
       edges: []
@@ -2009,6 +2402,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a1059ab36ec92a74185a8a51e16ff8c2
+      internalID: 21300174
       vertices: []
       indices: 
       edges: []
@@ -2029,6 +2423,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f6762bf643d1ff1448b44c158095b6fd
+      internalID: 21300176
       vertices: []
       indices: 
       edges: []
@@ -2049,6 +2444,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 6413320a52c928b43a1d0aebf3a2cb69
+      internalID: 21300178
       vertices: []
       indices: 
       edges: []
@@ -2069,6 +2465,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 17c798fab7ada054f9bfa60dd5b20c3d
+      internalID: 21300180
       vertices: []
       indices: 
       edges: []
@@ -2089,6 +2486,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 28fda3280023aa34b9dac7926c8c5c00
+      internalID: 21300182
       vertices: []
       indices: 
       edges: []
@@ -2109,6 +2507,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: e0988a76bd2be724e81cc126c06a7c1d
+      internalID: 21300184
       vertices: []
       indices: 
       edges: []
@@ -2129,6 +2528,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: b773e6901e4f6e547a74f1ea33ad322f
+      internalID: 21300186
       vertices: []
       indices: 
       edges: []
@@ -2149,6 +2549,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 01d9234b15472e048aead7e3ef776dfe
+      internalID: 21300188
       vertices: []
       indices: 
       edges: []
@@ -2169,6 +2570,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5f4dc94e19f6ec24cbea3eb79889e730
+      internalID: 21300190
       vertices: []
       indices: 
       edges: []
@@ -2189,6 +2591,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5e1e7bdef239eb04b8d15ba2d39a48d6
+      internalID: 21300192
       vertices: []
       indices: 
       edges: []
@@ -2209,6 +2612,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 52bd4695139973f439a89e9af9cfd32c
+      internalID: 21300194
       vertices: []
       indices: 
       edges: []
@@ -2229,6 +2633,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 30732cdb593400f41bd2fe9021934ea6
+      internalID: 21300196
       vertices: []
       indices: 
       edges: []
@@ -2249,6 +2654,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 9c33d0f4ad6b61f4eb0604c5de8307d1
+      internalID: 21300198
       vertices: []
       indices: 
       edges: []
@@ -2269,6 +2675,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: a3ddee53254e5c142a002ef71d988269
+      internalID: 21300200
       vertices: []
       indices: 
       edges: []
@@ -2289,6 +2696,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d1381509c1f85044fa05a719c43d6287
+      internalID: 21300202
       vertices: []
       indices: 
       edges: []
@@ -2309,6 +2717,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5ac63403e333df0438851fc9f31eff0f
+      internalID: 21300204
       vertices: []
       indices: 
       edges: []
@@ -2329,6 +2738,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 9e72432ffb9ef454f996022cc3aeebff
+      internalID: 21300206
       vertices: []
       indices: 
       edges: []
@@ -2349,6 +2759,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: cf309f5ab2174584baa2a8767c28247b
+      internalID: 21300208
       vertices: []
       indices: 
       edges: []
@@ -2369,6 +2780,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 185b0700e17fe0148929213683bf58e0
+      internalID: 21300210
       vertices: []
       indices: 
       edges: []
@@ -2389,6 +2801,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c63781dc63563c647a7839e9ac5789a8
+      internalID: 21300212
       vertices: []
       indices: 
       edges: []
@@ -2409,6 +2822,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: f46aa6197663539488a93d8c009ddc03
+      internalID: 21300214
       vertices: []
       indices: 
       edges: []
@@ -2429,6 +2843,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: cef69fbb1be11ec428ee20423feba60d
+      internalID: 21300216
       vertices: []
       indices: 
       edges: []
@@ -2449,6 +2864,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5b4dd16846cad9c4593fdfa15b335502
+      internalID: 21300218
       vertices: []
       indices: 
       edges: []
@@ -2469,6 +2885,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 677700c461bb7a441af65acabcb7faca
+      internalID: 21300220
       vertices: []
       indices: 
       edges: []
@@ -2489,6 +2906,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d36d8932479a30c42bc66ddbf7866ecf
+      internalID: 21300222
       vertices: []
       indices: 
       edges: []
@@ -2509,6 +2927,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 042a592fecd265f4880ccd5cdaac97db
+      internalID: 21300224
       vertices: []
       indices: 
       edges: []
@@ -2529,6 +2948,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: b8d830677d360854abf845e1b0fb86d1
+      internalID: 21300226
       vertices: []
       indices: 
       edges: []
@@ -2549,6 +2969,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 062fdecbabda9ad468d2415f5080505f
+      internalID: 21300228
       vertices: []
       indices: 
       edges: []
@@ -2569,6 +2990,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 54288cbc5e4be0f47947468b9ad0aad8
+      internalID: 21300230
       vertices: []
       indices: 
       edges: []
@@ -2589,6 +3011,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ba14ec0655e8c0548907a31d8ae85108
+      internalID: 21300232
       vertices: []
       indices: 
       edges: []
@@ -2609,6 +3032,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c1366ec988b20844b904e5aee2b58f1b
+      internalID: 21300234
       vertices: []
       indices: 
       edges: []
@@ -2629,6 +3053,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0ca7b661296700246aeb1cdce7055577
+      internalID: 21300236
       vertices: []
       indices: 
       edges: []
@@ -2649,6 +3074,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 543b98e7c8b1e3f4996c09d8ff153c5e
+      internalID: 21300238
       vertices: []
       indices: 
       edges: []
@@ -2669,6 +3095,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 910d905dbdab2b140a7bc311492701d0
+      internalID: 21300240
       vertices: []
       indices: 
       edges: []
@@ -2689,6 +3116,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 87732ade762a4114cad29dcf183d0f66
+      internalID: 21300242
       vertices: []
       indices: 
       edges: []
@@ -2709,6 +3137,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 354065d3d76e3584f85214c04e2287a9
+      internalID: 21300244
       vertices: []
       indices: 
       edges: []
@@ -2729,6 +3158,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0d313463ff916d34ea16dc5446e8fb00
+      internalID: 21300246
       vertices: []
       indices: 
       edges: []
@@ -2749,6 +3179,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 29f46950595ad8c43a64c5562712ca56
+      internalID: 21300248
       vertices: []
       indices: 
       edges: []
@@ -2769,6 +3200,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: bbe07f5eabd4abd4e82005172dc9bff7
+      internalID: 21300250
       vertices: []
       indices: 
       edges: []
@@ -2789,6 +3221,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0d1fb59f493a2c6478f4cca20d1c54c0
+      internalID: 21300252
       vertices: []
       indices: 
       edges: []
@@ -2809,6 +3242,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3f0e985359d12414c9b81f3d01faaab9
+      internalID: 21300254
       vertices: []
       indices: 
       edges: []
@@ -2829,6 +3263,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: cdc7d48220ba88e4194bb55694d78e8b
+      internalID: 21300256
       vertices: []
       indices: 
       edges: []
@@ -2849,6 +3284,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 6af930572ba3d8c47bfc97bad3477c4b
+      internalID: 21300258
       vertices: []
       indices: 
       edges: []
@@ -2869,6 +3305,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 3e646f9336a826740b24d338475002de
+      internalID: 21300260
       vertices: []
       indices: 
       edges: []
@@ -2889,6 +3326,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 9f26a824b36764248a0d3481447ab461
+      internalID: 21300262
       vertices: []
       indices: 
       edges: []
@@ -2909,6 +3347,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ad4fe97e25bb1a1449ddf3c322008704
+      internalID: 21300264
       vertices: []
       indices: 
       edges: []
@@ -2929,6 +3368,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1381a4b92402a7d409887d6ddcd27f96
+      internalID: 21300266
       vertices: []
       indices: 
       edges: []
@@ -2949,6 +3389,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0a5c58bd00488134699bd18299ed0e28
+      internalID: 21300268
       vertices: []
       indices: 
       edges: []
@@ -2969,6 +3410,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 1e15b11d03a36b942b957525f9bb624b
+      internalID: 21300270
       vertices: []
       indices: 
       edges: []
@@ -2989,6 +3431,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 412cc72ec2be7ff4fb0459bd1e3e6cbc
+      internalID: 21300272
       vertices: []
       indices: 
       edges: []
@@ -3009,6 +3452,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: b1e305ab4cb12604d88d934338708f73
+      internalID: 21300274
       vertices: []
       indices: 
       edges: []
@@ -3029,6 +3473,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 61f7576db883fbc4e80ef5849d689425
+      internalID: 21300276
       vertices: []
       indices: 
       edges: []
@@ -3049,6 +3494,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: db4cba8abe1922942996e39d432e7f5b
+      internalID: 21300278
       vertices: []
       indices: 
       edges: []
@@ -3069,6 +3515,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: e32dc0acfa8dc904882d69ba4cf48efa
+      internalID: 21300280
       vertices: []
       indices: 
       edges: []
@@ -3089,6 +3536,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 0616068157fab9c458eef5114772af5d
+      internalID: 21300282
       vertices: []
       indices: 
       edges: []
@@ -3109,6 +3557,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 2f0a4be93bfba1e448cd0ea398b273cf
+      internalID: 21300284
       vertices: []
       indices: 
       edges: []
@@ -3129,6 +3578,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 4a734ae08f5f53544a42d44ddb81fd11
+      internalID: 21300286
       vertices: []
       indices: 
       edges: []
@@ -3149,6 +3599,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 5e2849002cc62a546bcacbaace919cc6
+      internalID: 21300288
       vertices: []
       indices: 
       edges: []
@@ -3169,6 +3620,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: ec36b87e61d94334dbb2215348673e5a
+      internalID: 21300290
       vertices: []
       indices: 
       edges: []
@@ -3189,6 +3641,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: d9961d47ddabead40b4b14e472be714f
+      internalID: 21300292
       vertices: []
       indices: 
       edges: []
@@ -3209,6 +3662,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: cf4f17783b5caad4689392dd42bdff4a
+      internalID: 21300294
       vertices: []
       indices: 
       edges: []
@@ -3217,10 +3671,161 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 19b8ea0bb93827f49993fa0a2e9095a9
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1": 21300058
+      "next button \uC778\uC2A4\uD134\uC2A4 10000": 21300220
+      "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000": 21300264
+      "Bread.png \uC778\uC2A4\uD134\uC2A4 1": 21300000
+      "continue2 \uC778\uC2A4\uD134\uC2A4 10000": 21300136
+      "yes \uC778\uC2A4\uD134\uC2A4 10000": 21300292
+      "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300192
+      "mission1 \uC778\uC2A4\uD134\uC2A4 10000": 21300214
+      "Ice.png \uC778\uC2A4\uD134\uC2A4 1": 21300060
+      "game item1_1 \uC778\uC2A4\uD134\uC2A4 10000": 21300160
+      "mission check b \uC778\uC2A4\uD134\uC2A4 10000": 21300208
+      "Egg.png \uC778\uC2A4\uD134\uC2A4 1": 21300024
+      "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1": 21300044
+      "JumpItem.png \uC778\uC2A4\uD134\uC2A4 1": 21300066
+      "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1": 21300002
+      "game item4 \uC778\uC2A4\uD134\uC2A4 10000": 21300170
+      "character_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300114
+      "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300150
+      "star gage b \uC778\uC2A4\uD134\uC2A4 10000": 21300274
+      "continue check1 \uC778\uC2A4\uD134\uC2A4 10000": 21300128
+      "next \uC778\uC2A4\uD134\uC2A4 10000": 21300222
+      "stage1 \uC778\uC2A4\uD134\uC2A4 10000": 21300270
+      "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1": 21300094
+      "yes2 \uC778\uC2A4\uD134\uC2A4 10000": 21300294
+      "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1": 21300050
+      "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1": 21300012
+      "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1": 21300028
+      "Jump.png \uC778\uC2A4\uD134\uC2A4 1": 21300064
+      "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000": 21300148
+      "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1": 21300014
+      "no \uC778\uC2A4\uD134\uC2A4 10000": 21300226
+      "change3 \uC778\uC2A4\uD134\uC2A4 10000": 21300108
+      "gage \uC778\uC2A4\uD134\uC2A4 10000": 21300156
+      "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000": 21300280
+      "iceje \uC778\uC2A4\uD134\uC2A4 10000": 21300196
+      "change1 \uC778\uC2A4\uD134\uC2A4 10000": 21300104
+      "game stage mission bar3 \uC778\uC2A4\uD134\uC2A4 10000": 21300178
+      "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1": 21300048
+      "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1": 21300090
+      "itembg \uC778\uC2A4\uD134\uC2A4 10000": 21300204
+      "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1": 21300030
+      "close button \uC778\uC2A4\uD134\uC2A4 10000": 21300118
+      "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300288
+      "x3 \uC778\uC2A4\uD134\uC2A4 10000": 21300290
+      "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1": 21300054
+      "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000": 21300188
+      "continue item bg \uC778\uC2A4\uD134\uC2A4 10000": 21300132
+      "retry2 \uC778\uC2A4\uD134\uC2A4 10000": 21300252
+      "continue button2 \uC778\uC2A4\uD134\uC2A4 10000": 21300126
+      "WhistleItem.png \uC778\uC2A4\uD134\uC2A4 1": 21300096
+      "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300072
+      "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000": 21300142
+      "continue bg \uC778\uC2A4\uD134\uC2A4 10000": 21300122
+      "pause roby button \uC778\uC2A4\uD134\uC2A4 10000": 21300240
+      "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1": 21300042
+      "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300074
+      "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1": 21300034
+      "Move.png \uC778\uC2A4\uD134\uC2A4 1": 21300068
+      "pause sound button off \uC778\uC2A4\uD134\uC2A4 10000": 21300242
+      "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000": 21300140
+      "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1": 21300036
+      "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300008
+      "continue1 \uC778\uC2A4\uD134\uC2A4 10000": 21300134
+      "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000": 21300146
+      "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000": 21300154
+      "jump \uC778\uC2A4\uD134\uC2A4 10000": 21300206
+      "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1": 21300278
+      "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300076
+      "star3 \uC778\uC2A4\uD134\uC2A4 10000": 21300276
+      "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000": 21300284
+      "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300282
+      "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000": 21300266
+      "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300152
+      "change2 \uC778\uC2A4\uD134\uC2A4 10000": 21300106
+      "Cream.png \uC778\uC2A4\uD134\uC2A4 1": 21300018
+      "continue check2 \uC778\uC2A4\uD134\uC2A4 10000": 21300130
+      "game item4_1 \uC778\uC2A4\uD134\uC2A4 10000": 21300172
+      "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000": 21300174
+      "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1": 21300040
+      "game item1 \uC778\uC2A4\uD134\uC2A4 10000": 21300158
+      "game item2 \uC778\uC2A4\uD134\uC2A4 10000": 21300162
+      "pause effect button on \uC778\uC2A4\uD134\uC2A4 10000": 21300238
+      "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000": 21300254
+      "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1": 21300056
+      "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1": 21300086
+      "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300006
+      "game stage mission bar2 \uC778\uC2A4\uD134\uC2A4 10000": 21300176
+      "pause botton \uC778\uC2A4\uD134\uC2A4 10000": 21300234
+      "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1": 21300032
+      "change 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300102
+      "Hammer.png \uC778\uC2A4\uD134\uC2A4 1": 21300026
+      "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1": 21300080
+      "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1": 21300038
+      "change 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300100
+      "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000": 21300098
+      "MoveItem.png \uC778\uC2A4\uD134\uC2A4 1": 21300070
+      "continue button1 \uC778\uC2A4\uD134\uC2A4 10000": 21300124
+      "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1": 21300082
+      "mission check \uC778\uC2A4\uD134\uC2A4 10000": 21300210
+      "character_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300116
+      "Combo_txt.png \uC778\uC2A4\uD134\uC2A4 1": 21300016
+      "coin \uC778\uC2A4\uD134\uC2A4 10000": 21300120
+      "character_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300110
+      "game item2_1 \uC778\uC2A4\uD134\uC2A4 10000": 21300164
+      "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300190
+      "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1": 21300088
+      "next2 \uC778\uC2A4\uD134\uC2A4 10000": 21300224
+      "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000": 21300202
+      "mission number bg \uC778\uC2A4\uD134\uC2A4 10000": 21300212
+      "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300004
+      "retry1 \uC778\uC2A4\uD134\uC2A4 10000": 21300250
+      "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000": 21300262
+      "pause effect button off \uC778\uC2A4\uD134\uC2A4 10000": 21300236
+      "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1": 21300052
+      "move \uC778\uC2A4\uD134\uC2A4 10000": 21300218
+      "no2 \uC778\uC2A4\uD134\uC2A4 10000": 21300228
+      "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000": 21300144
+      "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300078
+      "game stage move bar \uC778\uC2A4\uD134\uC2A4 10000": 21300180
+      "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000": 21300184
+      "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000": 21300258
+      "stage2 \uC778\uC2A4\uD134\uC2A4 10000": 21300272
+      "item anima \uC778\uC2A4\uD134\uC2A4 10000": 21300198
+      "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300286
+      "Item_Effect.png \uC778\uC2A4\uD134\uC2A4 1": 21300062
+      "mission2 \uC778\uC2A4\uD134\uC2A4 10000": 21300216
+      "Title.png \uC778\uC2A4\uD134\uC2A4 1": 21300092
+      "character_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300112
+      "pause bg \uC778\uC2A4\uD134\uC2A4 10000": 21300230
+      "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000": 21300268
+      "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300232
+      "game item3 \uC778\uC2A4\uD134\uC2A4 10000": 21300166
+      "Cycle.png \uC778\uC2A4\uD134\uC2A4 1": 21300020
+      "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300186
+      "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300010
+      "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000": 21300256
+      "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1": 21300046
+      "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000": 21300260
+      "game item3_1 \uC778\uC2A4\uD134\uC2A4 10000": 21300168
+      "price button1 \uC778\uC2A4\uD134\uC2A4 10000": 21300248
+      "deadlock \uC778\uC2A4\uD134\uC2A4 10000": 21300138
+      "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1": 21300246
+      "heart m \uC778\uC2A4\uD134\uC2A4 10000": 21300194
+      "gameover1 \uC778\uC2A4\uD134\uC2A4 10000": 21300182
+      "Shadow.png \uC778\uC2A4\uD134\uC2A4 1": 21300084
+      "pause sound button on \uC778\uC2A4\uD134\uC2A4 10000": 21300244
+      "item plus \uC778\uC2A4\uD134\uC2A4 10000": 21300200
+      "Dim.png \uC778\uC2A4\uD134\uC2A4 1": 21300022
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
