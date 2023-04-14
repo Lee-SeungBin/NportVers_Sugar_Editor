@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tutorial.png">
+	<!-- Created with Adobe Flash Professional version 15.0.0.173 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="Box 인스턴스 10000" x="1202" y="0" width="502" height="267" pivotX="243.6" pivotY="137"/>
+	<SubTexture name="FrogSoup 인스턴스 10000" x="2682" y="282" width="350" height="299" pivotX="174.9" pivotY="167.3"/>
+	<SubTexture name="Item_Arrow.png 인스턴스 1" x="3984" y="0" width="63" height="71" pivotX="0" pivotY="0"/>
+	<SubTexture name="Jelly 인스턴스 10000" x="306" y="774" width="247" height="287" pivotX="122.85" pivotY="131.15"/>
+	<SubTexture name="Randommon 인스턴스 10000" x="3609" y="277" width="446" height="244" pivotX="225.35" pivotY="123.65"/>
+	<SubTexture name="TutorialTextDim.png 인스턴스 1" x="3034" y="523" width="775" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="Tutorial_Bombmon 인스턴스 10000" x="1633" y="552" width="363" height="243" pivotX="190.4" pivotY="0.95"/>
+	<SubTexture name="Tutorial_CW_CCW_EN 인스턴스 10000" x="2126" y="515" width="460" height="219" pivotX="229.75" pivotY="11"/>
+	<SubTexture name="Tutorial_CW_CCW_KR 인스턴스 10000" x="766" y="525" width="460" height="218" pivotX="229.75" pivotY="11"/>
+	<SubTexture name="Tutorial_Changer 인스턴스 10000" x="2163" y="0" width="488" height="266" pivotX="187.55" pivotY="166.85"/>
+	<SubTexture name="Tutorial_Cross_Explosion 인스턴스 10000" x="1720" y="292" width="404" height="258" pivotX="95.25" pivotY="36.9"/>
+	<SubTexture name="Tutorial_Doppelganger 인스턴스 10000" x="693" y="745" width="327" height="238" pivotX="100.85" pivotY="36.2"/>
+	<SubTexture name="Tutorial_Frogmon 인스턴스 10000" x="2653" y="0" width="448" height="280" pivotX="223.5" pivotY="139.4"/>
+	<SubTexture name="Tutorial_GummyBear 인스턴스 10000" x="3103" y="277" width="504" height="237" pivotX="252.3" pivotY="114.05"/>
+	<SubTexture name="Tutorial_Hammer 인스턴스 10000" x="306" y="534" width="385" height="238" pivotX="165.55" pivotY="125.2"/>
+	<SubTexture name="Tutorial_Heart_Explosion 인스턴스 10000" x="1228" y="525" width="403" height="247" pivotX="95.25" pivotY="26.95"/>
+	<SubTexture name="Tutorial_Ice_EN 인스턴스 10000" x="2588" y="659" width="588" height="157" pivotX="289.45" pivotY="-48.3"/>
+	<SubTexture name="Tutorial_Ice_KR 인스턴스 10000" x="2588" y="659" width="588" height="157" pivotX="289.45" pivotY="-48.3"/>
+	<SubTexture name="Tutorial_Item_Mon_EN 인스턴스 10000" x="2350" y="736" width="213" height="231" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_EN_1 인스턴스 10000" x="2163" y="282" width="517" height="231" pivotX="257.7" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_Jump_EN 인스턴스 10000" x="1022" y="774" width="212" height="231" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_Jump_KR 인스턴스 10000" x="1450" y="797" width="212" height="231" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_KR 인스턴스 10000" x="3874" y="523" width="213" height="232" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_KR_1 인스턴스 10000" x="1202" y="292" width="516" height="231" pivotX="257.7" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_Whistle_EN 인스턴스 10000" x="1236" y="774" width="212" height="231" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Item_Mon_Whistle_KR 인스턴스 10000" x="3874" y="757" width="212" height="231" pivotX="105.65" pivotY="6.45"/>
+	<SubTexture name="Tutorial_Jump 인스턴스 10000" x="3103" y="0" width="441" height="274" pivotX="8.15" pivotY="27.85"/>
+	<SubTexture name="Tutorial_Move 인스턴스 10000" x="3178" y="659" width="371" height="233" pivotX="39.4" pivotY="-71.6"/>
+	<SubTexture name="Tutorial_One_Line_Explosion 인스턴스 10000" x="766" y="0" width="434" height="311" pivotX="217.85" pivotY="10.85"/>
+	<SubTexture name="Tutorial_Popup_BG 인스턴스 10000" x="0" y="0" width="764" height="532" pivotX="380.85" pivotY="13.45"/>
+	<SubTexture name="Tutorial_Rail 인스턴스 10000" x="3546" y="0" width="436" height="275" pivotX="226.15" pivotY="139.05"/>
+	<SubTexture name="Tutorial_Star 인스턴스 10000" x="3551" y="659" width="321" height="259" pivotX="159.95" pivotY="15"/>
+	<SubTexture name="Tutorial_Star_Gauge 인스턴스 10000" x="1706" y="0" width="455" height="290" pivotX="230.4" pivotY="11.55"/>
+	<SubTexture name="Tutorial_Whistle 인스턴스 10000" x="1998" y="736" width="350" height="232" pivotX="139.05" pivotY="84.15"/>
+	<SubTexture name="Wooden_Fence 인스턴스 10000" x="0" y="534" width="304" height="308" pivotX="154.9" pivotY="159.2"/>
+</TextureAtlas>

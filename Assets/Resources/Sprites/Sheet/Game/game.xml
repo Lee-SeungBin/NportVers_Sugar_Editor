@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="game.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bread.png 인스턴스 1" x="3707" y="2254" width="113" height="96" pivotX="0" pivotY="0"/>
+	<SubTexture name="Chocolate.png 인스턴스 1" x="2170" y="2263" width="100" height="101" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_01.png 인스턴스 1" x="2712" y="2122" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_02.png 인스턴스 1" x="1385" y="2130" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_03.png 인스턴스 1" x="2040" y="2132" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_04.png 인스턴스 1" x="131" y="2136" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_05.png 인스턴스 1" x="0" y="2136" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Circle_06.png 인스턴스 1" x="1516" y="2130" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Combo_txt0000" x="655" y="2171" width="256" height="64" pivotX="128" pivotY="32"/>
+	<SubTexture name="Combo_txt0001" x="3216" y="2178" width="256" height="64"/>
+	<SubTexture name="Combo_txt0002" x="3707" y="2188" width="256" height="64"/>
+	<SubTexture name="Combo_txt0003" x="913" y="2210" width="256" height="64"/>
+	<SubTexture name="Cream.png 인스턴스 1" x="2978" y="2090" width="100" height="104" pivotX="0" pivotY="0"/>
+	<SubTexture name="Cream_Light 인스턴스 10000" x="1182" y="2328" width="83" height="87" pivotX="41.05" pivotY="43.05"/>
+	<SubTexture name="Cycle.png 인스턴스 1" x="0" y="0" width="1024" height="1024" pivotX="0" pivotY="0"/>
+	<SubTexture name="Dim.png 인스턴스 1" x="3543" y="1153" width="513" height="513" pivotX="0" pivotY="0"/>
+	<SubTexture name="Egg.png 인스턴스 1" x="0" y="2267" width="109" height="91" pivotX="0" pivotY="0"/>
+	<SubTexture name="GameItem_BG 인스턴스 10000" x="979" y="2276" width="96" height="98" pivotX="47.75" pivotY="48.85"/>
+	<SubTexture name="GameItem_BG1 인스턴스 10000" x="3174" y="1677" width="88" height="89" pivotX="43.35" pivotY="44.35"/>
+	<SubTexture name="GameItem_Icon_ 인스턴스 10000" x="783" y="2349" width="80" height="82" pivotX="39.9" pivotY="40.85"/>
+	<SubTexture name="GameItem_Icon_ 인스턴스 10001" x="3158" y="2351" width="80" height="82"/>
+	<SubTexture name="GameItem_Icon_ 인스턴스 10002" x="3240" y="2351" width="80" height="82"/>
+	<SubTexture name="Hammer.png 인스턴스 1" x="991" y="2405" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0001.png 인스턴스 1" x="3756" y="2057" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0002.png 인스턴스 1" x="282" y="2019" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0003.png 인스턴스 1" x="806" y="2040" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0004.png 인스턴스 1" x="675" y="2040" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0005.png 인스턴스 1" x="2319" y="2122" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0006.png 인스턴스 1" x="2847" y="2090" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0007.png 인스턴스 1" x="3887" y="2057" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0008.png 인스턴스 1" x="1068" y="2079" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0009.png 인스턴스 1" x="413" y="2019" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0010.png 인스턴스 1" x="3085" y="2067" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0011.png 인스턴스 1" x="3625" y="2013" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0012.png 인스턴스 1" x="1254" y="2074" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0013.png 인스턴스 1" x="937" y="2079" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0014.png 인스턴스 1" x="3445" y="2047" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0015.png 인스턴스 1" x="544" y="2019" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Hit2_0016.png 인스턴스 1" x="3314" y="2047" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Ice.png 인스턴스 1" x="3216" y="2067" width="96" height="104" pivotX="0" pivotY="0"/>
+	<SubTexture name="Ice_Light 인스턴스 10000" x="4016" y="2315" width="80" height="87" pivotX="39.45" pivotY="43.35"/>
+	<SubTexture name="Item_Check 인스턴스 10000" x="1510" y="2408" width="64" height="60" pivotX="30" pivotY="30"/>
+	<SubTexture name="Item_Effect 인스턴스 10000" x="3265" y="1477" width="171" height="171" pivotX="85.4" pivotY="85.45"/>
+	<SubTexture name="Item_Effect1 인스턴스 10000" x="1517" y="1268" width="244" height="243" pivotX="121.4" pivotY="121.45"/>
+	<SubTexture name="Jump.png 인스턴스 1" x="1778" y="2132" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="JumpBG 인스턴스 10000" x="3935" y="389" width="141" height="141" pivotX="65.9" pivotY="65.9"/>
+	<SubTexture name="Move.png 인스턴스 1" x="1909" y="2132" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="MoveBG 인스턴스 10000" x="870" y="1026" width="141" height="141" pivotX="65.9" pivotY="65.9"/>
+	<SubTexture name="Move_Circle_01.png 인스턴스 1" x="1647" y="2130" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Move_Circle_02.png 인스턴스 1" x="2450" y="2122" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Move_Circle_03.png 인스턴스 1" x="2581" y="2122" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Move_Circle_04.png 인스턴스 1" x="2171" y="2132" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Non_GameIteam_Button_ 인스턴스 10000" x="2843" y="2221" width="110" height="110" pivotX="54.7" pivotY="54.6"/>
+	<SubTexture name="Non_GameIteam_Button_ 인스턴스 10001" x="655" y="2237" width="110" height="110"/>
+	<SubTexture name="Non_GameIteam_Button_ 인스턴스 10002" x="767" y="2237" width="110" height="110"/>
+	<SubTexture name="Non_WhistleIteam_Button_ 인스턴스 10000" x="2978" y="2198" width="122" height="121" pivotX="67.2" pivotY="65.6"/>
+	<SubTexture name="OK 인스턴스 10000" x="2064" y="2411" width="70" height="48" pivotX="34.9" pivotY="23.7"/>
+	<SubTexture name="Plus_3.png 인스턴스 1" x="1795" y="2405" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Plus_6.png 인스턴스 1" x="2528" y="2399" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="RankIconBG 인스턴스 10000" x="879" y="2276" width="98" height="98" pivotX="48.5" pivotY="48.5"/>
+	<SubTexture name="RankingResultPopupBG 인스턴스 10000" x="1952" y="634" width="791" height="613" pivotX="395.2" pivotY="307.35"/>
+	<SubTexture name="Shadow.png 인스턴스 1" x="212" y="2281" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="StartMissionBoard.png 인스턴스 1" x="2745" y="1215" width="772" height="260" pivotX="0" pivotY="0"/>
+	<SubTexture name="StartMissionBoardTitle_EN.png 인스턴스 1" x="865" y="2376" width="202" height="27" pivotX="0" pivotY="0"/>
+	<SubTexture name="StartMissionBoardTitle_KR.png 인스턴스 1" x="1347" y="2403" width="161" height="30" pivotX="0" pivotY="0"/>
+	<SubTexture name="Title.png 인스턴스 1" x="1278" y="1550" width="513" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="TutorialTextDim.png 인스턴스 1" x="2396" y="1677" width="776" height="134" pivotX="0" pivotY="0"/>
+	<SubTexture name="WhistleBG_BG 인스턴스 10000" x="518" y="2280" width="94" height="95" pivotX="46.6" pivotY="46.65"/>
+	<SubTexture name="WhistleBG_Button 인스턴스 10000" x="1199" y="2205" width="119" height="121" pivotX="59.3" pivotY="60.4"/>
+	<SubTexture name="WhistleIcon 인스턴스 10000" x="2982" y="2363" width="78" height="79" pivotX="38.6" pivotY="39.15"/>
+	<SubTexture name="ad continue play button 인스턴스 10000" x="1793" y="1705" width="596" height="145" pivotX="292.3" pivotY="71.45"/>
+	<SubTexture name="ad_continue_play_button_move0000" x="1077" y="1809" width="466" height="152" pivotX="223.95" pivotY="71.45"/>
+	<SubTexture name="afix 인스턴스 10000" x="3832" y="2408" width="59" height="59" pivotX="29.05" pivotY="29.05"/>
+	<SubTexture name="bg_title0000" x="3314" y="1873" width="360" height="104" pivotX="0" pivotY="0"/>
+	<SubTexture name="bonus_Bubble 인스턴스 10000" x="3965" y="2188" width="124" height="125" pivotX="61.75" pivotY="61.75"/>
+	<SubTexture name="bread5x0000" x="1428" y="2261" width="106" height="101" pivotX="52.7" pivotY="50.1"/>
+	<SubTexture name="bread_Light 인스턴스 10000" x="3916" y="2315" width="98" height="79" pivotX="48.35" pivotY="39.4"/>
+	<SubTexture name="buff 인스턴스 10000" x="2331" y="1950" width="170" height="170" pivotX="84.65" pivotY="84.65"/>
+	<SubTexture name="buff 인스턴스 10001" x="2503" y="1950" width="170" height="170"/>
+	<SubTexture name="buff 인스턴스 10002" x="2675" y="1950" width="170" height="170"/>
+	<SubTexture name="chacolate_Light 인스턴스 10000" x="3174" y="1768" width="85" height="85" pivotX="41.65" pivotY="42.05"/>
+	<SubTexture name="change 4 인스턴스 10000" x="2688" y="2373" width="113" height="44" pivotX="56" pivotY="21.4"/>
+	<SubTexture name="change 5 인스턴스 10000" x="1795" y="2366" width="158" height="37" pivotX="78.7" pivotY="17.9"/>
+	<SubTexture name="change1 인스턴스 10000" x="2195" y="2373" width="162" height="34" pivotX="80.75" pivotY="16.45"/>
+	<SubTexture name="change2 인스턴스 10000" x="463" y="2377" width="107" height="41" pivotX="53.15" pivotY="19.9"/>
+	<SubTexture name="change3 인스턴스 10000" x="2904" y="1813" width="203" height="192" pivotX="100.9" pivotY="96.2"/>
+	<SubTexture name="character_01.png 인스턴스 1" x="262" y="2150" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="character_02.png 인스턴스 1" x="524" y="2150" width="129" height="128" pivotX="0" pivotY="0"/>
+	<SubTexture name="character_03.png 인스턴스 1" x="3576" y="2144" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="character_04.png 인스턴스 1" x="393" y="2150" width="129" height="128" pivotX="0" pivotY="0"/>
+	<SubTexture name="chocolate5x0000" x="1320" y="2261" width="106" height="101" pivotX="52.7" pivotY="50.1"/>
+	<SubTexture name="clock 인스턴스 10000" x="2608" y="2253" width="102" height="108" pivotX="46.35" pivotY="49.25"/>
+	<SubTexture name="close button 인스턴스 10000" x="3322" y="2351" width="77" height="85" pivotX="38.25" pivotY="41.65"/>
+	<SubTexture name="coin0000" x="1862" y="2405" width="64" height="64" pivotX="31.8" pivotY="31.8"/>
+	<SubTexture name="coin 인스턴스 10000" x="1077" y="2368" width="69" height="69" pivotX="30.2" pivotY="30"/>
+	<SubTexture name="complete 인스턴스 10000" x="2396" y="1378" width="327" height="63" pivotX="163" pivotY="30.85"/>
+	<SubTexture name="continue bg 인스턴스 10000" x="2745" y="634" width="796" height="579" pivotX="395.55" pivotY="287.05"/>
+	<SubTexture name="continue button1 인스턴스 10000" x="1545" y="1852" width="400" height="135" pivotX="189.4" pivotY="66.85"/>
+	<SubTexture name="continue button2 인스턴스 10000" x="2391" y="1813" width="511" height="135" pivotX="244.7" pivotY="67.35"/>
+	<SubTexture name="continue check1 인스턴스 10000" x="819" y="1397" width="46" height="46" pivotX="22.5" pivotY="22.5"/>
+	<SubTexture name="continue check2 인스턴스 10000" x="819" y="1445" width="45" height="46" pivotX="22.5" pivotY="22.5"/>
+	<SubTexture name="continue item bg 인스턴스 10000" x="870" y="1268" width="645" height="280" pivotX="321.55" pivotY="139.35"/>
+	<SubTexture name="continue1 인스턴스 10000" x="2401" y="2367" width="184" height="30" pivotX="91.5" pivotY="14.65"/>
+	<SubTexture name="continue2 인스턴스 10000" x="1512" y="2364" width="143" height="42" pivotX="71.05" pivotY="20.5"/>
+	<SubTexture name="continue_bg_Name 인스턴스 10000" x="371" y="1913" width="359" height="104" pivotX="179.9" pivotY="51.65"/>
+	<SubTexture name="continue_button_move0000" x="1947" y="1852" width="382" height="137" pivotX="181.85" pivotY="62.05"/>
+	<SubTexture name="cream5x0000" x="1644" y="2261" width="106" height="101" pivotX="52.7" pivotY="50.1"/>
+	<SubTexture name="deadlock 인스턴스 10000" x="570" y="1755" width="505" height="156" pivotX="247.75" pivotY="62.35"/>
+	<SubTexture name="deadlock1 인스턴스 10000" x="3314" y="1979" width="309" height="66" pivotX="152" pivotY="30.3"/>
+	<SubTexture name="deadlock2 인스턴스 10000" x="2847" y="2007" width="236" height="81" pivotX="115.55" pivotY="37.9"/>
+	<SubTexture name="defiance0000" x="2178" y="1991" width="139" height="139" pivotX="68.95" pivotY="68.55"/>
+	<SubTexture name="defiance0001" x="0" y="1995" width="139" height="139"/>
+	<SubTexture name="defiance0002" x="141" y="1995" width="139" height="139"/>
+	<SubTexture name="defianceinfo_bg_bar0000" x="4058" y="0" width="10" height="151" pivotX="0" pivotY="0"/>
+	<SubTexture name="defianceinfo_bg_bottom0000" x="0" y="1026" width="868" height="369" pivotX="0" pivotY="0"/>
+	<SubTexture name="defianceinfo_bg_title0000" x="2955" y="2321" width="201" height="40" pivotX="0" pivotY="0"/>
+	<SubTexture name="defianceinfo_bg_top0000" x="2396" y="1477" width="867" height="198" pivotX="0" pivotY="-0.8"/>
+	<SubTexture name="dia_coin0000" x="81" y="2367" width="73" height="73" pivotX="36.25" pivotY="36.3"/>
+	<SubTexture name="doppelganger1 인스턴스 10000" x="1517" y="1513" width="254" height="29" pivotX="126.25" pivotY="14.15"/>
+	<SubTexture name="doppelganger2 인스턴스 10000" x="1657" y="2366" width="136" height="43" pivotX="67.2" pivotY="21.2"/>
+	<SubTexture name="doppelganger3 인스턴스 10000" x="3836" y="1863" width="203" height="192" pivotX="100.9" pivotY="96.2"/>
+	<SubTexture name="dopplelganger 4 인스턴스 10000" x="3401" y="2351" width="147" height="43" pivotX="72.85" pivotY="20.9"/>
+	<SubTexture name="dopplelganger 5 인스턴스 10000" x="2396" y="1443" width="255" height="31" pivotX="126.9" pivotY="15.35"/>
+	<SubTexture name="down 인스턴스 10000" x="4058" y="204" width="28" height="21" pivotX="13.8" pivotY="10.1"/>
+	<SubTexture name="egg5x0000" x="1752" y="2263" width="106" height="101" pivotX="52.7" pivotY="50.1"/>
+	<SubTexture name="egg_Light 인스턴스 10000" x="2806" y="2333" width="94" height="75" pivotX="46.2" pivotY="37.25"/>
+	<SubTexture name="frogsoup 인스턴스 10000" x="870" y="1169" width="139" height="92" pivotX="67.2" pivotY="42.2"/>
+	<SubTexture name="frogsoup_Light 인스턴스 10000" x="393" y="2280" width="123" height="76" pivotX="61.1" pivotY="37.45"/>
+	<SubTexture name="gacha ok button 인스턴스 10000" x="1017" y="1963" width="235" height="114" pivotX="115.05" pivotY="52.7"/>
+	<SubTexture name="gage 인스턴스 10000" x="699" y="2349" width="82" height="81" pivotX="38.65" pivotY="37.9"/>
+	<SubTexture name="game item jump 인스턴스 10000" x="1860" y="2263" width="102" height="101" pivotX="47.55" pivotY="47.3"/>
+	<SubTexture name="game item move 인스턴스 10000" x="2067" y="2263" width="101" height="101" pivotX="47.55" pivotY="47.3"/>
+	<SubTexture name="game item whistle 인스턴스 10000" x="1964" y="2263" width="101" height="101" pivotX="47.55" pivotY="47.3"/>
+	<SubTexture name="game mode item 인스턴스 10000" x="1473" y="1989" width="139" height="139" pivotX="68.95" pivotY="68.95"/>
+	<SubTexture name="game mode item 인스턴스 10001" x="1614" y="1989" width="139" height="139"/>
+	<SubTexture name="game mode item 인스턴스 10002" x="1755" y="1989" width="139" height="139"/>
+	<SubTexture name="game mode item 인스턴스 10003" x="1896" y="1991" width="139" height="139"/>
+	<SubTexture name="game mode item 인스턴스 10004" x="2037" y="1991" width="139" height="139"/>
+	<SubTexture name="game stage mission bar 인스턴스 10000" x="3804" y="0" width="129" height="535" pivotX="58" pivotY="261.05"/>
+	<SubTexture name="gameover1 인스턴스 10000" x="1952" y="1249" width="442" height="454" pivotX="214.7" pivotY="247.25"/>
+	<SubTexture name="hammer 1 인스턴스 10000" x="3747" y="2373" width="166" height="33" pivotX="82.65" pivotY="16.4"/>
+	<SubTexture name="hammer 2 인스턴스 10000" x="1148" y="2417" width="81" height="37" pivotX="40.2" pivotY="18.05"/>
+	<SubTexture name="hammer 3 인스턴스 10000" x="3109" y="1873" width="203" height="192" pivotX="100.9" pivotY="96.2"/>
+	<SubTexture name="hammer 4 인스턴스 10000" x="3474" y="2178" width="96" height="46" pivotX="47.2" pivotY="22.8"/>
+	<SubTexture name="hammer 5 인스턴스 10000" x="1347" y="2364" width="163" height="37" pivotX="81.3" pivotY="17.75"/>
+	<SubTexture name="heart m 인스턴스 10000" x="3560" y="2275" width="104" height="93" pivotX="48.45" pivotY="41.9"/>
+	<SubTexture name="iceje 인스턴스 10000" x="2505" y="2253" width="101" height="112" pivotX="48.05" pivotY="51.75"/>
+	<SubTexture name="iceje_Light 인스턴스 10000" x="2401" y="2253" width="102" height="112" pivotX="48.05" pivotY="52.4"/>
+	<SubTexture name="ingame_tip_bg0000" x="1026" y="0" width="924" height="632" pivotX="461.5" pivotY="315.3"/>
+	<SubTexture name="ingame_tip_img0000" x="1952" y="0" width="924" height="632" pivotX="461.5" pivotY="315.3"/>
+	<SubTexture name="ingame_tip_img0001" x="2878" y="0" width="924" height="632"/>
+	<SubTexture name="ingame_tip_img0002" x="1026" y="634" width="924" height="632"/>
+	<SubTexture name="item anima 인스턴스 10000" x="3543" y="634" width="523" height="517" pivotX="256.95" pivotY="254.4"/>
+	<SubTexture name="item plus 인스턴스 10000" x="819" y="1493" width="43" height="43" pivotX="21.2" pivotY="21.4"/>
+	<SubTexture name="item_count_bg 인스턴스 10000" x="4040" y="1737" width="50" height="50" pivotX="24.4" pivotY="24.4"/>
+	<SubTexture name="itembg 인스턴스 10000" x="600" y="1550" width="676" height="203" pivotX="337.7" pivotY="100.75"/>
+	<SubTexture name="jump 인스턴스 10000" x="4040" y="1668" width="56" height="67" pivotX="23" pivotY="29.5"/>
+	<SubTexture name="lanking gift 인스턴스 10000" x="4058" y="252" width="25" height="23" pivotX="12.05" pivotY="11.45"/>
+	<SubTexture name="lanking score bar 인스턴스 10000" x="0" y="1862" width="369" height="131" pivotX="180.5" pivotY="61.55"/>
+	<SubTexture name="lanking scorebar 인스턴스 10000" x="3915" y="2404" width="167" height="31" pivotX="82.95" pivotY="15"/>
+	<SubTexture name="lanking time 인스턴스 10000" x="1254" y="1963" width="217" height="109" pivotX="104.15" pivotY="50.25"/>
+	<SubTexture name="lanking timebar 인스턴스 10000" x="600" y="1527" width="155" height="16" pivotX="67.7" pivotY="7.5"/>
+	<SubTexture name="level 1 인스턴스 10000" x="3212" y="2244" width="114" height="105" pivotX="56.55" pivotY="52.25"/>
+	<SubTexture name="level 2 인스턴스 10000" x="3444" y="2244" width="114" height="105" pivotX="56.55" pivotY="52.25"/>
+	<SubTexture name="level 3 인스턴스 10000" x="3328" y="2244" width="114" height="105" pivotX="56.55" pivotY="52.25"/>
+	<SubTexture name="mission check b 인스턴스 10000" x="4040" y="1789" width="50" height="49" pivotX="22.75" pivotY="22.8"/>
+	<SubTexture name="mission check 인스턴스 10000" x="4058" y="153" width="28" height="26" pivotX="10.9" pivotY="9.4"/>
+	<SubTexture name="mission number bg 인스턴스 10000" x="1955" y="2366" width="107" height="53" pivotX="52.65" pivotY="26"/>
+	<SubTexture name="mission1 인스턴스 10000" x="2653" y="1443" width="85" height="18" pivotX="41.95" pivotY="8.4"/>
+	<SubTexture name="mission2 인스턴스 10000" x="4041" y="1840" width="50" height="24" pivotX="23.95" pivotY="12.95"/>
+	<SubTexture name="move 인스턴스 10000" x="3568" y="2370" width="65" height="69" pivotX="27.95" pivotY="29.8"/>
+	<SubTexture name="next button 인스턴스 10000" x="732" y="1913" width="283" height="125" pivotX="135" pivotY="58.95"/>
+	<SubTexture name="next 인스턴스 10000" x="2064" y="2366" width="129" height="43" pivotX="64.05" pivotY="21.05"/>
+	<SubTexture name="next2 인스턴스 10000" x="1385" y="2074" width="82" height="51" pivotX="40.55" pivotY="24.95"/>
+	<SubTexture name="nextstage b 인스턴스 10000" x="600" y="1397" width="217" height="128" pivotX="104.15" pivotY="55.05"/>
+	<SubTexture name="no 인스턴스 10000" x="3109" y="1813" width="59" height="35" pivotX="29.25" pivotY="16.95"/>
+	<SubTexture name="no2 인스턴스 10000" x="2195" y="2409" width="99" height="35" pivotX="48.65" pivotY="17.25"/>
+	<SubTexture name="paus_effect_on0000" x="2902" y="2363" width="78" height="79" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="pause botton 2 인스턴스 10000" x="297" y="2348" width="83" height="83" pivotX="36.9" pivotY="35.7"/>
+	<SubTexture name="pause botton 인스턴스 10000" x="614" y="2349" width="83" height="83" pivotX="36.9" pivotY="35.7"/>
+	<SubTexture name="pauseMask.png 인스턴스 1" x="1793" y="1268" width="123" height="304" pivotX="0" pivotY="0"/>
+	<SubTexture name="pause_bg0000" x="3935" y="0" width="121" height="387" pivotX="60" pivotY="192.8"/>
+	<SubTexture name="pause_effect_off0000" x="0" y="2360" width="79" height="78" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="pause_roby_button0000" x="3062" y="2363" width="78" height="78" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="pause_sound_off0000" x="382" y="2358" width="79" height="79" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="pause_sound_on0000" x="1267" y="2364" width="78" height="78" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="price button1 인스턴스 10000" x="2396" y="1249" width="339" height="127" pivotX="135" pivotY="58.95"/>
+	<SubTexture name="ranking bar01 인스턴스 10000" x="1077" y="1755" width="175" height="38" pivotX="86.95" pivotY="19"/>
+	<SubTexture name="ranking bar02 인스턴스 10000" x="2359" y="2399" width="167" height="31" pivotX="82.95" pivotY="15"/>
+	<SubTexture name="ranking result b 인스턴스 10000" x="3265" y="1668" width="569" height="203" pivotX="284.05" pivotY="100.9"/>
+	<SubTexture name="ranking result b2 인스턴스 10000" x="0" y="1687" width="568" height="173" pivotX="283.55" pivotY="85.9"/>
+	<SubTexture name="ranking score 인스턴스 10000" x="1545" y="1809" width="206" height="41" pivotX="102.4" pivotY="19.95"/>
+	<SubTexture name="ranking star 인스턴스 10000" x="4058" y="227" width="25" height="23" pivotX="12.05" pivotY="11.55"/>
+	<SubTexture name="result level 인스턴스 10000" x="3747" y="2408" width="83" height="46" pivotX="41" pivotY="22.55"/>
+	<SubTexture name="retry1 인스턴스 10000" x="1638" y="2411" width="99" height="34" pivotX="48.95" pivotY="16.8"/>
+	<SubTexture name="retry2 인스턴스 10000" x="865" y="2405" width="124" height="35" pivotX="61.3" pivotY="17.15"/>
+	<SubTexture name="retry_button0000" x="2608" y="2363" width="78" height="79" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="retry_button20000" x="3666" y="2352" width="79" height="79" pivotX="38.75" pivotY="38.75"/>
+	<SubTexture name="same 인스턴스 10000" x="4058" y="277" width="30" height="15" pivotX="14.5" pivotY="7"/>
+	<SubTexture name="stage clear coin bg 인스턴스 10000" x="3804" y="537" width="289" height="92" pivotX="144.05" pivotY="45.4"/>
+	<SubTexture name="stage clear01 인스턴스 10000" x="3438" y="1477" width="99" height="118" pivotX="47.05" pivotY="56.75"/>
+	<SubTexture name="stage clear02 인스턴스 10000" x="2712" y="2253" width="92" height="118" pivotX="43.25" pivotY="56.45"/>
+	<SubTexture name="stage clear03 인스턴스 10000" x="3822" y="2254" width="92" height="117" pivotX="43.5" pivotY="56.2"/>
+	<SubTexture name="stage clear04 인스턴스 10000" x="3102" y="2198" width="108" height="117" pivotX="51.35" pivotY="56.3"/>
+	<SubTexture name="stage clear05 인스턴스 10000" x="2302" y="2253" width="97" height="118" pivotX="45.95" pivotY="56.35"/>
+	<SubTexture name="stage clear06 인스턴스 10000" x="4018" y="2057" width="58" height="124" pivotX="26.75" pivotY="59.6"/>
+	<SubTexture name="stage mini popup 인스턴스 10000" x="0" y="1397" width="598" height="288" pivotX="298.85" pivotY="140.3"/>
+	<SubTexture name="stage1 인스턴스 10000" x="2688" y="2419" width="96" height="28" pivotX="47.9" pivotY="13.4"/>
+	<SubTexture name="stage2 인스턴스 10000" x="463" y="2420" width="92" height="27" pivotX="45.45" pivotY="12.95"/>
+	<SubTexture name="star gage b 인스턴스 10000" x="3676" y="1873" width="141" height="138" pivotX="63.65" pivotY="62.75"/>
+	<SubTexture name="star3 인스턴스 10000" x="1793" y="1574" width="130" height="129" pivotX="56.65" pivotY="56.45"/>
+	<SubTexture name="strawbarry.png 인스턴스 1" x="111" y="2267" width="99" height="98" pivotX="0" pivotY="0"/>
+	<SubTexture name="strawberry5x0000" x="1536" y="2261" width="106" height="101" pivotX="52.7" pivotY="50.1"/>
+	<SubTexture name="strawberry_Light 인스턴스 10000" x="212" y="2348" width="83" height="83" pivotX="41.1" pivotY="40.85"/>
+	<SubTexture name="up 인스턴스 10000" x="4058" y="181" width="29" height="21" pivotX="13.8" pivotY="10.1"/>
+	<SubTexture name="whistle 1 인스턴스 10000" x="3401" y="2396" width="165" height="33" pivotX="82.3" pivotY="16.5"/>
+	<SubTexture name="whistle 2 인스턴스 10000" x="2803" y="2410" width="79" height="43" pivotX="38.7" pivotY="21"/>
+	<SubTexture name="whistle 3 인스턴스 10000" x="3836" y="1668" width="202" height="193" pivotX="100.9" pivotY="96.2"/>
+	<SubTexture name="whistle 4 인스턴스 10000" x="3438" y="1597" width="97" height="51" pivotX="47.85" pivotY="24.9"/>
+	<SubTexture name="whistle 5 인스턴스 10000" x="371" y="1862" width="172" height="37" pivotX="85.4" pivotY="17.7"/>
+	<SubTexture name="whistle button item b 인스턴스 10000" x="1576" y="2408" width="60" height="60" pivotX="29.4" pivotY="29.55"/>
+	<SubTexture name="whistle button item c 인스턴스 10000" x="4070" y="0" width="26" height="27" pivotX="12.8" pivotY="12.85"/>
+	<SubTexture name="x3 인스턴스 10000" x="1077" y="2276" width="103" height="90" pivotX="51.25" pivotY="44.65"/>
+	<SubTexture name="yes 인스턴스 10000" x="3756" y="2013" width="77" height="35" pivotX="38.2" pivotY="17.2"/>
+	<SubTexture name="yes2 인스턴스 10000" x="1753" y="1809" width="37" height="34" pivotX="18.3" pivotY="16.8"/>
+</TextureAtlas>

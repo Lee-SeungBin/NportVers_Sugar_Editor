@@ -27,6 +27,7 @@ public class RailManager : MonoBehaviour
     public void DeleteRailGroup(RailGroup railGroup)
     {
         railGroups.Remove(railGroup);
+        Destroy(railGroup.gameObject);
     }
 
     public void SetActiveRailGroups(bool isActive)
@@ -58,7 +59,7 @@ public class RailManager : MonoBehaviour
             RailGroup railGroup = Instantiate(railGroupPrefab).GetComponent<RailGroup>();
             railGroup.Init(this);
 
-            railGroup.railType = (RailGroup.RAIL_TYPE)mapData.railGroupDatas[i].straightMode;
+            railGroup.railType = (RailGroup.RAIL_TYPE)int.Parse(mapData.railGroupDatas[i].straightMode);
 
             for(int j = 0; j < mapData.railGroupDatas[i].rails.Count; ++j)
             {

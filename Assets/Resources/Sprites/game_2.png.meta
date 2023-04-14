@@ -9913,8 +9913,8 @@ TextureImporter:
         y: 3629
         width: 99
         height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10077,7 +10077,7 @@ TextureImporter:
       name: "ice3_1 \uC778\uC2A4\uD134\uC2A4 10000"
       rect:
         serializedVersion: 2
-        x: 2928
+        x: 2926
         y: 3644
         width: 99
         height: 91
@@ -10350,8 +10350,8 @@ TextureImporter:
       "EG \uC778\uC2A4\uD134\uC2A4 10007": -5608001857894987284
       "CR04.png \uC778\uC2A4\uD134\uC2A4 1": 21301238
       "CH_L_Closseye_0004.png \uC778\uC2A4\uD134\uC2A4 1": 21301324
-      "EG_Yolk.png \uC778\uC2A4\uD134\uC2A4 1": 21301388
       "MyTeamTile.png \uC778\uC2A4\uD134\uC2A4 1": 21300684
+      "EG_Yolk.png \uC778\uC2A4\uD134\uC2A4 1": 21301388
       "Box_Ani \uC778\uC2A4\uD134\uC2A4 10000": 5608059069539365701
       "GummyBear_Left_eye \uC778\uC2A4\uD134\uC2A4 10003": 3299791677001815130
       "IceEffect_0010.png \uC778\uC2A4\uD134\uC2A4 1": 21300440
@@ -10546,8 +10546,8 @@ TextureImporter:
       "BR \uC778\uC2A4\uD134\uC2A4 10002": 6103390007019057915
       "Box_Ani \uC778\uC2A4\uD134\uC2A4 10014": 7205545391865221845
       "JellyBubble \uC778\uC2A4\uD134\uC2A4 10000": 5793007718809875667
-      "BR_R_Eye_Closs0002.png \uC778\uC2A4\uD134\uC2A4 1": 21301302
       "My_Tile_Theme_2 \uC778\uC2A4\uD134\uC2A4 10000": 1871920507995722534
+      "BR_R_Eye_Closs0002.png \uC778\uC2A4\uD134\uC2A4 1": 21301302
       "CR07.png \uC778\uC2A4\uD134\uC2A4 1": 21301244
       "CR01_Down_hair.png \uC778\uC2A4\uD134\uC2A4 1": 21300022
       "FrogSoupTile \uC778\uC2A4\uD134\uC2A4 10000": -4250112069009366260
@@ -10579,8 +10579,8 @@ TextureImporter:
       "EG_Head.png \uC778\uC2A4\uD134\uC2A4 1": 21301354
       "R_eye_close_0004.png \uC778\uC2A4\uD134\uC2A4 1": 21300902
       "Box_Ani \uC778\uC2A4\uD134\uC2A4 10023": 5639290917454121977
-      "CH_R_eye_Bomb_Ready.png \uC778\uC2A4\uD134\uC2A4 1": 21301346
       "L_eye_close_0005.png \uC778\uC2A4\uD134\uC2A4 1": 21300578
+      "CH_R_eye_Bomb_Ready.png \uC778\uC2A4\uD134\uC2A4 1": 21301346
       "Sp01_Hand \uC778\uC2A4\uD134\uC2A4 10000": 1331401265155443802
       "FenceAnimation1.png \uC778\uC2A4\uD134\uC2A4 1": 21300310
       "FrogSoupTile_Souce2 \uC778\uC2A4\uD134\uC2A4 10000": 8951360288916203755
@@ -10592,8 +10592,8 @@ TextureImporter:
       "di e1 \uC778\uC2A4\uD134\uC2A4 10002": -4793946334772255183
       "GummyBear_Left_ear \uC778\uC2A4\uD134\uC2A4 10000": 9032412618213785589
       "CR08.png \uC778\uC2A4\uD134\uC2A4 1": 21301246
-      "BR \uC778\uC2A4\uD134\uC2A4 10006": 1329456851764401532
       "WhistleItem.png \uC778\uC2A4\uD134\uC2A4 1": 21301264
+      "BR \uC778\uC2A4\uD134\uC2A4 10006": 1329456851764401532
       "ice2 \uC778\uC2A4\uD134\uC2A4 20000": 1461864843142713877
       "Sp01_Right_Eye2 \uC778\uC2A4\uD134\uC2A4 10000": 5416847231946459
       "L_eye_close_0004.png \uC778\uC2A4\uD134\uC2A4 1": 21300576

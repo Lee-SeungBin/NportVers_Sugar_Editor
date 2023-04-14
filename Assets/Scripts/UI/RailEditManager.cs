@@ -39,7 +39,7 @@ public class RailEditManager : MonoBehaviour
 
     public void SetActiveRailSelectPopup(bool isActive, TileSet tileSet)
     {
-        print("isActive : " + isActive);
+        //print("isActive : " + isActive);
         railSelectPopup.gameObject.SetActive(isActive);
 
         if(isActive)

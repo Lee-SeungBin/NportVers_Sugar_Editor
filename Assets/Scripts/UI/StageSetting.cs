@@ -18,6 +18,7 @@ public class StageSetting : MonoBehaviour
     public Toggle fenceBuff;
 
     public InputField starPercentText;
+    public InputField stageNumberText;
 
 
     private void Awake()
@@ -44,6 +45,7 @@ public class StageSetting : MonoBehaviour
         moveBuff.isOn = stageData.usePossibleMoveBuff == 1;
         fenceBuff.isOn = stageData.usePossibleJumpBuff == 1;
         starPercentText.text = stageData.starPercent.ToString();
+        stageNumberText.text = stageData.stageNumber.ToString();
     }
 
     public void OnChangeBG()

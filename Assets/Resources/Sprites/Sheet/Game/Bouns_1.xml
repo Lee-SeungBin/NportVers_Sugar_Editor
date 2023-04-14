@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bouns_1.png">
+	<!-- Created with Adobe Flash Professional version 15.0.1.179 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="Bg_Yellow.png 인스턴스 1" x="657" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Bonus_Bubble.png 인스턴스 1" x="3110" y="2074" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Bouns_Dim.png 인스턴스 1" x="2" y="2" width="1561" height="721" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinBank.png 인스턴스 1" x="3128" y="2" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10000" x="3628" y="2074" width="257" height="129" pivotX="128" pivotY="64"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10001" x="3628" y="2205" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10002" x="2" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10003" x="261" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10004" x="520" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10005" x="779" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10006" x="1038" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10007" x="1297" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10008" x="1556" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10009" x="1815" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10010" x="2074" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10011" x="2333" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10012" x="2592" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10013" x="2851" y="2279" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10014" x="3110" y="2333" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10015" x="3369" y="2333" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10016" x="3628" y="2336" width="257" height="129"/>
+	<SubTexture name="CoinBank_Smoke 인스턴스 10017" x="2" y="2410" width="257" height="129"/>
+	<SubTexture name="CoinEffect_0001.png 인스턴스 1" x="3887" y="1651" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0002.png 인스턴스 1" x="3887" y="1782" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0003.png 인스턴스 1" x="3887" y="1913" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0004.png 인스턴스 1" x="3887" y="2044" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0005.png 인스턴스 1" x="3887" y="2175" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0006.png 인스턴스 1" x="3887" y="2306" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0007.png 인스턴스 1" x="261" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0008.png 인스턴스 1" x="392" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0009.png 인스턴스 1" x="523" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0010.png 인스턴스 1" x="654" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0011.png 인스턴스 1" x="785" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0012.png 인스턴스 1" x="2750" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0013.png 인스턴스 1" x="2881" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0014.png 인스턴스 1" x="3887" y="2437" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0015.png 인스턴스 1" x="3012" y="2464" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0016.png 인스턴스 1" x="3143" y="2464" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0017.png 인스턴스 1" x="3274" y="2464" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0018.png 인스턴스 1" x="3405" y="2464" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0019.png 인스턴스 1" x="3536" y="2467" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinEffect_0020.png 인스턴스 1" x="3667" y="2467" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="CoinParty_Light.png 인스턴스 1" x="4020" y="1489" width="72" height="71" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0001.png 인스턴스 1" x="4018" y="2031" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0002.png 인스턴스 1" x="4020" y="1629" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0003.png 인스턴스 1" x="69" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0004.png 인스턴스 1" x="672" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0005.png 인스턴스 1" x="4018" y="1763" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0006.png 인스턴스 1" x="4018" y="2098" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0007.png 인스턴스 1" x="203" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0008.png 인스턴스 1" x="873" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0009.png 인스턴스 1" x="806" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0010.png 인스턴스 1" x="739" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0011.png 인스턴스 1" x="4018" y="1696" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0012.png 인스턴스 1" x="4018" y="2165" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0013.png 인스턴스 1" x="4020" y="1562" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0014.png 인스턴스 1" x="4018" y="1964" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0015.png 인스턴스 1" x="1007" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0016.png 인스턴스 1" x="4018" y="1830" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0017.png 인스턴스 1" x="3569" y="2665" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0018.png 인스턴스 1" x="4018" y="2098" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0019.png 인스턴스 1" x="2" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0020.png 인스턴스 1" x="940" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0021.png 인스턴스 1" x="4018" y="1897" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0022.png 인스턴스 1" x="136" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0023.png 인스턴스 1" x="270" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_0024.png 인스턴스 1" x="3636" y="2665" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0001.png 인스턴스 1" x="2333" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0002.png 인스턴스 1" x="3110" y="1038" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0003.png 인스턴스 1" x="779" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0004.png 인스턴스 1" x="1038" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0005.png 인스턴스 1" x="1038" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0006.png 인스턴스 1" x="520" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0007.png 인스턴스 1" x="1297" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0008.png 인스턴스 1" x="3628" y="1038" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0009.png 인스턴스 1" x="520" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0010.png 인스턴스 1" x="2074" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0011.png 인스턴스 1" x="2592" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0012.png 인스턴스 1" x="3369" y="1038" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0013.png 인스턴스 1" x="1556" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0014.png 인스턴스 1" x="2" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0015.png 인스턴스 1" x="2" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0016.png 인스턴스 1" x="2333" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0017.png 인스턴스 1" x="261" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0018.png 인스턴스 1" x="261" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0019.png 인스턴스 1" x="1815" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0020.png 인스턴스 1" x="2074" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0021.png 인스턴스 1" x="779" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0022.png 인스턴스 1" x="1297" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0023.png 인스턴스 1" x="2851" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0024.png 인스턴스 1" x="3110" y="1297" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0025.png 인스턴스 1" x="1556" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0026.png 인스턴스 1" x="1815" y="984" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0027.png 인스턴스 1" x="2851" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Coin_Bomb_0028.png 인스턴스 1" x="2592" y="1243" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Dim.png 인스턴스 1" x="1565" y="2" width="1561" height="721" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0001.png 인스턴스 1" x="1556" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0002.png 인스턴스 1" x="2851" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0003.png 인스턴스 1" x="2592" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0004.png 인스턴스 1" x="779" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0005.png 인스턴스 1" x="2" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0006.png 인스턴스 1" x="1815" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0007.png 인스턴스 1" x="3110" y="1815" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0008.png 인스턴스 1" x="3628" y="1815" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0009.png 인스턴스 1" x="1038" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0010.png 인스턴스 1" x="520" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0011.png 인스턴스 1" x="1297" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0012.png 인스턴스 1" x="261" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0013.png 인스턴스 1" x="2074" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0014.png 인스턴스 1" x="3369" y="1815" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0015.png 인스턴스 1" x="2851" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Explosion_1_0016.png 인스턴스 1" x="2333" y="2020" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0001.png 인스턴스 1" x="605" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0002.png 인스턴스 1" x="3502" y="2665" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0003.png 인스턴스 1" x="3301" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0004.png 인스턴스 1" x="3234" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0005.png 인스턴스 1" x="538" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0006.png 인스턴스 1" x="3368" y="2665" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0007.png 인스턴스 1" x="3435" y="2665" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0008.png 인스턴스 1" x="2430" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0009.png 인스턴스 1" x="3670" y="2598" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0010.png 인스턴스 1" x="4018" y="2299" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0011.png 인스턴스 1" x="4018" y="2366" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0012.png 인스턴스 1" x="2229" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_1_0013.png 인스턴스 1" x="3798" y="2467" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0001.png 인스턴스 1" x="2832" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0002.png 인스턴스 1" x="2765" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0003.png 인스턴스 1" x="3033" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0004.png 인스턴스 1" x="3804" y="2635" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0005.png 인스턴스 1" x="2899" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0006.png 인스턴스 1" x="4005" y="2635" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0007.png 인스턴스 1" x="2698" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0008.png 인스턴스 1" x="3100" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0009.png 인스턴스 1" x="3737" y="2635" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0010.png 인스턴스 1" x="3871" y="2635" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0011.png 인스턴스 1" x="3938" y="2635" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0012.png 인스턴스 1" x="2966" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_2_0013.png 인스턴스 1" x="3167" y="2662" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0001.png 인스턴스 1" x="4018" y="2433" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0002.png 인스턴스 1" x="2497" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0003.png 인스턴스 1" x="2564" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0004.png 인스턴스 1" x="2296" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0005.png 인스턴스 1" x="2631" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0006.png 인스턴스 1" x="2363" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0007.png 인스턴스 1" x="4018" y="2500" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0008.png 인스턴스 1" x="2430" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0009.png 인스턴스 1" x="3670" y="2598" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0010.png 인스턴스 1" x="4018" y="2299" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0011.png 인스턴스 1" x="4018" y="2366" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0012.png 인스턴스 1" x="2229" y="2608" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Light_3_0013.png 인스턴스 1" x="3798" y="2467" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Line_effect.png 인스턴스 1" x="4061" y="62" width="17" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Move_Bouns.png 인스턴스 1" x="4018" y="2232" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0001.png 인스턴스 1" x="2622" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0002.png 인스턴스 1" x="1443" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0003.png 인스턴스 1" x="3146" y="2595" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0004.png 인스턴스 1" x="1967" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0005.png 인스턴스 1" x="3929" y="2568" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0006.png 인스턴스 1" x="3015" y="2595" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0007.png 인스턴스 1" x="1574" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0008.png 인스턴스 1" x="1967" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0009.png 인스턴스 1" x="1836" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0010.png 인스턴스 1" x="3539" y="2598" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0011.png 인스턴스 1" x="3408" y="2598" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0012.png 인스턴스 1" x="1836" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0013.png 인스턴스 1" x="3798" y="2568" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0014.png 인스턴스 1" x="2098" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0015.png 인스턴스 1" x="2753" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0016.png 인스턴스 1" x="1443" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0017.png 인스턴스 1" x="2491" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0018.png 인스턴스 1" x="3277" y="2595" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0019.png 인스턴스 1" x="1705" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0020.png 인스턴스 1" x="2360" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0021.png 인스턴스 1" x="2884" y="2595" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0022.png 인스턴스 1" x="2098" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0023.png 인스턴스 1" x="1705" y="2608" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0024.png 인스턴스 1" x="1574" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Particle_0025.png 인스턴스 1" x="2229" y="2541" width="129" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="SmokeLine.png 인스턴스 1" x="3369" y="1297" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0001.png 인스턴스 1" x="264" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0002.png 인스턴스 1" x="1178" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0003.png 인스턴스 1" x="1050" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0004.png 인스턴스 1" x="916" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0005.png 인스턴스 1" x="1440" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0006.png 인스턴스 1" x="788" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0007.png 인스턴스 1" x="1571" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0008.png 인스턴스 1" x="1702" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0009.png 인스턴스 1" x="2488" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0010.png 인스턴스 1" x="133" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0011.png 인스턴스 1" x="1047" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0012.png 인스턴스 1" x="919" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0013.png 인스턴스 1" x="526" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0014.png 인스턴스 1" x="2095" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0015.png 인스턴스 1" x="1309" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0016.png 인스턴스 1" x="395" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0017.png 인스턴스 1" x="2226" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0018.png 인스턴스 1" x="2" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0019.png 인스턴스 1" x="1181" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0020.png 인스턴스 1" x="2357" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0021.png 인스턴스 1" x="2619" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0022.png 인스턴스 1" x="1312" y="2541" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0023.png 인스턴스 1" x="1833" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="StarHit_effect_0024.png 인스턴스 1" x="1964" y="2410" width="129" height="129" pivotX="0" pivotY="0"/>
+	<SubTexture name="Star_001.png 인스턴스 1" x="337" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Star_002.png 인스턴스 1" x="404" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Star_003.png 인스턴스 1" x="471" y="2672" width="65" height="65" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0001.png 인스턴스 1" x="1815" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0002.png 인스턴스 1" x="1815" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0003.png 인스턴스 1" x="261" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0004.png 인스턴스 1" x="2074" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0005.png 인스턴스 1" x="2" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0006.png 인스턴스 1" x="3387" y="520" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0007.png 인스턴스 1" x="3646" y="261" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0008.png 인스턴스 1" x="2333" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0009.png 인스턴스 1" x="520" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0010.png 인스턴스 1" x="3128" y="520" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0011.png 인스턴스 1" x="3628" y="1297" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0012.png 인스턴스 1" x="779" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0013.png 인스턴스 1" x="779" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0014.png 인스턴스 1" x="261" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0015.png 인스턴스 1" x="3128" y="261" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0016.png 인스턴스 1" x="1815" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0017.png 인스턴스 1" x="2592" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0018.png 인스턴스 1" x="2851" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0019.png 인스턴스 1" x="779" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0020.png 인스턴스 1" x="520" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0021.png 인스턴스 1" x="1556" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0022.png 인스턴스 1" x="3369" y="1556" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0023.png 인스턴스 1" x="1038" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0024.png 인스턴스 1" x="2" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0025.png 인스턴스 1" x="2592" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0026.png 인스턴스 1" x="1556" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0027.png 인스턴스 1" x="3387" y="261" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0028.png 인스턴스 1" x="1297" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0029.png 인스턴스 1" x="3628" y="779" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0030.png 인스턴스 1" x="2074" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0031.png 인스턴스 1" x="2333" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0032.png 인스턴스 1" x="1556" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0033.png 인스턴스 1" x="2851" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0034.png 인스턴스 1" x="520" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0035.png 인스턴스 1" x="1038" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0036.png 인스턴스 1" x="2333" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0037.png 인스턴스 1" x="3628" y="1556" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0038.png 인스턴스 1" x="3646" y="520" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0039.png 인스턴스 1" x="261" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0040.png 인스턴스 1" x="2" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0041.png 인스턴스 1" x="3646" y="2" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0042.png 인스턴스 1" x="2074" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0043.png 인스턴스 1" x="1297" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0044.png 인스턴스 1" x="3387" y="2" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0045.png 인스턴스 1" x="1297" y="1761" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0046.png 인스턴스 1" x="3369" y="779" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0047.png 인스턴스 1" x="3110" y="1556" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0048.png 인스턴스 1" x="3110" y="779" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0049.png 인스턴스 1" x="2592" y="725" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_0050.png 인스턴스 1" x="1038" y="1502" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="Sun_Effect_1.png 인스턴스 1" x="3369" y="2074" width="257" height="257" pivotX="0" pivotY="0"/>
+	<SubTexture name="coin n2 인스턴스 10000" x="4061" y="2" width="29" height="58" pivotX="25.65" pivotY="31.1" frameX="-11" frameY="-4" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10001" x="4038" y="1345" width="47" height="56" frameX="-2" frameY="-5" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10002" x="4038" y="1156" width="45" height="63" frameX="-3" frameY="-1" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10003" x="4036" y="897" width="51" height="62" frameX="0" frameY="-1" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10004" x="4038" y="1282" width="45" height="61" frameX="-3" frameY="-2" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10005" x="4038" y="961" width="47" height="63" frameX="-2" frameY="-1" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10006" x="4036" y="1221" width="47" height="59" frameX="-2" frameY="-3" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10007" x="4038" y="1091" width="46" height="63" frameX="-3" frameY="0" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10008" x="4038" y="1026" width="47" height="63" frameX="-3" frameY="0" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin n2 인스턴스 10009" x="4036" y="834" width="52" height="61" frameX="0" frameY="-1" frameWidth="52" frameHeight="64"/>
+	<SubTexture name="coin num1 인스턴스 10000" x="3887" y="1489" width="131" height="160" pivotX="71.85" pivotY="78.85" frameX="-11" frameY="-4" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10001" x="3887" y="1329" width="149" height="158" frameX="-2" frameY="-5" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10002" x="3887" y="834" width="147" height="165" frameX="-3" frameY="-1" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10003" x="3905" y="167" width="153" height="164" frameX="0" frameY="-1" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10004" x="3887" y="1164" width="147" height="163" frameX="-3" frameY="-2" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10005" x="3905" y="333" width="149" height="165" frameX="-2" frameY="-1" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10006" x="3887" y="1001" width="149" height="161" frameX="-2" frameY="-3" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10007" x="3905" y="500" width="149" height="165" frameX="-3" frameY="0" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10008" x="3905" y="667" width="149" height="165" frameX="-3" frameY="0" frameWidth="154" frameHeight="166"/>
+	<SubTexture name="coin num1 인스턴스 10009" x="3905" y="2" width="154" height="163" frameX="0" frameY="-1" frameWidth="154" frameHeight="166"/>
+</TextureAtlas>

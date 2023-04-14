@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class UIManager : MonoBehaviour
     public Toggle jumpBuff;
 
     public InputField starPercent;
+    public InputField stageNumber;
 
     public InputField moveText;
     public InputField jumpText;
@@ -31,17 +33,22 @@ public class UIManager : MonoBehaviour
 
     public GameObject container;
 
-    public Text stageFileName;
+    //public Text stageFileName;
     public Text mapCount;
 
     public GameObject stagePosition;
     public Text stagePositionText;
+    public InputField mapPositionX;
+    public InputField mapPositionY;
 
     public Dropdown selectModeDropDown;
 
+    public GameObject saveStageWarnningPopup;
     public GameObject loadStageWarnningPopup;
     public ObstacleOptionPopup obstacleOptionPopup;
-
+    public GameObject loadStagePopup;
+    public Dropdown stageType;
+    public InputField loadStageNumber;
 
     public DragItem dragItem;
 
@@ -49,6 +56,9 @@ public class UIManager : MonoBehaviour
 
     public GameDataUI gameDataUI;
 
+    public CryptoMNG cryptoMNG;
+    public NetworkMNG networkMNG;
+    public MapDataMNG mapdataMNG;
     private void Awake()
     {
         Instance = this;
@@ -107,6 +117,11 @@ public class UIManager : MonoBehaviour
         stagePosition.transform.position = uiPositionValue;
         stagePositionText.text = "x:" + stagePositionValue.x + "\ny:" + stagePositionValue.y;
     }
+    public void SetMapPositionText(Vector2 mapPositionValue)
+    {
+        mapPositionX.text = mapPositionValue.x.ToString();
+        mapPositionY.text = mapPositionValue.y.ToString();
+     }
 
     public void OnClickLoadStageButton()
     {
@@ -130,40 +145,45 @@ public class UIManager : MonoBehaviour
             select ch);
     }
 
-    public void OnClickLoadStartButton()
-    {
-        OnClickLoadCancelButton();
+    //public void OnClickLoadStartButton()
+    //{
+    //    OnClickLoadCancelButton();
 
-        stageFilePath = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
+    //    stageFilePath = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
 
-        if (stageFilePath.Length == 0) return;
+    //    if (stageFilePath.Length == 0) return;
 
-        StartCoroutine(LoadJsonForAndroid());
-    }
+    //    StartCoroutine(LoadJsonForAndroid());
+    //}
 
     public void OnClickLoadCancelButton()
     {
         loadStageWarnningPopup.SetActive(false);
     }
 
+    public void ShowSavePopup()
+    {
+        saveStageWarnningPopup.SetActive(true);
+    }
+
     private string stageFilePath;
 
-    IEnumerator LoadJsonForAndroid()
+    public void LoadJsonForAndroid(string Decrjson)
     {
-        string[] paths = stageFilePath.Split('/');
-        stageFileName.text = paths[paths.Length - 1].ToString().Split('.')[0];
+        //string[] paths = stageFilePath.Split('/');
+        //stageFileName.text = paths[paths.Length - 1].ToString().Split('.')[0];
+        //mapEditManager.jsonFileMakerPopup.fileName.text = stageFileName.text;
 
-        mapEditManager.jsonFileMakerPopup.fileName.text = stageFileName.text;
+        string jsonData = cryptoMNG.DecrStage(Decrjson);
+        StageInfo.data = JsonUtility.FromJson<StageData>(jsonData);
 
-        UnityWebRequest reader = UnityWebRequest.Get(stageFilePath);
-        reader.SendWebRequest();
 
-        while (!reader.isDone)
-        {   
-            yield return new WaitForFixedUpdate();
+        if(string.IsNullOrEmpty(jsonData))
+        {
+            errorPopup.SetMessage("맵의 정보가 잘못되어있습니다.");
+            return;
         }
-
-        StageInfo.data = JsonUtility.FromJson<StageData>(reader.downloadHandler.text);
+        Debug.Log(jsonData);
 
         MapManager.Instance.CreateLoadedMap(StageInfo.data);
 
@@ -172,6 +192,8 @@ public class UIManager : MonoBehaviour
         moveText.text = StageInfo.data.moveCount.ToString();
         jumpText.text = StageInfo.data.fenceCount.ToString();
 
+        obstacleOptionPopup.jellyTerm.text = "0";
+        obstacleOptionPopup.jellyCount.text = "0";
 
         bgDropdown.value = StageInfo.data.bgNumber;
 
@@ -184,6 +206,7 @@ public class UIManager : MonoBehaviour
         jumpBuff.isOn = StageInfo.data.usePossibleJumpBuff == 1;
 
         starPercent.text = StageInfo.data.starPercent.ToString();
+        stageNumber.text = StageInfo.data.stageNumber.ToString();
 
         for(int i = 0; i < StageInfo.data.obstacles.Count; ++i)
         {
@@ -195,88 +218,88 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnClickAllFixStartButton()
-    {
-        OnClickLoadCancelButton();
+    //public void OnClickAllFixStartButton()
+    //{
+    //    OnClickLoadCancelButton();
 
-        if (stageFilePath_ == "")
-        {
-            stageFilePath_ = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
+    //    if (stageFilePath_ == "")
+    //    {
+    //        stageFilePath_ = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
 
-            if (stageFilePath_.Length == 0) return;
-        }
-        else
-        {
-            paths_ = stageFilePath_.Split('/');
-            current_stage_num = int.Parse(paths_[paths_.Length - 2].Split('_')[1]);
-            string current_stage_origin = current_stage_num.ToString();
-            string current_stage_new = (current_stage_num + 1).ToString();
+    //        if (stageFilePath_.Length == 0) return;
+    //    }
+    //    else
+    //    {
+    //        paths_ = stageFilePath_.Split('/');
+    //        current_stage_num = int.Parse(paths_[paths_.Length - 2].Split('_')[1]);
+    //        string current_stage_origin = current_stage_num.ToString();
+    //        string current_stage_new = (current_stage_num + 1).ToString();
 
-            if (current_stage_num == 86)
-                return;
+    //        if (current_stage_num == 86)
+    //            return;
 
-            stageFilePath_ = stageFilePath_.Replace("_" + current_stage_origin + "/", "_" + current_stage_new + "/");
-            stageFilePath_ = stageFilePath_.Replace("_" + current_stage_origin + "_", "_" + current_stage_new + "_");
-        }
-
-
-        StartCoroutine(LoadAllJsonForAndroid());
-    }
-
-    string[] paths_;
-    int current_stage_num = 1;
-    public string stageFilePath_ = "";
-
-    IEnumerator LoadAllJsonForAndroid()
-    {
-        yield return new WaitForSeconds(1.0f);
-
-        paths_ = stageFilePath_.Split('/');
-        stageFileName.text = paths_[paths_.Length - 1].ToString().Split('.')[0];
-
-        mapEditManager.jsonFileMakerPopup.fileName.text = stageFileName.text;
-
-        UnityWebRequest reader = UnityWebRequest.Get(stageFilePath_);
-        reader.SendWebRequest();
-
-        while (!reader.isDone)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-
-        StageInfo.data = JsonUtility.FromJson<StageData>(reader.downloadHandler.text);
-
-        MapManager.Instance.CreateLoadedMap(StageInfo.data);
-
-        mapEditManager.popups.mission.SetLoadedData(StageInfo.data);
-
-        moveText.text = StageInfo.data.moveCount.ToString();
-        jumpText.text = StageInfo.data.fenceCount.ToString();
+    //        stageFilePath_ = stageFilePath_.Replace("_" + current_stage_origin + "/", "_" + current_stage_new + "/");
+    //        stageFilePath_ = stageFilePath_.Replace("_" + current_stage_origin + "_", "_" + current_stage_new + "_");
+    //    }
 
 
-        bgDropdown.value = StageInfo.data.bgNumber;
+    //    StartCoroutine(LoadAllJsonForAndroid());
+    //}
 
-        bgmDropdown.value = StageInfo.data.bgmNumber;
-        SoundManager.Instance.SetBGM(bgmDropdown.value);
+    //string[] paths_;
+    //int current_stage_num = 1;
+    //public string stageFilePath_ = "";
 
-        starGauge.isOn = StageInfo.data.showStarGauge == 1;
-        startingMove.isOn = StageInfo.data.isMoveAtStart == 1;
-        moveBuff.isOn = StageInfo.data.usePossibleMoveBuff == 1;
-        jumpBuff.isOn = StageInfo.data.usePossibleJumpBuff == 1;
+    //IEnumerator LoadAllJsonForAndroid()
+    //{
+    //    yield return new WaitForSeconds(1.0f);
 
-        starPercent.text = StageInfo.data.starPercent.ToString();
+    //    //paths_ = stageFilePath_.Split('/');
+    //    //stageFileName.text = paths_[paths_.Length - 1].ToString().Split('.')[0];
+    //    //mapEditManager.jsonFileMakerPopup.fileName.text = stageFileName.text;
 
-        for (int i = 0; i < StageInfo.data.obstacles.Count; ++i)
-        {
-            if (StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY)
-            {
-                obstacleOptionPopup.jellyTerm.text = StageInfo.data.obstacles[i].options[0].ToString();
-                obstacleOptionPopup.jellyCount.text = StageInfo.data.obstacles[i].options[1].ToString();
-            }
-        }
+    //    UnityWebRequest reader = UnityWebRequest.Get(stageFilePath_);
+    //    reader.SendWebRequest();
 
-        mapEditManager.jsonFileMakerPopup.OnClickSave();
-    }
+    //    while (!reader.isDone)
+    //    {
+    //        yield return new WaitForFixedUpdate();
+    //    }
+
+    //    StageInfo.data = JsonUtility.FromJson<StageData>(reader.downloadHandler.text);
+
+    //    MapManager.Instance.CreateLoadedMap(StageInfo.data);
+
+    //    mapEditManager.popups.mission.SetLoadedData(StageInfo.data);
+
+    //    moveText.text = StageInfo.data.moveCount.ToString();
+    //    jumpText.text = StageInfo.data.fenceCount.ToString();
+
+
+    //    bgDropdown.value = StageInfo.data.bgNumber;
+
+    //    bgmDropdown.value = StageInfo.data.bgmNumber;
+    //    SoundManager.Instance.SetBGM(bgmDropdown.value);
+
+    //    starGauge.isOn = StageInfo.data.showStarGauge == 1;
+    //    startingMove.isOn = StageInfo.data.isMoveAtStart == 1;
+    //    moveBuff.isOn = StageInfo.data.usePossibleMoveBuff == 1;
+    //    jumpBuff.isOn = StageInfo.data.usePossibleJumpBuff == 1;
+
+    //    starPercent.text = StageInfo.data.starPercent.ToString();
+    //    stageNumber.text = StageInfo.data.stageNumber.ToString();
+
+    //    for (int i = 0; i < StageInfo.data.obstacles.Count; ++i)
+    //    {
+    //        if (StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY)
+    //        {
+    //            obstacleOptionPopup.jellyTerm.text = StageInfo.data.obstacles[i].options[0].ToString();
+    //            obstacleOptionPopup.jellyCount.text = StageInfo.data.obstacles[i].options[1].ToString();
+    //        }
+    //    }
+
+    //    mapEditManager.jsonFileMakerPopup.OnClickSave();
+    //}
 
 
 }

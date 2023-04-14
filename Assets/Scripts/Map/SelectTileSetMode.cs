@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class SelectTileSetMode : MonoBehaviour
 {
-    private TileSet selectTileSet;
+    public TileSet selectTileSet;
 
-    private Vector2 prevMousePosition;
+    //private Vector2 prevMousePosition;
 
     public void TouchControll()
     {
@@ -15,7 +15,7 @@ public class SelectTileSetMode : MonoBehaviour
         {
             OnMouseDownForTileSet();
 
-            prevMousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //prevMousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -25,13 +25,13 @@ public class SelectTileSetMode : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            if (selectTileSet != null)
-            {
-                if (prevMousePosition != (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition))
-                {
-                    selectTileSet = null;
-                }
-            }
+            //if (selectTileSet != null)
+            //{
+            //    if (prevMousePosition != (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition))
+            //    {
+            //        selectTileSet = null;
+            //    }
+            //}
         }
     }
 
@@ -98,9 +98,19 @@ public class SelectTileSetMode : MonoBehaviour
     {
         if (selectTileSet != null)
         {
-            if(selectTileSet.character != null)
+            bool flag = false;
+            for (int i = 0; i < 4; ++i)
             {
-                UIManager.Instance.errorPopup.SetMessage("캐릭터가 있는 울타리는 없앨 수 없습니다.");
+                if (selectTileSet.tiles[i].jelly != null ||
+                    selectTileSet.tiles[i].frogSoup != null ||
+                    selectTileSet.tiles[i].box != null)
+                    flag = true;
+            }
+            if (selectTileSet.character != null || 
+                selectTileSet.vine != null ||
+                flag)
+            {
+                UIManager.Instance.errorPopup.SetMessage("캐릭터 또는 장애물이 있는 타일 셋은 변경할 수 없습니다.");
             }
             else
             {
@@ -116,9 +126,13 @@ public class SelectTileSetMode : MonoBehaviour
     {
         if (selectTileSet != null)
         {
-            if (selectTileSet.tiles[index].character != null)
+            if (selectTileSet.tiles[index].character != null ||
+                selectTileSet.tiles[index].jelly != null ||
+                selectTileSet.tiles[index].frogSoup != null ||
+                selectTileSet.tiles[index].box != null ||
+                selectTileSet.vine != null)
             {
-                UIManager.Instance.errorPopup.SetMessage("캐릭터가 있는 타일은 없앨 수 없습니다.");
+                UIManager.Instance.errorPopup.SetMessage("캐릭터 또는 장애물이 있는 타일은 변경할 수 없습니다.");
             }
             else
             {

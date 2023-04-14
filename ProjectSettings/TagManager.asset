@@ -13,6 +13,7 @@ TagManager:
   - UpDownTile
   - Box
   - WoodenFence
+  - Vine
   layers:
   - Default
   - TransparentFX
@@ -53,11 +54,14 @@ TagManager:
   - name: TileSet
     uniqueID: 3396538687
     locked: 0
-  - name: Charactor
-    uniqueID: 3119065795
-    locked: 0
   - name: Rail
     uniqueID: 3455193065
+    locked: 0
+  - name: Obstacle
+    uniqueID: 3655100425
+    locked: 0
+  - name: Charactor
+    uniqueID: 3119065795
     locked: 0
   - name: MapCenterPoint
     uniqueID: 752717661

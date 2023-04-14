@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
@@ -17,21 +18,46 @@ public class Map : MonoBehaviour
     public int height;
 
     public List<List<TileSet>> tileSets;
-    [HideInInspector]
+
     public RailManager railManager;
 
     public List<Jelly> jellys = new List<Jelly>();
     public List<FrogSoup> frogSoups = new List<FrogSoup>();
     public List<Box> boxs = new List<Box>();
-
+    public List<Vine> vines = new List<Vine>();
 
     public List<NextStageData> nextStageDatas;
 
-
+    private Dictionary<string, Vector2> mapCoords = new Dictionary<string, Vector2>()
+    {
+        { "3x3", new Vector2(0f, 1.9f) },
+        { "4x3", new Vector2(0.58f, 1.4f) },
+        { "4x4", new Vector2(0f, 1.9f) },
+        { "4x5", new Vector2(-0.58f, 2f) },
+        { "4x6", new Vector2(0f, 0f) },
+        { "4x7", new Vector2(-1.8f, 2.5f) },
+        { "5x5", new Vector2(0f, 2.2f) },
+        { "5x6", new Vector2(0f, 2.2f) },
+        { "5x7", new Vector2(-1.1f, 2.9f) },
+        { "6x4", new Vector2(1.16f, 2.2f) },
+        { "6x5", new Vector2(0.58f, 2.6f) },
+        { "6x6", new Vector2(0f, 2.9f) },
+        { "6x7", new Vector2(-0.6f, 3.3f) },
+        { "7x4", new Vector2(1.74f, 3f) },
+        { "7x5", new Vector2(2f, 3.5f) },
+        { "7x6", new Vector2(1f, 2.9f) },
+        { "7x7", new Vector2(0f, 3.5f) },
+        { "7x8", new Vector2(-0.55f, 3.5f) },
+        { "8x6", new Vector2(1.1f, 3.5f) },
+        { "8x7", new Vector2(0.6f, 3.8f) },
+        { "8x8", new Vector2(0f, 4.2f) },
+        { "9x9", new Vector2(0f, 4.8f) }
+    };
 
     private void Awake()
     {
         railManager = GetComponent<RailManager>();
+
     }
 
     private void SetBGSize(int width, int height)
@@ -75,7 +101,7 @@ public class Map : MonoBehaviour
             }
         }
 
-        container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f ), (((width + height) * 0.5f - 1.2f) * TileSetH));
+        container.transform.localPosition = MotifyCoordinateMap();
 
         Vector3 newPos = Vector3.zero;
 
@@ -84,6 +110,8 @@ public class Map : MonoBehaviour
         transform.position = newPos;
 
         nextStageDatas = new List<NextStageData>();
+
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
     }
 
 
@@ -97,19 +125,19 @@ public class Map : MonoBehaviour
 
         SetBGSize(modifyWidth, modifyHeight);
 
-        SpecialMode specialMode = GetComponent<SpecialMode>();
-
+        SpecialMode specialMode = MapManager.Instance.specialMode;
         if (width > modifyWidth)
         {
-            if (tileSets.Count > modifyWidth)
+
+            for (w = tileSets.Count - 1; w > modifyWidth - 1; --w)
             {
-                for(w = tileSets.Count - 1; w > modifyWidth - 1; --w)
+                if (tileSets.Count > modifyWidth)
                 {
                     for (h = tileSets[w].Count - 1; h > -1; --h)
                     {
-                        for(int t = 0; t < 4; ++t)
+                        for (int t = 0; t < 4; ++t)
                         {
-                            if(tileSets[w][h].tiles[t].jelly != null)
+                            if (tileSets[w][h].tiles[t].jelly != null)
                             {
                                 specialMode.RemoveJelly(tileSets[w][h].tiles[t].jelly);
                             }
@@ -122,7 +150,15 @@ public class Map : MonoBehaviour
                                 specialMode.RemoveBox(tileSets[w][h].tiles[t].box);
                             }
                         }
-                        
+                        if (tileSets[w][h].vine != null)
+                        {
+                            specialMode.RemoveVine(tileSets[w][h].vine);
+                        }
+                        if (tileSets[w][h].railGroup != null)
+                        {
+                            tileSets[w][h].railGroup.DeleteRailGroup();
+                            //railManager.DeleteRailGroup(tileSets[w][h].railGroup);
+                        }
                         Destroy(tileSets[w][h].gameObject);
                         tileSets[w].RemoveAt(h);
                     }
@@ -133,13 +169,14 @@ public class Map : MonoBehaviour
         }
         else if (width < modifyWidth)
         {
-            for(w = width; w < modifyWidth; ++w)
+            for (w = width; w < modifyWidth; ++w)
             {
                 tileSets.Add(new List<TileSet>());
 
                 for (h = 0; h < modifyHeight; ++h)
                 {
-                    tileSet = Instantiate(mapManager.tileSet).GetComponent< TileSet>();
+                    tileSet = Instantiate(mapManager.tileSet).GetComponent<TileSet>();
+                    tileSet.map = this;
                     tileSet.transform.SetParent(container.transform);
                     tileSets[w].Add(tileSet);
                 }
@@ -154,6 +191,30 @@ public class Map : MonoBehaviour
                 {
                     for(h = tileSets[w].Count - 1; h > modifyHeight - 1; --h)
                     {
+                        if (tileSets[w][h].vine != null)
+                        {
+                            specialMode.RemoveVine(tileSets[w][h].vine);
+                        }
+                        if (tileSets[w][h].railGroup != null)
+                        {
+                            tileSets[w][h].railGroup.DeleteRailGroup();
+                            //railManager.DeleteRailGroup(tileSets[w][h].railGroup);
+                        }
+                        for (int t = 0; t < 4; ++t)
+                        {
+                            if (tileSets[w][h].tiles[t].jelly != null)
+                            {
+                                specialMode.RemoveJelly(tileSets[w][h].tiles[t].jelly);
+                            }
+                            if (tileSets[w][h].tiles[t].frogSoup != null)
+                            {
+                                specialMode.RemoveFrogSoup(tileSets[w][h].tiles[t].frogSoup);
+                            }
+                            if (tileSets[w][h].tiles[t].box != null)
+                            {
+                                specialMode.RemoveBox(tileSets[w][h].tiles[t].box);
+                            }
+                        }
                         Destroy(tileSets[w][h].gameObject);
                         tileSets[w].RemoveAt(h);
                     }
@@ -167,6 +228,7 @@ public class Map : MonoBehaviour
                 for(h = tileSets[w].Count; h < modifyHeight; ++h)
                 {
                     tileSet = Instantiate(mapManager.tileSet).GetComponent< TileSet>();
+                    tileSet.map = this;
                     tileSet.transform.SetParent(container.transform);
                     tileSets[w].Add(tileSet);
                 }
@@ -187,16 +249,24 @@ public class Map : MonoBehaviour
                 ++count;
             }
         }
+        container.transform.localPosition = MotifyCoordinateMap();
+        //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
 
-
-        container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
-
-
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
     }
 
+    public Vector2 MotifyCoordinateMap()
+    {
+        string mapsize = width.ToString() + "x" + height.ToString();
 
+        if (mapCoords.ContainsKey(mapsize))
+            return mapCoords[mapsize];
+        else
+            return new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
+    }
     public void SetLoadMap(MapManager mapManager, MapData data, int mapIndex)
     {
+        UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype = 0;
         this.width = data.width;
         this.height = data.height;
         this.index = mapIndex;
@@ -250,7 +320,7 @@ public class Map : MonoBehaviour
                 }
 
 
-                if (tileSetDatas[count].code != "x")
+                if (tileSetDatas[count].code != "x" && !string.IsNullOrEmpty(tileSetDatas[count].code))
                 {
                     tileSet.character = Instantiate(mapManager.GetCharacter(tileSetDatas[count].code)).GetComponent<Charactor>();
                     tileSet.character.name = tileSetDatas[count].code;
@@ -259,7 +329,7 @@ public class Map : MonoBehaviour
                     tileSet.character.transform.localPosition = tileSet.tiles[tileSet.character.tileIndex].transform.localPosition;
                     tileSet.character.iceStep = tileSetDatas[count].iceStep;
                     tileSet.character.isStar = tileSetDatas[count].startStar == 1;
-                    tileSet.character.isHeightDirection= tileSetDatas[count].heightDirection == 1;
+                    tileSet.character.isHeightDirection= tileSetDatas[count].heightDirection == "1";
                     tileSet.character.isUser = tileSetDatas[count].userFence == 1;
                 }
 
@@ -274,6 +344,7 @@ public class Map : MonoBehaviour
         //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1) * TileSetH));
         container.transform.localPosition = new Vector3(data.centerX, data.centerY, 0);
         //container.transform.localPosition = new Vector2(data.centerX, (((width + height) * 0.5f - 1.21f) * TileSetH));
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
 
         transform.localPosition = new Vector2(data.x, data.y);
 
@@ -282,22 +353,38 @@ public class Map : MonoBehaviour
         Tile tile;
         for(w = 0; w < data.jellyDatas.Count; ++w)
         {
-            tile = tileSets[data.jellyDatas[w].fenceIndex / height][data.jellyDatas[w].fenceIndex % height].tiles[data.jellyDatas[w].tileIndex].GetComponent<Tile>();
+            tile = tileSets[data.jellyDatas[w].fenceIndex / height][data.jellyDatas[w].fenceIndex % height].tiles[int.Parse(data.jellyDatas[w].tileIndex)].GetComponent<Tile>();
             MapManager.Instance.specialMode.SetJelly(tile.transform.parent, tile);
         }
 
         for (w = 0; w < data.frogSoupDatas.Count; ++w)
         {
-            tile = tileSets[data.frogSoupDatas[w].fenceIndex / height][data.frogSoupDatas[w].fenceIndex % height].tiles[data.frogSoupDatas[w].tileIndex].GetComponent<Tile>();
+            tile = tileSets[data.frogSoupDatas[w].fenceIndex / height][data.frogSoupDatas[w].fenceIndex % height].tiles[int.Parse(data.frogSoupDatas[w].tileIndex)].GetComponent<Tile>();
             MapManager.Instance.specialMode.SetFrogSoup(tile.transform.parent, tile);
         }
 
         for (w = 0; w < data.boxDatas.Count; ++w)
         {
-            tile = tileSets[data.boxDatas[w].fenceIndex / height][data.boxDatas[w].fenceIndex % height].tiles[data.boxDatas[w].tileIndex].GetComponent<Tile>();
+            tile = tileSets[int.Parse(data.boxDatas[w].fenceIndex) / height][int.Parse(data.boxDatas[w].fenceIndex) % height].tiles[int.Parse(data.boxDatas[w].tileIndex)].GetComponent<Tile>();
             MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
+            if(data.boxDatas[w].boxTypes != null)
+                tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
+            if(data.boxDatas[w].boxLayer != null)
+                tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
+            if (data.boxDatas[w].boxTier != null)
+                tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
+            MapManager.Instance.specialMode.ChangeSpriteBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
+            //if(int.Parse(data.boxDatas[w].boxTypes) == 2)
+            //    MapManager.Instance.specialMode.LoadTasteOfBox(tile.box);
         }
 
+        for(w = 0; w < data.vineDatas.Count; ++w)
+        {
+            tileSet = tileSets[int.Parse(data.vineDatas[w].fenceIndex) / height][int.Parse(data.vineDatas[w].fenceIndex) % height].GetComponent<TileSet>();
+            MapManager.Instance.specialMode.SetVine(tileSet.transform, tileSet);
+
+            tileSet.vine.layer = int.Parse(data.vineDatas[w].layer);
+        }
 
         nextStageDatas = data.nextStageDatas;
     }
@@ -338,6 +425,17 @@ public class Map : MonoBehaviour
         return count;
     }
 
+    public void HideUserFence()
+    {
+        for (int w = 0; w < width; ++w)
+        {
+            for (int h = 0; h < height; ++h)
+            {
+                tileSets[w][h].GetComponent<TileSet>().woodenFenceColliders.SetActive(false);
+            }
+        }
+    }
+
     public void SetJelly(Jelly jelly)
     {
         jellys.Add(jelly);
@@ -367,6 +465,15 @@ public class Map : MonoBehaviour
     {
         boxs.Remove(box);
     }
+    public void SetVine(Vine vine)
+    {
+        vines.Add(vine);
+    }
+
+    public void RemoveVine(Vine vine)
+    {
+        vines.Remove(vine);
+    }
 
     public Tile GetTile(int fenceIndex, int tileIndex)
     {
@@ -374,4 +481,6 @@ public class Map : MonoBehaviour
         int h = fenceIndex % height;
         return tileSets[w][h].tiles[tileIndex].GetComponent<Tile>();
     }
+
+
 }

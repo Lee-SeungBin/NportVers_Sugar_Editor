@@ -118,7 +118,7 @@ public class RailGroup : MonoBehaviour
         return moveNumbers;
     }
 
-    public void DeleteRailGroup()
+    public void DeleteRailGroup() // 버튼 액션
     {
         for (int i = tileSets.Count - 1; i > -1; --i)
         {
@@ -127,10 +127,8 @@ public class RailGroup : MonoBehaviour
             tileSets.RemoveAt(i);
 
             Destroy(railMoveNumbers[i].gameObject);
-            //railMoveNumbers[i].gameObject.SetActive(false);
             railMoveNumbers.RemoveAt(i);
         }
-
         railManager.DeleteRailGroup(this);
     }
 

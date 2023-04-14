@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3444654392893265726}
   m_Father: {fileID: 0}
@@ -76,6 +77,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fenceIndex: 0
   tileIndex: 0
+  boxLayer: 0
+  boxTypes: 0
+  boxTier: 
+  boxsprite:
+  - {fileID: -674415033804269254, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: 5940932675678284840, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -2526321687524810148, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -5025544016754360798, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: 2880729775690283345, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -6193577111578046878, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
   tile: {fileID: 0}
 --- !u!1 &9122082199415723503
 GameObject:
@@ -88,7 +99,7 @@ GameObject:
   - component: {fileID: 3444654392893265726}
   - component: {fileID: 5289662285039659773}
   m_Layer: 9
-  m_Name: Up
+  m_Name: Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,6 +115,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5250304265338699114}
   m_RootOrder: 0
@@ -119,9 +131,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -143,9 +158,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -898428609
-  m_SortingLayer: 1
-  m_SortingOrder: 9
+  m_SortingLayerID: -639866871
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5150363793092239320, guid: 43abcda8deb963e4cbffcfb4cea349e5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

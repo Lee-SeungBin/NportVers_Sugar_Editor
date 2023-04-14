@@ -10,7 +10,7 @@ public class ErrorMessagePopup : MonoBehaviour
 
     private void Awake()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
 

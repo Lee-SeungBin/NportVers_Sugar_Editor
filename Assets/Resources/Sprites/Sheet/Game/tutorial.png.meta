@@ -1,0 +1,1015 @@
+fileFormatVersion: 2
+guid: fcc4d8c7deaa06d4c989d5986514547c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4994404380867914841
+    second: "Tutorial_Bombmon \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5213391347345734258
+    second: "Tutorial_CW_CCW_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2505153234529726459
+    second: "Tutorial_CW_CCW_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2858137459852437789
+    second: "Tutorial_Changer \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 9098549803090138341
+    second: "Tutorial_Cross_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -146902028704614797
+    second: "Tutorial_Doppelganger \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1356776763758485899
+    second: "Tutorial_Hammer \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -8237112419013409365
+    second: "Tutorial_Heart_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -4593487818241243197
+    second: "Tutorial_Ice_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -7613445526788333277
+    second: "Tutorial_Ice_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3652471801432513091
+    second: "Tutorial_Item_Mon_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5972979926692012586
+    second: "Tutorial_Item_Mon_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -4189177524079758696
+    second: "Tutorial_Jump \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 6606716334975721989
+    second: "Tutorial_Move \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2228382510214949514
+    second: "Tutorial_One_Line_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5238316517670864661
+    second: "Tutorial_Popup_BG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 4720011191396948979
+    second: "Tutorial_Rail \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3564488225000008939
+    second: "Tutorial_Star \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2250767096036333801
+    second: "Tutorial_Star_Gauge \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -320033970856442002
+    second: "Tutorial_Whistle \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6569218994015387796
+    second: "Item_Arrow.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: -556147167452485454
+    second: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: -4580134525748137125
+    second: "Tutorial_Frogmon \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1701297642040745899
+    second: "Tutorial_GummyBear \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -4177803844167123235
+    second: "FrogSoup \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6348681783052594331
+    second: "Jelly \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 6337317216433755965
+    second: "Box \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -8799399120000425109
+    second: "Wooden_Fence \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5591962602491039450
+    second: "Randommon \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 6929476919666660767
+    second: "Tutorial_Item_Mon_Jump_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3946256163664673954
+    second: "Tutorial_Item_Mon_Jump_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -8495640176449638454
+    second: "Tutorial_Item_Mon_Move_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2558544838415542222
+    second: "Tutorial_Item_Mon_Move_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6688787566472151527
+    second: "Tutorial_Item_Mon_Whistle_EN \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3717858593382926678
+    second: "Tutorial_Item_Mon_Whistle_KR \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3059256268552128310
+    second: "Tutorial_Item_Mon_EN_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1922094509350871064
+    second: "Tutorial_Item_Mon_KR_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Box \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 3829
+        width: 502
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37508a8e6ca2f750800000000000000
+      internalID: 6337317216433755965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FrogSoup \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 3515
+        width: 350
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde3827e9857506c0800000000000000
+      internalID: -4177803844167123235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Item_Arrow.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 4025
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6fb6f1512275d4a0800000000000000
+      internalID: -6569218994015387796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Jelly \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 3035
+        width: 247
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56318291e83f4e7a0800000000000000
+      internalID: -6348681783052594331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Randommon \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 3575
+        width: 446
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621b049f3ab5562b0800000000000000
+      internalID: -5591962602491039450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 3439
+        width: 775
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8a729091b2848f0800000000000000
+      internalID: -556147167452485454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Bombmon \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 3301
+        width: 363
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a396b55daf40bab0800000000000000
+      internalID: -4994404380867914841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_CW_CCW_EN \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 3362
+        width: 460
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85cc5af03056a7b0800000000000000
+      internalID: -5213391347345734258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_CW_CCW_KR \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 3353
+        width: 460
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffa01c089714c220800000000000000
+      internalID: 2505153234529726459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Changer \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 3830
+        width: 488
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e612429f1bd558d0800000000000000
+      internalID: -2858137459852437789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Cross_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 3546
+        width: 404
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e45368f6da844e70800000000000000
+      internalID: 9098549803090138341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Doppelganger \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 3113
+        width: 327
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376f64a126916fdf0800000000000000
+      internalID: -146902028704614797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Frogmon \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 3816
+        width: 448
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53b7495ae71070c0800000000000000
+      internalID: -4580134525748137125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_GummyBear \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 3582
+        width: 504
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550a3f4fec6c368e0800000000000000
+      internalID: -1701297642040745899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Hammer \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 3324
+        width: 385
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57edbacc8b2cb2de0800000000000000
+      internalID: -1356776763758485899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Heart_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 3324
+        width: 403
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba54fb1a5e5efad80800000000000000
+      internalID: -8237112419013409365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Ice_EN \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2588
+        y: 3280
+        width: 588
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c785a9aa27a040c0800000000000000
+      internalID: -4593487818241243197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Ice_KR \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2588
+        y: 3280
+        width: 588
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321aef291ab975690800000000000000
+      internalID: -7613445526788333277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_EN \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 3129
+        width: 213
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a148470cf20b230800000000000000
+      internalID: 3652471801432513091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_EN_1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 3583
+        width: 517
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac83014e1a65b85d0800000000000000
+      internalID: -3059256268552128310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_Jump_EN \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 3091
+        width: 212
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95dff36b827a2060800000000000000
+      internalID: 6929476919666660767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_Jump_KR \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 3068
+        width: 212
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5342146de41c39c0800000000000000
+      internalID: -3946256163664673954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_KR \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3874
+        y: 3341
+        width: 213
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dddbf22766bb1da0800000000000000
+      internalID: -5972979926692012586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_KR_1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 3573
+        width: 516
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef99693a395355e0800000000000000
+      internalID: -1922094509350871064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_Whistle_EN \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 3091
+        width: 212
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91eb062a527ac23a0800000000000000
+      internalID: -6688787566472151527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Item_Mon_Whistle_KR \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3874
+        y: 3108
+        width: 212
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6f640be43876cc0800000000000000
+      internalID: -3717858593382926678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Jump \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 3822
+        width: 441
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892fc20bc3d0dd5c0800000000000000
+      internalID: -4189177524079758696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Move \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 3204
+        width: 371
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502aff5b085cfab50800000000000000
+      internalID: 6606716334975721989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_One_Line_Explosion \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 3785
+        width: 434
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675d1f6d9e13311e0800000000000000
+      internalID: -2228382510214949514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Popup_BG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3564
+        width: 764
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8ba2781e2cd47b0800000000000000
+      internalID: -5238316517670864661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Rail \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 3821
+        width: 436
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb551fbb29d08140800000000000000
+      internalID: 4720011191396948979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Star \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3551
+        y: 3178
+        width: 321
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513dfc648d4688ec0800000000000000
+      internalID: -3564488225000008939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Star_Gauge \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 3806
+        width: 455
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717ed90504ba3c0e0800000000000000
+      internalID: -2250767096036333801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tutorial_Whistle \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 3128
+        width: 350
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e674b039cc20f8bf0800000000000000
+      internalID: -320033970856442002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wooden_Fence \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3254
+        width: 304
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b636d7f1f1142e580800000000000000
+      internalID: -8799399120000425109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Tutorial_Frogmon \uC778\uC2A4\uD134\uC2A4 10000": -4580134525748137125
+      "Tutorial_GummyBear \uC778\uC2A4\uD134\uC2A4 10000": -1701297642040745899
+      "Item_Arrow.png \uC778\uC2A4\uD134\uC2A4 1": -6569218994015387796
+      "Tutorial_Ice_KR \uC778\uC2A4\uD134\uC2A4 10000": -7613445526788333277
+      "Jelly \uC778\uC2A4\uD134\uC2A4 10000": -6348681783052594331
+      "Tutorial_Item_Mon_Whistle_EN \uC778\uC2A4\uD134\uC2A4 10000": -6688787566472151527
+      "Wooden_Fence \uC778\uC2A4\uD134\uC2A4 10000": -8799399120000425109
+      "Box \uC778\uC2A4\uD134\uC2A4 10000": 6337317216433755965
+      "Tutorial_Item_Mon_EN_1 \uC778\uC2A4\uD134\uC2A4 10000": -3059256268552128310
+      "Tutorial_Heart_Explosion \uC778\uC2A4\uD134\uC2A4 10000": -8237112419013409365
+      "Tutorial_Whistle \uC778\uC2A4\uD134\uC2A4 10000": -320033970856442002
+      "Tutorial_CW_CCW_KR \uC778\uC2A4\uD134\uC2A4 10000": 2505153234529726459
+      "Tutorial_Item_Mon_KR_1 \uC778\uC2A4\uD134\uC2A4 10000": -1922094509350871064
+      "Tutorial_Item_Mon_KR \uC778\uC2A4\uD134\uC2A4 10000": -5972979926692012586
+      "Tutorial_Cross_Explosion \uC778\uC2A4\uD134\uC2A4 10000": 9098549803090138341
+      "Tutorial_Bombmon \uC778\uC2A4\uD134\uC2A4 10000": -4994404380867914841
+      "Tutorial_CW_CCW_EN \uC778\uC2A4\uD134\uC2A4 10000": -5213391347345734258
+      "Tutorial_Item_Mon_Jump_EN \uC778\uC2A4\uD134\uC2A4 10000": 6929476919666660767
+      "Tutorial_Changer \uC778\uC2A4\uD134\uC2A4 10000": -2858137459852437789
+      "Randommon \uC778\uC2A4\uD134\uC2A4 10000": -5591962602491039450
+      "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1": -556147167452485454
+      "Tutorial_Item_Mon_EN \uC778\uC2A4\uD134\uC2A4 10000": 3652471801432513091
+      "Tutorial_Popup_BG \uC778\uC2A4\uD134\uC2A4 10000": -5238316517670864661
+      "Tutorial_Star \uC778\uC2A4\uD134\uC2A4 10000": -3564488225000008939
+      "Tutorial_One_Line_Explosion \uC778\uC2A4\uD134\uC2A4 10000": -2228382510214949514
+      "Tutorial_Move \uC778\uC2A4\uD134\uC2A4 10000": 6606716334975721989
+      "FrogSoup \uC778\uC2A4\uD134\uC2A4 10000": -4177803844167123235
+      "Tutorial_Item_Mon_Jump_KR \uC778\uC2A4\uD134\uC2A4 10000": -3946256163664673954
+      "Tutorial_Hammer \uC778\uC2A4\uD134\uC2A4 10000": -1356776763758485899
+      "Tutorial_Jump \uC778\uC2A4\uD134\uC2A4 10000": -4189177524079758696
+      "Tutorial_Star_Gauge \uC778\uC2A4\uD134\uC2A4 10000": -2250767096036333801
+      "Tutorial_Ice_EN \uC778\uC2A4\uD134\uC2A4 10000": -4593487818241243197
+      "Tutorial_Rail \uC778\uC2A4\uD134\uC2A4 10000": 4720011191396948979
+      "Tutorial_Doppelganger \uC778\uC2A4\uD134\uC2A4 10000": -146902028704614797
+      "Tutorial_Item_Mon_Whistle_KR \uC778\uC2A4\uD134\uC2A4 10000": -3717858593382926678
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

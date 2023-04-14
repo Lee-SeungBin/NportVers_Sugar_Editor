@@ -101,6 +101,16 @@ public class MissionPopup : MonoBehaviour
 
     public void OnChangeValue()
     {
+        if (string.IsNullOrEmpty(creamScoreText.text) || 
+            string.IsNullOrEmpty(chocolateScoreText.text) ||
+            string.IsNullOrEmpty(strawberryScoreText.text) ||
+            string.IsNullOrEmpty(eggScoreText.text) ||
+            string.IsNullOrEmpty(breadScoreText.text) || 
+            string.IsNullOrEmpty(jellyText.text)
+            )
+        {
+            return;
+        }
         UIManager.Instance.gameDataUI.mission.ChangeMissionValue();
     }
 }

@@ -43,7 +43,8 @@ public class RailSelectPopup : MonoBehaviour
     public void OnClickDeleteButton()
     {
         MapManager.Instance.railMode.SetSelectTileSetNull();
-        railGroup.DeleteRailGroup();
+        if(railGroup != null)
+            railGroup.DeleteRailGroup();
         railGroup = null;
     }
 }

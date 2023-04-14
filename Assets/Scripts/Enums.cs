@@ -9,7 +9,8 @@ public class Enums : MonoBehaviour
         JELLY = 0,
         RAIL = 1,
         FROG_SOUP = 2,
-        BOX = 3
+        BOX = 3,
+        VINE = 4,
     }
 
     public enum NEXT_MAP_TYPE

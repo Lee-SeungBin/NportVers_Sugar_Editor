@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -21,19 +22,16 @@ public class MapManager : MonoBehaviour
     [Header("- Prefabs")]
     public GameObject tileSet;
     public Map map;
-    public List<GameObject> SBCharactors;
-    public List<GameObject> CHCharactors;
     public List<GameObject> CRCharactors;
+    public List<GameObject> STCharactors;
+    public List<GameObject> CHCharactors;
     public List<GameObject> EGCharactors;
     public List<GameObject> BRCharactors;
     public List<GameObject> SPCharactors;
 
-
-    private float scale = 0;
-    private const float minSize = 3.6f;
+    public float scale = 0;
+    public const float minSize = 3.6f;
     private const float maxSize = 14.4f;
-
-
     public List<Map> Maps { get; private set; }
 
     public Action onChangeMaps;
@@ -73,7 +71,6 @@ public class MapManager : MonoBehaviour
         specialMode = GetComponent<SpecialMode>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(2))
@@ -96,60 +93,60 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            Vector2 wheelInput2 = Input.mouseScrollDelta;
-            if (wheelInput2.y > 0)
+            if (selectModeType == SELECT_MODE.MAP_MOVE)
             {
-                // 휠을 밀어 돌렸을 때의 처리 ↑
-                scale -= (wheelInput2.y * 0.1f);
-                if (scale < 0)
-                {
-                    scale = 0;
-                }
-
-                SetCameraScale();
+                mapMoveMode.TouchControll();
             }
-            else if (wheelInput2.y < 0)
+            else if (selectModeType == SELECT_MODE.SELECT_TILESET)
             {
-
-                // 휠을 당겨 올렸을 때의 처리 ↓
-                scale -= (wheelInput2.y * 0.1f);
-                if (scale > 1)
-                {
-                    scale = 1;
-                }
-
-                SetCameraScale();
+                selectTileSetMode.TouchControll();
             }
-            else
+            else if (selectModeType == SELECT_MODE.MONSTER_SET)
             {
-                if (selectModeType == SELECT_MODE.MAP_MOVE)
+                monsterSetMode.TouchControll();
+            }
+            else if (selectModeType == SELECT_MODE.RAIL_SET)
+            {
+                railMode.TouchControll();
+            }
+            else if (selectModeType == SELECT_MODE.SPECIAL_SET)
+            {
+                specialMode.TouchControll();
+            }
+            if (!UIManager.Instance.loadStagePopup.activeSelf)
+            {
+                Vector2 wheelInput2 = Input.mouseScrollDelta;
+                if (wheelInput2.y > 0)
                 {
-                    mapMoveMode.TouchControll();
+                    // 휠을 밀어 돌렸을 때의 처리 ↑
+                    scale -= (wheelInput2.y * 0.1f);
+                    if (scale < 0)
+                    {
+                        scale = 0;
+                    }
+
+                    SetCameraScale();
                 }
-                else if (selectModeType == SELECT_MODE.SELECT_TILESET)
+                else if (wheelInput2.y < 0)
                 {
-                    selectTileSetMode.TouchControll();
-                }
-                else if (selectModeType == SELECT_MODE.MONSTER_SET)
-                {
-                    monsterSetMode.TouchControll();
-                }
-                else if (selectModeType == SELECT_MODE.RAIL_SET)
-                {
-                    railMode.TouchControll();
-                }
-                else if (selectModeType == SELECT_MODE.SPECIAL_SET)
-                {
-                    specialMode.TouchControll();
+
+                    // 휠을 당겨 올렸을 때의 처리 ↓
+                    scale -= (wheelInput2.y * 0.1f);
+                    if (scale > 1)
+                    {
+                        scale = 1;
+                    }
+
+                    SetCameraScale();
                 }
             }
-
         }
     }
 
     private void SetCameraScale()
     {
         mainCamera.orthographicSize = minSize + (maxSize * scale);
+        UIManager.Instance.mapEditManager.tileSetVisiblePopup.SetWheelTileSetData(selectTileSetMode.selectTileSet, mainCamera.orthographicSize);
     }
 
     public void CreateMap(int w, int h)
@@ -246,6 +243,8 @@ public class MapManager : MonoBehaviour
 
         if(Maps.Count > 0)
             MapcountManager.Instance.Init(Maps.Count, mapIndex + 1);
+        else
+            MapcountManager.Instance.Init(Maps.Count, mapIndex);
 
         onChangeMaps?.Invoke();
     }
@@ -275,7 +274,7 @@ public class MapManager : MonoBehaviour
         }
         else if(tastyType == Charactor.TASTY_TYPE.ST)
         {
-            monsterSetMode.ChangeCharactor(SBCharactors[characterIndex]);
+            monsterSetMode.ChangeCharactor(STCharactors[characterIndex]);
         }
         else if (tastyType == Charactor.TASTY_TYPE.CH)
         {
@@ -320,7 +319,26 @@ public class MapManager : MonoBehaviour
     {
         monsterSetMode.ChangeDirectionOfCharactor(isRightDirection);
     }
-
+    public void CrateTasteOfBox()
+    {
+        specialMode.CreateTasteOfBox();
+    }
+    public void ChangeTasteOfBox(int SelectLayer)
+    {
+        specialMode.ChangeTasteOfBox(SelectLayer);
+    }
+    public void DeleteTasteOfBox()
+    {
+        specialMode.DeleteTasteOfBox();
+    }
+    public void DeleteTasteLayerOfBox(int SelectLayer)
+    {
+        specialMode.DeleteTasteLayerOfBox(SelectLayer);
+    }
+    public void DestroyTasteOfBox()
+    {
+        specialMode.DestroyTasteOfBox();
+    }
     public bool IsAbleToChangeToUserFence()
     {
         int count = 0;
@@ -390,32 +408,70 @@ public class MapManager : MonoBehaviour
 
     public GameObject GetCharacter(string code)
     {
+        if (string.IsNullOrEmpty(code))
+        {
+            UIManager.Instance.errorPopup.SetMessage("몬스터를 로드하지 못했습니다. 저장된 몬스터가 빈칸 입니다.");
+
+            return null;
+        }
+
         string type = code.Substring(0, 2);
+
         if(type == "ST")
         {
-            return SBCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < STCharactors.Count; i++)
+            {
+                if (STCharactors[i].name == code)
+                    return STCharactors[i];
+            }
+            return null;
         }
         else if (type == "CH")
         {
-            return CHCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < CHCharactors.Count; i++)
+            {
+                if (CHCharactors[i].name == code)
+                    return CHCharactors[i];
+            }
+            return null;
 
         }
         else if (type == "CR")
         {
-            return CRCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < CRCharactors.Count; i++)
+            {
+                if (CRCharactors[i].name == code)
+                    return CRCharactors[i];
+            }
+            return null;
 
         }
         else if (type == "EG")
         {
-            return EGCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < EGCharactors.Count; i++)
+            {
+                if (EGCharactors[i].name == code)
+                    return EGCharactors[i];
+            }
+            return null;
         }
         else if (type == "BR")
         {
-            return BRCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < BRCharactors.Count; i++)
+            {
+                if (BRCharactors[i].name == code)
+                    return BRCharactors[i];
+            }
+            return null;
         }
         else if (type == "SP")
         {
-            return SPCharactors[int.Parse(code.Substring(4)) - 1];
+            for (int i = 0; i < SPCharactors.Count; i++)
+            {
+                if (SPCharactors[i].name == code)
+                    return SPCharactors[i];
+            }
+            return null;
         }
         else
         {
@@ -448,5 +504,26 @@ public class MapManager : MonoBehaviour
         {
             return Maps[MapcountManager.Instance.mapCurrentNumber - 1];
         }
+    }
+
+    public void HideWoodenFence()
+    {
+        for (int i = Maps.Count - 1; i > -1; --i)
+        {
+            Maps[i].HideUserFence();
+        }
+    }
+
+
+    public void OnInputFieldValueChanged(string value)
+    {
+        if (float.TryParse(value, out float floatValue))
+        {
+            Vector3 newPosition = currentMap.container.transform.position;
+            newPosition.x = floatValue;
+            currentMap.container.transform.position = newPosition;
+        }
+
+        Debug.Log(value);
     }
 }

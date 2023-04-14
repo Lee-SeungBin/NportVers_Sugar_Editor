@@ -1,0 +1,6083 @@
+fileFormatVersion: 2
+guid: 6f2b24464425e4d40a5828caf94ebc7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: "Bread.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300002
+    second: "Change.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300004
+    second: "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300006
+    second: "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300008
+    second: "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300010
+    second: "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300012
+    second: "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300014
+    second: "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300016
+    second: "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300018
+    second: "CoinBank.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300020
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300022
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 21300024
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: 21300026
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10003"
+  - first:
+      213: 21300028
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10004"
+  - first:
+      213: 21300030
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10005"
+  - first:
+      213: 21300032
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10006"
+  - first:
+      213: 21300034
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10007"
+  - first:
+      213: 21300036
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10008"
+  - first:
+      213: 21300038
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10009"
+  - first:
+      213: 21300040
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10010"
+  - first:
+      213: 21300042
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10011"
+  - first:
+      213: 21300044
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10012"
+  - first:
+      213: 21300046
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10013"
+  - first:
+      213: 21300048
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10014"
+  - first:
+      213: 21300050
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10015"
+  - first:
+      213: 21300052
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10016"
+  - first:
+      213: 21300054
+    second: "CoinBank_Smoke \uC778\uC2A4\uD134\uC2A4 10017"
+  - first:
+      213: 21300056
+    second: "CoinParty_Light.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300058
+    second: "Coin_0001.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300060
+    second: "Coin_0002.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300062
+    second: "Coin_0003.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300064
+    second: "Coin_0004.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300066
+    second: "Coin_0005.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300068
+    second: "Coin_0006.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300070
+    second: "Coin_0007.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300072
+    second: "Coin_0008.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300074
+    second: "Coin_0009.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300076
+    second: "Coin_0010.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300078
+    second: "Coin_0011.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300080
+    second: "Coin_0012.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300082
+    second: "Coin_0013.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300084
+    second: "Coin_0014.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300086
+    second: "Coin_0015.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300088
+    second: "Coin_0016.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300090
+    second: "Coin_0017.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300092
+    second: "Coin_0018.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300094
+    second: "Coin_0019.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300096
+    second: "Coin_0020.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300098
+    second: "Coin_0021.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300100
+    second: "Coin_0022.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300102
+    second: "Coin_0023.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300104
+    second: "Coin_0024.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300106
+    second: "Combo_txt.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300108
+    second: "Cream.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300110
+    second: "Cycle.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300112
+    second: "Dim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300114
+    second: "Egg.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300116
+    second: "Hammer.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300118
+    second: "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300120
+    second: "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300122
+    second: "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300124
+    second: "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300126
+    second: "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300128
+    second: "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300130
+    second: "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300132
+    second: "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300134
+    second: "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300136
+    second: "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300138
+    second: "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300140
+    second: "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300142
+    second: "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300144
+    second: "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300146
+    second: "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300148
+    second: "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300150
+    second: "Ice.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300152
+    second: "Item_Effect.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300154
+    second: "Jump.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300156
+    second: "JumpItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300158
+    second: "Move.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300160
+    second: "MoveItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300162
+    second: "Move_Bouns.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300164
+    second: "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300166
+    second: "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300168
+    second: "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300170
+    second: "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300172
+    second: "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300174
+    second: "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300176
+    second: "Shadow.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300178
+    second: "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300180
+    second: "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300182
+    second: "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300184
+    second: "Title.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300186
+    second: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300188
+    second: "WhistleItem.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300190
+    second: "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300192
+    second: "change 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300194
+    second: "change 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300196
+    second: "change1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300198
+    second: "change2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300200
+    second: "change3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300202
+    second: "character_01.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300204
+    second: "character_02.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300206
+    second: "character_03.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300208
+    second: "character_04.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300210
+    second: "close button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300212
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300214
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 21300216
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: 21300218
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10003"
+  - first:
+      213: 21300220
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10004"
+  - first:
+      213: 21300222
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10005"
+  - first:
+      213: 21300224
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10006"
+  - first:
+      213: 21300226
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10007"
+  - first:
+      213: 21300228
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10008"
+  - first:
+      213: 21300230
+    second: "coin n2 \uC778\uC2A4\uD134\uC2A4 10009"
+  - first:
+      213: 21300232
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300234
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 21300236
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: 21300238
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10003"
+  - first:
+      213: 21300240
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10004"
+  - first:
+      213: 21300242
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10005"
+  - first:
+      213: 21300244
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10006"
+  - first:
+      213: 21300246
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10007"
+  - first:
+      213: 21300248
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10008"
+  - first:
+      213: 21300250
+    second: "coin num1 \uC778\uC2A4\uD134\uC2A4 10009"
+  - first:
+      213: 21300252
+    second: "coin \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300254
+    second: "continue bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300256
+    second: "continue button1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300258
+    second: "continue button2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300260
+    second: "continue check1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300262
+    second: "continue check2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300264
+    second: "continue item bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300266
+    second: "continue1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300268
+    second: "continue2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300270
+    second: "deadlock \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300272
+    second: "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300274
+    second: "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300276
+    second: "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300278
+    second: "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300280
+    second: "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300282
+    second: "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300284
+    second: "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300286
+    second: "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300288
+    second: "gacha ok button \uC778\uC2A4\uD134\uC2A4 20000"
+  - first:
+      213: 21300290
+    second: "gage \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300292
+    second: "game item1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300294
+    second: "game item1_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300296
+    second: "game item2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300298
+    second: "game item2_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300300
+    second: "game item3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300302
+    second: "game item3_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300304
+    second: "game item4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300306
+    second: "game item4_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300308
+    second: "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300310
+    second: "game stage mission bar2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300312
+    second: "game stage mission bar3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300314
+    second: "game stage move bar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300316
+    second: "gameover1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300318
+    second: "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300320
+    second: "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300322
+    second: "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300324
+    second: "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300326
+    second: "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300328
+    second: "heart m \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300330
+    second: "ice1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300332
+    second: "ice2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300334
+    second: "ice2_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300336
+    second: "ice3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300338
+    second: "ice3_1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300340
+    second: "iceee.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300342
+    second: "iceje \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300344
+    second: "item anima \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300346
+    second: "item plus \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300348
+    second: "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300350
+    second: "itembg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300352
+    second: "jump \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300354
+    second: "mission check b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300356
+    second: "mission check \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300358
+    second: "mission number bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300360
+    second: "mission1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300362
+    second: "mission2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300364
+    second: "move \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300366
+    second: "next button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300368
+    second: "next \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300370
+    second: "next2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300372
+    second: "no \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300374
+    second: "no2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300376
+    second: "pause bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300378
+    second: "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300380
+    second: "pause botton \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300382
+    second: "pause effect button off \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300384
+    second: "pause effect button on \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300386
+    second: "pause roby button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300388
+    second: "pause sound button off \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300390
+    second: "pause sound button on \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300392
+    second: "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300394
+    second: "price button1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300396
+    second: "retry1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300398
+    second: "retry2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300400
+    second: "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300402
+    second: "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300404
+    second: "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300406
+    second: "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300408
+    second: "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300410
+    second: "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300412
+    second: "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300414
+    second: "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300416
+    second: "stage1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300418
+    second: "stage2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300420
+    second: "star gage b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300422
+    second: "star \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300424
+    second: "star3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300426
+    second: "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: 21300428
+    second: "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300430
+    second: "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300432
+    second: "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300434
+    second: "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300436
+    second: "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300438
+    second: "x3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300440
+    second: "yes \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300442
+    second: "yes2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 21300444
+    second: "Bouns_Dim.png \uC778\uC2A4\uD134\uC2A4 1"
+  - first:
+      213: -4901000690560325279
+    second: "game item jump \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2030934619581840143
+    second: "game item move \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7403388897529155114
+    second: "game item whistle \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7115792336723713981
+    second: "frogsoup \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2779624219256389170
+    second: "whistle button item b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7787188679981013997
+    second: "whistle item11 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5718404911953911528
+    second: "\uC2EC\uBCFC 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7060547315850539268
+    second: "Item_Effect \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5475749250901693262
+    second: "Item_Effect1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3342744032270150968
+    second: "nextstage b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3145419241740314267
+    second: "JumpBG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3110950683000247523
+    second: "MoveBG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3421065044784149639
+    second: "afix \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 4852266276019661863
+    second: "clock \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7909153908289008084
+    second: "lanking gift \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3972318200689395464
+    second: "lanking score bar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1606996093489215643
+    second: "lanking scorebar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 9125692184302965576
+    second: "lanking time \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2216042428290004283
+    second: "lanking timebar \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6639632747388797551
+    second: "RankingResultPopupBG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -8804220127548697169
+    second: "complete \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -245920923743199231
+    second: "down \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3887823815978307104
+    second: "level 1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -7398317254557681952
+    second: "level 2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2258047818984714403
+    second: "level 3 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3417807482803019832
+    second: "same \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7709356179967687860
+    second: "up \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -3121519793626193375
+    second: "RankIconBG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -633334877130549289
+    second: "GameItem_BG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -408022669664588637
+    second: "GameItem_BG1 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 6633695950201082119
+    second: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 1862785067259792689
+    second: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: -8694426705657615754
+    second: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: -402107393793854334
+    second: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -4764500917991194930
+    second: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 8834523618466760351
+    second: "WhistleBG_BG \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6788739541027279732
+    second: "WhistleBG_Button \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6643585693280181356
+    second: "WhistleIcon \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1547998064127921334
+    second: "whistle button item c \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2563978096126780141
+    second: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 5002414488267490910
+    second: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: -2780807987667564585
+    second: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: -970205126419603759
+    second: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: -4024133680398167707
+    second: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10003"
+  - first:
+      213: 866751212285207080
+    second: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10004"
+  - first:
+      213: -3601385906303744001
+    second: "Item_Check \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3656127151078607827
+    second: "continue_bg_Name \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -6407905231329809440
+    second: "Cream_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -5532235592549637120
+    second: "Ice_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7870627054117434305
+    second: "bonus_Bubble \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3222856548112020883
+    second: "bread_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -4873610051945529741
+    second: "chacolate_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 9208075810970945607
+    second: "egg_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -1047927573112979495
+    second: "frogsoup_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -7211966437113088535
+    second: "iceje_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 1600045187209346468
+    second: "strawberry_Light \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2954557079960165354
+    second: "OK \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -2541151464426587247
+    second: "continue_bg_Name_Clear \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 5526335564966020994
+    second: "buff \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 6810077693616959587
+    second: "buff \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 8281352485791143851
+    second: "buff \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: 6338765651047528666
+    second: "defiance \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 1195608882353295893
+    second: "defiance \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: -534002743100843964
+    second: "game mode item \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 7303255281007289891
+    second: "game mode item \uC778\uC2A4\uD134\uC2A4 10001"
+  - first:
+      213: 6863155532430728557
+    second: "game mode item \uC778\uC2A4\uD134\uC2A4 10002"
+  - first:
+      213: 741273651857679575
+    second: "game mode item \uC778\uC2A4\uD134\uC2A4 10003"
+  - first:
+      213: 1607381093585274161
+    second: "game mode item \uC778\uC2A4\uD134\uC2A4 10004"
+  - first:
+      213: -2954981687932286284
+    second: "ranking bar01 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2704174243393965889
+    second: "ranking bar02 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 2752580369228644506
+    second: "ranking info bg \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -7093676543890794051
+    second: "ranking result b \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3813881912694059806
+    second: "ranking result b2 \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: -8263700419163659489
+    second: "ranking score \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 4847310107464902866
+    second: "ranking star \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 4603679130590457703
+    second: "result level \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 4234153339539178730
+    second: bg_title0000
+  - first:
+      213: -2003744602403029471
+    second: defianceinfo_bg_bar0000
+  - first:
+      213: -7103330215159556755
+    second: defianceinfo_bg_bottom0000
+  - first:
+      213: -1752978136404243004
+    second: defianceinfo_bg_title0000
+  - first:
+      213: 8342975734645730322
+    second: defianceinfo_bg_top0000
+  - first:
+      213: 8586679153772778451
+    second: ingame_tip_bg0000
+  - first:
+      213: 1272964275301875297
+    second: ingame_tip_img0000
+  - first:
+      213: -6633370714506740765
+    second: "ingame_tip_img \uC778\uC2A4\uD134\uC2A4 10000"
+  - first:
+      213: 3282620003499956882
+    second: ad_continue_play_button_move0000
+  - first:
+      213: 6085982221620983097
+    second: continue_button_move0000
+  - first:
+      213: -771377644155335566
+    second: bread5x0000
+  - first:
+      213: 7163876802063173626
+    second: chocolate5x0000
+  - first:
+      213: 118191315506983417
+    second: cream5x0000
+  - first:
+      213: 2044821876476358027
+    second: defiance0000
+  - first:
+      213: 5783028314150739156
+    second: defiance0001
+  - first:
+      213: -8203206618350844592
+    second: defiance0002
+  - first:
+      213: 4294558760941988541
+    second: egg5x0000
+  - first:
+      213: 3633381974577911898
+    second: strawberry5x0000
+  - first:
+      213: 744852985637527570
+    second: coin0000
+  - first:
+      213: -1294610026001077254
+    second: dia_coin0000
+  - first:
+      213: 3710274071186614737
+    second: Combo_txt0000
+  - first:
+      213: -3522858568003851141
+    second: Combo_txt0001
+  - first:
+      213: 5887294491077737642
+    second: Combo_txt0002
+  - first:
+      213: 7568073479420970498
+    second: Combo_txt0003
+  - first:
+      213: 8990360888525151170
+    second: paus_effect_on0000
+  - first:
+      213: -139612826311949537
+    second: pause_bg0000
+  - first:
+      213: 1659622527291191636
+    second: pause_effect_off0000
+  - first:
+      213: 7970156322294273783
+    second: pause_roby_button0000
+  - first:
+      213: 1494317037993221026
+    second: pause_sound_off0000
+  - first:
+      213: 1711664963937180237
+    second: pause_sound_on0000
+  - first:
+      213: -2120373574061213481
+    second: retry_button0000
+  - first:
+      213: -8345073954993920780
+    second: retry_button20000
+  - first:
+      213: -498062081149731359
+    second: ingame_tip_img0001
+  - first:
+      213: 1171021324579418045
+    second: ingame_tip_img0002
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Bread.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3707
+        y: 1746
+        width: 113
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 1732
+        width: 100
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1845
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1837
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1835
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1831
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1831
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1837
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo_txt0000
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1861
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9ab602c9a8d7330800000000000000
+      internalID: 3710274071186614737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo_txt0001
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 1854
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c603c1cca4c1fc0800000000000000
+      internalID: -3522858568003851141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo_txt0002
+      rect:
+        serializedVersion: 2
+        x: 3707
+        y: 1844
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac7dccb52fd3b150800000000000000
+      internalID: 5887294491077737642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Combo_txt0003
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1822
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20601fe6bb2370960800000000000000
+      internalID: 7568073479420970498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cream.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1902
+        width: 100
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cream_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1681
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb2834842c8217a0800000000000000
+      internalID: -6407905231329809440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cycle.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Dim.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 2430
+        width: 513
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Egg.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1738
+        width: 109
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "GameItem_BG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1722
+        width: 96
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d794c8e841f537f0800000000000000
+      internalID: -633334877130549289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "GameItem_BG1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 2330
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ace5523b89665af0800000000000000
+      internalID: -408022669664588637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1665
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701dea3e15f9f0c50800000000000000
+      internalID: 6633695950201082119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10001"
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 1663
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d0ce23621f9d910800000000000000
+      internalID: 1862785067259792689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10002"
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1663
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67aab9be9f0375780800000000000000
+      internalID: -8694426705657615754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hammer.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1626
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3756
+        y: 1910
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1948
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1927
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1927
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 1845
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 1877
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3887
+        y: 1910
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1888
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1948
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3085
+        y: 1900
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3625
+        y: 1954
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1893
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1888
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 1920
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1948
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 1920
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ice.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 1925
+        width: 96
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ice_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4016
+        y: 1694
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0046e442a0d8933b0800000000000000
+      internalID: -5532235592549637120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Item_Check \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 1628
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7caa3699e450ec0800000000000000
+      internalID: -3601385906303744001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Item_Effect \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 2448
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401fb19106a1cf160800000000000000
+      internalID: 7060547315850539268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Item_Effect1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 2585
+        width: 244
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bca4ec611b3204b0800000000000000
+      internalID: -5475749250901693262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Jump.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 1835
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "JumpBG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 3566
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b962c9d9226c6ab20800000000000000
+      internalID: 3145419241740314267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Move.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1835
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "MoveBG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 2929
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e41df5e9215c2b20800000000000000
+      internalID: 3110950683000247523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1837
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1845
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 1845
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 1835
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 1765
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284fb5fa47d6b6af0800000000000000
+      internalID: -402107393793854334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10001"
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1749
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2e48f6e74159320800000000000000
+      internalID: 2563978096126780141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10002"
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1749
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56837029752c6540800000000000000
+      internalID: 5002414488267490910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1777
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecebc1398a711edb0800000000000000
+      internalID: -4764500917991194930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "OK \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1637
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb14a3a202b00920800000000000000
+      internalID: 2954557079960165354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 1626
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 1632
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RankIconBG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1722
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1226f8549422ea4d0800000000000000
+      internalID: -3121519793626193375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RankingResultPopupBG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 2849
+        width: 791
+        height: 613
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19df6dcc1394bd3a0800000000000000
+      internalID: -6639632747388797551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Shadow.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1750
+        width: 129
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 2621
+        width: 772
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1693
+        width: 202
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1663
+        width: 161
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Title.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 2289
+        width: 513
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2285
+        width: 776
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "WhistleBG_BG \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1721
+        width: 94
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9682867c688a9a70800000000000000
+      internalID: 8834523618466760351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "WhistleBG_Button \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1770
+        width: 119
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cab601b5d89c1a0800000000000000
+      internalID: -6788739541027279732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "WhistleIcon \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 1654
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493ea2dd20e3dc3a0800000000000000
+      internalID: -6643585693280181356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 2246
+        width: 596
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ad_continue_play_button_move0000
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2135
+        width: 466
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ad43940853e8d20800000000000000
+      internalID: 3282620003499956882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "afix \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 1629
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b8224a77fe580d0800000000000000
+      internalID: -3421065044784149639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_title0000
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 2119
+        width: 360
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae444cf570cb2ca30800000000000000
+      internalID: 4234153339539178730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bonus_Bubble \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3965
+        y: 1783
+        width: 124
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3bf38fa951a3d60800000000000000
+      internalID: 7870627054117434305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bread5x0000
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1734
+        width: 106
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c817c9e148b45f0800000000000000
+      internalID: -771377644155335566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bread_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3916
+        y: 1702
+        width: 98
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395324084f2e9bc20800000000000000
+      internalID: 3222856548112020883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "buff \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 1976
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2874863aaec71bc40800000000000000
+      internalID: 5526335564966020994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "buff \uC778\uC2A4\uD134\uC2A4 10001"
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 1976
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360b9dcb491428e50800000000000000
+      internalID: 6810077693616959587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "buff \uC778\uC2A4\uD134\uC2A4 10002"
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1976
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7116795364de270800000000000000
+      internalID: 8281352485791143851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "chacolate_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 2243
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e7300ba757d5cb0800000000000000
+      internalID: -4873610051945529741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "change 4 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1679
+        width: 113
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "change 5 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 1693
+        width: 158
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "change1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 1689
+        width: 162
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "change2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1678
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "change3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 2091
+        width: 203
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "character_01.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1817
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "character_02.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1818
+        width: 129
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "character_03.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 1823
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "character_04.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1818
+        width: 129
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chocolate5x0000
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1734
+        width: 106
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af703a1eef33b6360800000000000000
+      internalID: 7163876802063173626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "clock \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1735
+        width: 102
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c62c93876b65340800000000000000
+      internalID: 4852266276019661863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "close button \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 1660
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin0000
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1627
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21060d218df365a00800000000000000
+      internalID: 744852985637527570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "coin \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1659
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1405410000000000800000000000000
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "complete \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2655
+        width: 327
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa59d15d07021d580800000000000000
+      internalID: -8804220127548697169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue bg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 2883
+        width: 796
+        height: 579
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1405410000000000800000000000000
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue button1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 2109
+        width: 400
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02405410000000000800000000000000
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue button2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 2148
+        width: 511
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22405410000000000800000000000000
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue check1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2653
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42405410000000000800000000000000
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue check2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2605
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62405410000000000800000000000000
+      internalID: 21300262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue item bg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 2548
+        width: 645
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82405410000000000800000000000000
+      internalID: 21300264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1699
+        width: 184
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2405410000000000800000000000000
+      internalID: 21300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1690
+        width: 143
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2405410000000000800000000000000
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "continue_bg_Name \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2079
+        width: 359
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db83bdd54c2db230800000000000000
+      internalID: 3656127151078607827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: continue_button_move0000
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 2107
+        width: 382
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935bf0de590c57450800000000000000
+      internalID: 6085982221620983097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cream5x0000
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1734
+        width: 106
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f174501066e3a100800000000000000
+      internalID: 118191315506983417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "deadlock \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2185
+        width: 505
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2405410000000000800000000000000
+      internalID: 21300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 2051
+        width: 309
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03405410000000000800000000000000
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 2008
+        width: 236
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23405410000000000800000000000000
+      internalID: 21300274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defiance0000
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 1966
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d2258a9aaa06c10800000000000000
+      internalID: 2044821876476358027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defiance0001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1962
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc1bf6ac91714050800000000000000
+      internalID: 5783028314150739156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defiance0002
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1962
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05580160b0b582e80800000000000000
+      internalID: -8203206618350844592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defianceinfo_bg_bar0000
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3945
+        width: 10
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e392186e44134e0800000000000000
+      internalID: -2003744602403029471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defianceinfo_bg_bottom0000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2701
+        width: 868
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d659d1bedc6eb6d90800000000000000
+      internalID: -7103330215159556755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defianceinfo_bg_title0000
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 1735
+        width: 201
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd49903cab2ca7e0800000000000000
+      internalID: -1752978136404243004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defianceinfo_bg_top0000
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2421
+        width: 867
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c23494a3438c370800000000000000
+      internalID: 8342975734645730322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dia_coin0000
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1656
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afbeb8d5a0f980ee0800000000000000
+      internalID: -1294610026001077254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 2554
+        width: 254
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43405410000000000800000000000000
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1687
+        width: 136
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63405410000000000800000000000000
+      internalID: 21300278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3836
+        y: 2041
+        width: 203
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83405410000000000800000000000000
+      internalID: 21300280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3401
+        y: 1702
+        width: 147
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3405410000000000800000000000000
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2622
+        width: 255
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3405410000000000800000000000000
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "down \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3871
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10063790930569cf0800000000000000
+      internalID: -245920923743199231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg5x0000
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1732
+        width: 106
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba2df48076599b30800000000000000
+      internalID: 4294558760941988541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "egg_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 1688
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7484ac1e928a9cf70800000000000000
+      internalID: 9208075810970945607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "frogsoup \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 2835
+        width: 139
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf1ddddd6f50c260800000000000000
+      internalID: 7115792336723713981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "frogsoup_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1740
+        width: 123
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df7346ac630571f0800000000000000
+      internalID: -1047927573112979495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2019
+        width: 235
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3405410000000000800000000000000
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gage \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1666
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24405410000000000800000000000000
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game item jump \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1732
+        width: 102
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169253ba6d52cfbb0800000000000000
+      internalID: -4901000690560325279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game item move \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 1732
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f408cd49bba0d3e0800000000000000
+      internalID: -2030934619581840143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game item whistle \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1732
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ecb4b3afe1eb660800000000000000
+      internalID: 7403388897529155114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game mode item \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1968
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448d36c9557d698f0800000000000000
+      internalID: -534002743100843964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game mode item \uC778\uC2A4\uD134\uC2A4 10001"
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 1968
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3266f68dbff5a5560800000000000000
+      internalID: 7303255281007289891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game mode item \uC778\uC2A4\uD134\uC2A4 10002"
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1968
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d5acc1893de3f50800000000000000
+      internalID: 6863155532430728557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game mode item \uC778\uC2A4\uD134\uC2A4 10003"
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1966
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4655c7578894a00800000000000000
+      internalID: 741273651857679575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game mode item \uC778\uC2A4\uD134\uC2A4 10004"
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 1966
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13544dd96909e4610800000000000000
+      internalID: 1607381093585274161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 3561
+        width: 129
+        height: 535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45405410000000000800000000000000
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gameover1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 2393
+        width: 442
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5405410000000000800000000000000
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3747
+        y: 1690
+        width: 166
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5405410000000000800000000000000
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1642
+        width: 81
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06405410000000000800000000000000
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 2031
+        width: 203
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26405410000000000800000000000000
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 1872
+        width: 96
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46405410000000000800000000000000
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1695
+        width: 163
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66405410000000000800000000000000
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "heart m \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 1728
+        width: 104
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86405410000000000800000000000000
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "iceje \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 1731
+        width: 101
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67405410000000000800000000000000
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "iceje_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1731
+        width: 102
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5b5df6cb2f9eb90800000000000000
+      internalID: -7211966437113088535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingame_tip_bg0000
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 3464
+        width: 924
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3d0e832330a2770800000000000000
+      internalID: 8586679153772778451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingame_tip_img0000
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 3464
+        width: 924
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e7121934a7aa110800000000000000
+      internalID: 1272964275301875297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingame_tip_img0001
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 3464
+        width: 924
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed7af01d278619f0800000000000000
+      internalID: -498062081149731359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingame_tip_img0002
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 2830
+        width: 924
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfa6fbb0bd404010800000000000000
+      internalID: 1171021324579418045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "item anima \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 2945
+        width: 523
+        height: 517
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87405410000000000800000000000000
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "item plus \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2560
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7405410000000000800000000000000
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 2309
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7405410000000000800000000000000
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "itembg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2343
+        width: 676
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7405410000000000800000000000000
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "jump \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 2361
+        width: 56
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08405410000000000800000000000000
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "lanking gift \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3821
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d175793395f2cd60800000000000000
+      internalID: 7909153908289008084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "lanking score bar \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2103
+        width: 369
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80709e67b52802730800000000000000
+      internalID: 3972318200689395464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "lanking scorebar \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3915
+        y: 1661
+        width: 167
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5678224319dc2b9e0800000000000000
+      internalID: -1606996093489215643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "lanking time \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 2024
+        width: 217
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843dfee01b8f4ae70800000000000000
+      internalID: 9125692184302965576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "lanking timebar \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2553
+        width: 155
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca849e07290f31e0800000000000000
+      internalID: -2216042428290004283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "level 1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 1747
+        width: 114
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ec0bc792354f530800000000000000
+      internalID: 3887823815978307104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "level 2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 1747
+        width: 114
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6327aa7a5e35990800000000000000
+      internalID: -7398317254557681952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "level 3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1747
+        width: 114
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0fd681782365f10800000000000000
+      internalID: 2258047818984714403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "mission check b \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 2258
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28405410000000000800000000000000
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "mission check \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3917
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48405410000000000800000000000000
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "mission number bg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1677
+        width: 107
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68405410000000000800000000000000
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "mission1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 2635
+        width: 85
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88405410000000000800000000000000
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "mission2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4041
+        y: 2232
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8405410000000000800000000000000
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "move \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3568
+        y: 1657
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8405410000000000800000000000000
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "next button \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2058
+        width: 283
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8405410000000000800000000000000
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "next \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1687
+        width: 129
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09405410000000000800000000000000
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "next2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1971
+        width: 82
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29405410000000000800000000000000
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "nextstage b \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2571
+        width: 217
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c21b7563003c91d0800000000000000
+      internalID: -3342744032270150968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "no \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 2248
+        width: 59
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49405410000000000800000000000000
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "no2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 1652
+        width: 99
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69405410000000000800000000000000
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paus_effect_on0000
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 1654
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb5b1b589d24cc70800000000000000
+      internalID: 8990360888525151170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1665
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9405410000000000800000000000000
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pause botton \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1664
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9405410000000000800000000000000
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 2524
+        width: 123
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a405410000000000800000000000000
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_bg0000
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 3709
+        width: 121
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f138699cfdeff0ef0800000000000000
+      internalID: -139612826311949537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_effect_off0000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1658
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4517d6045e9280710800000000000000
+      internalID: 1659622527291191636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_roby_button0000
+      rect:
+        serializedVersion: 2
+        x: 3062
+        y: 1655
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f61faa82feab9e60800000000000000
+      internalID: 7970156322294273783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_sound_off0000
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1659
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab5667cd61ecb410800000000000000
+      internalID: 1494317037993221026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_sound_on0000
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1654
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a15f5473e01c710800000000000000
+      internalID: 1711664963937180237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "price button1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2720
+        width: 339
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa405410000000000800000000000000
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking bar01 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2303
+        width: 175
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba030d9fcbcdf6d0800000000000000
+      internalID: -2954981687932286284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking bar02 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 1666
+        width: 167
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f0244a528278520800000000000000
+      internalID: 2704174243393965889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking result b \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 2225
+        width: 569
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db95ed964c23e8d90800000000000000
+      internalID: -7093676543890794051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking result b2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2236
+        width: 568
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13ba6d8461ade430800000000000000
+      internalID: 3813881912694059806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking score \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 2246
+        width: 206
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13e0817040715d80800000000000000
+      internalID: -8263700419163659489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ranking star \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3846
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d82b9f4cda154340800000000000000
+      internalID: 4847310107464902866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "result level \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3747
+        y: 1642
+        width: 83
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f29b627cd83ef30800000000000000
+      internalID: 4603679130590457703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "retry1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1651
+        width: 99
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca405410000000000800000000000000
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "retry2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1656
+        width: 124
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea405410000000000800000000000000
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: retry_button0000
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1654
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8b4f6f77be292e0800000000000000
+      internalID: -2120373574061213481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: retry_button20000
+      rect:
+        serializedVersion: 2
+        x: 3666
+        y: 1665
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f42938b377503c80800000000000000
+      internalID: -8345073954993920780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "same \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3804
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf9ad4e3328190d0800000000000000
+      internalID: -3417807482803019832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 3467
+        width: 289
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b405410000000000800000000000000
+      internalID: 21300400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3438
+        y: 2501
+        width: 99
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b405410000000000800000000000000
+      internalID: 21300402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1725
+        width: 92
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b405410000000000800000000000000
+      internalID: 21300404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 1725
+        width: 92
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b405410000000000800000000000000
+      internalID: 21300406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1781
+        width: 108
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b405410000000000800000000000000
+      internalID: 21300408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 1725
+        width: 97
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab405410000000000800000000000000
+      internalID: 21300410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4018
+        y: 1915
+        width: 58
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb405410000000000800000000000000
+      internalID: 21300412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2411
+        width: 598
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb405410000000000800000000000000
+      internalID: 21300414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1649
+        width: 96
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c405410000000000800000000000000
+      internalID: 21300416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "stage2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1649
+        width: 92
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c405410000000000800000000000000
+      internalID: 21300418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "star gage b \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3676
+        y: 2085
+        width: 141
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c405410000000000800000000000000
+      internalID: 21300420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "star3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 2393
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c405410000000000800000000000000
+      internalID: 21300424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1"
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1731
+        width: 99
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac405410000000000800000000000000
+      internalID: 21300426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry5x0000
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1734
+        width: 106
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a581608c7ad5c6230800000000000000
+      internalID: 3633381974577911898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "strawberry_Light \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1665
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adbf20de90843610800000000000000
+      internalID: 1600045187209346468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "up \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3894
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcbfe989922dfa60800000000000000
+      internalID: 7709356179967687860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3401
+        y: 1667
+        width: 165
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc405410000000000800000000000000
+      internalID: 21300428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 2803
+        y: 1643
+        width: 79
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec405410000000000800000000000000
+      internalID: 21300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3836
+        y: 2235
+        width: 202
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d405410000000000800000000000000
+      internalID: 21300432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3438
+        y: 2448
+        width: 97
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d405410000000000800000000000000
+      internalID: 21300434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2197
+        width: 172
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d405410000000000800000000000000
+      internalID: 21300436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle button item b \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 1628
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1862aef7acc69d0800000000000000
+      internalID: -2779624219256389170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "whistle button item c \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 4070
+        y: 4069
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43b9aa56f7648ae0800000000000000
+      internalID: -1547998064127921334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "x3 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1730
+        width: 103
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d405410000000000800000000000000
+      internalID: 21300438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "yes \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 3756
+        y: 2048
+        width: 77
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d405410000000000800000000000000
+      internalID: 21300440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "yes2 \uC778\uC2A4\uD134\uC2A4 10000"
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 2253
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad405410000000000800000000000000
+      internalID: 21300442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f5f68caf2408bcf4ebc4e0062fcabb6c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Dim.png \uC778\uC2A4\uD134\uC2A4 1": 21300112
+      "next button \uC778\uC2A4\uD134\uC2A4 10000": 21300366
+      "stage1 \uC778\uC2A4\uD134\uC2A4 10000": 21300416
+      "hammer 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300326
+      chocolate5x0000: 7163876802063173626
+      pause_sound_off0000: 1494317037993221026
+      "game item jump \uC778\uC2A4\uD134\uC2A4 10000": -4901000690560325279
+      ingame_tip_img0001: -498062081149731359
+      "OK \uC778\uC2A4\uD134\uC2A4 10000": 2954557079960165354
+      "TutorialTextDim.png \uC778\uC2A4\uD134\uC2A4 1": 21300186
+      ingame_tip_img0002: 1171021324579418045
+      "Hit2_0001.png \uC778\uC2A4\uD134\uC2A4 1": 21300118
+      defiance0002: -8203206618350844592
+      "level 3 \uC778\uC2A4\uD134\uC2A4 10000": 2258047818984714403
+      "clock \uC778\uC2A4\uD134\uC2A4 10000": 4852266276019661863
+      "Circle_06.png \uC778\uC2A4\uD134\uC2A4 1": 21300016
+      pause_effect_off0000: 1659622527291191636
+      "no \uC778\uC2A4\uD134\uC2A4 10000": 21300372
+      "afix \uC778\uC2A4\uD134\uC2A4 10000": -3421065044784149639
+      "yes2 \uC778\uC2A4\uD134\uC2A4 10000": 21300442
+      "change1 \uC778\uC2A4\uD134\uC2A4 10000": 21300196
+      "ranking bar02 \uC778\uC2A4\uD134\uC2A4 10000": 2704174243393965889
+      "continue_bg_Name \uC778\uC2A4\uD134\uC2A4 10000": 3656127151078607827
+      "chacolate_Light \uC778\uC2A4\uD134\uC2A4 10000": -4873610051945529741
+      "Hit2_0002.png \uC778\uC2A4\uD134\uC2A4 1": 21300120
+      "close button \uC778\uC2A4\uD134\uC2A4 10000": 21300210
+      "whistle 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300436
+      "up \uC778\uC2A4\uD134\uC2A4 10000": 7709356179967687860
+      "Hit2_0014.png \uC778\uC2A4\uD134\uC2A4 1": 21300144
+      "x3 \uC778\uC2A4\uD134\uC2A4 10000": 21300438
+      "WhistleBG_Button \uC778\uC2A4\uD134\uC2A4 10000": -6788739541027279732
+      "hammer 3 \uC778\uC2A4\uD134\uC2A4 10000": 21300322
+      "retry2 \uC778\uC2A4\uD134\uC2A4 10000": 21300398
+      "continue bg \uC778\uC2A4\uD134\uC2A4 10000": 21300254
+      "deadlock2 \uC778\uC2A4\uD134\uC2A4 10000": 21300274
+      egg5x0000: 4294558760941988541
+      "Hit2_0004.png \uC778\uC2A4\uD134\uC2A4 1": 21300124
+      "deadlock1 \uC778\uC2A4\uD134\uC2A4 10000": 21300272
+      "result level \uC778\uC2A4\uD134\uC2A4 10000": 4603679130590457703
+      "Hit2_0005.png \uC778\uC2A4\uD134\uC2A4 1": 21300126
+      "Circle_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300010
+      "RankIconBG \uC778\uC2A4\uD134\uC2A4 10000": -3121519793626193375
+      "doppelganger2 \uC778\uC2A4\uD134\uC2A4 10000": 21300278
+      "jump \uC778\uC2A4\uD134\uC2A4 10000": 21300352
+      defianceinfo_bg_bar0000: -2003744602403029471
+      "whistle button item c \uC778\uC2A4\uD134\uC2A4 10000": -1547998064127921334
+      "Move_Circle_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300168
+      "level 1 \uC778\uC2A4\uD134\uC2A4 10000": 3887823815978307104
+      "star3 \uC778\uC2A4\uD134\uC2A4 10000": 21300424
+      "strawbarry.png \uC778\uC2A4\uD134\uC2A4 1": 21300426
+      "whistle 3 \uC778\uC2A4\uD134\uC2A4 10000": 21300432
+      "Item_Check \uC778\uC2A4\uD134\uC2A4 10000": -3601385906303744001
+      "dopplelganger 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300284
+      "change2 \uC778\uC2A4\uD134\uC2A4 10000": 21300198
+      "level 2 \uC778\uC2A4\uD134\uC2A4 10000": -7398317254557681952
+      "Cream.png \uC778\uC2A4\uD134\uC2A4 1": 21300108
+      "continue check2 \uC778\uC2A4\uD134\uC2A4 10000": 21300262
+      "game stage mission bar \uC778\uC2A4\uD134\uC2A4 10000": 21300308
+      defianceinfo_bg_bottom0000: -7103330215159556755
+      "frogsoup \uC778\uC2A4\uD134\uC2A4 10000": 7115792336723713981
+      "stage clear coin bg \uC778\uC2A4\uD134\uC2A4 10000": 21300400
+      "StartMissionBoard.png \uC778\uC2A4\uD134\uC2A4 1": 21300178
+      "Hit2_0003.png \uC778\uC2A4\uD134\uC2A4 1": 21300122
+      "JumpBG \uC778\uC2A4\uD134\uC2A4 10000": 3145419241740314267
+      "change 5 \uC778\uC2A4\uD134\uC2A4 10000": 21300194
+      "character_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300202
+      "ad continue play button \uC778\uC2A4\uD134\uC2A4 10000": 21300190
+      "next2 \uC778\uC2A4\uD134\uC2A4 10000": 21300370
+      "character_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300208
+      pause_roby_button0000: 7970156322294273783
+      "continue button1 \uC778\uC2A4\uD134\uC2A4 10000": 21300256
+      "MoveBG \uC778\uC2A4\uD134\uC2A4 10000": 3110950683000247523
+      "mission check \uC778\uC2A4\uD134\uC2A4 10000": 21300356
+      "hammer 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300324
+      "coin \uC778\uC2A4\uD134\uC2A4 10000": 21300252
+      "whistle 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300434
+      "item_count_bg \uC778\uC2A4\uD134\uC2A4 10000": 21300348
+      "mission number bg \uC778\uC2A4\uD134\uC2A4 10000": 21300358
+      "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000": -402107393793854334
+      "retry1 \uC778\uC2A4\uD134\uC2A4 10000": 21300396
+      "Hit2_0013.png \uC778\uC2A4\uD134\uC2A4 1": 21300142
+      "no2 \uC778\uC2A4\uD134\uC2A4 10000": 21300374
+      "Move_Circle_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300170
+      "stage clear02 \uC778\uC2A4\uD134\uC2A4 10000": 21300404
+      "ranking score \uC778\uC2A4\uD134\uC2A4 10000": -8263700419163659489
+      "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10002": 5002414488267490910
+      "item anima \uC778\uC2A4\uD134\uC2A4 10000": 21300344
+      "stage2 \uC778\uC2A4\uD134\uC2A4 10000": 21300418
+      "mission2 \uC778\uC2A4\uD134\uC2A4 10000": 21300362
+      "character_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300204
+      "Item_Effect1 \uC778\uC2A4\uD134\uC2A4 10000": -5475749250901693262
+      "lanking gift \uC778\uC2A4\uD134\uC2A4 10000": 7909153908289008084
+      "complete \uC778\uC2A4\uD134\uC2A4 10000": -8804220127548697169
+      "game mode item \uC778\uC2A4\uD134\uC2A4 10002": 6863155532430728557
+      "game mode item \uC778\uC2A4\uD134\uC2A4 10003": 741273651857679575
+      defianceinfo_bg_top0000: 8342975734645730322
+      "egg_Light \uC778\uC2A4\uD134\uC2A4 10000": 9208075810970945607
+      "game mode item \uC778\uC2A4\uD134\uC2A4 10004": 1607381093585274161
+      "Hit2_0010.png \uC778\uC2A4\uD134\uC2A4 1": 21300136
+      ad_continue_play_button_move0000: 3282620003499956882
+      "price button1 \uC778\uC2A4\uD134\uC2A4 10000": 21300394
+      "deadlock \uC778\uC2A4\uD134\uC2A4 10000": 21300270
+      "pauseMask.png \uC778\uC2A4\uD134\uC2A4 1": 21300392
+      "gameover1 \uC778\uC2A4\uD134\uC2A4 10000": 21300316
+      "GameItem_BG1 \uC778\uC2A4\uD134\uC2A4 10000": -408022669664588637
+      "Hit2_0016.png \uC778\uC2A4\uD134\uC2A4 1": 21300148
+      "game item whistle \uC778\uC2A4\uD134\uC2A4 10000": 7403388897529155114
+      "stage clear05 \uC778\uC2A4\uD134\uC2A4 10000": 21300410
+      "Bread.png \uC778\uC2A4\uD134\uC2A4 1": 21300000
+      Combo_txt0001: -3522858568003851141
+      "continue2 \uC778\uC2A4\uD134\uC2A4 10000": 21300268
+      "yes \uC778\uC2A4\uD134\uC2A4 10000": 21300440
+      "GameItem_BG \uC778\uC2A4\uD134\uC2A4 10000": -633334877130549289
+      "mission1 \uC778\uC2A4\uD134\uC2A4 10000": 21300360
+      "Ice.png \uC778\uC2A4\uD134\uC2A4 1": 21300150
+      "mission check b \uC778\uC2A4\uD134\uC2A4 10000": 21300354
+      "Egg.png \uC778\uC2A4\uD134\uC2A4 1": 21300114
+      "Hit2_0009.png \uC778\uC2A4\uD134\uC2A4 1": 21300134
+      bread5x0000: -771377644155335566
+      "Chocolate.png \uC778\uC2A4\uD134\uC2A4 1": 21300004
+      "character_03.png \uC778\uC2A4\uD134\uC2A4 1": 21300206
+      "dopplelganger 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300282
+      "RankingResultPopupBG \uC778\uC2A4\uD134\uC2A4 10000": -6639632747388797551
+      "WhistleIcon \uC778\uC2A4\uD134\uC2A4 10000": -6643585693280181356
+      "continue check1 \uC778\uC2A4\uD134\uC2A4 10000": 21300260
+      "next \uC778\uC2A4\uD134\uC2A4 10000": 21300368
+      "ranking star \uC778\uC2A4\uD134\uC2A4 10000": 4847310107464902866
+      "Hit2_0012.png \uC778\uC2A4\uD134\uC2A4 1": 21300140
+      "Circle_05.png \uC778\uC2A4\uD134\uC2A4 1": 21300014
+      "doppelganger3 \uC778\uC2A4\uD134\uC2A4 10000": 21300280
+      "Jump.png \uC778\uC2A4\uD134\uC2A4 1": 21300154
+      "nextstage b \uC778\uC2A4\uD134\uC2A4 10000": -3342744032270150968
+      "iceje \uC778\uC2A4\uD134\uC2A4 10000": 21300342
+      "whistle button item b \uC778\uC2A4\uD134\uC2A4 10000": -2779624219256389170
+      "change3 \uC778\uC2A4\uD134\uC2A4 10000": 21300200
+      "bonus_Bubble \uC778\uC2A4\uD134\uC2A4 10000": 7870627054117434305
+      "star gage b \uC778\uC2A4\uD134\uC2A4 10000": 21300420
+      "gage \uC778\uC2A4\uD134\uC2A4 10000": 21300290
+      "ranking bar01 \uC778\uC2A4\uD134\uC2A4 10000": -2954981687932286284
+      "lanking timebar \uC778\uC2A4\uD134\uC2A4 10000": -2216042428290004283
+      "whistle 1 \uC778\uC2A4\uD134\uC2A4 10000": 21300428
+      continue_button_move0000: 6085982221620983097
+      pause_bg0000: -139612826311949537
+      "Hit2_0011.png \uC778\uC2A4\uD134\uC2A4 1": 21300138
+      "StartMissionBoardTitle_KR.png \uC778\uC2A4\uD134\uC2A4 1": 21300182
+      "WhistleBG_BG \uC778\uC2A4\uD134\uC2A4 10000": 8834523618466760351
+      "ranking result b \uC778\uC2A4\uD134\uC2A4 10000": -7093676543890794051
+      "itembg \uC778\uC2A4\uD134\uC2A4 10000": 21300350
+      defiance0001: 5783028314150739156
+      "continue item bg \uC778\uC2A4\uD134\uC2A4 10000": 21300264
+      "continue button2 \uC778\uC2A4\uD134\uC2A4 10000": 21300258
+      "Move_Circle_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300164
+      defianceinfo_bg_title0000: -1752978136404243004
+      "Hit2_0008.png \uC778\uC2A4\uD134\uC2A4 1": 21300132
+      "Move_Circle_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300166
+      "frogsoup_Light \uC778\uC2A4\uD134\uC2A4 10000": -1047927573112979495
+      "Move.png \uC778\uC2A4\uD134\uC2A4 1": 21300158
+      "Ice_Light \uC778\uC2A4\uD134\uC2A4 10000": -5532235592549637120
+      "continue1 \uC778\uC2A4\uD134\uC2A4 10000": 21300266
+      "gacha ok button \uC778\uC2A4\uD134\uC2A4 10000": 21300286
+      "game item move \uC778\uC2A4\uD134\uC2A4 10000": -2030934619581840143
+      Combo_txt0000: 3710274071186614737
+      "buff \uC778\uC2A4\uD134\uC2A4 10000": 5526335564966020994
+      "whistle 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300430
+      "stage clear06 \uC778\uC2A4\uD134\uC2A4 10000": 21300412
+      coin0000: 744852985637527570
+      "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10001": 1862785067259792689
+      Combo_txt0002: 5887294491077737642
+      "Non_GameIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10001": 2563978096126780141
+      "buff \uC778\uC2A4\uD134\uC2A4 10002": 8281352485791143851
+      Combo_txt0003: 7568073479420970498
+      "Cream_Light \uC778\uC2A4\uD134\uC2A4 10000": -6407905231329809440
+      "down \uC778\uC2A4\uD134\uC2A4 10000": -245920923743199231
+      "Hit2_0007.png \uC778\uC2A4\uD134\uC2A4 1": 21300130
+      paus_effect_on0000: 8990360888525151170
+      retry_button20000: -8345073954993920780
+      "Hit2_0015.png \uC778\uC2A4\uD134\uC2A4 1": 21300146
+      "Circle_02.png \uC778\uC2A4\uD134\uC2A4 1": 21300008
+      "pause botton \uC778\uC2A4\uD134\uC2A4 10000": 21300380
+      retry_button0000: -2120373574061213481
+      "game mode item \uC778\uC2A4\uD134\uC2A4 10000": -534002743100843964
+      "ranking result b2 \uC778\uC2A4\uD134\uC2A4 10000": 3813881912694059806
+      "Hammer.png \uC778\uC2A4\uD134\uC2A4 1": 21300116
+      "Plus_3.png \uC778\uC2A4\uD134\uC2A4 1": 21300172
+      "Hit2_0006.png \uC778\uC2A4\uD134\uC2A4 1": 21300128
+      "Item_Effect \uC778\uC2A4\uD134\uC2A4 10000": 7060547315850539268
+      cream5x0000: 118191315506983417
+      "move \uC778\uC2A4\uD134\uC2A4 10000": 21300364
+      "change 4 \uC778\uC2A4\uD134\uC2A4 10000": 21300192
+      "Plus_6.png \uC778\uC2A4\uD134\uC2A4 1": 21300174
+      defiance0000: 2044821876476358027
+      "lanking score bar \uC778\uC2A4\uD134\uC2A4 10000": 3972318200689395464
+      "same \uC778\uC2A4\uD134\uC2A4 10000": -3417807482803019832
+      ingame_tip_bg0000: 8586679153772778451
+      "StartMissionBoardTitle_EN.png \uC778\uC2A4\uD134\uC2A4 1": 21300180
+      "Circle_01.png \uC778\uC2A4\uD134\uC2A4 1": 21300006
+      "Non_WhistleIteam_Button_ \uC778\uC2A4\uD134\uC2A4 10000": -4764500917991194930
+      "stage clear04 \uC778\uC2A4\uD134\uC2A4 10000": 21300408
+      "doppelganger1 \uC778\uC2A4\uD134\uC2A4 10000": 21300276
+      "hammer 1 \uC778\uC2A4\uD134\uC2A4 10000": 21300318
+      "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10000": 6633695950201082119
+      "lanking time \uC778\uC2A4\uD134\uC2A4 10000": 9125692184302965576
+      "strawberry_Light \uC778\uC2A4\uD134\uC2A4 10000": 1600045187209346468
+      "iceje_Light \uC778\uC2A4\uD134\uC2A4 10000": -7211966437113088535
+      "Title.png \uC778\uC2A4\uD134\uC2A4 1": 21300184
+      dia_coin0000: -1294610026001077254
+      "stage mini popup \uC778\uC2A4\uD134\uC2A4 10000": 21300414
+      "pause botton 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300378
+      pause_sound_on0000: 1711664963937180237
+      "Cycle.png \uC778\uC2A4\uD134\uC2A4 1": 21300110
+      "hammer 2 \uC778\uC2A4\uD134\uC2A4 10000": 21300320
+      "Circle_04.png \uC778\uC2A4\uD134\uC2A4 1": 21300012
+      "stage clear01 \uC778\uC2A4\uD134\uC2A4 10000": 21300402
+      "GameItem_Icon_ \uC778\uC2A4\uD134\uC2A4 10002": -8694426705657615754
+      "stage clear03 \uC778\uC2A4\uD134\uC2A4 10000": 21300406
+      "lanking scorebar \uC778\uC2A4\uD134\uC2A4 10000": -1606996093489215643
+      "game mode item \uC778\uC2A4\uD134\uC2A4 10001": 7303255281007289891
+      "heart m \uC778\uC2A4\uD134\uC2A4 10000": 21300328
+      strawberry5x0000: 3633381974577911898
+      "Shadow.png \uC778\uC2A4\uD134\uC2A4 1": 21300176
+      "bread_Light \uC778\uC2A4\uD134\uC2A4 10000": 3222856548112020883
+      "item plus \uC778\uC2A4\uD134\uC2A4 10000": 21300346
+      bg_title0000: 4234153339539178730
+      ingame_tip_img0000: 1272964275301875297
+      "buff \uC778\uC2A4\uD134\uC2A4 10001": 6810077693616959587
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

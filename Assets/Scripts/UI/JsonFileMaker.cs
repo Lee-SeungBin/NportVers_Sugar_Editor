@@ -8,8 +8,6 @@ using System;
 
 public class JsonFileMaker : MonoBehaviour
 {
-    public InputField fileName;
-
     public MapManager mapManager;
     public UIManager uIManager;
 
@@ -22,14 +20,13 @@ public class JsonFileMaker : MonoBehaviour
     public Toggle startingMove;
 
     public InputField starPercent;
+    public InputField stageNumber;
 
     public MissionPopup missionPopup;
     public InputField moveText;
     public InputField jumpText;
 
-    public Text stageFileName;
-
-    public void OnClickSave()
+    public string SaveJsonForAndroid()
     {
         StageData data = new StageData();
 
@@ -38,7 +35,8 @@ public class JsonFileMaker : MonoBehaviour
             data.missions = missionPopup.GetUsingMissionDatas().ToArray();
 
             data.obstacles = new List<Obstacle>();
-            
+
+
             data.bgNumber = bgDropdown.value;
             data.bgmNumber = bgmDropdown.value;
             data.moveCount = int.Parse(moveText.text);
@@ -48,13 +46,29 @@ public class JsonFileMaker : MonoBehaviour
             data.isMoveAtStart = startingMove.isOn ? 1 : 0;
             data.usePossibleMoveBuff = moveBuff.isOn ? 1 : 0;
             data.usePossibleJumpBuff = fenceBuff.isOn ? 1 : 0;
+            data.stageNumber = int.Parse(stageNumber.text);
+
+
         }
         catch (Exception)
         {
             UIManager.Instance.errorPopup.SetMessage("스테이지 정보를 확인해주세요.");
         }
 
-
+        if (data.missions.Length == 0 ||
+            data.moveCount == 0 ||
+            data.fenceCount == 0 ||
+            data.stageNumber == 0 ||
+            data.starPercent == 0 ||
+            string.IsNullOrEmpty(moveText.text) ||
+            string.IsNullOrEmpty(jumpText.text) ||
+            string.IsNullOrEmpty(starPercent.text) ||
+            string.IsNullOrEmpty(stageNumber.text) ||
+            mapManager.Maps.Count == 0)
+        {
+            UIManager.Instance.errorPopup.SetMessage("저장이 불가능합니다. 맵, 점프, 무브, 미션을 확인해주세요.");
+            return null;
+        }
 
         List<Map> maps = mapManager.Maps;
         int mapCount = maps.Count;
@@ -79,6 +93,7 @@ public class JsonFileMaker : MonoBehaviour
         bool isJelly = false;
         bool isFrogSoup = false;
         bool isBox = false;
+        bool isVine = false;
 
         for (i = 0; i < mapCount; ++i)
         {
@@ -106,7 +121,7 @@ public class JsonFileMaker : MonoBehaviour
                         tileSet.startStar = charactor.isStar ? 1 : 0;
                         tileSet.position = charactor.tileIndex;
                         tileSet.iceStep = charactor.iceStep;
-                        tileSet.heightDirection = charactor.isHeightDirection ? 1 : 0;
+                        tileSet.heightDirection = charactor.isHeightDirection ? "1" : "0";
                         tileSet.userFence = charactor.isUser ? 1 : 0;
                     }
                     else
@@ -115,12 +130,23 @@ public class JsonFileMaker : MonoBehaviour
                         tileSet.startStar = 0;
                         tileSet.position = 0;
                         tileSet.iceStep = 0;
-                        tileSet.heightDirection = 0;
+                        tileSet.heightDirection = "0";
                         tileSet.userFence = 0;
                     }
 
                     tileSet.woodenFences = maps[i].tileSets[w][h].GetWoodenFencesForJsonSaving();
                     tileSet.isVisibleTiles = maps[i].tileSets[w][h].GetTileVisibleState();
+                    int cnt = 0;
+                    for(int j = 0; j < 4; j++)
+                    {
+                        if (tileSet.isVisibleTiles[j] == false)
+                            cnt++;
+                    }
+                    if (tileSet.code == "x" && cnt != 4)
+                    {
+                        UIManager.Instance.errorPopup.SetMessage("저장이 불가능합니다. 활성화된 타일에는 플라본이 꼭 있어야합니다.");
+                        return null;
+                    }
                     tileSets.Add(tileSet);
 
                     ++tileCount;
@@ -142,7 +168,7 @@ public class JsonFileMaker : MonoBehaviour
                     visibleFenceCount = 0;
 
                     railGroupData = new RailGroupData();
-                    railGroupData.straightMode = railGroups[r].railType == RailGroup.RAIL_TYPE.STRIGHT ? 1 : 0;
+                    railGroupData.straightMode = railGroups[r].railType == RailGroup.RAIL_TYPE.STRIGHT ? "1" : "0";
 
                     rails = new List<int>();
                     for (ri = 0; ri < railGroups[r].tileSets.Count; ++ri)
@@ -155,7 +181,7 @@ public class JsonFileMaker : MonoBehaviour
                         rails.Add(railGroups[r].tileSets[ri].tileSetIndex);
                     }
 
-                    if(railGroupData.straightMode == 1)
+                    if(railGroupData.straightMode == "1")
                     {
                         if(rails.Count == visibleFenceCount)
                         {
@@ -196,21 +222,24 @@ public class JsonFileMaker : MonoBehaviour
                 isBox = true;
             }
 
+            mapData.vineDatas = GetVineData(maps[i]);
+            if (mapData.vineDatas.Count > 0)
+                isVine = true;
+
             mapData.nextStageDatas = maps[i].nextStageDatas;
 
 
             mapDatas[i] = mapData;
         }
 
-        int jellyTerm = int.Parse(uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text);
-        int jellyCount = int.Parse(uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text);
-
-        if ( jellyTerm > 0 && jellyCount > 0 )
+        string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
+        string jellyCount = uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text;
+        if ( int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0 )
         {
             data.obstacles.Add(new Obstacle
             {
                 type = (int)Enums.OBSTACLE_TYPE.JELLY,
-                options = new int[] { jellyTerm, jellyCount }
+                options = new string[] { jellyTerm, jellyCount }
             });
         }
 
@@ -219,7 +248,7 @@ public class JsonFileMaker : MonoBehaviour
             data.obstacles.Add(new Obstacle
             {
                 type = (int)Enums.OBSTACLE_TYPE.RAIL,
-                options = new int[]{ }
+                options = new string[]{ }
             });
         }
 
@@ -228,7 +257,7 @@ public class JsonFileMaker : MonoBehaviour
             data.obstacles.Add(new Obstacle
             {
                 type = (int)Enums.OBSTACLE_TYPE.FROG_SOUP,
-                options = new int[] { }
+                options = new string[] { }
             });
         }
 
@@ -237,21 +266,33 @@ public class JsonFileMaker : MonoBehaviour
             data.obstacles.Add(new Obstacle
             {
                 type = (int)Enums.OBSTACLE_TYPE.BOX,
-                options = new int[] { }
+                options = new string[] { }
+            });
+        }
+
+        if(isVine)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.VINE,
+                options = new string[] { }
             });
         }
         
         data.mapDatas = mapDatas;
 
         string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(data);
-        
-        File.WriteAllText(Application.dataPath + "/" + fileName.text + ".json", jsonData.ToString());
+
+        Debug.Log(jsonData);
+
+        string AES256json = UIManager.Instance.cryptoMNG.EncrStage(jsonData);
+
+        //File.WriteAllText(Application.dataPath + "/" + fileName.text + ".json", AES256json.ToString());
         //File.WriteAllText(uIManager.stageFilePath_, jsonData.ToString());
 
-        stageFileName.text = fileName.text;
-
-        gameObject.SetActive(false);
-
+        //stageFileName.text = fileName.text;
+        //UIManager.Instance.errorPopup.SetMessage("저장이 완료되었습니다. 버전 업데이트를 확인해주세요.");
+        return AES256json;
         //uIManager.OnClickAllFixStartButton();
     }
 
@@ -268,7 +309,7 @@ public class JsonFileMaker : MonoBehaviour
         {
             jellyData = new JellyData();
             jellyData.fenceIndex = jellysOfMap[i].fenceIndex;
-            jellyData.tileIndex = jellysOfMap[i].tileIndex;
+            jellyData.tileIndex = jellysOfMap[i].tileIndex.ToString();
             jellyDatas.Add(jellyData);
         }
 
@@ -288,7 +329,7 @@ public class JsonFileMaker : MonoBehaviour
         {
             frogSoupData = new FrogSoupData();
             frogSoupData.fenceIndex = frogSoupOfMap[i].fenceIndex;
-            frogSoupData.tileIndex = frogSoupOfMap[i].tileIndex;
+            frogSoupData.tileIndex = frogSoupOfMap[i].tileIndex.ToString();
             frogSoupDatas.Add(frogSoupData);
         }
 
@@ -307,12 +348,38 @@ public class JsonFileMaker : MonoBehaviour
         for (int i = 0; i < count; ++i)
         {
             boxData = new BoxData();
-            boxData.fenceIndex = boxOfMap[i].fenceIndex;
-            boxData.tileIndex = boxOfMap[i].tileIndex;
+            boxData.fenceIndex = boxOfMap[i].fenceIndex.ToString();
+            boxData.tileIndex = boxOfMap[i].tileIndex.ToString();
+            boxData.boxLayer = boxOfMap[i].boxLayer.ToString();
+            boxData.boxTypes = boxOfMap[i].boxTypes.ToString();
+            if(boxOfMap[i].boxTier != null)
+            {
+                boxData.boxTier = boxOfMap[i].boxTier.ConvertAll(i => i.ToString());
+            }
             boxDatas.Add(boxData);
         }
 
         return boxDatas;
+    }
+    
+    private List<VineData> GetVineData(Map map)
+    {
+        VineData vineData;
+        List<VineData> vineDatas = new List<VineData>();
+
+        List<Vine> vineOfMap = map.vines;
+
+        int count = vineOfMap.Count;
+
+        for(int i = 0; i < count; ++i)
+        {
+            vineData = new VineData();
+            vineData.fenceIndex = vineOfMap[i].fenceIndex.ToString();
+            vineData.layer = vineOfMap[i].layer.ToString();
+            vineDatas.Add(vineData);
+        }
+
+        return vineDatas;
     }
 
     public void OnClickCancel()
@@ -334,6 +401,7 @@ public class StageData
     public Mission[] missions;
     public List<Obstacle> obstacles;
 
+    public int stageNumber;
     public int bgNumber;
     public int bgmNumber;
 
@@ -362,7 +430,7 @@ public class Mission
 public class Obstacle
 {
     public int type;
-    public int[] options;
+    public string[] options;
 }
 
 
@@ -380,6 +448,7 @@ public class MapData
     public List<JellyData> jellyDatas;
     public List<FrogSoupData> frogSoupDatas;
     public List<BoxData> boxDatas;
+    public List<VineData> vineDatas;
     public List<NextStageData> nextStageDatas;
 }
 
@@ -391,7 +460,7 @@ public class TileSetData
     public int startStar;
     public int position;
     public int iceStep;
-    public int heightDirection;
+    public string heightDirection;
     public int userFence;
     public bool[] woodenFences;
     public bool[] isVisibleTiles;
@@ -400,7 +469,7 @@ public class TileSetData
 [Serializable]
 public class RailGroupData
 {
-    public int straightMode;
+    public string straightMode;
     public List<int> rails;
 }
 
@@ -408,19 +477,28 @@ public class RailGroupData
 public class JellyData
 {
     public int fenceIndex;
-    public int tileIndex;
+    public string tileIndex;
 }
 [Serializable]
 public class FrogSoupData
 {
     public int fenceIndex;
-    public int tileIndex;
+    public string tileIndex;
 }
 [Serializable]
 public class BoxData
 {
-    public int fenceIndex;
-    public int tileIndex;
+    public string fenceIndex;
+    public string tileIndex;
+    public string boxLayer;
+    public string boxTypes;
+    public List<string> boxTier;
+}
+[Serializable]
+public class VineData
+{
+    public string fenceIndex;
+    public string layer;
 }
 [Serializable]
 public class NextStageData

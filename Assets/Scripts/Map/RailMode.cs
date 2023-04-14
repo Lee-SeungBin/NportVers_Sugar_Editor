@@ -13,6 +13,11 @@ public class RailMode : MonoBehaviour
         {
             OnMouseDown();
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            if (selectTileSet.railGroup != null)
+                selectTileSet.railGroup.UnselectGroup();
+        }
     }
 
     private void OnMouseDown()
@@ -28,6 +33,17 @@ public class RailMode : MonoBehaviour
         if(selectTileSet == null)
         {
             selectTileSet = hit.transform.GetComponent<TileSet>();
+            int cnt = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                if (!selectTileSet.tiles[i].isVisible)
+                    cnt++;
+            }
+            if (cnt > 0 && cnt < 4)
+            {
+                UIManager.Instance.errorPopup.SetMessage("레일은 타일이 전부 없거나 있어야 설치 가능합니다.");
+                return;
+            }
 
             if (selectTileSet.railGroup == null)
             {
@@ -42,12 +58,22 @@ public class RailMode : MonoBehaviour
         }
         else
         {
-
             TileSet tempTileSet = hit.transform.GetComponent<TileSet>();
-
-            if(selectTileSet == tempTileSet)
+            int cnt = 0;
+            for (int i = 0; i < 4; i++)
             {
-                selectTileSet.railGroup.UnselectGroup();
+                if (!tempTileSet.tiles[i].isVisible)
+                    cnt++;
+            }
+            if (cnt > 0 && cnt < 4)
+            {
+                UIManager.Instance.errorPopup.SetMessage("레일은 타일이 전부 없거나 있어야 설치 가능합니다.");
+                return;
+            }
+            if (selectTileSet == tempTileSet)
+            {
+                if (selectTileSet.railGroup != null)
+                    selectTileSet.railGroup.UnselectGroup();
                 selectTileSet = null;
             }
             else
@@ -56,7 +82,8 @@ public class RailMode : MonoBehaviour
 
                 if (isVisibleTiles == false) //새로운 그룹 생성
                 {
-                    selectTileSet.railGroup.UnselectGroup();
+                    if (selectTileSet.railGroup != null)
+                        selectTileSet.railGroup.UnselectGroup();
 
                     selectTileSet = tempTileSet;
 

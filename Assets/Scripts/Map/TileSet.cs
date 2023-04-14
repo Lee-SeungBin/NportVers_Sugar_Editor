@@ -37,11 +37,12 @@ public class TileSet : MonoBehaviour
     public GameObject woodenFenceColliders;
     public WoodenFence[] woodenFenceShadows;
     public WoodenFence[] woodenFences = new WoodenFence[12];
+    public Vine vine;
 
     public Sprite[] normalThemes;
     public Sprite[] myThemes;
-    public Sprite railTheme;
-    public Sprite myRailTheme;
+    public Sprite[] railTheme;
+    public Sprite[] myRailTheme;
 
     void Awake()
     {
@@ -139,12 +140,12 @@ public class TileSet : MonoBehaviour
 
         if(railGroup != null)
         {
-            sp = railTheme;
+            sp = railTheme[UIManager.Instance.bgDropdown.value];
             if (character != null)
             {
                 if (character.isUser)
                 {
-                    sp = myRailTheme;
+                    sp = myRailTheme[UIManager.Instance.bgDropdown.value];
                 }
             }
         }

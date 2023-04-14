@@ -20,6 +20,10 @@ public class MonsterSetMode : MonoBehaviour
 
             OnMouseUpForSetMonster();
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            UIManager.Instance.mapEditManager.characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
+        }
     }
 
 
@@ -37,7 +41,8 @@ public class MonsterSetMode : MonoBehaviour
         {
             if (hit.collider != null)
             {
-                if (hit.transform.tag.Equals("Tile"))
+                Tile tile = hit.collider.transform.GetComponent<Tile>();
+                if (hit.transform.tag.Equals("Tile") && tile.isVisible && !tile.box)
                 {
                     tileIndex = hit.transform.GetComponent<Tile>().tileIndex;
 
@@ -127,7 +132,7 @@ public class MonsterSetMode : MonoBehaviour
     public void DeleteCharacterOnSelectFence()
     {
         if (selectTileSet.character == null) return;
-
+        ChangeUserCharacterState(false);
         Destroy(selectTileSet.character.gameObject);
 
         selectTileSet.character = null;

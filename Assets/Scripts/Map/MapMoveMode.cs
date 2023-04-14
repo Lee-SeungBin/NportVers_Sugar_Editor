@@ -116,20 +116,32 @@ public class MapMoveMode : MonoBehaviour
 
     private void OnMouseMoveForMapMoving()
     {
-        if(selectMapContainer != null)
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 prevPosition = Camera.main.ScreenToWorldPoint(prevMousePosition);
+        Vector2 translation = mousePosition - prevPosition;
+
+        if (selectMapContainer != null)
         {
-            selectMapContainer.transform.Translate((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)Camera.main.ScreenToWorldPoint(prevMousePosition));
+            Vector3 newPosition = selectMapContainer.transform.localPosition + new Vector3(translation.x, translation.y, 0f);
+            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f;
+            newPosition.y = Mathf.Round(newPosition.y * 100f) / 100f;
+            selectMapContainer.transform.localPosition = newPosition;
+
             prevMousePosition = Input.mousePosition;
+            UIManager.Instance.SetMapPositionText(selectMapContainer.transform.localPosition);
 
         }
         else if (selectMap != null)
         {
-            if (prevMousePosition == Input.mousePosition) return;
+            if (prevMousePosition == Input.mousePosition)
+                return;
+            Vector3 newPosition = selectMap.transform.localPosition + new Vector3(translation.x, translation.y, 0f);
+            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f;
+            newPosition.y = Mathf.Round(newPosition.y * 100f) / 100f;
+            selectMap.transform.localPosition = newPosition;
 
-            selectMap.transform.Translate((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)Camera.main.ScreenToWorldPoint(prevMousePosition));
             prevMousePosition = Input.mousePosition;
             UIManager.Instance.SetStagePosition(selectMap.transform.position, Input.mousePosition);
         }
     }
-
 }
