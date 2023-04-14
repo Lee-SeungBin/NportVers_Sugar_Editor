@@ -204,7 +204,11 @@ public class MapManager : MonoBehaviour
     {
 
         if (Maps.Count == 0)
+        {
+            UIManager.Instance.errorPopup.SetMessage("맵이 없습니다.");
             return;
+        }
+
 
         int mapIndex = index;
 
@@ -251,7 +255,10 @@ public class MapManager : MonoBehaviour
 
     public void ModifyMap(int index, int w, int h)
     {
-        Maps[index].ModifyMap(this, w, h, index);
+        if (Maps.Count > 0)
+            Maps[index].ModifyMap(this, w, h, index);
+        else
+            UIManager.Instance.errorPopup.SetMessage("수정할 맵이 없습니다.");
     }
 
     public int GetTotalIceCount()
