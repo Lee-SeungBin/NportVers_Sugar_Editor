@@ -40,6 +40,7 @@ public class MapEditManager : MonoBehaviour
 
     public Button obstacleButton;
     public Button versionupdateButton;
+    public Button resetButton;
 
     private void Start()
     {
@@ -74,6 +75,7 @@ public class MapEditManager : MonoBehaviour
             createMapButton.gameObject.SetActive(false);
             obstacleButton.gameObject.SetActive(false);
             versionupdateButton.gameObject.SetActive(false);
+            resetButton.gameObject.SetActive(false);
         }
         else if (selectMode == MapManager.SELECT_MODE.SPECIAL_SET)
         {
@@ -85,6 +87,7 @@ public class MapEditManager : MonoBehaviour
             createMapButton.gameObject.SetActive(false);
             obstacleButton.gameObject.SetActive(false);
             versionupdateButton.gameObject.SetActive(false);
+            resetButton.gameObject.SetActive(false);
         }
         else
         {
@@ -96,6 +99,7 @@ public class MapEditManager : MonoBehaviour
             createMapButton.gameObject.SetActive(true);
             obstacleButton.gameObject.SetActive(true);
             versionupdateButton.gameObject.SetActive(true);
+            resetButton.gameObject.SetActive(true);
         }
 
         SetVisibleTileSetPopup(false);
@@ -286,6 +290,7 @@ public class MapEditManager : MonoBehaviour
 
         UIManager.Instance.mapPositionX.text = "0";
         UIManager.Instance.mapPositionY.text = "0";
+        UIManager.Instance.mapSize.text = "Width :  0\nHeight : 0";
 
         // 팝업 초기화
         Width.text = "";
