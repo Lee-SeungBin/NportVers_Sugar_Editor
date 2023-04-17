@@ -75,6 +75,8 @@ public class MapcountManager : MonoBehaviour
         MapManager.Instance.HideWoodenFence();
 
         CameraMove(cameraPos);
+
+        UIManager.Instance.SetMapPositionText(MapManager.Instance.currentMap.container.transform.localPosition);
     }
 
     void CameraMove(Vector3 newPosVec3)
