@@ -249,7 +249,8 @@ public class Map : MonoBehaviour
                 ++count;
             }
         }
-        typeSelected = false;
+        UIManager.Instance.mapEditManager.Maptype.value = 0;
+        this.type = 0;
         container.transform.localPosition = MotifyCoordinateMap();
 
         //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
@@ -260,48 +261,40 @@ public class Map : MonoBehaviour
     public Vector2 MotifyCoordinateMap()
     {
         string mapsize = width.ToString() + "x" + height.ToString();
-        Debug.Log(type);
         if (mapCoords.ContainsKey(mapsize))
         {
             List<Vector2> coords = mapCoords[mapsize];
-            if (coords.Count == 1) // value가 하나인 경우는 중앙 좌표 정할 필요 없음
+            List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
+            Dropdown.OptionData option;
+
+            int len = coords.Count + 1;
+            for (int i = 1; i < len; ++i)
             {
-                return coords[0];
+                option = new Dropdown.OptionData();
+                string coordString = coords[i - 1].ToString();
+
+                string[] coordArray = coordString.Trim('(', ')', ' ').Split(',');
+
+                string xLabel = "X: ";
+                string yLabel = "Y: ";
+
+                string formattedString = xLabel + coordArray[0] + ", " + yLabel + coordArray[1];
+
+                option.text = formattedString;
+                options.Add(option);
             }
-            else if (typeSelected) // 중앙 좌표를 정한 경우
-            {
-                return coords[type];
-            }
-            else // 중앙 좌표를 정하지 않은 경우
-            {
-                List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
-                Dropdown.OptionData option;
 
-                int len = coords.Count + 1;
-                for (int i = 1; i < len; ++i)
-                {
-                    option = new Dropdown.OptionData();
-                    string coordString = coords[i - 1].ToString();
+            UIManager.Instance.mapEditManager.Maptype.options = options;
 
-                    string[] coordArray = coordString.Trim('(', ')', ' ').Split(',');
-
-                    string xLabel = "X: ";
-                    string yLabel = "Y: ";
-
-                    string formattedString = xLabel + coordArray[0] + ", " + yLabel + coordArray[1];
-
-                    option.text = formattedString;
-                    options.Add(option);
-                }
-
-                UIManager.Instance.mapEditManager.Maptype.options = options;
-                UIManager.Instance.mapEditManager.selectMaptypePopup.SetActive(true);
-                return Vector2.zero;
-            }
+            return coords[type];
 
         }
         else
+        {
+            UIManager.Instance.mapEditManager.Maptype.options.Clear();
+            UIManager.Instance.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
             return new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
+        }
     }
     public void SetLoadMap(MapManager mapManager, MapData data, int mapIndex)
     {

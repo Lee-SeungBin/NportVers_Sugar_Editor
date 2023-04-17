@@ -14,7 +14,6 @@ public class MapEditManager : MonoBehaviour
     public Button modifyMapButton;
     public Dropdown modifyMapDropDown;
     public GameObject modifyMapPopup;
-    public GameObject selectMaptypePopup;
     public Dropdown Maptype;
 
     public Button stageLoadButton;
@@ -33,8 +32,7 @@ public class MapEditManager : MonoBehaviour
     public SandWichChangePopup sandwichChangePopup;
     public Dropdown sandwichChangeDropDown;
 
-    public Toggle centerSelectButton;
-
+    //public Toggle centerSelectButton;
 
     public MapEditorPopups popups;
 
@@ -291,6 +289,8 @@ public class MapEditManager : MonoBehaviour
         UIManager.Instance.mapPositionX.text = "0";
         UIManager.Instance.mapPositionY.text = "0";
         UIManager.Instance.mapSize.text = "Width :  0\nHeight : 0";
+        UIManager.Instance.mapEditManager.Maptype.options.Clear();
+        UIManager.Instance.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
 
         // 팝업 초기화
         Width.text = "";
