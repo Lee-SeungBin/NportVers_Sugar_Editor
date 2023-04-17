@@ -76,7 +76,7 @@ public class MapcountManager : MonoBehaviour
 
         CameraMove(cameraPos);
 
-        UIManager.Instance.SetMapPositionText(MapManager.Instance.currentMap.container.transform.localPosition);
+        UIManager.Instance.SetMapPositionText(MapManager.Instance.currentMap.container.transform.localPosition, MapManager.Instance.currentMap);
     }
 
     void CameraMove(Vector3 newPosVec3)

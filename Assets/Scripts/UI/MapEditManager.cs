@@ -230,7 +230,7 @@ public class MapEditManager : MonoBehaviour
                 newPosition.x = floatValueX;
                 newPosition.y = floatValueY;
                 MapManager.Instance.currentMap.container.transform.localPosition = newPosition;
-                UIManager.Instance.SetMapPositionText(newPosition);
+                UIManager.Instance.SetMapPositionText(newPosition, MapManager.Instance.currentMap);
             }
         }
         else
@@ -245,7 +245,7 @@ public class MapEditManager : MonoBehaviour
         {
             Vector2 newPosition = MapManager.Instance.currentMap.container.transform.localPosition;
             newPosition = MapManager.Instance.currentMap.MotifyCoordinateMap();
-            UIManager.Instance.SetMapPositionText(newPosition);
+            UIManager.Instance.SetMapPositionText(newPosition, MapManager.Instance.currentMap);
         }
         else
         {

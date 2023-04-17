@@ -111,7 +111,7 @@ public class Map : MonoBehaviour
 
         nextStageDatas = new List<NextStageData>();
 
-        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
 
 
@@ -252,7 +252,7 @@ public class Map : MonoBehaviour
         container.transform.localPosition = MotifyCoordinateMap();
         //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
 
-        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
 
     public Vector2 MotifyCoordinateMap()
@@ -344,7 +344,7 @@ public class Map : MonoBehaviour
         //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1) * TileSetH));
         container.transform.localPosition = new Vector3(data.centerX, data.centerY, 0);
         //container.transform.localPosition = new Vector2(data.centerX, (((width + height) * 0.5f - 1.21f) * TileSetH));
-        UIManager.Instance.SetMapPositionText(container.transform.localPosition);
+        UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
 
         transform.localPosition = new Vector2(data.x, data.y);
 

@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
     public GameObject mapPosition;
     public InputField mapPositionX;
     public InputField mapPositionY;
+    public Text mapSize;
 
     public Dropdown selectModeDropDown;
 
@@ -126,33 +127,34 @@ public class UIManager : MonoBehaviour
         stagePosition.transform.position = uiPositionValue;
         stagePositionText.text = "x:" + stagePositionValue.x + "\ny:" + stagePositionValue.y;
     }
-    public void SetMapPositionText(Vector2 mapPositionValue)
+    public void SetMapPositionText(Vector2 mapPositionValue, Map map)
     {
         mapPositionX.text = mapPositionValue.x.ToString();
         mapPositionY.text = mapPositionValue.y.ToString();
+        mapSize.text = "Width :  " + map.width + "\nHeight : " + map.height;
      }
 
     public void OnClickLoadStageButton()
     {
-        string input = " 야야야 ひらがな Киа ! @ # $ % ^ & * ' + = ` | ( ) [ ] { } : ; - _ - ＃ ＆ ＆ ＠ § ※ ○ ○ ◎ ◇ ◇ □ □ △ △ ▽ ▽ → ← ← ↑ ↓ ↔ 〓";
+        //string input = " 야야야 ひらがな Киа ! @ # $ % ^ & * ' + = ` | ( ) [ ] { } : ; - _ - ＃ ＆ ＆ ＠ § ※ ○ ○ ◎ ◇ ◇ □ □ △ △ ▽ ▽ → ← ← ↑ ↓ ↔ 〓";
         //string regexp = @"/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]";
         //input = Regex.Replace(input, regexp, "", RegexOptions.Singleline);
 
-        string clenaName = new string(input.Select(c => char.IsLetterOrDigit(c) ? c : new char()).ToArray());
-        clenaName = clenaName.Replace("\0","");
+        //string clenaName = new string(input.Select(c => char.IsLetterOrDigit(c) ? c : new char()).ToArray());
+        //clenaName = clenaName.Replace("\0","");
 
-        string aaaaa = Normalize(input);
+        //string aaaaa = Normalize(input);
         //clenaName = clenaName.Trim();
         loadStageWarnningPopup.SetActive(true);
     }
 
-    private string Normalize(string text)
-    {
-        return string.Join("",
-            from ch in text
-            where char.IsLetterOrDigit(ch) || char.IsWhiteSpace(ch)
-            select ch);
-    }
+    //private string Normalize(string text)
+    //{
+    //    return string.Join("",
+    //        from ch in text
+    //        where char.IsLetterOrDigit(ch) || char.IsWhiteSpace(ch)
+    //        select ch);
+    //}
 
     //public void OnClickLoadStartButton()
     //{
@@ -175,7 +177,7 @@ public class UIManager : MonoBehaviour
         saveStageWarnningPopup.SetActive(true);
     }
 
-    private string stageFilePath;
+    //private string stageFilePath;
 
     public void LoadJsonForAndroid(string Decrjson)
     {

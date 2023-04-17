@@ -128,7 +128,7 @@ public class MapMoveMode : MonoBehaviour
             selectMapContainer.transform.localPosition = newPosition;
 
             prevMousePosition = Input.mousePosition;
-            UIManager.Instance.SetMapPositionText(selectMapContainer.transform.localPosition);
+            UIManager.Instance.SetMapPositionText(selectMapContainer.transform.localPosition, selectMapContainer.GetComponentInParent<Map>());
 
         }
         else if (selectMap != null)
