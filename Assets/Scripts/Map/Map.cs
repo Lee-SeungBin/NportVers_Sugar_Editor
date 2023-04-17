@@ -10,7 +10,8 @@ public class Map : MonoBehaviour
 
 
     public int index;
-
+    public int type;
+    public bool typeSelected = false;
     public GameObject bg;
     public GameObject container;
 
@@ -28,30 +29,29 @@ public class Map : MonoBehaviour
 
     public List<NextStageData> nextStageDatas;
 
-    private Dictionary<string, Vector2> mapCoords = new Dictionary<string, Vector2>()
-    {
-        { "3x3", new Vector2(0f, 1.9f) },
-        { "4x3", new Vector2(0.58f, 1.4f) },
-        { "4x4", new Vector2(0f, 1.9f) },
-        { "4x5", new Vector2(-0.58f, 2f) },
-        { "4x6", new Vector2(0f, 0f) },
-        { "4x7", new Vector2(-1.8f, 2.5f) },
-        { "5x5", new Vector2(0f, 2.2f) },
-        { "5x6", new Vector2(0f, 2.2f) },
-        { "5x7", new Vector2(-1.1f, 2.9f) },
-        { "6x4", new Vector2(1.16f, 2.2f) },
-        { "6x5", new Vector2(0.58f, 2.6f) },
-        { "6x6", new Vector2(0f, 2.9f) },
-        { "6x7", new Vector2(-0.6f, 3.3f) },
-        { "7x4", new Vector2(1.74f, 3f) },
-        { "7x5", new Vector2(2f, 3.5f) },
-        { "7x6", new Vector2(1f, 2.9f) },
-        { "7x7", new Vector2(0f, 3.5f) },
-        { "7x8", new Vector2(-0.55f, 3.5f) },
-        { "8x6", new Vector2(1.1f, 3.5f) },
-        { "8x7", new Vector2(0.6f, 3.8f) },
-        { "8x8", new Vector2(0f, 4.2f) },
-        { "9x9", new Vector2(0f, 4.8f) }
+    private Dictionary<string, List<Vector2>> mapCoords = new Dictionary<string, List<Vector2>>()
+{
+    { "3x3", new List<Vector2>() { new Vector2(0f, 1.9f) } },
+    { "4x3", new List<Vector2>() { new Vector2(0.58f, 1.4f) } },
+    { "4x4", new List<Vector2>() { new Vector2(0f, 1.9f) } },
+    { "4x5", new List<Vector2>() { new Vector2(-0.58f, 2f) } },
+    { "4x7", new List<Vector2>() { new Vector2(-1.8f, 2.5f) } },
+    { "5x5", new List<Vector2>() { new Vector2(0f, 2.2f), new Vector2(0f, 2.4f) } },
+    { "5x6", new List<Vector2>() { new Vector2(0f, 2.2f), new Vector2(-0.58f, 2.6f), new Vector2(-1f, 2.85f), new Vector2(-1f, 2.2f) } },
+    { "5x7", new List<Vector2>() { new Vector2(-1.1f, 2.9f) } },
+    { "6x4", new List<Vector2>() { new Vector2(1.16f, 2.2f) } },
+    { "6x5", new List<Vector2>() { new Vector2(0.58f, 2.6f) } },
+    { "6x6", new List<Vector2>() { new Vector2(0f, 2.9f), new Vector2(0f, 3.2f), new Vector2(0f, 3.5f) } },
+    { "6x7", new List<Vector2>() { new Vector2(-0.6f, 3.3f) } },
+    { "7x4", new List<Vector2>() { new Vector2(1.74f, 3f) } },
+    { "7x5", new List<Vector2>() { new Vector2(2f, 3.5f), new Vector2(1.15f, 2.88f) } },
+    { "7x6", new List<Vector2>() { new Vector2(1f, 2.9f), new Vector2(0.6f, 3.2f), new Vector2(0f, 3.3f) } },
+    { "7x7", new List<Vector2>() { new Vector2(0f, 3.5f), new Vector2(0f, 3.6f) } },
+    { "7x8", new List<Vector2>() { new Vector2(-0.55f, 3.5f) } },
+    { "8x6", new List<Vector2>() { new Vector2(1.1f, 3.5f) } },
+    { "8x7", new List<Vector2>() { new Vector2(0.6f, 3.8f) } },
+    { "8x8", new List<Vector2>() { new Vector2(0f, 4.2f) } },
+    { "9x9", new List<Vector2>() { new Vector2(0f, 4.8f) } }
     };
 
     private void Awake()
@@ -249,7 +249,9 @@ public class Map : MonoBehaviour
                 ++count;
             }
         }
+        typeSelected = false;
         container.transform.localPosition = MotifyCoordinateMap();
+
         //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
 
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
@@ -258,9 +260,46 @@ public class Map : MonoBehaviour
     public Vector2 MotifyCoordinateMap()
     {
         string mapsize = width.ToString() + "x" + height.ToString();
-
+        Debug.Log(type);
         if (mapCoords.ContainsKey(mapsize))
-            return mapCoords[mapsize];
+        {
+            List<Vector2> coords = mapCoords[mapsize];
+            if (coords.Count == 1) // value가 하나인 경우는 중앙 좌표 정할 필요 없음
+            {
+                return coords[0];
+            }
+            else if (typeSelected) // 중앙 좌표를 정한 경우
+            {
+                return coords[type];
+            }
+            else // 중앙 좌표를 정하지 않은 경우
+            {
+                List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
+                Dropdown.OptionData option;
+
+                int len = coords.Count + 1;
+                for (int i = 1; i < len; ++i)
+                {
+                    option = new Dropdown.OptionData();
+                    string coordString = coords[i - 1].ToString();
+
+                    string[] coordArray = coordString.Trim('(', ')', ' ').Split(',');
+
+                    string xLabel = "X: ";
+                    string yLabel = "Y: ";
+
+                    string formattedString = xLabel + coordArray[0] + ", " + yLabel + coordArray[1];
+
+                    option.text = formattedString;
+                    options.Add(option);
+                }
+
+                UIManager.Instance.mapEditManager.Maptype.options = options;
+                UIManager.Instance.mapEditManager.selectMaptypePopup.SetActive(true);
+                return Vector2.zero;
+            }
+
+        }
         else
             return new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
     }
@@ -481,6 +520,4 @@ public class Map : MonoBehaviour
         int h = fenceIndex % height;
         return tileSets[w][h].tiles[tileIndex].GetComponent<Tile>();
     }
-
-
 }

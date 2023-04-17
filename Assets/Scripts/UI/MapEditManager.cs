@@ -14,7 +14,8 @@ public class MapEditManager : MonoBehaviour
     public Button modifyMapButton;
     public Dropdown modifyMapDropDown;
     public GameObject modifyMapPopup;
-    public GameObject coordinateMapPopup;
+    public GameObject selectMaptypePopup;
+    public Dropdown Maptype;
 
     public Button stageLoadButton;
     public Button jsonSaveButton;

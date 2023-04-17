@@ -538,4 +538,12 @@ public class MapManager : MonoBehaviour
 
         Debug.Log(value);
     }
+    public void SetType()
+    {
+        currentMap.type = UIManager.Instance.mapEditManager.Maptype.value;
+        currentMap.typeSelected = true;
+        Vector2 newPosition = currentMap.container.transform.localPosition;
+        newPosition = currentMap.MotifyCoordinateMap();
+        UIManager.Instance.SetMapPositionText(newPosition, currentMap);
+    }
 }
