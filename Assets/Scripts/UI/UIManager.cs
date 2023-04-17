@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject stagePosition;
     public Text stagePositionText;
+    public GameObject mapPosition;
     public InputField mapPositionX;
     public InputField mapPositionY;
 
@@ -110,6 +111,14 @@ public class UIManager : MonoBehaviour
     public void HideStagePosition()
     {
         stagePosition.SetActive(false);
+    }
+
+    public void MapPostionActive()
+    {
+        if (mapPosition.activeSelf)
+            mapPosition.SetActive(false);
+        else
+            mapPosition.SetActive(true);
     }
 
     public void SetStagePosition(Vector2 stagePositionValue, Vector2 uiPositionValue)
