@@ -222,13 +222,13 @@ public class MapEditManager : MonoBehaviour
     }
     public void InputCoordinateMap()
     {
-        if (MapManager.Instance.Maps.Count > 0)
+        if (MapManager.Instance.Maps.Count > 0 && !MapManager.Instance.isCreatingMap)
         {
-            if (float.TryParse(UIManager.Instance.mapPositionX.text, out float floatValueT) && float.TryParse(UIManager.Instance.mapPositionY.text, out float floatValueQ))
+            if (float.TryParse(UIManager.Instance.mapPositionX.text, out float floatValueX) && float.TryParse(UIManager.Instance.mapPositionY.text, out float floatValueY))
             {
                 Vector2 newPosition = MapManager.Instance.currentMap.container.transform.localPosition;
-                newPosition.x = floatValueT;
-                newPosition.y = floatValueQ;
+                newPosition.x = floatValueX;
+                newPosition.y = floatValueY;
                 MapManager.Instance.currentMap.container.transform.localPosition = newPosition;
                 UIManager.Instance.SetMapPositionText(newPosition);
             }

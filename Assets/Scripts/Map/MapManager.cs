@@ -16,6 +16,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public bool isCreatingMap = false;
 
     public Camera mainCamera;
 
@@ -151,6 +152,8 @@ public class MapManager : MonoBehaviour
 
     public void CreateMap(int w, int h)
     {
+        isCreatingMap = true;
+
         Map tempMap = Instantiate(map);
         tempMap.CreateMap(this, w, h, Maps.Count);
         Maps.Add(tempMap);
@@ -158,6 +161,8 @@ public class MapManager : MonoBehaviour
         MapcountManager.Instance.Init(Maps.Count, Maps.Count);
 
         CameraSetting(Maps[Maps.Count-1].transform.position);
+
+        isCreatingMap = false;
 
         onChangeMaps?.Invoke();
     }
