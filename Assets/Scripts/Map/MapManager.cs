@@ -427,68 +427,30 @@ public class MapManager : MonoBehaviour
             return null;
         }
 
+        Dictionary<string, List<GameObject>> characterDictionary = new Dictionary<string, List<GameObject>>()
+    {
+        { "ST", STCharactors },
+        { "CH", CHCharactors },
+        { "CR", CRCharactors },
+        { "EG", EGCharactors },
+        { "BR", BRCharactors },
+        { "SP", SPCharactors }
+    };
+
         string type = code.Substring(0, 2);
 
-        if(type == "ST")
+        if (characterDictionary.ContainsKey(type))
         {
-            for (int i = 0; i < STCharactors.Count; i++)
+            foreach (GameObject character in characterDictionary[type])
             {
-                if (STCharactors[i].name == code)
-                    return STCharactors[i];
+                if (character.name == code)
+                {
+                    return character;
+                }
             }
-            return null;
         }
-        else if (type == "CH")
-        {
-            for (int i = 0; i < CHCharactors.Count; i++)
-            {
-                if (CHCharactors[i].name == code)
-                    return CHCharactors[i];
-            }
-            return null;
 
-        }
-        else if (type == "CR")
-        {
-            for (int i = 0; i < CRCharactors.Count; i++)
-            {
-                if (CRCharactors[i].name == code)
-                    return CRCharactors[i];
-            }
-            return null;
-
-        }
-        else if (type == "EG")
-        {
-            for (int i = 0; i < EGCharactors.Count; i++)
-            {
-                if (EGCharactors[i].name == code)
-                    return EGCharactors[i];
-            }
-            return null;
-        }
-        else if (type == "BR")
-        {
-            for (int i = 0; i < BRCharactors.Count; i++)
-            {
-                if (BRCharactors[i].name == code)
-                    return BRCharactors[i];
-            }
-            return null;
-        }
-        else if (type == "SP")
-        {
-            for (int i = 0; i < SPCharactors.Count; i++)
-            {
-                if (SPCharactors[i].name == code)
-                    return SPCharactors[i];
-            }
-            return null;
-        }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 
     public void SetCameraPosition(Vector3 position)
@@ -525,7 +487,6 @@ public class MapManager : MonoBehaviour
             Maps[i].HideUserFence();
         }
     }
-
 
     public void OnInputFieldValueChanged(string value)
     {

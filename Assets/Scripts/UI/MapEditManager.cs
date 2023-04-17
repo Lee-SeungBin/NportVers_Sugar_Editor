@@ -39,72 +39,68 @@ public class MapEditManager : MonoBehaviour
     public Button obstacleButton;
     public Button versionupdateButton;
     public Button resetButton;
-
-    private void Start()
+    private void HidePopups()
     {
         HideCreateMapPopup();
         HideCharactorInfoPopup();
         HideModifyMapPopup();
         HideSandWichInfoPopup();
         HideSandWichChangePopup();
+    }
+
+    private void Start()
+    {
+        HidePopups();
 
         SetVisibleTileSetPopup(false);
-        //SetVisibleJsonFileSavePopup(false);
         SetVisibleObstacleOptionPopup(false);
-
 
         MapManager.Instance.onChangeMaps += OnChangeModifyMapDropDown;
     }
 
-
+    public void ActiveManager(GameObject[] gameobj, bool[] active)
+    {
+        for(int i = 0; i < gameobj.Length; i++)
+        {
+            gameobj[i].SetActive(active[i]);
+        }
+    }
     public void OnChangeSelectModeDropDown(MapManager.SELECT_MODE selectMode)
     {
         gameObject.SetActive(true);
 
         specialList.GetComponent<SpecialList>().SelectEmtpy();
 
-        if (selectMode == MapManager.SELECT_MODE.MONSTER_SET)
+        GameObject[] objArray = { 
+            characterList, 
+            specialList, 
+            stageLoadButton.gameObject,
+            jsonSaveButton.gameObject,
+            modifyMapButton.gameObject, 
+            createMapButton.gameObject, 
+            obstacleButton.gameObject, 
+            versionupdateButton.gameObject, 
+            resetButton.gameObject };
+
+        bool[] activeArray = { false, false, true, true, true, true, true, true, true };
+
+        switch (selectMode)
         {
-            characterList.SetActive(true);
-            specialList.SetActive(false);
-            stageLoadButton.gameObject.SetActive(false);
-            jsonSaveButton.gameObject.SetActive(false);
-            modifyMapButton.gameObject.SetActive(false);
-            createMapButton.gameObject.SetActive(false);
-            obstacleButton.gameObject.SetActive(false);
-            versionupdateButton.gameObject.SetActive(false);
-            resetButton.gameObject.SetActive(false);
-        }
-        else if (selectMode == MapManager.SELECT_MODE.SPECIAL_SET)
-        {
-            characterList.SetActive(false);
-            specialList.SetActive(true);
-            stageLoadButton.gameObject.SetActive(false);
-            jsonSaveButton.gameObject.SetActive(false);
-            modifyMapButton.gameObject.SetActive(false);
-            createMapButton.gameObject.SetActive(false);
-            obstacleButton.gameObject.SetActive(false);
-            versionupdateButton.gameObject.SetActive(false);
-            resetButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            characterList.SetActive(false);
-            specialList.SetActive(false);
-            stageLoadButton.gameObject.SetActive(true);
-            jsonSaveButton.gameObject.SetActive(true);
-            modifyMapButton.gameObject.SetActive(true);
-            createMapButton.gameObject.SetActive(true);
-            obstacleButton.gameObject.SetActive(true);
-            versionupdateButton.gameObject.SetActive(true);
-            resetButton.gameObject.SetActive(true);
+            case MapManager.SELECT_MODE.MONSTER_SET:
+                objArray[0].SetActive(true);
+                activeArray[0] = true;
+                break;
+            case MapManager.SELECT_MODE.SPECIAL_SET:
+                objArray[1].SetActive(true);
+                activeArray[1] = true;
+                break;
         }
 
+        ActiveManager(objArray, activeArray);
+
         SetVisibleTileSetPopup(false);
-        HideCharactorInfoPopup();
-        HideSandWichInfoPopup();
+        HidePopups();
         HideWoodenFenceColliders();
-        HideSandWichChangePopup();
         characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
     }
 

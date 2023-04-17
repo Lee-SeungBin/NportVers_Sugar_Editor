@@ -11,7 +11,6 @@ public class Map : MonoBehaviour
 
     public int index;
     public int type;
-    public bool typeSelected = false;
     public GameObject bg;
     public GameObject container;
 
