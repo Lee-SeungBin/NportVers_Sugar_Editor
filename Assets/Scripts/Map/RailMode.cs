@@ -186,9 +186,10 @@ public class RailMode : MonoBehaviour
             if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
-                  (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)))
+                  (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) || 
+                  (tileSet.railGroup.tileSets.Count <= 2))
             {
-                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");
+                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 두 개 일수 없으며 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");
                 return false;
             }
         }

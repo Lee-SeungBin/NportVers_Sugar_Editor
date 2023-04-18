@@ -184,7 +184,7 @@ public class JsonFileMaker : MonoBehaviour
                     {
                         if (railGroups[r].GetLastTileSet().isVisible)
                         {
-                            throw new Exception("직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다. 레일 그룹 번호 " + r + "의 타일의 끝이나 처음을 없애주세요.");
+                            throw new Exception("직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다. 레일 그룹 번호 " + r + "의 타일의 끝을 없애주세요.");
                         }
                         if (rails.Count == visibleFenceCount)
                         {
@@ -201,9 +201,10 @@ public class JsonFileMaker : MonoBehaviour
                         if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
                               (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
                               (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
-                              (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex)))
+                              (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex)) ||
+                              (rails.Count <= 2))
                         {
-                            throw new Exception("회전 레일은 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다. 레일 그룹 번호 " + r + "의 타일을 조정해주세요.");
+                            throw new Exception("회전 레일은 두 개 일수 없으며 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다. 레일 그룹 번호 " + r + "의 타일을 조정해주세요.");
                         }
                     }
 
