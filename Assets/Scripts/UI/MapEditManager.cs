@@ -114,6 +114,9 @@ public class MapEditManager : MonoBehaviour
         createMapPopup.SetActive(true);
 
         createMapPopup.transform.Find("MapNumber").GetComponent<Text>().text = (MapManager.Instance.Maps.Count + 1).ToString();
+
+        Width.text = "";
+        Height.text = "";
     }
 
     public void HideCreateMapPopup()
@@ -134,7 +137,6 @@ public class MapEditManager : MonoBehaviour
         int w = int.Parse(Width.text);
         int h = int.Parse(Height.text);
         MapManager.Instance.CreateMap(w, h);
-
         HideCreateMapPopup();
     }
 
@@ -167,16 +169,13 @@ public class MapEditManager : MonoBehaviour
             modifyMapPopup.transform.Find("Width").GetComponent<InputField>().text = MapManager.Instance.currentMap.width.ToString();
             modifyMapPopup.transform.Find("Height").GetComponent<InputField>().text = MapManager.Instance.currentMap.height.ToString();
         }
-        else
-        {
-            modifyMapPopup.transform.Find("Width").GetComponent<InputField>().text = "";
-            modifyMapPopup.transform.Find("Height").GetComponent<InputField>().text = "";
-        }
     }
 
     public void DeleteMap()
     {
         MapManager.Instance.DeleteMap(modifyMapDropDown.value);
+        modifyMapPopup.transform.Find("Width").GetComponent<InputField>().text = "";
+        modifyMapPopup.transform.Find("Height").GetComponent<InputField>().text = "";
     }
 
     public void HideModifyMapPopup()
@@ -217,7 +216,6 @@ public class MapEditManager : MonoBehaviour
         int h = int.Parse(Height.text);
 
         MapManager.Instance.ModifyMap(modifyMapDropDown.value, w, h);
-
         HideModifyMapPopup();
     }
     public void InputCoordinateMap()
@@ -260,57 +258,49 @@ public class MapEditManager : MonoBehaviour
             MapManager.Instance.DeleteMap(i);
         }
         // 미션 초기화
-        UIManager.Instance.stageNumber.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.creamScoreText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.strawberryScoreText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.chocolateScoreText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.eggScoreText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.breadScoreText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.jellyText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.breakIceText.text = "0";
-        UIManager.Instance.mapEditManager.popups.mission.frogSoup.isOn = false;
+        var missionPopup = UIManager.Instance.mapEditManager.popups.mission;
+        missionPopup.creamScoreText.text = "0";
+        missionPopup.strawberryScoreText.text = "0";
+        missionPopup.chocolateScoreText.text = "0";
+        missionPopup.eggScoreText.text = "0";
+        missionPopup.breadScoreText.text = "0";
+        missionPopup.jellyText.text = "0";
+        missionPopup.breakIceText.text = "0";
+        missionPopup.frogSoup.isOn = false;
 
         // 게임 데이터 UI 초기화
-        UIManager.Instance.starPercent.text = "0";
-        UIManager.Instance.moveBuff.isOn = true;
-        UIManager.Instance.jumpBuff.isOn = true;
-        UIManager.Instance.starGauge.isOn = true;
-        UIManager.Instance.startingMove.isOn = true;
-        UIManager.Instance.moveText.text = "0";
-        UIManager.Instance.jumpText.text = "0";
-
-        UIManager.Instance.stageType.value = 0;
-        UIManager.Instance.bgDropdown.value = 0;
-        UIManager.Instance.bgmDropdown.value = 0;
-
-        UIManager.Instance.mapPositionX.text = "0";
-        UIManager.Instance.mapPositionY.text = "0";
-        UIManager.Instance.mapSize.text = "Width :  0\nHeight : 0";
-        UIManager.Instance.mapEditManager.Maptype.options.Clear();
-        UIManager.Instance.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
+        var gameDataUI = UIManager.Instance;
+        gameDataUI.starPercent.text = "0";
+        gameDataUI.moveBuff.isOn = true;
+        gameDataUI.jumpBuff.isOn = true;
+        gameDataUI.starGauge.isOn = true;
+        gameDataUI.startingMove.isOn = true;
+        gameDataUI.moveText.text = "0";
+        gameDataUI.jumpText.text = "0";
+        gameDataUI.stageType.value = 0;
+        gameDataUI.bgDropdown.value = 0;
+        gameDataUI.bgmDropdown.value = 0;
+        gameDataUI.mapPositionX.text = "0";
+        gameDataUI.mapPositionY.text = "0";
+        gameDataUI.mapSize.text = "Width :  0\nHeight : 0";
+        gameDataUI.mapEditManager.Maptype.ClearOptions();
+        gameDataUI.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
 
         // 팝업 초기화
-        Width.text = "";
-        Height.text = "";
         UIManager.Instance.mapEditManager.obstacleOptionPopup.jellyCount.text = "0";
         UIManager.Instance.mapEditManager.obstacleOptionPopup.jellyTerm.text = "0";
+        Width.text = "";
+        Height.text = "";
     }
     public void ShowCharactorInfoPopup(Charactor character)
     {
         characterInfoPopup.Show(character);
     }
 
-
     public void HideCharactorInfoPopup()
     {
         characterInfoPopup.Hide();
     }
-
-    //public void SetVisibleJsonFileSavePopup(bool isActive)
-    //{
-    //    jsonFileMakerPopup.gameObject.SetActive(isActive);
-    //}
-    
 
     public void SetVisibleObstacleOptionPopup(bool isActive)
     {

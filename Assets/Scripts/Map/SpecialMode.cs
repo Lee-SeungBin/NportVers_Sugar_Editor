@@ -38,15 +38,14 @@ public class SpecialMode : MonoBehaviour
         {
             OnMouseDownForSetSpecial();
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if (EventSystem.current.IsPointerOverGameObject() == true) return;
-
             OnMouseUpForSetSpecial();
         }
-        else if(Input.GetMouseButton(1))
+        else if (Input.GetMouseButton(1))
         {
-            UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().SelectEmtpy();
+            var specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
+            specialList.SelectEmtpy();
             MapManager.Instance.HideWoodenFence();
         }
     }
@@ -57,67 +56,49 @@ public class SpecialMode : MonoBehaviour
 
     private void OnMouseDownForSetSpecial()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         SetNullToSelectTile();
 
         UIManager.Instance.mapEditManager.HideSandWichInfoPopup();
         UIManager.Instance.mapEditManager.HideSandWichChangePopup();
-        
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
 
-        foreach (RaycastHit2D hit in hits)
-        {
-            if (hit.collider == null) continue;
-
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
+        if (hit.collider != null)
             selectTile = hit.collider.transform.GetComponent<Tile>();
-        }
 
-
-        if (UIManager.Instance.dragItem.specialType == SpecialList.SPECIAL_TYPE.JELLY)
+        switch (UIManager.Instance.dragItem.specialType)
         {
-            OnClickJelly();
-        }
-        else if (UIManager.Instance.dragItem.specialType == SpecialList.SPECIAL_TYPE.FROG_SOUP)
-        {
-            OnClickFrogSoup();
-        }
-        else if (UIManager.Instance.dragItem.specialType == SpecialList.SPECIAL_TYPE.BOX)
-        {
-            OnClickBox();
-        }
-        else if (UIManager.Instance.dragItem.specialType == SpecialList.SPECIAL_TYPE.WOODEN_FENCE)
-        {
-            OnClickWoodenFence();
-        }
-        else if (UIManager.Instance.dragItem.specialType == SpecialList.SPECIAL_TYPE.VINE)
-        {
-            OnClickVine();
+            case SpecialList.SPECIAL_TYPE.JELLY:
+                OnClickJelly();
+                break;
+            case SpecialList.SPECIAL_TYPE.FROG_SOUP:
+                OnClickFrogSoup();
+                break;
+            case SpecialList.SPECIAL_TYPE.BOX:
+                OnClickBox();
+                break;
+            case SpecialList.SPECIAL_TYPE.WOODEN_FENCE:
+                OnClickWoodenFence();
+                break;
+            case SpecialList.SPECIAL_TYPE.VINE:
+                OnClickVine();
+                break;
         }
     }
     private void OnMouseUpForSetSpecial()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
 
         foreach (RaycastHit2D hit in hits)
         {
-            if (hit.collider != null)
+            Tile tile = hit.collider?.GetComponent<Tile>();
+            if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 2)
             {
-                if (hit.transform.tag.Equals("Tile"))
-                {
-                    if (selectTile == hit.collider.transform.GetComponent<Tile>())
-                    {
-                        if (selectTile.box != null && selectTile.box.boxTypes == 2)
-                        {
-                            UIManager.Instance.mapEditManager.ShowSandWichInfoPopup(selectTile.box);
-
-                        }
-
-                        break;
-                    }
-                }
+                UIManager.Instance.mapEditManager.ShowSandWichInfoPopup(selectTile.box);
+                break;
             }
         }
     }
@@ -125,35 +106,13 @@ public class SpecialMode : MonoBehaviour
     #region Jelly
     private void OnClickJelly()
     {
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
-
-        //foreach (RaycastHit2D hit in hits)
-        //{
-        //    if (hit.collider == null) continue;
-
-        //    Tile tile = hit.collider.transform.GetComponent<Tile>();
-
-        //    if (tile.jelly != null)
-        //    {
-        //        RemoveJelly(tile.jelly);
-        //    }
-        //    else
-        //    {
-        //        if(tile.isVisible)
-        //            SetJelly(tile.transform.parent, tile);
-        //    }
-        //}
-        if (selectTile == null) return;
-
-
-        if (selectTile.jelly != null)
+        if (selectTile?.jelly != null)
         {
             RemoveJelly(selectTile.jelly);
         }
-        else
+        else if (selectTile?.isVisible == true)
         {
-            if (selectTile.isVisible)
-                SetJelly(selectTile.transform.parent, selectTile);
+            SetJelly(selectTile.transform.parent, selectTile);
         }
     }
 
@@ -161,21 +120,8 @@ public class SpecialMode : MonoBehaviour
     {
         if (tile.box != null) return;
 
-        Jelly jelly;
+        Jelly jelly = Instantiate(jellyPrefab);
 
-        //if(inactiveJellys.Count > 0)
-        //{
-        //    jelly = inactiveJellys[0];
-        //    inactiveJellys.RemoveAt(0);
-        //}
-        //else
-        //{
-            jelly = Instantiate(jellyPrefab);
-        //}
-
-        //activeJellys.Add(jelly);
-
-        //jelly.gameObject.SetActive(true);
         jelly.transform.SetParent(parent);
         jelly.transform.localScale = Vector3.one;
         jelly.transform.position = tile.transform.position;
@@ -191,11 +137,8 @@ public class SpecialMode : MonoBehaviour
 
     public void RemoveJelly(Jelly jelly)
     {
-        //activeJellys.Remove(jelly);
-        //inactiveJellys.Add(jelly);
         jelly.tile.jelly = null;
         jelly.tile = null;
-        //jelly.gameObject.SetActive(false);
 
         Destroy(jelly.gameObject);
 
@@ -206,24 +149,6 @@ public class SpecialMode : MonoBehaviour
     #region FrogSoup
     private void OnClickFrogSoup()
     {
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
-
-        //foreach (RaycastHit2D hit in hits)
-        //{
-        //    if (hit.collider == null) continue;
-
-        //    Tile tile = hit.collider.transform.GetComponent<Tile>();
-
-        //    if (tile.frogSoup != null)
-        //    {
-        //        RemoveFrogSoup(tile.frogSoup);
-        //    }
-        //    else
-        //    {
-        //        if(tile.isVisible)
-        //            SetFrogSoup(tile.transform.parent, tile);
-        //    }
-        //}
         if (selectTile == null)
             return;
 
@@ -238,46 +163,23 @@ public class SpecialMode : MonoBehaviour
     {
         if (tile.box != null) return;
 
-        FrogSoup frogSoup;
+        FrogSoup frogSoup = Instantiate(frogSoupPrefab, parent);
+        frogSoup.transform.position = tile.transform.position + Vector3.up * 0.119f;
 
-        //if (inactiveFrogSoups.Count > 0)
-        //{
-        //    frogSoup = inactiveFrogSoups[0];
-        //    inactiveFrogSoups.RemoveAt(0);
-        //}
-        //else
-        //{
-            frogSoup = Instantiate(frogSoupPrefab);
-        //}
+        frogSoup.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
+        frogSoup.tileIndex = tile.tileIndex;
 
-        if (frogSoup != null)
-        {
-            //activeFrogSoups.Add(frogSoup);
+        frogSoup.tile = tile;
+        tile.frogSoup = frogSoup;
 
-            //frogSoup.gameObject.SetActive(true);
-            frogSoup.transform.SetParent(parent);
-            frogSoup.transform.localScale = Vector3.one;
-            frogSoup.transform.position = tile.transform.position;
-            frogSoup.transform.Translate(Vector3.up * (0.119f)); // 위치가 살짝 틀어져서 맞추기 위함
-
-            frogSoup.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
-            frogSoup.tileIndex = tile.tileIndex;
-
-            frogSoup.tile = tile;
-            tile.frogSoup = frogSoup;
-
-            tile.transform.parent.GetComponent<TileSet>().map.SetFrogSoup(frogSoup);
-        }
+        tile.transform.parent.GetComponent<TileSet>().map.SetFrogSoup(frogSoup);
 
     }
 
     public void RemoveFrogSoup(FrogSoup frogSoup)
     {
-        //activeFrogSoups.Remove(frogSoup);
-        //inactiveFrogSoups.Add(frogSoup);
         frogSoup.tile.frogSoup = null;
         frogSoup.tile = null;
-        //frogSoup.gameObject.SetActive(false);
 
         Destroy(frogSoup.gameObject);
 
@@ -288,25 +190,6 @@ public class SpecialMode : MonoBehaviour
     #region Box
     private void OnClickBox()
     {
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
-
-        //foreach (RaycastHit2D hit in hits)
-        //{
-        //    if (hit.collider == null) continue;
-
-        //    Tile tile = hit.collider.transform.GetComponent<Tile>();
-
-        //    if (tile.box != null && tile.box.boxTypes != 2)
-        //    {
-        //        RemoveBox(tile.box);
-        //    }
-        //    else
-        //    {
-        //        if (tile.isVisible && tile.box == null)
-        //            SetBox(tile.transform.parent, tile);
-        //    }
-        //}
-
         if (selectTile == null)
             return;
 
@@ -319,61 +202,39 @@ public class SpecialMode : MonoBehaviour
 
     public void SetBox(Transform parent, Tile tile)
     {
-        if (tile.character != null) return;
-        if (tile.jelly != null) return;
-        if (tile.frogSoup != null) return;
+        if (tile.character != null || 
+            tile.jelly != null || 
+            tile.frogSoup != null) return;
 
-        Box box;
-
-        //if (inactiveBoxs.Count > 0)
-        //{
-        //    box = inactiveBoxs[0];
-        //    inactiveBoxs.RemoveAt(0);
-        //}
-        //else
-        //{
-        //if (UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype == 2)
-        //    box = Instantiate(SandWichPrefab);
-        //else
-            box = Instantiate(boxPrefab);
-        //}
-
-        //activeBoxs.Add(box);
-
-        //box.gameObject.SetActive(true);
-        box.transform.SetParent(parent);
-        box.transform.localScale = Vector3.one;
+        Box box = Instantiate(boxPrefab, parent);
         box.transform.position = tile.transform.position;
 
+        var specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
         box.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
         box.tileIndex = tile.tileIndex;
+        box.boxLayer = specialList.boxlayer;
+        box.boxTypes = specialList.boxtype;
 
-        box.boxLayer = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxlayer; // 박스 레이어 가져오기
-        box.boxTypes = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype; // 박스 타입 가져오기
-
-        if(box.boxTypes == 2)
+        if (box.boxTypes == 2)
         {
-            box.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = box.boxsprite[5];
-            box.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+            var spriteRenderer = box.transform.GetChild(0).GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = box.boxsprite[5];
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
             UIManager.Instance.mapEditManager.ShowSandWichInfoPopup(box);
-            UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().SelectEmtpy();
+            specialList.SelectEmtpy();
         }
 
         ChangeSpriteBox(box, box.boxLayer, box.boxTypes);
 
-        box.tile = tile;
         tile.box = box;
-
+        box.tile = tile;
         tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
     }
 
     public void RemoveBox(Box box)
     {
-        //activeBoxs.Remove(box);
-        //inactiveBoxs.Add(box);
         box.tile.box = null;
         box.tile = null;
-        //box.gameObject.SetActive(false);
 
         box.GetComponentInParent<Map>().RemoveBox(box);
 
@@ -383,94 +244,76 @@ public class SpecialMode : MonoBehaviour
     public void ChangeSpriteBox(Box box,int layer,int types)
     {
         Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
-
         if (types == 0)
         {
-            if (layer == 1)
-                box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[2];
-            else if (layer == 3)
-                box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[4];
-            else if (layer == 5)
-                box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[5];
+            switch (layer)
+            {
+                case 1:
+                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[2];
+                    break;
+                case 3:
+                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[4];
+                    break;
+                case 5:
+                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[5];
+                    break;
+            }
         }
-        else if (types == 1) // 햄버거 로드
+        else if (types == 1)
         {
             box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[8];
         }
         else if (types == 2)
+        {
             LoadTasteOfBox(box);
+        }
     }
     public void LoadTasteOfBox(Box box)
     {
-        GameObject alphalayer = box.transform.GetChild(0).gameObject;
-        box.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = box.boxsprite[5];
-        box.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+        GameObject alphaTier = box.transform.GetChild(0).gameObject;
+        alphaTier.GetComponent<SpriteRenderer>().sprite = box.boxsprite[5];
+        alphaTier.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+
         for (int i = 0; i < box.boxLayer; i++)
         {
-            GameObject layer = Instantiate(box.transform.GetChild(0).gameObject);
+            GameObject Tier = Instantiate(alphaTier);
+            Tier.transform.SetParent(box.transform);
+            Tier.transform.position = box.transform.position + Vector3.up * (0.135f * (i + 1));
+            Tier.GetComponent<SpriteRenderer>().sprite = box.boxsprite[box.boxTier[i]];
+            Tier.GetComponent<SpriteRenderer>().color = Color.white;
 
-            layer.transform.SetParent(box.transform);
-            layer.transform.position = box.transform.position;
-            layer.transform.Translate(Vector3.up * (0.135f * (i + 1)));
-            layer.GetComponent<SpriteRenderer>().sprite = box.boxsprite[box.boxTier[i]];
-            layer.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-
-            alphalayer.transform.position = box.transform.position;
-            alphalayer.transform.Translate(Vector3.up * (0.135f * (i + 1)));
-            alphalayer.GetComponent<SpriteRenderer>().sortingOrder++;
+            alphaTier.transform.position = Tier.transform.position;
+            alphaTier.GetComponent<SpriteRenderer>().sortingOrder++;
         }
-        alphalayer.transform.position = box.transform.position;
-        alphalayer.transform.Translate(Vector3.up * (0.135f * (box.boxLayer + 1)));
 
+        alphaTier.transform.position = box.transform.position + Vector3.up * (0.135f * (box.boxLayer + 1));
         ActiveAlphaLayerOfBox(box, false);
     }
+
     public void CreateTasteOfBox()
     {
-        GameObject layer;
-
         int currentTaste = UIManager.Instance.mapEditManager.sandwichInfoPopup.TasteStepDropdown.value;
-        //selectTile.box.transform.GetChild(selectTile.box.boxLayer).gameObject.SetActive(true);
 
-        //샌드위치 레이어 생성
-        layer = Instantiate(selectTile.box.transform.GetChild(0).gameObject);
-
-        layer.transform.SetParent(selectTile.box.transform);
-        layer.transform.position = selectTile.box.transform.position;
-        layer.transform.Translate(Vector3.up * (0.135f * (selectTile.box.boxLayer + 1)));
-        layer.GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[currentTaste];
-        layer.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-
-        //selectTile.box.transform.GetChild(selectTile.box.boxLayer).gameObject.SetActive(true);
-        //selectTile.box.transform.GetChild(selectTile.box.boxLayer).GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[currentTaste];
-        //selectTile.box.transform.GetChild(selectTile.box.boxLayer).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        GameObject Tier = Instantiate(selectTile.box.transform.GetChild(0).gameObject, selectTile.box.transform); // 샌드위치 층 생성
+        Tier.transform.position = selectTile.box.transform.position + Vector3.up * (0.135f * (selectTile.box.boxLayer + 1));
+        Tier.GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[currentTaste];
+        Tier.GetComponent<SpriteRenderer>().color = Color.white;
 
         selectTile.box.boxTier.Add(currentTaste);
         selectTile.box.boxLayer++;
 
-        GameObject alphalayer = selectTile.box.transform.GetChild(0).gameObject;
-
-        alphalayer.transform.position = selectTile.box.transform.position;
-        alphalayer.transform.Translate(Vector3.up * (0.135f * (selectTile.box.boxLayer + 1)));
-        alphalayer.GetComponent<SpriteRenderer>().sortingOrder++;
+        GameObject alphaTier = selectTile.box.transform.GetChild(0).gameObject;
+        alphaTier.transform.position = selectTile.box.transform.position + Vector3.up * (0.135f * (selectTile.box.boxLayer + 1));
+        alphaTier.GetComponent<SpriteRenderer>().sortingOrder++;
 
         UIManager.Instance.mapEditManager.sandwichInfoPopup.SetData(selectTile.box);
-
-        //if (selectTile.box.boxLayer == 5)
-        //    return;
-        //else
-        //{
-        //    selectTile.box.transform.GetChild(selectTile.box.boxLayer).gameObject.SetActive(true);
-        //    selectTile.box.transform.GetChild(selectTile.box.boxLayer).GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[5];
-        //    selectTile.box.transform.GetChild(selectTile.box.boxLayer).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
-        //}
     }
-
-    public void ChangeTasteOfBox(int SelectLayer)
+    public void ChangeTasteOfBox(int SelectTier)
     {
         int currentTaste = UIManager.Instance.mapEditManager.sandwichChangeDropDown.value;
 
-        selectTile.box.boxTier[SelectLayer] = currentTaste;
-        selectTile.box.transform.GetChild(SelectLayer + 1).GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[currentTaste];
+        selectTile.box.boxTier[SelectTier] = currentTaste;
+        selectTile.box.transform.GetChild(SelectTier + 1).GetComponent<SpriteRenderer>().sprite = selectTile.box.boxsprite[currentTaste];
         UIManager.Instance.mapEditManager.sandwichChangePopup.SetData(selectTile.box);
     }
 
@@ -486,39 +329,39 @@ public class SpecialMode : MonoBehaviour
             if (selectTile.box.boxTier.Count != 0)
                 selectTile.box.boxTier.RemoveAt(selectTile.box.boxTier.Count - 1);
 
-            GameObject alphalayer = selectTile.box.transform.GetChild(0).gameObject;
-            GameObject deletelayer = selectTile.box.transform.GetChild(selectTile.box.boxLayer).gameObject;
+            GameObject alphaTier = selectTile.box.transform.GetChild(0).gameObject;
+            GameObject deleteTier = selectTile.box.transform.GetChild(selectTile.box.boxLayer).gameObject;
 
-            alphalayer.transform.position = deletelayer.transform.position;
-            Destroy(deletelayer);
-            alphalayer.GetComponent<SpriteRenderer>().sortingOrder--;
+            alphaTier.transform.position = deleteTier.transform.position;
+            Destroy(deleteTier);
+            alphaTier.GetComponent<SpriteRenderer>().sortingOrder--;
             selectTile.box.boxLayer--;
 
             UIManager.Instance.mapEditManager.sandwichInfoPopup.SetData(selectTile.box);
         }
     }
 
-    public void DeleteTasteLayerOfBox(int SelectLayer)
+    public void DeleteTasteLayerOfBox(int SelectTier)
     {
         if(selectTile.box.boxLayer != 0)
         {
-            for (int i = SelectLayer + 1; i <= selectTile.box.boxLayer; i++) // 샌드위치 레이어 재구성
+            for (int i = SelectTier + 1; i <= selectTile.box.boxLayer; i++) // 샌드위치 레이어 재구성
             {
-                GameObject layer = selectTile.box.transform.GetChild(i).gameObject;
-                GameObject alphalayer = selectTile.box.transform.GetChild(0).gameObject;
+                GameObject Tier = selectTile.box.transform.GetChild(i).gameObject;
+                GameObject alphaTier = selectTile.box.transform.GetChild(0).gameObject;
                 if (i == selectTile.box.boxLayer) // 마지막 레이어일때 맨위만 파괴
                 {
-                    Destroy(layer);
+                    Destroy(Tier);
                 }
                 else // 선택된 층부터 위에 층꺼를 하나씩 땡겨옴
                 {
-                    layer.GetComponent<SpriteRenderer>().sprite = selectTile.box.transform.GetChild(i + 1).GetComponent<SpriteRenderer>().sprite;
+                    Tier.GetComponent<SpriteRenderer>().sprite = selectTile.box.transform.GetChild(i + 1).GetComponent<SpriteRenderer>().sprite;
                 }
-                alphalayer.transform.position = layer.transform.position; // 파괴된 위치(맨위)에 투명 레이어 이동
-                alphalayer.GetComponent<SpriteRenderer>().sortingOrder = layer.GetComponent<SpriteRenderer>().sortingOrder;
+                alphaTier.transform.position = Tier.transform.position; // 파괴된 위치(맨위)에 투명 레이어 이동
+                alphaTier.GetComponent<SpriteRenderer>().sortingOrder = Tier.GetComponent<SpriteRenderer>().sortingOrder;
             }
 
-            selectTile.box.boxTier.RemoveAt(SelectLayer);
+            selectTile.box.boxTier.RemoveAt(SelectTier);
             selectTile.box.boxLayer--;
 
             UIManager.Instance.mapEditManager.sandwichChangePopup.SetData(selectTile.box);
@@ -549,13 +392,11 @@ public class SpecialMode : MonoBehaviour
         Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 12);
 
-        TileSet tileSet;
-
         if (hit.collider != null)
         {
             GameObject shadowFence = hit.collider.gameObject;
             int index = int.Parse(shadowFence.name.Split('_')[1]);
-            tileSet = shadowFence.transform.parent.parent.GetComponent<TileSet>();
+            TileSet tileSet = shadowFence.transform.parent.parent.GetComponent<TileSet>();
 
             if (tileSet.woodenFences[index] == null)
             {
@@ -572,17 +413,10 @@ public class SpecialMode : MonoBehaviour
 
             if (hit.collider == null) return;
 
-            tileSet = hit.collider.transform.GetComponent<TileSet>();
+            TileSet tileSet = hit.collider.transform.GetComponent<TileSet>();
             if (tileSet != null)
             {
-                if (!tileSet.woodenFenceColliders.activeSelf)
-                {
-                    tileSet.woodenFenceColliders.SetActive(true);
-                }
-                else
-                {
-                    tileSet.woodenFenceColliders.SetActive(false);
-                }
+                tileSet.woodenFenceColliders.SetActive(!tileSet.woodenFenceColliders.activeSelf);
             }
         }
     }
@@ -630,57 +464,36 @@ public class SpecialMode : MonoBehaviour
     {
         Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
-        
-        TileSet tileSet;
 
-        if (hit.collider == null)
+        if (hit.collider == null) return;
+
+        TileSet tileSet = hit.collider.GetComponent<TileSet>();
+        if (tileSet == null) return;
+
+        if (tileSet.isVisible)
+        {
+            UIManager.Instance.errorPopup.SetMessage("타일이 전부 비어있어야 설치 가능합니다.");
             return;
+        }
+
+        if (tileSet.vine != null)
+        {
+            RemoveVine(tileSet.vine);
+        }
         else
         {
-            tileSet = hit.collider.transform.GetComponent<TileSet>();
-
-            if (tileSet.isVisible)
-            {
-                UIManager.Instance.errorPopup.SetMessage("타일이 전부 비어있어야 설치 가능합니다.");
-                return;
-            }
-            else
-            {
-                if (tileSet.vine != null)
-                {
-                    RemoveVine(tileSet.vine);
-                }
-                else
-                {
-                    SetVine(tileSet.transform, tileSet);
-                }
-
-            }
+            SetVine(tileSet.transform, tileSet);
         }
+
 
     }
 
     public void SetVine(Transform parent,TileSet tileSet)
     {
-        if (tileSet.vine != null)
-            return;
+        if (tileSet.vine != null) return;
 
-        Vine vine;
+        Vine vine = Instantiate(vinePrefab, parent);
 
-        //if (inactiveVines.Count > 0)
-        //{
-        //    vine = inactiveVines[0];
-        //    inactiveVines.RemoveAt(0);
-        //}
-        //else
-        //{
-            vine = Instantiate(vinePrefab);
-        //}
-
-        //activeVines.Add(vine);
-
-        //vine.gameObject.SetActive(true);
-        vine.transform.SetParent(parent);
         vine.transform.localScale = Vector3.one;
         vine.transform.position = tileSet.transform.position;
 
@@ -697,11 +510,8 @@ public class SpecialMode : MonoBehaviour
 
     public void RemoveVine(Vine vine)
     {
-        //activeVines.Remove(vine);
-        //inactiveVines.Add(vine);
         vine.tileset.vine = null;
         vine.tileset = null;
-        //vine.gameObject.SetActive(false);
 
         Destroy(vine.gameObject);
 
