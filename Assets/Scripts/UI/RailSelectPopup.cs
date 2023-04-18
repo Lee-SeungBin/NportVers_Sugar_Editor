@@ -30,21 +30,30 @@ public class RailSelectPopup : MonoBehaviour
 
     public void OnChangeRailType()
     {
-        if(straight.isOn)
+        if (railGroup != null)
         {
-            railGroup.railType = RailGroup.RAIL_TYPE.STRIGHT;
+            if (straight.isOn)
+            {
+                railGroup.railType = RailGroup.RAIL_TYPE.STRIGHT;
+            }
+            else
+            {
+                railGroup.railType = RailGroup.RAIL_TYPE.ROTATION;
+            }
         }
         else
         {
-            railGroup.railType = RailGroup.RAIL_TYPE.ROTATION;
+            UIManager.Instance.errorPopup.SetMessage("레일이 없습니다.");
         }
     }
 
     public void OnClickDeleteButton()
     {
         MapManager.Instance.railMode.SetSelectTileSetNull();
-        if(railGroup != null)
+        if (railGroup != null)
             railGroup.DeleteRailGroup();
+        else
+            UIManager.Instance.errorPopup.SetMessage("레일을 선택해주세요.");
         railGroup = null;
     }
 }

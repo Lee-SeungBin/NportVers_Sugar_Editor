@@ -102,6 +102,7 @@ public class MapEditManager : MonoBehaviour
         HidePopups();
         HideWoodenFenceColliders();
         characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
+        MapManager.Instance.railMode.selectTileSet = null;
     }
 
     public void HideWoodenFenceColliders()

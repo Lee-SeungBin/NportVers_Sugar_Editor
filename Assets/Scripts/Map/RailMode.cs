@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class RailMode : MonoBehaviour
 {
-    private TileSet selectTileSet;
+    public TileSet selectTileSet;
 
     public void TouchControll()
     {
@@ -15,8 +15,8 @@ public class RailMode : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            if (selectTileSet.railGroup != null)
-                selectTileSet.railGroup.UnselectGroup();
+            //if (selectTileSet.railGroup != null)
+            //    selectTileSet.railGroup.UnselectGroup();
         }
     }
 
@@ -73,7 +73,13 @@ public class RailMode : MonoBehaviour
             if (selectTileSet == tempTileSet)
             {
                 if (selectTileSet.railGroup != null)
+                {
+                    if (!CheckErrorRail(selectTileSet))
+                        return;
                     selectTileSet.railGroup.UnselectGroup();
+
+                }
+
                 selectTileSet = null;
             }
             else
@@ -82,15 +88,19 @@ public class RailMode : MonoBehaviour
 
                 if (isVisibleTiles == false) //새로운 그룹 생성
                 {
+                    if (!CheckErrorRail(selectTileSet))
+                        return;
                     if (selectTileSet.railGroup != null)
+                    {
                         selectTileSet.railGroup.UnselectGroup();
-
+                    }
                     selectTileSet = tempTileSet;
 
                     if (tempTileSet.railGroup == null)
                     {
                         RailGroup railGroup = selectTileSet.map.railManager.CreateRailGroup();
                         railGroup.PushTileSet(selectTileSet);
+
                     }
 
                 }
@@ -161,6 +171,37 @@ public class RailMode : MonoBehaviour
             selectTileSet.railGroup.UnselectGroup();
             selectTileSet = null;
         }
+    }
+
+    public bool CheckErrorRail(TileSet tileSet)
+    {
+
+        TileSet lastTile = tileSet.railGroup.GetLastTileSet();
+
+        int a = lastTile.tileSetIndex / lastTile.map.height;
+        int b = lastTile.tileSetIndex % lastTile.map.height;
+
+        if (tileSet.railGroup.railType == 0)
+        {
+            if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)))
+            {
+                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");
+                return false;
+            }
+        }
+        else
+        {
+            if (tileSet.railGroup.tileSets[0].isVisible && tileSet.railGroup.tileSets[tileSet.railGroup.tileSets.Count - 1].isVisible)
+            {
+                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일은 맨 끝 또는 맨 처음의 타일이 비어 있어야 합니다.");
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
