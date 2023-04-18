@@ -43,22 +43,6 @@ public class MapDataMNG : MonoBehaviour
         }
     }
 
-    //int latestVersion = 0;
-
-    //UnityAction mapDownEndFunc;
-
-    //public void DownloadStage(UnityAction endFunc)
-    //{
-    //    mapDownEndFunc = endFunc;
-    //    DownloadStageData();
-    //}
-
-    //public struct MapData
-    //{
-    //    public string mapType;
-    //    public int lastMapNumber;
-    //    public List<int> changList;
-    //}
     /// <summary>
     /// 버전, 맵 타입에 따른 스테이지 리스트를 가져옴
     /// </summary>

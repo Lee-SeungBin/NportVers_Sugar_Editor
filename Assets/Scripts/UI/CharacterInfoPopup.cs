@@ -22,18 +22,8 @@ public class CharacterInfoPopup : MonoBehaviour
     {
         iceStepDropdown.value = character.iceStep;
         starToggle.isOn = character.isStar;
-
-        if (character.characterType == Charactor.CHARCTER_TYPE.TURN_WHBOMBMON)
-        {
-            directionToggle.interactable = true;
-            directionToggle.isOn = character.isHeightDirection;
-        }
-        else
-        {
-            directionToggle.interactable = false;
-            directionToggle.isOn = false;
-        }
-
+        directionToggle.interactable = (character.characterType == Enums.CHARCTER_TYPE.TURN_WHBOMBMON);
+        directionToggle.isOn = (character.characterType == Enums.CHARCTER_TYPE.TURN_WHBOMBMON) ? character.isHeightDirection : false;
         userCharacterToggle.isOn = character.isUser;
     }
 
@@ -59,22 +49,15 @@ public class CharacterInfoPopup : MonoBehaviour
 
     public void OnClickCharacterFenceButton()
     {
-        if (userCharacterToggle.isOn == false)
-        {
-            if (MapManager.Instance.IsAbleToChangeToUserFence() == true)
-            {
-                MapManager.Instance.ChangeUserCharacterState(true);
-                userCharacterToggle.isOn = true;
-            }
-            else
-            {
-                userCharacterToggle.isOn = false;
-            }
-        }
-        else
+        if (userCharacterToggle.isOn)
         {
             userCharacterToggle.isOn = false;
             MapManager.Instance.ChangeUserCharacterState(false);
+        }
+        else if (MapManager.Instance.IsAbleToChangeToUserFence())
+        {
+            userCharacterToggle.isOn = true;
+            MapManager.Instance.ChangeUserCharacterState(true);
         }
     }
 

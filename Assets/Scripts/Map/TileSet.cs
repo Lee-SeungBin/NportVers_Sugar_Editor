@@ -33,7 +33,6 @@ public class TileSet : MonoBehaviour
     }
     public bool isVisibleTiles { get; private set; }
 
-
     public GameObject woodenFenceColliders;
     public WoodenFence[] woodenFenceShadows;
     public WoodenFence[] woodenFences = new WoodenFence[12];
@@ -58,22 +57,6 @@ public class TileSet : MonoBehaviour
     public void SetVisibleAllTilesForRailMode(bool isActive)
     {
         isVisibleTiles = isActive;
-
-        if (isActive)
-        {
-            //line
-            //for (int i = 0; i < 4; ++i)
-            //{
-            //    tiles[i].GetComponent<SpriteRenderer>().color = Color.green;
-            //}
-        }
-        else
-        {
-            //for (int i = 0; i < 4; ++i)
-            //{
-            //    tiles[i].GetComponent<SpriteRenderer>().color = Color.white;
-            //}
-        }
     }
 
     private bool _isVisible;
@@ -141,22 +124,16 @@ public class TileSet : MonoBehaviour
         if(railGroup != null)
         {
             sp = railTheme[UIManager.Instance.bgDropdown.value];
-            if (character != null)
+            if (character != null && character.isUser)
             {
-                if (character.isUser)
-                {
-                    sp = myRailTheme[UIManager.Instance.bgDropdown.value];
-                }
+                sp = myRailTheme[UIManager.Instance.bgDropdown.value];
             }
         }
         else
         {
-            if(character != null)
+            if(character != null && character.isUser)
             {
-                if(character.isUser)
-                {
-                    sp = myThemes[UIManager.Instance.bgDropdown.value]; ;
-                }
+                sp = myThemes[UIManager.Instance.bgDropdown.value];
             }
         }
 

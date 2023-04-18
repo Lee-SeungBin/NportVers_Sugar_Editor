@@ -16,7 +16,7 @@ public class MonsterSetMode : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            if (EventSystem.current.IsPointerOverGameObject() == true) return;
+            if (EventSystem.current.IsPointerOverGameObject()) return;
 
             OnMouseUpForSetMonster();
         }
@@ -29,7 +29,7 @@ public class MonsterSetMode : MonoBehaviour
 
     private void OnMouseDownForSetMonster()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         SetNullToSelectTileSet();
 
@@ -39,60 +39,34 @@ public class MonsterSetMode : MonoBehaviour
 
         foreach (RaycastHit2D hit in hits)
         {
-            if (hit.collider != null)
+            Tile tile = hit.collider?.GetComponent<Tile>();
+            if (tile != null && tile.isVisible && !tile.box)
             {
-                Tile tile = hit.collider.transform.GetComponent<Tile>();
-                if (hit.transform.tag.Equals("Tile") && tile.isVisible && !tile.box)
-                {
-                    tileIndex = hit.transform.GetComponent<Tile>().tileIndex;
+                selectTileSet = tile.transform.parent.GetComponent<TileSet>();
+                if (selectedCharacterFromList == null || selectTileSet.character != null) return;
 
-                    selectTileSet = hit.transform.parent.gameObject.GetComponent<TileSet>();
+                selectTileSet.character = Instantiate(selectedCharacterFromList, selectTileSet.transform).GetComponent<Charactor>();
+                selectTileSet.character.name = selectedCharacterFromList.name;
+                selectTileSet.character.tileIndex = tile.tileIndex;
+                selectTileSet.character.transform.localPosition = selectTileSet.tiles[tile.tileIndex].transform.localPosition;
+                UIManager.Instance.mapEditManager.ShowCharactorInfoPopup(selectTileSet.character);
 
-                    if (selectedCharacterFromList == null) return;
-
-                    if (selectTileSet.character != null)
-                    {
-                        Destroy(selectTileSet.character.gameObject);
-                        selectTileSet.character = null;
-                    }
-
-                    selectTileSet.character = Instantiate(selectedCharacterFromList).GetComponent<Charactor>();
-                    selectTileSet.character.name = selectedCharacterFromList.name;
-                    selectTileSet.character.tileIndex = tileIndex;
-                    selectTileSet.character.transform.SetParent(selectTileSet.transform);
-                    selectTileSet.character.transform.localScale = Vector3.one;
-                    selectTileSet.character.transform.localPosition = selectTileSet.tiles[tileIndex].transform.localPosition;
-
-
-                    UIManager.Instance.mapEditManager.ShowCharactorInfoPopup(selectTileSet.character);
-                    break;
-                }
+                break;
             }
         }
     }
 
     private void OnMouseUpForSetMonster()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
-
-        foreach (RaycastHit2D hit in hits)
+        foreach (RaycastHit2D hit in Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10))
         {
-            if (hit.collider != null)
+            TileSet hitTileSet = hit.transform.parent.GetComponent<TileSet>();
+            if (hitTileSet != null && hit.transform.CompareTag("Tile") && hitTileSet == selectTileSet && selectTileSet.character != null)
             {
-                if (hit.transform.tag.Equals("Tile"))
-                {
-                    if (selectTileSet == hit.transform.parent.gameObject.GetComponent<TileSet>())
-                    {
-                        if (selectTileSet.character != null)
-                        {
-                            UIManager.Instance.mapEditManager.ShowCharactorInfoPopup(selectTileSet.character);
-                        }
-
-                        break;
-                    }
-                }
+                UIManager.Instance.mapEditManager.ShowCharactorInfoPopup(selectTileSet.character);
+                break;
             }
         }
     }
@@ -110,23 +84,6 @@ public class MonsterSetMode : MonoBehaviour
             selectedCharacterFromList = character;
         else
             selectedCharacterFromList = null;
-        //if (selectTileSet == null) return;
-
-            //if (selectTileSet.character != null)
-            //{
-            //    Destroy(selectTileSet.character.gameObject);
-            //    selectTileSet.character = null;
-            //}
-
-            //if (character == null) return;
-
-            //selectTileSet.character = Instantiate(character).GetComponent<Charactor>();
-            //selectTileSet.character.name = character.name;
-            //selectTileSet.character.tileIndex = tileIndex;
-            //selectTileSet.character.transform.SetParent(selectTileSet.transform);
-            //selectTileSet.character.transform.localPosition = selectTileSet.tiles[tileIndex].transform.localPosition;
-
-            //UIManager.Instance.mapEditManager.ShowCharactorInfoPopup(selectTileSet.character);
     }
 
     public void DeleteCharacterOnSelectFence()

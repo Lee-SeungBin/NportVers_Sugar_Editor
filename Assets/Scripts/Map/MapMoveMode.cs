@@ -11,7 +11,6 @@ public class MapMoveMode : MonoBehaviour
 
     private float doubleTapTimer = -1;
 
-    // Update is called once per frame
     public void TouchControll()
     {
         if (Input.GetMouseButtonDown(0))
@@ -20,7 +19,7 @@ public class MapMoveMode : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            if (EventSystem.current.IsPointerOverGameObject() == true) return;
+            if (EventSystem.current.IsPointerOverGameObject()) return;
 
             SetNullSelectMap();
         }
@@ -45,55 +44,42 @@ public class MapMoveMode : MonoBehaviour
         else if (selectMap != null)
         {
             selectMap = null;
-
             UIManager.Instance.HideStagePosition();
         }
     }
 
     private void OnMouseDownForMapMoving()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, 1 << 9);
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.transform.tag.Equals("TileSet"))
         {
-            if (hit.transform.tag.Equals("TileSet"))
-            {
-                selectMapContainer = hit.transform.parent.gameObject;
-
-                prevMousePosition = Input.mousePosition;
-
-                return;
-            }
+            selectMapContainer = hit.transform.parent.gameObject;
+            prevMousePosition = Input.mousePosition;
+            return;
         }
 
         hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, 1 << 8);
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.transform.tag.Equals("Map"))
         {
-            if (hit.transform.tag.Equals("Map"))
+            selectMap = hit.transform.parent.gameObject;
+
+            if (doubleTapTimer == -1)
             {
-                selectMap = hit.transform.parent.gameObject;
-
-                if (doubleTapTimer == -1)
-                {
-                    prevMousePosition = Input.mousePosition;
-
-                    UIManager.Instance.ShowStagePosition();
-
-                    doubleTapTimer = 0;
-
-                    StartCoroutine(DoubleTapTimeChecker());
-
-                }
-                else
-                {
-                    MapManager.Instance.mainCamera.transform.position = new Vector3(
-                        selectMap.transform.position.x
-                        , selectMap.transform.position.y
-                        , MapManager.Instance.mainCamera.transform.position.z);
-                }
+                prevMousePosition = Input.mousePosition;
+                UIManager.Instance.ShowStagePosition();
+                doubleTapTimer = 0;
+                StartCoroutine(DoubleTapTimeChecker());
+            }
+            else
+            {
+                MapManager.Instance.mainCamera.transform.position = new Vector3(
+                    selectMap.transform.position.x
+                    , selectMap.transform.position.y
+                    , MapManager.Instance.mainCamera.transform.position.z);
             }
         }
     }
@@ -113,7 +99,9 @@ public class MapMoveMode : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// 맵 또는 스테이지를 이동시키는 함수
+    /// </summary>
     private void OnMouseMoveForMapMoving()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -123,7 +111,7 @@ public class MapMoveMode : MonoBehaviour
         if (selectMapContainer != null)
         {
             Vector3 newPosition = selectMapContainer.transform.localPosition + new Vector3(translation.x, translation.y, 0f);
-            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f;
+            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f; // 맵 좌표를 소숫점 2자리 까지만 제한
             newPosition.y = Mathf.Round(newPosition.y * 100f) / 100f;
             selectMapContainer.transform.localPosition = newPosition;
 
@@ -136,7 +124,7 @@ public class MapMoveMode : MonoBehaviour
             if (prevMousePosition == Input.mousePosition)
                 return;
             Vector3 newPosition = selectMap.transform.localPosition + new Vector3(translation.x, translation.y, 0f);
-            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f;
+            newPosition.x = Mathf.Round(newPosition.x * 100f) / 100f; // 스테이지 좌표를 소숫점 2자리 까지만 제한
             newPosition.y = Mathf.Round(newPosition.y * 100f) / 100f;
             selectMap.transform.localPosition = newPosition;
 

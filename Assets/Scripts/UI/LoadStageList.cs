@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class LoadStageList : MonoBehaviour
 {
     public Text loadListText;
-
+    /// <summary>
+    /// 로드 팝업에서 리스트 버튼을 통해 스테이지 로드
+    /// </summary>
     public void OnClickLoadButton()
     {
         string mapUrl = NetworkMNG.instance.ServerMapDataURL;

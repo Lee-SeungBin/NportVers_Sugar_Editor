@@ -96,13 +96,9 @@ public class NetworkMNG : MonoBehaviour
 
     public void StartNetworking(bool networkingCheck, string url, List<IMultipartFormSection> form, NetworkResultCallback networkResultCallback)
     {
-        if (Application.internetReachability == NetworkReachability.NotReachable)
+        if (Application.internetReachability == NetworkReachability.NotReachable && networkingCheck)
         {
-            if(networkingCheck)
-            {
-                //MapDataMNG.Instance.SetVisibleLoading(false);
                 UIManager.Instance.errorPopup.SetMessage("통신시작 과정에서 통신 실패.");
-            }
         }
         else
         {
@@ -119,7 +115,6 @@ public class NetworkMNG : MonoBehaviour
 
         if(webRequest.error != null)
         {
-            //MapDataMNG.Instance.SetVisibleLoading(false);
             UIManager.Instance.errorPopup.SetMessage("보내는 과정에서 통신 실패.");
         }
         else

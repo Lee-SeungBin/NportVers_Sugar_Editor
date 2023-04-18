@@ -11,19 +11,13 @@ public class RailGroup : MonoBehaviour
 
     private Color color;
 
-    public enum RAIL_TYPE
-    {
-        ROTATION = 0,
-        STRIGHT = 1
-    }
     [HideInInspector]
-    public RAIL_TYPE railType;
+    public Enums.RAIL_TYPE railType;
 
     private void Awake()
     {
         color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 0.8f);
     }
-
 
     public void Init(RailManager railManager)
     {
@@ -43,13 +37,10 @@ public class RailGroup : MonoBehaviour
                 return;
             }
         }
-
         tileSets.Add(tileSet);
-        //tileSet.isVisible = true;
         tileSet.railGroup = this;
         tileSet.SetLineColor(Color.red);
         tileSet.SetActiveStateRailLine(true);
-
 
         if (railMoveNumbers.Count > 0)
         {
@@ -114,7 +105,6 @@ public class RailGroup : MonoBehaviour
                 moveNumbers.Add(i);
             }
         }
-
         return moveNumbers;
     }
 
@@ -137,7 +127,6 @@ public class RailGroup : MonoBehaviour
         for (int i = tileSets.Count - 1; i > -1; --i)
         {
             tileSets[i].SetLineColor(Color.red);
-            //tileSets[i].SetActiveStateRailLine(true);
         }
 
         railMoveNumbers[railMoveNumbers.Count - 1].Select();

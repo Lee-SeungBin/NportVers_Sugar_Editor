@@ -3,19 +3,6 @@ using UnityEngine.UI;
 
 public class MissionManager : MonoBehaviour
 {
-    public enum MISSION_TYPE
-    {
-        CREAM = 0,
-        STRAWBERRY = 1,
-        CHOCOLATE = 2,
-        EGG= 3,
-        BREAD = 4,
-        ICE = 5,
-        JELLY = 6,
-        FROG_SOUP = 7
-    }
-
-
     public MissionPopup missionPopup;
 
     public Text stageNumber;
@@ -28,56 +15,38 @@ public class MissionManager : MonoBehaviour
 
     public void ChangeMissionValue()
     {
-        if(container.transform.childCount > 0)
-        {
-            for(int i = container.transform.childCount - 1; i > -1; --i)
-            {
-                Destroy(container.transform.GetChild(i).gameObject);
-            }
-        }
+        DestroyMissions();
+        AddMisions(Enums.MISSION_TYPE.CREAM, missionPopup.creamScoreText.text);
+        AddMisions(Enums.MISSION_TYPE.STRAWBERRY, missionPopup.strawberryScoreText.text);
+        AddMisions(Enums.MISSION_TYPE.CHOCOLATE, missionPopup.chocolateScoreText.text);
+        AddMisions(Enums.MISSION_TYPE.EGG, missionPopup.eggScoreText.text);
+        AddMisions(Enums.MISSION_TYPE.BREAD, missionPopup.breadScoreText.text);
+        AddMisions(Enums.MISSION_TYPE.ICE, missionPopup.breakIceText.text);
+        AddMisions(Enums.MISSION_TYPE.JELLY, missionPopup.jellyText.text);
 
-        if (int.Parse(missionPopup.creamScoreText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.CREAM, missionPopup.creamScoreText.text);
-        }
-
-        if (int.Parse(missionPopup.strawberryScoreText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.STRAWBERRY, missionPopup.strawberryScoreText.text);
-        }
-
-        if (int.Parse(missionPopup.chocolateScoreText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.CHOCOLATE, missionPopup.chocolateScoreText.text);
-        }
-
-        if (int.Parse(missionPopup.eggScoreText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.EGG, missionPopup.eggScoreText.text);
-        }
-        
-        if (int.Parse(missionPopup.breadScoreText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.BREAD, missionPopup.breadScoreText.text);
-        }
-
-        if (int.Parse(missionPopup.breakIceText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.ICE, missionPopup.breakIceText.text);
-        }
-
-        if (int.Parse(missionPopup.jellyText.text) > 0)
-        {
-            CreateMission(MISSION_TYPE.JELLY, missionPopup.jellyText.text);
-        }
-        
         if (missionPopup.frogSoup.isOn)
         {
-            CreateMission(MISSION_TYPE.FROG_SOUP, "1");
+            CreateMission(Enums.MISSION_TYPE.FROG_SOUP, "1");
         }
     }
 
-    private void CreateMission(MISSION_TYPE missionType, string value)
+    private void DestroyMissions()
+    {
+        for (int i = container.transform.childCount - 1; i >= 0; --i)
+        {
+            Destroy(container.transform.GetChild(i).gameObject);
+        }
+    }
+
+    private void AddMisions(Enums.MISSION_TYPE type, string score)
+    {
+        if (int.Parse(score) > 0)
+        {
+            CreateMission(type, score);
+        }
+    }
+
+    private void CreateMission(Enums.MISSION_TYPE missionType, string value)
     {
         MissionUIBase obj = Instantiate(missionPrefab);
         obj.transform.SetParent(container.transform);

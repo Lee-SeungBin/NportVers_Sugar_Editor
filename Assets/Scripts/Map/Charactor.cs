@@ -7,6 +7,9 @@ public class Charactor : MonoBehaviour
     public int tileSetIndex;
     public int tileIndex;
 
+    public Enums.CHARCTER_TYPE characterType;
+    
+    public GameObject star;
     private bool _isStar;
     public bool isStar
     {
@@ -21,8 +24,8 @@ public class Charactor : MonoBehaviour
             star.SetActive(value);
         }
     }
-    public GameObject star;
 
+    public SpriteChanger ice;
     private int _iceStep;
     public int iceStep
     {
@@ -45,9 +48,10 @@ public class Charactor : MonoBehaviour
             }
         }
     }
-    public SpriteChanger ice;
 
 
+    private Vector2 widthDirection = new Vector2(1, 1);
+    private Vector2 heightDirection = new Vector2(-1, 1);
     private bool _isHeightDirection;
     public bool isHeightDirection
     {
@@ -93,35 +97,7 @@ public class Charactor : MonoBehaviour
     }
 
 
-    private Vector2 widthDirection = new Vector2(1, 1);
-    private Vector2 heightDirection = new Vector2(-1, 1);
 
-
-
-    public enum CHARCTER_TYPE
-    {
-        NONE,
-        MOVE,
-        JUMP,
-        WHISTLE,
-        CCWMON,
-        CWMON,
-        BOMBMON,
-        TURN_WHBOMBMON,
-        WHBOMBMON
-    }
-    public CHARCTER_TYPE characterType;
-
-    public enum TASTY_TYPE
-    {
-        NONE,
-        ST,
-        CH,
-        CR,
-        EG,
-        BR,
-        SP
-    }
 
     private void Awake()
     {
@@ -129,7 +105,4 @@ public class Charactor : MonoBehaviour
         isStar = false;
         isUser = false;
     }
-
-
-
 }

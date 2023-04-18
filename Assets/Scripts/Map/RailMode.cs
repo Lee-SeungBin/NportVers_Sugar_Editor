@@ -22,103 +22,74 @@ public class RailMode : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject() == true) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, 1 << 9);
 
-        if (hit.collider == null) return;
-        if (hit.transform.CompareTag("TileSet") == false) return;
+        if (hit == false || hit.transform.CompareTag("TileSet") == false)
+            return;
 
-        if(selectTileSet == null)
+        TileSet clickedTileSet = hit.transform.GetComponent<TileSet>();
+
+        int emptyTiles = 0; // 비어 있는 타일 체크
+        foreach (Tile tile in clickedTileSet.tiles)
         {
-            selectTileSet = hit.transform.GetComponent<TileSet>();
-            int cnt = 0;
-            for (int i = 0; i < 4; i++)
+            if (!tile.isVisible)
             {
-                if (!selectTileSet.tiles[i].isVisible)
-                    cnt++;
+                emptyTiles++;
             }
-            if (cnt > 0 && cnt < 4)
-            {
-                UIManager.Instance.errorPopup.SetMessage("레일은 타일이 전부 없거나 있어야 설치 가능합니다.");
-                return;
-            }
+        }
+        if (emptyTiles > 0 && emptyTiles < 4)
+        {
+            UIManager.Instance.errorPopup.SetMessage("레일은 타일이 전부 없거나 있어야 설치 가능합니다.");
+            return;
+        }
 
+        if (selectTileSet == null)
+        {
+            selectTileSet = clickedTileSet;
             if (selectTileSet.railGroup == null)
             {
                 RailGroup railGroup = selectTileSet.map.railManager.CreateRailGroup();
                 railGroup.PushTileSet(selectTileSet);
             }
-
-            selectTileSet.railGroup.SelectGroup();
-            selectTileSet = selectTileSet.railGroup.GetLastTileSet();
-
-            UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
+        }
+        else if (selectTileSet == clickedTileSet)
+        {
+            if (selectTileSet.railGroup != null && CheckErrorRail(selectTileSet) == false) // 레일 그룹을 만들고 선택 해제하려는 순간 현재 레일 체크
+                return;
+            selectTileSet.railGroup?.UnselectGroup();
+            selectTileSet = null;
         }
         else
         {
-            TileSet tempTileSet = hit.transform.GetComponent<TileSet>();
-            int cnt = 0;
-            for (int i = 0; i < 4; i++)
+            bool isVisibleTiles = clickedTileSet.isVisibleTiles;
+            if (isVisibleTiles == false)
             {
-                if (!tempTileSet.tiles[i].isVisible)
-                    cnt++;
-            }
-            if (cnt > 0 && cnt < 4)
-            {
-                UIManager.Instance.errorPopup.SetMessage("레일은 타일이 전부 없거나 있어야 설치 가능합니다.");
-                return;
-            }
-            if (selectTileSet == tempTileSet)
-            {
-                if (selectTileSet.railGroup != null)
+                if (selectTileSet.railGroup != null && CheckErrorRail(selectTileSet) == false) // 다른 레일 그룹을 만들기 전에 현재 레일 체크
+                    return;
+                selectTileSet.railGroup?.UnselectGroup();
+                selectTileSet = clickedTileSet;
+                if (selectTileSet.railGroup == null)
                 {
-                    if (!CheckErrorRail(selectTileSet))
-                        return;
-                    selectTileSet.railGroup.UnselectGroup();
-
+                    RailGroup railGroup = selectTileSet.map.railManager.CreateRailGroup();
+                    railGroup.PushTileSet(selectTileSet);
                 }
-
-                selectTileSet = null;
             }
             else
             {
-                bool isVisibleTiles = tempTileSet.isVisibleTiles;
-
-                if (isVisibleTiles == false) //새로운 그룹 생성
-                {
-                    if (!CheckErrorRail(selectTileSet))
-                        return;
-                    if (selectTileSet.railGroup != null)
-                    {
-                        selectTileSet.railGroup.UnselectGroup();
-                    }
-                    selectTileSet = tempTileSet;
-
-                    if (tempTileSet.railGroup == null)
-                    {
-                        RailGroup railGroup = selectTileSet.map.railManager.CreateRailGroup();
-                        railGroup.PushTileSet(selectTileSet);
-
-                    }
-
-                }
-                else
-                {
-                    UnselectGroup(selectTileSet);
-                    selectTileSet.railGroup.PushTileSet(tempTileSet);
-                }
-    
-                selectTileSet.railGroup.SelectGroup();
-                selectTileSet = selectTileSet.railGroup.GetLastTileSet();
-
-                UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
+                UnselectGroup(selectTileSet);
+                selectTileSet.railGroup.PushTileSet(clickedTileSet);
             }
-
-
-
         }
+
+        if (selectTileSet != null)
+        {
+            selectTileSet.railGroup?.SelectGroup();
+            selectTileSet = selectTileSet.railGroup.GetLastTileSet();
+            UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
+        }
+
     }
 
     public void SelectGroup(TileSet tileSet)
@@ -151,12 +122,9 @@ public class RailMode : MonoBehaviour
         }
 
         TileSet tileSet = map.tileSets[w][h];
-        if(isActive)
+        if(isActive && (tileSet.railGroup == null || tileSet.railGroup == selectTileSet.railGroup))
         {
-            if(tileSet.railGroup == null || tileSet.railGroup == selectTileSet.railGroup)
-            {
-                tileSet.SetVisibleAllTilesForRailMode(true);
-            }
+            tileSet.SetVisibleAllTilesForRailMode(true);
         }
         else
         {
@@ -172,36 +140,38 @@ public class RailMode : MonoBehaviour
             selectTileSet = null;
         }
     }
-
+    /// <summary>
+    /// 직선과 회전 레일의 조건 체크 함수
+    /// </summary>
+    /// <param name="tileSet"></param>
+    /// <returns></returns>
     public bool CheckErrorRail(TileSet tileSet)
     {
-
         TileSet lastTile = tileSet.railGroup.GetLastTileSet();
 
         int a = lastTile.tileSetIndex / lastTile.map.height;
         int b = lastTile.tileSetIndex % lastTile.map.height;
 
-        if (tileSet.railGroup.railType == 0)
+        if (tileSet.railGroup.railType == 0) // 회전 레일이면
         {
             if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) || 
-                  (tileSet.railGroup.tileSets.Count <= 2))
+                  (tileSet.railGroup.tileSets.Count <= 2)) // 마지막 레일의 인덱스를 통해 4방향에서 첫번째 타일과 인접한지 체크 및 2개 이하 인지 체크
             {
                 UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 두 개 일수 없으며 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");
                 return false;
             }
         }
-        else
+        else // 직선 레일 이면
         {
-            if (lastTile.isVisible)
+            if (lastTile.isVisible) // 마지막 레일 타일이 비어 있는지 체크
             {
                 UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다.");
                 return false;
             }
         }
-
         return true;
     }
 

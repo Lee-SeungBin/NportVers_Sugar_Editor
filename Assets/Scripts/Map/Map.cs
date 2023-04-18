@@ -27,8 +27,8 @@ public class Map : MonoBehaviour
     public List<Vine> vines = new List<Vine>();
 
     public List<NextStageData> nextStageDatas;
-
-    private Dictionary<string, List<Vector2>> mapCoords = new Dictionary<string, List<Vector2>>()
+    
+    private Dictionary<string, List<Vector2>> mapCoords = new Dictionary<string, List<Vector2>>() // 맵 정보 딕셔너리 리스트
 {
     { "3x3", new List<Vector2>() { new Vector2(0f, 1.9f) } },
     { "4x3", new List<Vector2>() { new Vector2(0.58f, 1.4f) } },
@@ -156,7 +156,6 @@ public class Map : MonoBehaviour
                         if (tileSets[w][h].railGroup != null)
                         {
                             tileSets[w][h].railGroup.DeleteRailGroup();
-                            //railManager.DeleteRailGroup(tileSets[w][h].railGroup);
                         }
                         Destroy(tileSets[w][h].gameObject);
                         tileSets[w].RemoveAt(h);
@@ -197,7 +196,6 @@ public class Map : MonoBehaviour
                         if (tileSets[w][h].railGroup != null)
                         {
                             tileSets[w][h].railGroup.DeleteRailGroup();
-                            //railManager.DeleteRailGroup(tileSets[w][h].railGroup);
                         }
                         for (int t = 0; t < 4; ++t)
                         {
@@ -251,21 +249,21 @@ public class Map : MonoBehaviour
         UIManager.Instance.mapEditManager.Maptype.value = 0;
         this.type = 0;
         container.transform.localPosition = MotifyCoordinateMap();
-
-        //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1.2f) * TileSetH));
-
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
-
+    /// <summary>
+    /// 맵 크기에 따라 중앙 좌표를 정해줌
+    /// </summary>
+    /// <returns> Vector2 중앙 좌표 </returns>
     public Vector2 MotifyCoordinateMap()
     {
         string mapsize = width.ToString() + "x" + height.ToString();
-        if (mapCoords.ContainsKey(mapsize))
+        if (mapCoords.ContainsKey(mapsize)) // Key값인지 검색
         {
             List<Vector2> coords = mapCoords[mapsize];
             List<Dropdown.OptionData> options = new List<Dropdown.OptionData>();
             Dropdown.OptionData option;
-
+            // Value가 여러개인 경우 드롭다운 옵션 설정
             int len = coords.Count + 1;
             for (int i = 1; i < len; ++i)
             {
@@ -278,17 +276,15 @@ public class Map : MonoBehaviour
                 string yLabel = "Y: ";
 
                 string formattedString = xLabel + coordArray[0] + ", " + yLabel + coordArray[1];
-
+                // 보기 이쁘게 문자열 잘라줌
                 option.text = formattedString;
                 options.Add(option);
             }
 
             UIManager.Instance.mapEditManager.Maptype.options = options;
-
             return coords[type];
-
         }
-        else
+        else // 딕셔너리에 있는 맵 크기가 아님
         {
             UIManager.Instance.mapEditManager.Maptype.options.Clear();
             UIManager.Instance.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
@@ -372,9 +368,9 @@ public class Map : MonoBehaviour
             }
         }
 
-        //container.transform.localPosition = new Vector2((width - height) * (TileSetW * 0.5f), (((width + height) * 0.5f - 1) * TileSetH));
+
         container.transform.localPosition = new Vector3(data.centerX, data.centerY, 0);
-        //container.transform.localPosition = new Vector2(data.centerX, (((width + height) * 0.5f - 1.21f) * TileSetH));
+
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
 
         transform.localPosition = new Vector2(data.x, data.y);
@@ -405,8 +401,6 @@ public class Map : MonoBehaviour
             if (data.boxDatas[w].boxTier != null)
                 tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
             MapManager.Instance.specialMode.ChangeSpriteBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
-            //if(int.Parse(data.boxDatas[w].boxTypes) == 2)
-            //    MapManager.Instance.specialMode.LoadTasteOfBox(tile.box);
         }
 
         for(w = 0; w < data.vineDatas.Count; ++w)

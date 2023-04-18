@@ -17,43 +17,31 @@ public class RailSelectPopup : MonoBehaviour
     public void SetData(TileSet tileSet)
     {
         railGroup = tileSet.railGroup;
-
-        if (railGroup.railType == RailGroup.RAIL_TYPE.STRIGHT)
-        {
-            straight.isOn = true;
-        }
-        else
-        {
-            rotation.isOn = true;
-        }
+        straight.isOn = railGroup.railType == Enums.RAIL_TYPE.STRIGHT;
+        rotation.isOn = railGroup.railType == Enums.RAIL_TYPE.ROTATION;
     }
 
     public void OnChangeRailType()
     {
-        if (railGroup != null)
-        {
-            if (straight.isOn)
-            {
-                railGroup.railType = RailGroup.RAIL_TYPE.STRIGHT;
-            }
-            else
-            {
-                railGroup.railType = RailGroup.RAIL_TYPE.ROTATION;
-            }
-        }
-        else
+        if (railGroup == null)
         {
             UIManager.Instance.errorPopup.SetMessage("레일이 없습니다.");
+            return;
         }
+
+        railGroup.railType = straight.isOn ? Enums.RAIL_TYPE.STRIGHT : Enums.RAIL_TYPE.ROTATION;
     }
 
     public void OnClickDeleteButton()
     {
-        MapManager.Instance.railMode.SetSelectTileSetNull();
-        if (railGroup != null)
-            railGroup.DeleteRailGroup();
-        else
+        if (railGroup == null)
+        {
             UIManager.Instance.errorPopup.SetMessage("레일을 선택해주세요.");
+            return;
+        }
+
+        MapManager.Instance.railMode.SetSelectTileSetNull();
+        railGroup.DeleteRailGroup();
         railGroup = null;
     }
 }

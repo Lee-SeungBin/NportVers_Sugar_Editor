@@ -5,40 +5,19 @@ using UnityEngine.UI;
 
 public class MapEditManager : MonoBehaviour
 {
-    public GameObject characterList;
-    public GameObject specialList;
-
-    public Button createMapButton;
-    public GameObject createMapPopup;
-
-    public Button modifyMapButton;
-    public Dropdown modifyMapDropDown;
-    public GameObject modifyMapPopup;
-    public Dropdown Maptype;
-
-    public Button stageLoadButton;
-    public Button jsonSaveButton;
-    //public JsonFileMaker jsonFileMaker;
+    public GameObject characterList, specialList;
+    public GameObject createMapPopup, modifyMapPopup;
+    public Button createMapButton, modifyMapButton, stageLoadButton, jsonSaveButton;
+    public Button obstacleButton, versionupdateButton, resetButton;
+    public Dropdown modifyMapDropDown, Maptype, sandwichChangeDropDown;
+    public InputField Width, Height;
     public ObstacleOptionPopup obstacleOptionPopup;
-
-    public InputField Width;
-    public InputField Height;
-
     public CharacterInfoPopup characterInfoPopup;
-
     public TileSetVisiblePopup tileSetVisiblePopup;
-
     public SandWichInfoPopup sandwichInfoPopup;
     public SandWichChangePopup sandwichChangePopup;
-    public Dropdown sandwichChangeDropDown;
-
-    //public Toggle centerSelectButton;
-
     public MapEditorPopups popups;
 
-    public Button obstacleButton;
-    public Button versionupdateButton;
-    public Button resetButton;
     private void HidePopups()
     {
         HideCreateMapPopup();
@@ -57,7 +36,11 @@ public class MapEditManager : MonoBehaviour
 
         MapManager.Instance.onChangeMaps += OnChangeModifyMapDropDown;
     }
-
+    /// <summary>
+    /// 게임 오브젝트를 끄고 키는 함수 (배열 형태)
+    /// </summary>
+    /// <param name="gameobj"></param>
+    /// <param name="active"></param>
     public void ActiveManager(GameObject[] gameobj, bool[] active)
     {
         for(int i = 0; i < gameobj.Length; i++)
@@ -65,16 +48,16 @@ public class MapEditManager : MonoBehaviour
             gameobj[i].SetActive(active[i]);
         }
     }
-    public void OnChangeSelectModeDropDown(MapManager.SELECT_MODE selectMode)
+    public void OnChangeSelectModeDropDown(Enums.MAP_SELECT_MODE selectMode)
     {
         gameObject.SetActive(true);
 
         specialList.GetComponent<SpecialList>().SelectEmtpy();
-
+        // 맵 모드가 바뀔때마다 UI 끄고 켜기
         GameObject[] objArray = { 
-            characterList, 
-            specialList, 
-            stageLoadButton.gameObject,
+            characterList, // 0몬스터 1장애물 2로드버튼 3세이브버튼
+            specialList,  // 4맵 수정버튼 5맵 생성버튼 6장애물 옵션버튼
+            stageLoadButton.gameObject, // 7버전 업데이트 버튼 8리셋 버튼
             jsonSaveButton.gameObject,
             modifyMapButton.gameObject, 
             createMapButton.gameObject, 
@@ -86,11 +69,11 @@ public class MapEditManager : MonoBehaviour
 
         switch (selectMode)
         {
-            case MapManager.SELECT_MODE.MONSTER_SET:
+            case Enums.MAP_SELECT_MODE.MONSTER_SET:
                 objArray[0].SetActive(true);
                 activeArray[0] = true;
                 break;
-            case MapManager.SELECT_MODE.SPECIAL_SET:
+            case Enums.MAP_SELECT_MODE.SPECIAL_SET:
                 objArray[1].SetActive(true);
                 activeArray[1] = true;
                 break;
@@ -218,22 +201,23 @@ public class MapEditManager : MonoBehaviour
         MapManager.Instance.ModifyMap(modifyMapDropDown.value, w, h);
         HideModifyMapPopup();
     }
+    /// <summary>
+    /// Input Field의 값의 따라 맵의 좌표를 변경 하는 함수
+    /// </summary>
     public void InputCoordinateMap()
     {
-        if (MapManager.Instance.Maps.Count > 0 && !MapManager.Instance.isCreatingMap)
-        {
-            if (float.TryParse(UIManager.Instance.mapPositionX.text, out float floatValueX) && float.TryParse(UIManager.Instance.mapPositionY.text, out float floatValueY))
-            {
-                Vector2 newPosition = MapManager.Instance.currentMap.container.transform.localPosition;
-                newPosition.x = floatValueX;
-                newPosition.y = floatValueY;
-                MapManager.Instance.currentMap.container.transform.localPosition = newPosition;
-                UIManager.Instance.SetMapPositionText(newPosition, MapManager.Instance.currentMap);
-            }
-        }
-        else
+        if (MapManager.Instance.Maps.Count == 0 || MapManager.Instance.isCreatingMap)
         {
             return;
+        }
+
+        if (float.TryParse(UIManager.Instance.mapPositionX.text, out float floatValueX) && float.TryParse(UIManager.Instance.mapPositionY.text, out float floatValueY))
+        {
+            Vector2 newPosition = MapManager.Instance.currentMap.container.transform.localPosition;
+            newPosition.x = floatValueX;
+            newPosition.y = floatValueY;
+            MapManager.Instance.currentMap.container.transform.localPosition = newPosition;
+            UIManager.Instance.SetMapPositionText(newPosition, MapManager.Instance.currentMap);
         }
     }
 
@@ -277,6 +261,7 @@ public class MapEditManager : MonoBehaviour
         gameDataUI.startingMove.isOn = true;
         gameDataUI.moveText.text = "0";
         gameDataUI.jumpText.text = "0";
+        gameDataUI.stageNumber.text = "0";
         gameDataUI.stageType.value = 0;
         gameDataUI.bgDropdown.value = 0;
         gameDataUI.bgmDropdown.value = 0;

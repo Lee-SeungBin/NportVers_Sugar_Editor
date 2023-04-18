@@ -8,18 +8,12 @@ public class SpecialMode : MonoBehaviour
 {
     [SerializeField]
     private Jelly jellyPrefab;
-    //private List<Jelly> activeJellys = new List<Jelly>();
-    //private List<Jelly> inactiveJellys = new List<Jelly>();
 
     [SerializeField]
     private FrogSoup frogSoupPrefab;
-    //private List<FrogSoup> activeFrogSoups = new List<FrogSoup>();
-    //private List<FrogSoup> inactiveFrogSoups = new List<FrogSoup>();
 
     [SerializeField]
     private Box boxPrefab;
-    //private List<Box> activeBoxs = new List<Box>();
-    //private List<Box> inactiveBoxs = new List<Box>();
 
     [SerializeField]
     private WoodenFence woodenFencePrefab;
@@ -28,8 +22,6 @@ public class SpecialMode : MonoBehaviour
 
     [SerializeField]
     private Vine vinePrefab;
-    //private List<Vine> activeVines = new List<Vine>();
-    //private List<Vine> inactiveVines = new List<Vine>();
 
     public Tile selectTile;
     public void TouchControll()
@@ -69,19 +61,19 @@ public class SpecialMode : MonoBehaviour
 
         switch (UIManager.Instance.dragItem.specialType)
         {
-            case SpecialList.SPECIAL_TYPE.JELLY:
+            case Enums.SPECIAL_TYPE.JELLY:
                 OnClickJelly();
                 break;
-            case SpecialList.SPECIAL_TYPE.FROG_SOUP:
+            case Enums.SPECIAL_TYPE.FROG_SOUP:
                 OnClickFrogSoup();
                 break;
-            case SpecialList.SPECIAL_TYPE.BOX:
+            case Enums.SPECIAL_TYPE.BOX:
                 OnClickBox();
                 break;
-            case SpecialList.SPECIAL_TYPE.WOODEN_FENCE:
+            case Enums.SPECIAL_TYPE.WOODEN_FENCE:
                 OnClickWoodenFence();
                 break;
-            case SpecialList.SPECIAL_TYPE.VINE:
+            case Enums.SPECIAL_TYPE.VINE:
                 OnClickVine();
                 break;
         }

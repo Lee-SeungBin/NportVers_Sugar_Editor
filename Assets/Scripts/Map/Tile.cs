@@ -10,12 +10,9 @@ public class Tile : MonoBehaviour
     {
         get
         {
-            if(GetComponentInParent<TileSet>().character != null)
+            if(GetComponentInParent<TileSet>().character != null && GetComponentInParent<TileSet>().character.tileIndex == tileIndex)
             {
-                if(GetComponentInParent<TileSet>().character.tileIndex == tileIndex)
-                {
-                    return GetComponentInParent<TileSet>().character;
-                }
+                return GetComponentInParent<TileSet>().character;
             }
 
             return null;
@@ -29,22 +26,11 @@ public class Tile : MonoBehaviour
     private bool _isVisible;
     public bool isVisible
     {
-        get
-        {
-            return _isVisible;
-        }
-
+        get => _isVisible;
         set
         {
             _isVisible = value;
-            if(value)
-            {
-                GetComponent<SpriteRenderer>().color = Color.white;
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
-            }
+            GetComponent<SpriteRenderer>().color = value ? Color.white : new Color(1, 1, 1, 0.3f);
         }
     }
 }

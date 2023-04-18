@@ -8,7 +8,7 @@ public class DragItem : MonoBehaviour
     [SerializeField]
     private Image image;
 
-    public SpecialList.SPECIAL_TYPE specialType { get; private set; }
+    public Enums.SPECIAL_TYPE specialType { get; private set; }
 
     private void Update()
     {
@@ -18,11 +18,11 @@ public class DragItem : MonoBehaviour
         }
     }
 
-    public void SetSpecial(SpecialList.SPECIAL_TYPE type, Sprite sprite)
+    public void SetSpecial(Enums.SPECIAL_TYPE type, Sprite sprite)
     {
         specialType = type;
 
-        if (specialType != SpecialList.SPECIAL_TYPE.NONE)
+        if (specialType != Enums.SPECIAL_TYPE.NONE)
         {
             gameObject.SetActive(true);
             image.sprite = sprite;

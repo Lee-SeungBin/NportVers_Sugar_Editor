@@ -37,15 +37,7 @@ public class MapManager : MonoBehaviour
 
     public Action onChangeMaps;
 
-    private SELECT_MODE selectModeType;
-    public enum SELECT_MODE
-    {
-        MAP_MOVE,
-        SELECT_TILESET,
-        MONSTER_SET,
-        RAIL_SET,
-        SPECIAL_SET
-    }
+    private Enums.MAP_SELECT_MODE selectModeType;
 
     private bool isTouchScreen;
     private Vector2 prevMousePosition;
@@ -85,7 +77,7 @@ public class MapManager : MonoBehaviour
             {
                 moveMousePosition = prevMousePosition - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mainCamera.gameObject.transform.position += new Vector3(moveMousePosition.x, moveMousePosition.y);
-                prevMousePosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                prevMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
         }
         else if (Input.GetMouseButtonUp(2))
@@ -94,50 +86,31 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            if (selectModeType == SELECT_MODE.MAP_MOVE)
+            switch (selectModeType)
             {
-                mapMoveMode.TouchControll();
-            }
-            else if (selectModeType == SELECT_MODE.SELECT_TILESET)
-            {
-                selectTileSetMode.TouchControll();
-            }
-            else if (selectModeType == SELECT_MODE.MONSTER_SET)
-            {
-                monsterSetMode.TouchControll();
-            }
-            else if (selectModeType == SELECT_MODE.RAIL_SET)
-            {
-                railMode.TouchControll();
-            }
-            else if (selectModeType == SELECT_MODE.SPECIAL_SET)
-            {
-                specialMode.TouchControll();
+                case Enums.MAP_SELECT_MODE.MAP_MOVE:
+                    mapMoveMode.TouchControll();
+                    break;
+                case Enums.MAP_SELECT_MODE.SELECT_TILESET:
+                    selectTileSetMode.TouchControll();
+                    break;
+                case Enums.MAP_SELECT_MODE.MONSTER_SET:
+                    monsterSetMode.TouchControll();
+                    break;
+                case Enums.MAP_SELECT_MODE.RAIL_SET:
+                    railMode.TouchControll();
+                    break;
+                case Enums.MAP_SELECT_MODE.SPECIAL_SET:
+                    specialMode.TouchControll();
+                    break;
             }
             if (!UIManager.Instance.loadStagePopup.activeSelf)
             {
                 Vector2 wheelInput2 = Input.mouseScrollDelta;
-                if (wheelInput2.y > 0)
+                if (wheelInput2.y != 0)
                 {
-                    // 휠을 밀어 돌렸을 때의 처리 ↑
                     scale -= (wheelInput2.y * 0.1f);
-                    if (scale < 0)
-                    {
-                        scale = 0;
-                    }
-
-                    SetCameraScale();
-                }
-                else if (wheelInput2.y < 0)
-                {
-
-                    // 휠을 당겨 올렸을 때의 처리 ↓
-                    scale -= (wheelInput2.y * 0.1f);
-                    if (scale > 1)
-                    {
-                        scale = 1;
-                    }
-
+                    scale = Mathf.Clamp(scale, 0, 1);
                     SetCameraScale();
                 }
             }
@@ -176,13 +149,13 @@ public class MapManager : MonoBehaviour
     }
     public void ChangeSelectMode(int value)
     {
-        selectModeType = (SELECT_MODE)value;
+        selectModeType = (Enums.MAP_SELECT_MODE)value;
 
         selectTileSetMode.SetNullToSelectTileSet();
 
         mapMoveMode.SetNullSelectMap();
 
-        SetActiveRailGroups(selectModeType == SELECT_MODE.RAIL_SET);
+        SetActiveRailGroups(selectModeType == Enums.MAP_SELECT_MODE.RAIL_SET);
     }
 
     public bool SetTileSetVisible(bool isActive)
@@ -207,13 +180,11 @@ public class MapManager : MonoBehaviour
 
     public void DeleteMap(int index)
     {
-
         if (Maps.Count == 0)
         {
             UIManager.Instance.errorPopup.SetMessage("맵이 없습니다.");
             return;
         }
-
 
         int mapIndex = index;
 
@@ -223,16 +194,11 @@ public class MapManager : MonoBehaviour
         Maps.RemoveAt(mapIndex);
 
         int len = Maps.Count;
-        if (len == 0)
-        {
-
-        }
-        else
+        if (len != 0)
         {
             Vector3 posSort;
             for (int i = 0; i < len; ++i)
             {
-                
                 Maps[i].index = i;
 
                 if (i >= mapIndex)
@@ -243,7 +209,6 @@ public class MapManager : MonoBehaviour
                     Maps[i].transform.position = posSort;
                 }
             }
-
             if (mapIndex == len)
                 mapIndex -= 1;
 
@@ -278,35 +243,37 @@ public class MapManager : MonoBehaviour
         return count;
     }
 
-    public void ChangeCharactor(Charactor.TASTY_TYPE tastyType, int characterIndex)
+    public void ChangeCharactor(Enums.CHARACTOR_TASTY_TYPE tastyType, int characterIndex)
     {
-        if (tastyType == Charactor.TASTY_TYPE.NONE)
+        List<GameObject> charactors;
+        switch (tastyType)
         {
-            monsterSetMode.ChangeCharactor(null);
+            case Enums.CHARACTOR_TASTY_TYPE.CR:
+                charactors = CRCharactors;
+                break;
+            case Enums.CHARACTOR_TASTY_TYPE.ST:
+                charactors = STCharactors;
+                break;
+            case Enums.CHARACTOR_TASTY_TYPE.CH:
+                charactors = CHCharactors;
+                break;
+            case Enums.CHARACTOR_TASTY_TYPE.EG:
+                charactors = EGCharactors;
+                break;
+            case Enums.CHARACTOR_TASTY_TYPE.BR:
+                charactors = BRCharactors;
+                break;
+            case Enums.CHARACTOR_TASTY_TYPE.SP:
+                charactors = SPCharactors;
+                break;
+            default:
+                monsterSetMode.ChangeCharactor(null);
+                return;
         }
-        else if(tastyType == Charactor.TASTY_TYPE.ST)
+
+        if (characterIndex >= 0 && characterIndex < charactors.Count)
         {
-            monsterSetMode.ChangeCharactor(STCharactors[characterIndex]);
-        }
-        else if (tastyType == Charactor.TASTY_TYPE.CH)
-        {
-            monsterSetMode.ChangeCharactor(CHCharactors[characterIndex]);
-        }
-        else if (tastyType == Charactor.TASTY_TYPE.CR)
-        {
-            monsterSetMode.ChangeCharactor(CRCharactors[characterIndex]);
-        }
-        else if (tastyType == Charactor.TASTY_TYPE.EG)
-        {
-            monsterSetMode.ChangeCharactor(EGCharactors[characterIndex]);
-        }
-        else if (tastyType == Charactor.TASTY_TYPE.BR)
-        {
-            monsterSetMode.ChangeCharactor(BRCharactors[characterIndex]);
-        }
-        else if (tastyType == Charactor.TASTY_TYPE.SP)
-        {
-            monsterSetMode.ChangeCharactor(SPCharactors[characterIndex]);
+            monsterSetMode.ChangeCharactor(charactors[characterIndex]);
         }
     }
 
@@ -335,17 +302,17 @@ public class MapManager : MonoBehaviour
     {
         specialMode.CreateTasteOfBox();
     }
-    public void ChangeTasteOfBox(int SelectLayer)
+    public void ChangeTasteOfBox(int SelectTier)
     {
-        specialMode.ChangeTasteOfBox(SelectLayer);
+        specialMode.ChangeTasteOfBox(SelectTier);
     }
     public void DeleteTasteOfBox()
     {
         specialMode.DeleteTasteOfBox();
     }
-    public void DeleteTasteLayerOfBox(int SelectLayer)
+    public void DeleteTasteLayerOfBox(int SelectTier)
     {
-        specialMode.DeleteTasteLayerOfBox(SelectLayer);
+        specialMode.DeleteTasteLayerOfBox(SelectTier);
     }
     public void DestroyTasteOfBox()
     {
@@ -380,7 +347,6 @@ public class MapManager : MonoBehaviour
         }
     }
 
-
     public void CreateLoadedMap(StageData stageData)
     {
         if(Maps.Count > 0)
@@ -393,13 +359,10 @@ public class MapManager : MonoBehaviour
             Maps = new List<Map>();
         }
 
-
-
         for(int i = 0; i < stageData.mapDatas.Length; ++i)
         {
             Map tempMap = Instantiate(map);
             tempMap.SetLoadMap(this, stageData.mapDatas[i], i);
-            //tempMap.transform.localPosition = Vector3.zero;
             Maps.Add(tempMap);
 
             onChangeMaps?.Invoke();
@@ -417,7 +380,6 @@ public class MapManager : MonoBehaviour
         }
     }
 
-
     public GameObject GetCharacter(string code)
     {
         if (string.IsNullOrEmpty(code))
@@ -427,7 +389,7 @@ public class MapManager : MonoBehaviour
             return null;
         }
 
-        Dictionary<string, List<GameObject>> characterDictionary = new Dictionary<string, List<GameObject>>()
+        Dictionary<string, List<GameObject>> characterDictionary = new Dictionary<string, List<GameObject>>() // 딕셔너리로 저장
     {
         { "ST", STCharactors },
         { "CH", CHCharactors },
@@ -487,18 +449,9 @@ public class MapManager : MonoBehaviour
             Maps[i].HideUserFence();
         }
     }
-
-    public void OnInputFieldValueChanged(string value)
-    {
-        if (float.TryParse(value, out float floatValue))
-        {
-            Vector3 newPosition = currentMap.container.transform.position;
-            newPosition.x = floatValue;
-            currentMap.container.transform.position = newPosition;
-        }
-
-        Debug.Log(value);
-    }
+    /// <summary>
+    /// 맵 크기가 딕셔너리 Key값에 있는 경우 Value값을 정하기 위한 함수
+    /// </summary>
     public void SetType()
     {
         currentMap.type = UIManager.Instance.mapEditManager.Maptype.value;

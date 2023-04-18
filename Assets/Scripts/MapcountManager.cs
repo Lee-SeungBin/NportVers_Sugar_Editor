@@ -40,28 +40,7 @@ public class MapcountManager : MonoBehaviour
         if (MapManager.Instance.Maps.Count < 2)
             return;
 
-        if (isNextClick)
-        {
-            if (mapCurrentNumber == MapManager.Instance.Maps.Count)
-            {
-                mapCurrentNumber = 1;
-            }
-            else
-            {
-                mapCurrentNumber++;
-            }
-        }
-        else
-        {
-            if (mapCurrentNumber == 1)
-            {
-                mapCurrentNumber = MapManager.Instance.Maps.Count;
-            }
-            else
-            {
-                mapCurrentNumber--;
-            }
-        }
+        mapCurrentNumber = (isNextClick) ? (mapCurrentNumber % MapManager.Instance.Maps.Count) + 1 : (mapCurrentNumber == 1) ? MapManager.Instance.Maps.Count : mapCurrentNumber - 1;
 
         mapCurrentNumberText.text = mapCurrentNumber.ToString();
 

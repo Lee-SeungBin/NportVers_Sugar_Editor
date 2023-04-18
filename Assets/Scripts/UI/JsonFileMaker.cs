@@ -36,7 +36,6 @@ public class JsonFileMaker : MonoBehaviour
 
             data.obstacles = new List<Obstacle>();
 
-
             data.bgNumber = bgDropdown.value;
             data.bgmNumber = bgmDropdown.value;
             data.moveCount = int.Parse(moveText.text);
@@ -47,8 +46,6 @@ public class JsonFileMaker : MonoBehaviour
             data.usePossibleMoveBuff = moveBuff.isOn ? 1 : 0;
             data.usePossibleJumpBuff = fenceBuff.isOn ? 1 : 0;
             data.stageNumber = int.Parse(stageNumber.text);
-
-
         }
         catch (Exception)
         {
@@ -83,17 +80,15 @@ public class JsonFileMaker : MonoBehaviour
         List<RailGroupData> railGroupDatas;
         List<RailGroup> railGroups;
 
-       
-
         Charactor charactor;
         int tileCount;
         int i, w, h, r, ri;
 
-        bool isRail = false;
-        bool isJelly = false;
-        bool isFrogSoup = false;
-        bool isBox = false;
-        bool isVine = false;
+        //bool isRail = false;
+        //bool isJelly = false;
+        //bool isFrogSoup = false;
+        //bool isBox = false;
+        //bool isVine = false;
 
         for (i = 0; i < mapCount; ++i)
         {
@@ -168,7 +163,7 @@ public class JsonFileMaker : MonoBehaviour
                     visibleFenceCount = 0;
 
                     railGroupData = new RailGroupData();
-                    railGroupData.straightMode = railGroups[r].railType == RailGroup.RAIL_TYPE.STRIGHT ? "1" : "0";
+                    railGroupData.straightMode = railGroups[r].railType == Enums.RAIL_TYPE.STRIGHT ? "1" : "0";
 
                     rails = new List<int>();
                     for (ri = 0; ri < railGroups[r].tileSets.Count; ++ri)
@@ -180,7 +175,7 @@ public class JsonFileMaker : MonoBehaviour
                         rails.Add(railGroups[r].tileSets[ri].tileSetIndex);
                     }
 
-                    if (railGroupData.straightMode == "1")
+                    if (railGroupData.straightMode == "1") // 직선 레일일 경우
                     {
                         if (railGroups[r].GetLastTileSet().isVisible)
                         {
@@ -191,13 +186,13 @@ public class JsonFileMaker : MonoBehaviour
                             throw new Exception("레일 그룹 번호 " + r + "의 타일이 보이는 상태입니다. 레일 그룹안의 타일 중 1개 이상을 없애주세요.");
                         }
                     }
-                    if (railGroupData.straightMode == "0")
+                    if (railGroupData.straightMode == "0") // 회전 레일일 경우
                     {
                         TileSet lastTile = railGroups[r].GetLastTileSet();
 
                         int a = lastTile.tileSetIndex / lastTile.map.height;
                         int b = lastTile.tileSetIndex % lastTile.map.height;
-
+                        // 마지막 레일의 인덱스를 통해 4방향에서 첫번째 타일과 인접한지 체크 및 2개 이하 인지 체크
                         if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
                               (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
                               (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == railGroups[r].tileSets[0].tileSetIndex) ||
@@ -209,7 +204,6 @@ public class JsonFileMaker : MonoBehaviour
                     }
 
                     railGroupData.rails = rails;
-
                     railGroupDatas.Add(railGroupData);
                 }
             }
@@ -219,42 +213,18 @@ public class JsonFileMaker : MonoBehaviour
                 return null;
             }
             mapData.railGroupDatas = railGroupDatas;
-            if (mapData.railGroupDatas.Count > 0)
-            {
-                isRail = true;
-            }
-
             mapData.jellyDatas = GetJellyDatas(maps[i]);
-            if (mapData.jellyDatas.Count > 0)
-            {
-                isJelly = true;
-            }
-
             mapData.frogSoupDatas = GetFrogSoupDatas(maps[i]);
-            if(mapData.frogSoupDatas.Count > 0)
-            {
-                isFrogSoup = true;
-            }
-            
             mapData.boxDatas = GetBoxData(maps[i]);
-            if (mapData.boxDatas.Count > 0)
-            {
-                isBox = true;
-            }
-
             mapData.vineDatas = GetVineData(maps[i]);
-            if (mapData.vineDatas.Count > 0)
-                isVine = true;
-
             mapData.nextStageDatas = maps[i].nextStageDatas;
-
 
             mapDatas[i] = mapData;
         }
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
         string jellyCount = uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text;
-        if ( int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0 )
+        if ( int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0 ) // 현재 젤리만 사용중 젤리 타입 0
         {
             data.obstacles.Add(new Obstacle
             {
@@ -262,42 +232,42 @@ public class JsonFileMaker : MonoBehaviour
                 options = new string[] { jellyTerm, jellyCount }
             });
         }
+        // 아직 사용하지 않는 기능 장애물 옵션 기능 json 저장 형태 obstacles
+        //if (isRail)
+        //{
+        //    data.obstacles.Add(new Obstacle
+        //    {
+        //        type = (int)Enums.OBSTACLE_TYPE.RAIL,
+        //        options = new string[]{ }
+        //    });
+        //}
 
-        if (isRail)
-        {
-            data.obstacles.Add(new Obstacle
-            {
-                type = (int)Enums.OBSTACLE_TYPE.RAIL,
-                options = new string[]{ }
-            });
-        }
+        //if(isFrogSoup)
+        //{
+        //    data.obstacles.Add(new Obstacle
+        //    {
+        //        type = (int)Enums.OBSTACLE_TYPE.FROG_SOUP,
+        //        options = new string[] { }
+        //    });
+        //}
 
-        if(isFrogSoup)
-        {
-            data.obstacles.Add(new Obstacle
-            {
-                type = (int)Enums.OBSTACLE_TYPE.FROG_SOUP,
-                options = new string[] { }
-            });
-        }
+        //if(isBox)
+        //{
+        //    data.obstacles.Add(new Obstacle
+        //    {
+        //        type = (int)Enums.OBSTACLE_TYPE.BOX,
+        //        options = new string[] { }
+        //    });
+        //}
 
-        if(isBox)
-        {
-            data.obstacles.Add(new Obstacle
-            {
-                type = (int)Enums.OBSTACLE_TYPE.BOX,
-                options = new string[] { }
-            });
-        }
-
-        if(isVine)
-        {
-            data.obstacles.Add(new Obstacle
-            {
-                type = (int)Enums.OBSTACLE_TYPE.VINE,
-                options = new string[] { }
-            });
-        }
+        //if(isVine)
+        //{
+        //    data.obstacles.Add(new Obstacle
+        //    {
+        //        type = (int)Enums.OBSTACLE_TYPE.VINE,
+        //        options = new string[] { }
+        //    });
+        //}
         
         data.mapDatas = mapDatas;
 
@@ -307,13 +277,7 @@ public class JsonFileMaker : MonoBehaviour
 
         string AES256json = UIManager.Instance.cryptoMNG.EncrStage(jsonData);
 
-        //File.WriteAllText(Application.dataPath + "/" + fileName.text + ".json", AES256json.ToString());
-        //File.WriteAllText(uIManager.stageFilePath_, jsonData.ToString());
-
-        //stageFileName.text = fileName.text;
-        //UIManager.Instance.errorPopup.SetMessage("저장이 완료되었습니다. 버전 업데이트를 확인해주세요.");
         return AES256json;
-        //uIManager.OnClickAllFixStartButton();
     }
 
     private List<JellyData> GetJellyDatas(Map map)

@@ -61,33 +61,33 @@ public class NextMapPopup : MonoBehaviour
     {
         List<NextStageData> datas = new List<NextStageData>();
 
-        if (int.Parse(creamScoreText.text) > 0)
+        if (int.TryParse(creamScoreText.text, out int creamScore) && creamScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.CREAM, int.Parse(creamScoreText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.CREAM, creamScore));
         }
-        if (int.Parse(strawberryScoreText.text) > 0)
+        if (int.TryParse(strawberryScoreText.text, out int strawberryScore) && strawberryScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.STRAWBERRY, int.Parse(strawberryScoreText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.STRAWBERRY, strawberryScore));
         }
-        if (int.Parse(chocolateScoreText.text) > 0)
+        if (int.TryParse(chocolateScoreText.text, out int chocolateScore) && chocolateScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.CHOCOLATE, int.Parse(chocolateScoreText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.CHOCOLATE, chocolateScore));
         }
-        if (int.Parse(eggScoreText.text) > 0)
+        if (int.TryParse(eggScoreText.text, out int eggScore) && eggScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.EGG, int.Parse(eggScoreText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.EGG, eggScore));
         }
-        if (int.Parse(breadScoreText.text) > 0)
+        if (int.TryParse(breadScoreText.text, out int breadScore) && breadScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.BREAD, int.Parse(breadScoreText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.BREAD, breadScore));
         }
-        if (int.Parse(breakIceText.text) > 0)
+        if (int.TryParse(breakIceText.text, out int breakIceScore) && breakIceScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.ICE, int.Parse(breakIceText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.ICE, breakIceScore));
         }
-        if (int.Parse(jellyText.text) > 0)
+        if (int.TryParse(jellyText.text, out int jellyScore) && jellyScore > 0)
         {
-            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.JELLY, int.Parse(jellyText.text)));
+            datas.Add(GetNextStageData(Enums.NEXT_MAP_TYPE.JELLY, jellyScore));
         }
         if (frogSoup.isOn)
         {

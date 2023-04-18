@@ -45,7 +45,6 @@ public class RailManager : MonoBehaviour
         {
             for (i = railGroups.Count - 1; i > -1; --i)
             {
-                //railGroups[i].SetActiveGroupLine(false);
                 railGroups[i].UnselectGroup();
             }
         }
@@ -59,7 +58,7 @@ public class RailManager : MonoBehaviour
             RailGroup railGroup = Instantiate(railGroupPrefab).GetComponent<RailGroup>();
             railGroup.Init(this);
 
-            railGroup.railType = (RailGroup.RAIL_TYPE)int.Parse(mapData.railGroupDatas[i].straightMode);
+            railGroup.railType = (Enums.RAIL_TYPE)int.Parse(mapData.railGroupDatas[i].straightMode);
 
             for(int j = 0; j < mapData.railGroupDatas[i].rails.Count; ++j)
             {
@@ -72,7 +71,5 @@ public class RailManager : MonoBehaviour
             railGroups.Add(railGroup);
 
         }
-
-        //SetActiveRailGroups(false);
     }
 }

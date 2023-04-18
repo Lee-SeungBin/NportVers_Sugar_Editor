@@ -40,54 +40,15 @@ public class CharacterList : MonoBehaviour
     {
         SetAllNonSelectState();
 
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.NONE, 0);
+        MapManager.Instance.ChangeCharactor(Enums.CHARACTOR_TASTY_TYPE.NONE, 0);
     }
 
-    public void OnClickSTCharacterInList()
+    public void OnClickCharacterInList(int typeIndex)
     {
         int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
         SetAllNonSelectState();
-        types[1].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.ST, charactorIndex);
+        types[typeIndex].SetSelectCharacter(charactorIndex);
+        MapManager.Instance.ChangeCharactor((Enums.CHARACTOR_TASTY_TYPE)typeIndex, charactorIndex);
     }
-
-    public void OnClickCHCharacterInList()
-    {
-        int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
-        SetAllNonSelectState();
-        types[2].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.CH, charactorIndex);
-    }
-
-    public void OnClickCRCharacterInList()
-    {
-        int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
-        SetAllNonSelectState();
-        types[0].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.CR, charactorIndex);
-    }
-
-    public void OnClickEGCharacterInList()
-    {
-        int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
-        SetAllNonSelectState();
-        types[3].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.EG, charactorIndex);
-    }
-    public void OnClickBRCharacterInList()
-    {
-        int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
-        SetAllNonSelectState();
-        types[4].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.BR, charactorIndex);
-    }
-    public void OnClickSPCharacterInList()
-    {
-        int charactorIndex = int.Parse(EventSystem.current.currentSelectedGameObject.name.Substring(2, 2)) - 1;
-        SetAllNonSelectState();
-        types[5].SetSelectCharacter(charactorIndex);
-        MapManager.Instance.ChangeCharactor(Charactor.TASTY_TYPE.SP, charactorIndex);
-    }
-
 
 }

@@ -8,12 +8,6 @@ public class ErrorMessagePopup : MonoBehaviour
     [SerializeField]
     private Text text;
 
-    private void Awake()
-    {
-        //gameObject.SetActive(false);
-    }
-
-
     public void SetMessage(string message)
     {
         text.text = message;

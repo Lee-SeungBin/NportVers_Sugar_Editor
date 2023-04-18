@@ -104,9 +104,9 @@
     <Compile Include="Assets\Scripts\MapcountManager.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterInfoPopup.cs" />
     <Compile Include="Assets\Scripts\MapDataMNG.cs" />
-    <Compile Include="Assets\Scripts\UI\NextMapPopup.cs" />
+    <Compile Include="Assets\Scripts\UI\Goal\NextMapPopup.cs" />
     <Compile Include="Assets\Scripts\Map\Rail\RailMoveNumber.cs" />
-    <Compile Include="Assets\Scripts\UI\NextMapMissionUI.cs" />
+    <Compile Include="Assets\Scripts\UI\Goal\NextMapMissionUI.cs" />
     <Compile Include="Assets\Scripts\Map\Map.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
   </ItemGroup>
