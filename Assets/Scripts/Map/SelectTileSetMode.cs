@@ -92,9 +92,10 @@ public class SelectTileSetMode : MonoBehaviour
                 selectTileSet.tiles[index].jelly != null ||
                 selectTileSet.tiles[index].frogSoup != null ||
                 selectTileSet.tiles[index].box != null ||
-                selectTileSet.vine != null)
+                selectTileSet.vine != null || 
+                selectTileSet.railGroup)
             {
-                UIManager.Instance.errorPopup.SetMessage("캐릭터 또는 장애물이 있는 타일은 변경할 수 없습니다.");
+                UIManager.Instance.errorPopup.SetMessage("캐릭터 또는 장애물이 있는 타일은 변경할 수 없습니다. 또, 레일이 있는 타일은 타일셋만 변경 가능합니다.");
             }
             else
             {

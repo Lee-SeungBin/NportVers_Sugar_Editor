@@ -166,9 +166,9 @@ public class RailMode : MonoBehaviour
         }
         else // 직선 레일 이면
         {
-            if (lastTile.isVisible) // 마지막 레일 타일이 비어 있는지 체크
+            if (lastTile.isVisible || tileSet.railGroup.tileSets.Count <= 1) // 마지막 레일 타일이 비어 있는지 체크
             {
-                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다.");
+                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일은 한 개 일수 없으며 맨 끝 타일은 무조건 비어 있어야 합니다.");
                 return false;
             }
         }

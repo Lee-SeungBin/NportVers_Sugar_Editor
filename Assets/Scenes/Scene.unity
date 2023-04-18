@@ -715,13 +715,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -929,13 +929,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1154,13 +1154,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1498,140 +1498,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69513391}
   m_CullTransparentMesh: 0
---- !u!1 &70511953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 70511954}
-  - component: {fileID: 70511957}
-  - component: {fileID: 70511956}
-  - component: {fileID: 70511955}
-  m_Layer: 5
-  m_Name: CancelButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &70511954
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70511953}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1842544206}
-  m_Father: {fileID: 1011142100}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 93.5, y: 41}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &70511955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70511953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Highlighted
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 70511956}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1011142103}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCancelButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &70511956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70511953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &70511957
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70511953}
-  m_CullTransparentMesh: 0
 --- !u!1 &72171836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,13 +1783,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2650,13 +2516,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3188,13 +3054,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSPCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3585,13 +3451,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3719,13 +3585,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4691,13 +4557,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4905,13 +4771,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5038,13 +4904,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5565,7 +5431,7 @@ RectTransform:
   - {fileID: 571986645}
   - {fileID: 638136830}
   m_Father: {fileID: 801427654}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6543,13 +6409,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6928,13 +6794,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7295,13 +7161,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7702,13 +7568,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7835,13 +7701,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8373,140 +8239,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289840209}
-  m_CullTransparentMesh: 0
---- !u!1 &299762360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299762361}
-  - component: {fileID: 299762364}
-  - component: {fileID: 299762363}
-  - component: {fileID: 299762362}
-  m_Layer: 5
-  m_Name: CreateGroup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &299762361
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299762360}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1563328428}
-  m_Father: {fileID: 801427654}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 94, y: -245}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &299762362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299762360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Highlighted
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 299762363}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 801427655}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetCreateState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &299762363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299762360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &299762364
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299762360}
   m_CullTransparentMesh: 0
 --- !u!1 &304635691
 GameObject:
@@ -9143,22 +8875,22 @@ MonoBehaviour:
   stageNumber: {fileID: 1788679064}
   moveText: {fileID: 1812155690}
   jumpText: {fileID: 947529304}
-  uiOnOffButton: {fileID: 725153589}
-  container: {fileID: 315832177}
-  mapCount: {fileID: 844002551}
-  stagePosition: {fileID: 329646479}
-  stagePositionText: {fileID: 1486242566}
-  mapPosition: {fileID: 169489900}
+  loadStageNumber: {fileID: 1425805213}
   mapPositionX: {fileID: 1331893508}
   mapPositionY: {fileID: 1500441159}
-  mapSize: {fileID: 1653462221}
-  selectModeDropDown: {fileID: 1049082006}
+  uiOnOffButton: {fileID: 725153589}
+  container: {fileID: 315832177}
+  stagePosition: {fileID: 329646479}
+  mapPosition: {fileID: 169489900}
   saveStageWarnningPopup: {fileID: 521089477}
   loadStageWarnningPopup: {fileID: 272866874}
-  obstacleOptionPopup: {fileID: 5930097075774271099}
   loadStagePopup: {fileID: 1739283839}
+  selectModeDropDown: {fileID: 1049082006}
   stageType: {fileID: 1466854903}
-  loadStageNumber: {fileID: 1425805213}
+  mapCount: {fileID: 844002551}
+  stagePositionText: {fileID: 1486242566}
+  mapSize: {fileID: 1653462221}
+  obstacleOptionPopup: {fileID: 5930097075774271099}
   dragItem: {fileID: 2087162406}
   errorPopup: {fileID: 609836787}
   gameDataUI: {fileID: 1271505904}
@@ -9583,13 +9315,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10107,13 +9839,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10290,13 +10022,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10751,13 +10483,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11259,13 +10991,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11675,9 +11407,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12386,13 +12118,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14121,13 +13853,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14335,13 +14067,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15037,13 +14769,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSPCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15160,13 +14892,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSPCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15624,9 +15356,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15920,13 +15652,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16745,13 +16477,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17250,13 +16982,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17770,13 +17502,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -18030,13 +17762,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -18371,13 +18103,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -19199,13 +18931,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -19332,13 +19064,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -19931,13 +19663,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -20241,8 +19973,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 299762361}
-  - {fileID: 1011142100}
   - {fileID: 186897042}
   m_Father: {fileID: 315832178}
   m_RootOrder: 1
@@ -20264,8 +19994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2430825e8ec10340953ec017f33b8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createRailGroupButton: {fileID: 299762362}
-  railCreateView: {fileID: 1011142103}
   railSelectPopup: {fileID: 186897043}
 --- !u!1 &802210889
 GameObject:
@@ -20351,13 +20079,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -20948,13 +20676,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -21081,13 +20809,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -21640,13 +21368,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22227,6 +21955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c2a136591c17f49956adeb1c7ec1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectTileSet: {fileID: 0}
 --- !u!114 &879816393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22334,13 +22063,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22467,13 +22196,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22680,13 +22409,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22880,86 +22609,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &922736060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 922736061}
-  - component: {fileID: 922736063}
-  - component: {fileID: 922736062}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &922736061
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922736060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1011142100}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &922736062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922736060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\uC6B8\uD0C0\uB9AC\uB97C \uC120\uD0DD\uD574\uC8FC\uC138\uC694."
---- !u!222 &922736063
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922736060}
-  m_CullTransparentMesh: 0
 --- !u!1 &927165117
 GameObject:
   m_ObjectHideFlags: 0
@@ -23044,13 +22693,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -23246,9 +22895,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -23740,13 +23389,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -24251,13 +23900,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -24908,98 +24557,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
---- !u!1 &1011142099
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1011142100}
-  - component: {fileID: 1011142102}
-  - component: {fileID: 1011142101}
-  - component: {fileID: 1011142103}
-  m_Layer: 5
-  m_Name: RailCreateView
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1011142100
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011142099}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 922736061}
-  - {fileID: 70511954}
-  m_Father: {fileID: 801427654}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1011142101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011142099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.72156864}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1011142102
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011142099}
-  m_CullTransparentMesh: 0
---- !u!114 &1011142103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011142099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 130bcf62bc79a1d4380ad2ecdc7d71f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cancelButton: {fileID: 70511955}
 --- !u!1 &1011425768
 GameObject:
   m_ObjectHideFlags: 0
@@ -26063,13 +25620,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -26196,13 +25753,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -27386,13 +26943,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -27845,13 +27402,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -27968,13 +27525,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -28338,13 +27895,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -28630,13 +28187,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -29249,13 +28806,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -29746,13 +29303,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30253,9 +29810,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -30451,13 +30008,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30753,13 +30310,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30962,13 +30519,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -31383,13 +30940,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -31922,13 +31479,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -32056,13 +31613,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -32572,13 +32129,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -32753,26 +32310,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterList: {fileID: 1904293495}
   specialList: {fileID: 309967459}
-  createMapButton: {fileID: 646456047}
   createMapPopup: {fileID: 1759845301}
-  modifyMapButton: {fileID: 1165059130}
-  modifyMapDropDown: {fileID: 2062489357}
   modifyMapPopup: {fileID: 121671200}
-  Maptype: {fileID: 1904257862}
+  createMapButton: {fileID: 646456047}
+  modifyMapButton: {fileID: 1165059130}
   stageLoadButton: {fileID: 305657490}
   jsonSaveButton: {fileID: 217172375}
-  obstacleOptionPopup: {fileID: 5930097075774271099}
+  obstacleButton: {fileID: 1267339046}
+  versionupdateButton: {fileID: 1618561135}
+  resetButton: {fileID: 956962564}
+  modifyMapDropDown: {fileID: 2062489357}
+  Maptype: {fileID: 1904257862}
+  sandwichChangeDropDown: {fileID: 2144659725}
   Width: {fileID: 1566037070}
   Height: {fileID: 1226112047}
+  obstacleOptionPopup: {fileID: 5930097075774271099}
   characterInfoPopup: {fileID: 1429489967}
   tileSetVisiblePopup: {fileID: 1340091040}
   sandwichInfoPopup: {fileID: 1867178046}
   sandwichChangePopup: {fileID: 756139295}
-  sandwichChangeDropDown: {fileID: 2144659725}
   popups: {fileID: 526759748}
-  obstacleButton: {fileID: 1267339046}
-  versionupdateButton: {fileID: 1618561135}
-  resetButton: {fileID: 956962564}
 --- !u!1 &1352503822
 GameObject:
   m_ObjectHideFlags: 0
@@ -32933,13 +32490,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -33067,13 +32624,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -33201,13 +32758,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -33416,13 +32973,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -33702,13 +33259,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -34348,13 +33905,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -34482,13 +34039,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -35064,13 +34621,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -35278,13 +34835,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -36530,13 +36087,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -36786,13 +36343,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -37154,13 +36711,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -37439,86 +36996,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559089557}
-  m_CullTransparentMesh: 0
---- !u!1 &1563328427
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1563328428}
-  - component: {fileID: 1563328430}
-  - component: {fileID: 1563328429}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1563328428
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563328427}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 299762361}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1563328429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563328427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\uB808\uC77C \uADF8\uB8F9 \uC0DD\uC131"
---- !u!222 &1563328430
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563328427}
   m_CullTransparentMesh: 0
 --- !u!1 &1565240520
 GameObject:
@@ -37965,13 +37442,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -38401,13 +37878,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -38614,9 +38091,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -38905,13 +38382,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -39667,13 +39144,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSTCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -41416,13 +40893,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -42806,13 +42283,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickBRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -43833,13 +43310,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickSPCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -43957,86 +43434,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839945259}
-  m_CullTransparentMesh: 0
---- !u!1 &1842544205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1842544206}
-  - component: {fileID: 1842544208}
-  - component: {fileID: 1842544207}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1842544206
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842544205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 70511954}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1842544207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842544205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\uB808\uC77C \uADF8\uB8F9 \uC0DD\uC131 \uCDE8\uC18C"
---- !u!222 &1842544208
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842544205}
   m_CullTransparentMesh: 0
 --- !u!1 &1846848827
 GameObject:
@@ -44568,13 +43965,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -45414,13 +44811,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCHCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -45969,13 +45366,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -46878,13 +46275,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -47451,13 +46848,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -48511,13 +47908,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -48721,13 +48118,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickEGCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -48892,13 +48289,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -49025,13 +48422,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1904293500}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCRCharacterInList
-        m_Mode: 1
+        m_TargetAssemblyTypeName: CharacterList, Assembly-CSharp
+        m_MethodName: OnClickCharacterInList
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
