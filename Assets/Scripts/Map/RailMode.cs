@@ -194,9 +194,9 @@ public class RailMode : MonoBehaviour
         }
         else
         {
-            if (tileSet.railGroup.tileSets[0].isVisible && tileSet.railGroup.tileSets[tileSet.railGroup.tileSets.Count - 1].isVisible)
+            if (lastTile.isVisible)
             {
-                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일은 맨 끝 또는 맨 처음의 타일이 비어 있어야 합니다.");
+                UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다.");
                 return false;
             }
         }

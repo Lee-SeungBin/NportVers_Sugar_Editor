@@ -182,11 +182,9 @@ public class JsonFileMaker : MonoBehaviour
 
                     if (railGroupData.straightMode == "1")
                     {
-                        Debug.Log(railGroups[r].GetLastTileSet().isVisible);
-                        Debug.Log(railGroups[r].tileSets[0].isVisible);
-                        if (railGroups[r].tileSets[0].isVisible && railGroups[r].GetLastTileSet().isVisible)
+                        if (railGroups[r].GetLastTileSet().isVisible)
                         {
-                            throw new Exception("직선 레일은 맨 끝 또는 맨 처음의 타일이 비어 있어야 합니다. 레일 그룹 번호 " + r + "의 타일의 끝이나 처음을 없애주세요.");
+                            throw new Exception("직선 레일의 맨 끝 타일은 무조건 비어 있어야 합니다. 레일 그룹 번호 " + r + "의 타일의 끝이나 처음을 없애주세요.");
                         }
                         if (rails.Count == visibleFenceCount)
                         {
