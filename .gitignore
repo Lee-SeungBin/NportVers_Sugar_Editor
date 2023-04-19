@@ -5,3 +5,10 @@ Temp/
 .vs/SugarMonsterMapMaker/v16/Server/sqlite3/storage.ide-shm
 .vs/SugarMonsterMapMaker/v16/Server/sqlite3/storage.ide-wal
 obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
