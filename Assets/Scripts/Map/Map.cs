@@ -370,9 +370,8 @@ public class Map : MonoBehaviour
 
 
         container.transform.localPosition = new Vector3(data.centerX, data.centerY, 0);
-
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
-
+        transform.localPosition = MotifyCoordinateMap();
         transform.localPosition = new Vector2(data.x, data.y);
 
         railManager.SetLoadedData(tileSets, data);
