@@ -351,8 +351,15 @@ public class MapManager : MonoBehaviour
     {
         if(Maps.Count > 0)
         {
-            for(int j = Maps.Count - 1; j > -1; --j)
+            for (int j = Maps.Count - 1; j > -1; --j)
             {
+                if (Maps[j].railManager.railGroups != null)
+                {
+                    for (int i = 0; i < Maps[j].railManager.railGroups.Count; i++)
+                    {
+                        Destroy(Maps[j].railManager.railGroups[i].gameObject);
+                    }
+                }
                 DeleteMap(j);
             }
 

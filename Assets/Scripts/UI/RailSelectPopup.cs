@@ -14,11 +14,18 @@ public class RailSelectPopup : MonoBehaviour
     [SerializeField]
     private Toggle rotation;
 
+    public Text railinfo;
+
     public void SetData(TileSet tileSet)
     {
         railGroup = tileSet.railGroup;
-        straight.isOn = railGroup.railType == Enums.RAIL_TYPE.STRIGHT;
-        rotation.isOn = railGroup.railType == Enums.RAIL_TYPE.ROTATION;
+        if (railGroup.railType == Enums.RAIL_TYPE.STRIGHT)
+            straight.isOn = true;
+        if (railGroup.railType == Enums.RAIL_TYPE.ROTATION)
+            rotation.isOn = true;
+        railinfo.text = "현재 레일 모드 : " + railGroup.railType;
+        //straight.isOn = railGroup.railType == Enums.RAIL_TYPE.STRIGHT;
+        //rotation.isOn = railGroup.railType == Enums.RAIL_TYPE.ROTATION;
     }
 
     public void OnChangeRailType()
@@ -30,6 +37,7 @@ public class RailSelectPopup : MonoBehaviour
         }
 
         railGroup.railType = straight.isOn ? Enums.RAIL_TYPE.STRIGHT : Enums.RAIL_TYPE.ROTATION;
+        railinfo.text = "현재 레일 모드 : " + railGroup.railType;
     }
 
     public void OnClickDeleteButton()

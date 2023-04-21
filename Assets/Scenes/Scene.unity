@@ -5413,7 +5413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &186897042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5430,6 +5430,7 @@ RectTransform:
   - {fileID: 2140263127}
   - {fileID: 571986645}
   - {fileID: 638136830}
+  - {fileID: 565383945}
   m_Father: {fileID: 801427654}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5452,6 +5453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   straight: {fileID: 638136831}
   rotation: {fileID: 571986646}
+  railinfo: {fileID: 565383946}
 --- !u!114 &186897044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6608,6 +6610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapManager: {fileID: 879816388}
   uIManager: {fileID: 310087479}
+  missionPopup: {fileID: 807067242}
   bgDropdown: {fileID: 1646215988}
   bgmDropdown: {fileID: 1211012248}
   starGauge: {fileID: 732281035}
@@ -6616,7 +6619,6 @@ MonoBehaviour:
   startingMove: {fileID: 67543765}
   starPercent: {fileID: 1648232680}
   stageNumber: {fileID: 1788679064}
-  missionPopup: {fileID: 807067242}
   moveText: {fileID: 1812155690}
   jumpText: {fileID: 947529304}
 --- !u!1 &227377951
@@ -8668,7 +8670,6 @@ MonoBehaviour:
   - {fileID: 548639342}
   - {fileID: 1486739643}
   - {fileID: 1161590921}
-  removeModeOn: 0
   boxlayer: 0
   vinelayer: 0
   boxtype: 0
@@ -8921,7 +8922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336f051077d71e041a27357d80ce487e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loading: {fileID: 1551803733}
+  loadingPopup: {fileID: 1551803733}
   versionUpPopup: {fileID: 1864261972}
   stageList: {fileID: 6857812122227422875, guid: f2954c975581b9b48a453b1b015ed2ac,
     type: 3}
@@ -8929,12 +8930,12 @@ MonoBehaviour:
   currentVersionText: {fileID: 1404056275}
   currentMapTypeText: {fileID: 125084292}
   currentTotalStageText: {fileID: 903552341}
-  currentMapType: {fileID: 403865662}
-  sr: {fileID: 1739283845}
   updateStageList_normal_Text: {fileID: 1460608135}
   updateStageList_ranking_Text: {fileID: 7407832}
   updateStageList_tutorial_Text: {fileID: 2104580550}
   updateStageVersionText: {fileID: 861663594}
+  currentMapType: {fileID: 403865662}
+  sr: {fileID: 1739283845}
 --- !u!114 &310087482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13983,6 +13984,86 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &565383944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565383945}
+  - component: {fileID: 565383947}
+  - component: {fileID: 565383946}
+  m_Layer: 5
+  m_Name: RailInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565383945
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565383944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 186897042}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -133, y: 63.981018}
+  m_SizeDelta: {x: 160, y: 60.6379}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565383946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565383944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.5
+  m_Text: "\uD604\uC7AC \uB808\uC77C \uBAA8\uB4DC : "
+--- !u!222 &565383947
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565383944}
+  m_CullTransparentMesh: 1
 --- !u!1 &568718656
 GameObject:
   m_ObjectHideFlags: 0
@@ -19960,7 +20041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &801427654
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47424,6 +47505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapManager: {fileID: 879816388}
   uIManager: {fileID: 310087479}
+  missionPopup: {fileID: 807067242}
   bgDropdown: {fileID: 1646215988}
   bgmDropdown: {fileID: 1211012248}
   starGauge: {fileID: 732281035}
@@ -47432,7 +47514,6 @@ MonoBehaviour:
   startingMove: {fileID: 67543765}
   starPercent: {fileID: 1648232680}
   stageNumber: {fileID: 1788679064}
-  missionPopup: {fileID: 807067242}
   moveText: {fileID: 1812155690}
   jumpText: {fileID: 947529304}
 --- !u!1 &1995107068

@@ -143,7 +143,7 @@ public class UIManager : MonoBehaviour
             errorPopup.SetMessage("맵의 정보가 잘못되어있습니다.");
             return;
         }
-        Debug.Log(jsonData);
+        Debug.Log("Load - " + jsonData);
 
         MapManager.Instance.CreateLoadedMap(StageInfo.data);
 
