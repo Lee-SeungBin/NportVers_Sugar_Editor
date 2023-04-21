@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
@@ -10,7 +10,7 @@ public class CryptoMNG : MonoBehaviour
     private static string Enckey = "7rMG6jG3UWwXBZS3sRWLZ7jjalkTsudw";
     private static readonly string EncIv = "0123456789012345";
 
-    //AES ��ȣȭ
+    //AES 256 암호화
 
     public static string AESEncrypt256(string input)
     {
@@ -44,7 +44,7 @@ public class CryptoMNG : MonoBehaviour
         }
     }
 
-    //AES ��ȣȭ
+    //AES 256 복호화
     public static string AESDecrypt256(string input)
     {
         try

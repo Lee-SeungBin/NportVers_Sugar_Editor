@@ -10,26 +10,22 @@ public class SpecialList : MonoBehaviour
     [SerializeField]
     private GameObject[] BoxTypes;
 
-    public bool removeModeOn = false;
     public int boxlayer;
     public int vinelayer;
     public int boxtype;
 
     public void SelectEmtpy()
     {
-        removeModeOn = false;
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.NONE, null);
     }
 
     public void SelectJelly()
     {
-        removeModeOn = false;
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.JELLY, specialSprites[(int)Enums.SPECIAL_TYPE.JELLY]);
     }
 
     public void SelectFrogSoup()
     {
-        removeModeOn = false;
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.FROG_SOUP, specialSprites[(int)Enums.SPECIAL_TYPE.FROG_SOUP]);
     }
 
@@ -52,12 +48,10 @@ public class SpecialList : MonoBehaviour
     }
     public void SelectWoodenFence()
     {
-        removeModeOn = false;
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.WOODEN_FENCE, specialSprites[(int)Enums.SPECIAL_TYPE.WOODEN_FENCE]);
     }
     public void SelectBox(int boxLayer)
     {
-        removeModeOn = false;
             if (boxLayer == 1)
                 UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX]);
             else if (boxLayer == 3)
@@ -68,7 +62,6 @@ public class SpecialList : MonoBehaviour
     }
     public void SelectBoxtype(int boxType)
     {
-        removeModeOn = false;
         if (boxType == 1)
             UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[8]);
         else if (boxType == 2)
@@ -78,7 +71,6 @@ public class SpecialList : MonoBehaviour
 
     public void SelectVine(int vineLayer)
     {
-        removeModeOn = false;
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.VINE, specialSprites[6]);
         vinelayer = vineLayer;
     }

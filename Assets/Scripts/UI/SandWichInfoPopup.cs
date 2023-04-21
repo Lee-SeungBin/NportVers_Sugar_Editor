@@ -28,8 +28,8 @@ public class SandWichInfoPopup : MonoBehaviour
 
     public void Hide()
     {
-        if(selectbox != null && selectbox.boxLayer != 0)
-            selectbox.transform.GetChild(0).gameObject.SetActive(false);
+        if (selectbox != null && selectbox.boxLayer != 0)
+            MapManager.Instance.specialMode.ActiveAlphaLayerOfBox(selectbox, false);
         gameObject.SetActive(false);
     }
 

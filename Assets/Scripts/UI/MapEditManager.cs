@@ -268,12 +268,15 @@ public class MapEditManager : MonoBehaviour
         gameDataUI.mapPositionX.text = "0";
         gameDataUI.mapPositionY.text = "0";
         gameDataUI.mapSize.text = "Width :  0\nHeight : 0";
-        gameDataUI.mapEditManager.Maptype.ClearOptions();
-        gameDataUI.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";
+        Maptype.ClearOptions();
+        Maptype.GetComponentInChildren<Text>().text = "";
 
         // 팝업 초기화
-        UIManager.Instance.mapEditManager.obstacleOptionPopup.jellyCount.text = "0";
-        UIManager.Instance.mapEditManager.obstacleOptionPopup.jellyTerm.text = "0";
+        obstacleOptionPopup.jellyCount.text = "0";
+        obstacleOptionPopup.jellyTerm.text = "0";
+        UIManager.Instance.selectModeDropDown.value = 0;
+        OnChangeSelectModeDropDown(0);
+
         Width.text = "";
         Height.text = "";
     }

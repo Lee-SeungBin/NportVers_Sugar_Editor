@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +7,7 @@ public class LoadStageList : MonoBehaviour
 {
     public Text loadListText;
     /// <summary>
-    /// ·Îµå ÆË¾÷¿¡¼­ ¸®½ºÆ® ¹öÆ°À» ÅëÇØ ½ºÅ×ÀÌÁö ·Îµå
+    /// ë¡œë“œ íŒì—…ì—ì„œ ë¦¬ìŠ¤íŠ¸ ë²„íŠ¼ì„ í†µí•´ ìŠ¤í…Œì´ì§€ ë¡œë“œ
     /// </summary>
     public void OnClickLoadButton()
     {

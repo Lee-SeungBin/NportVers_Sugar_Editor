@@ -10,21 +10,12 @@ public class JsonFileMaker : MonoBehaviour
 {
     public MapManager mapManager;
     public UIManager uIManager;
-
-    public Dropdown bgDropdown;
-    public Dropdown bgmDropdown;
-
-    public Toggle starGauge;
-    public Toggle moveBuff;
-    public Toggle fenceBuff;
-    public Toggle startingMove;
-
-    public InputField starPercent;
-    public InputField stageNumber;
-
     public MissionPopup missionPopup;
-    public InputField moveText;
-    public InputField jumpText;
+    public Dropdown bgDropdown, bgmDropdown;
+
+    public Toggle starGauge, moveBuff, fenceBuff, startingMove;
+
+    public InputField starPercent, stageNumber, moveText, jumpText;
 
     public string SaveJsonForAndroid()
     {

@@ -7,8 +7,6 @@ public class SelectTileSetMode : MonoBehaviour
 {
     public TileSet selectTileSet;
 
-    //private Vector2 prevMousePosition;
-
     public void TouchControll()
     {
         if (Input.GetMouseButtonDown(0))

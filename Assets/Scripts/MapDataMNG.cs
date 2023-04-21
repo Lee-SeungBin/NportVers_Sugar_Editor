@@ -12,21 +12,13 @@ public class MapDataMNG : MonoBehaviour
 {
     public static MapDataMNG Instance { get; private set; }
 
-    public GameObject loading;
-    public GameObject versionUpPopup;
+    public GameObject loadingPopup, versionUpPopup;
 
-    public GameObject stageList;
-    public GameObject content;
-    public Text currentVersionText;
-    public Text currentMapTypeText;
-    public Text currentTotalStageText;
+    public GameObject stageList, content;
+    public Text currentVersionText , currentMapTypeText, currentTotalStageText;
+    public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
     public Dropdown currentMapType;
     public ScrollRect sr;
-
-    public Text updateStageList_normal_Text;
-    public Text updateStageList_ranking_Text;
-    public Text updateStageList_tutorial_Text;
-    public Text updateStageVersionText;
 
     public static bool iSDev = false;
 
@@ -243,7 +235,7 @@ public class MapDataMNG : MonoBehaviour
     }
     public void SetVisibleLoading(bool isActive)
     {
-        loading.SetActive(isActive);
+        loadingPopup.SetActive(isActive);
     }
     public void SetVersionUpPopup(bool isActive)
     {

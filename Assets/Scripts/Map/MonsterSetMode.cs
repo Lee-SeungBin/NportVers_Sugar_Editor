@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class MonsterSetMode : MonoBehaviour
 {
-    private int tileIndex;
     private TileSet selectTileSet;
 
     public void TouchControll()

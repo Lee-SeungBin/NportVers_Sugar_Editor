@@ -56,7 +56,6 @@ public class Map : MonoBehaviour
     private void Awake()
     {
         railManager = GetComponent<RailManager>();
-
     }
 
     private void SetBGSize(int width, int height)
@@ -284,7 +283,7 @@ public class Map : MonoBehaviour
             UIManager.Instance.mapEditManager.Maptype.options = options;
             return coords[type];
         }
-        else // 딕셔너리에 있는 맵 크기가 아님
+        else // 딕셔너리에 있는 맵 크기가 아닐경우
         {
             UIManager.Instance.mapEditManager.Maptype.options.Clear();
             UIManager.Instance.mapEditManager.Maptype.GetComponentInChildren<Text>().text = "";

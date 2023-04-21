@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 
 public class SpecialMode : MonoBehaviour
 {
+    /* 기존의 오브젝트 풀링 방식 사용 안함(장애물의 종류가 다양해지면 처리해야 하는게 많아지기 때문)
+    * 예를 들어 샌드위치 같은 경우 생성하고 비활성화후 다른 박스 타입을 선택하면 레이어도 초기화 해야하고
+    * 처리할게 많아지기 때문, 나중에 문제가 생기면 다시 오브젝트 풀링 방식 사용예정
+    */
     [SerializeField]
     private Jelly jellyPrefab;
 
