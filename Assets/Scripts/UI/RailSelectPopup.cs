@@ -37,7 +37,7 @@ public class RailSelectPopup : MonoBehaviour
         }
 
         railGroup.railType = straight.isOn ? Enums.RAIL_TYPE.STRIGHT : Enums.RAIL_TYPE.ROTATION;
-        railinfo.text = "현재 레일 모드 : " + railGroup.railType;
+        SetData(MapManager.Instance.railMode.selectTileSet);
     }
 
     public void OnClickDeleteButton()
