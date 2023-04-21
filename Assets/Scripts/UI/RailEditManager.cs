@@ -10,10 +10,10 @@ public class RailEditManager : MonoBehaviour
     public void OnChangeSelectModeDropDown(Enums.MAP_SELECT_MODE selectMode)
     {
         gameObject.SetActive(selectMode == Enums.MAP_SELECT_MODE.RAIL_SET);
-        if (selectMode == Enums.MAP_SELECT_MODE.RAIL_SET)
-        {
-            railSelectPopup.gameObject.SetActive(true);
-        }
+        //if (selectMode == Enums.MAP_SELECT_MODE.RAIL_SET)
+        //{
+        //    railSelectPopup.gameObject.SetActive(true);
+        //}
     }
 
     public void SetActiveRailSelectPopup(bool isActive, TileSet tileSet)

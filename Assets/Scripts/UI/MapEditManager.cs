@@ -86,6 +86,7 @@ public class MapEditManager : MonoBehaviour
         HideWoodenFenceColliders();
         characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
         MapManager.Instance.railMode.selectTileSet = null;
+        UIManager.Instance.railEditManager.railSelectPopup.railinfo.text = "";
     }
 
     public void HideWoodenFenceColliders()

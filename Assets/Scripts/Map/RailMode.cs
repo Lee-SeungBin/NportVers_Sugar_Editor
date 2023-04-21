@@ -89,6 +89,10 @@ public class RailMode : MonoBehaviour
             selectTileSet = selectTileSet.railGroup.GetLastTileSet();
             UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
         }
+        else
+        {
+            UIManager.Instance.railEditManager.SetActiveRailSelectPopup(false, selectTileSet);
+        }
 
     }
 
@@ -149,15 +153,15 @@ public class RailMode : MonoBehaviour
     {
         TileSet lastTile = tileSet.railGroup.GetLastTileSet();
 
-        int a = lastTile.tileSetIndex / lastTile.map.height;
-        int b = lastTile.tileSetIndex % lastTile.map.height;
+        int w = lastTile.tileSetIndex / lastTile.map.height;
+        int h = lastTile.tileSetIndex % lastTile.map.height;
 
         if (tileSet.railGroup.railType == 0) // 회전 레일이면
         {
-            if (!((a > 0 && lastTile.map.tileSets[a - 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
-                  (a < lastTile.map.width - 1 && lastTile.map.tileSets[a + 1][b].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
-                  (b > 0 && lastTile.map.tileSets[a][b - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
-                  (b < lastTile.map.height - 1 && lastTile.map.tileSets[a][b + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) || 
+            if (!((w > 0 && lastTile.map.tileSets[w - 1][h].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (w < lastTile.map.width - 1 && lastTile.map.tileSets[w + 1][h].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (h > 0 && lastTile.map.tileSets[w][h - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
+                  (h < lastTile.map.height - 1 && lastTile.map.tileSets[w][h + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) || 
                   (tileSet.railGroup.tileSets.Count <= 2)) // 마지막 레일의 인덱스를 통해 4방향에서 첫번째 타일과 인접한지 체크 및 2개 이하 인지 체크
             {
                 UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 두 개 일수 없으며 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");

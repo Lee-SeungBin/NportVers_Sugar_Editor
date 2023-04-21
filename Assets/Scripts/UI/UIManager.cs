@@ -176,5 +176,7 @@ public class UIManager : MonoBehaviour
                 obstacleOptionPopup.jellyCount.text = StageInfo.data.obstacles[i].options[1].ToString();
             }
         }
+        selectModeDropDown.value = 0;
+        mapEditManager.OnChangeSelectModeDropDown(0);
     }
 }

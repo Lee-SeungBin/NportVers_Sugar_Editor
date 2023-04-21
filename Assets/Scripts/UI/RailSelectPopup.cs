@@ -23,7 +23,7 @@ public class RailSelectPopup : MonoBehaviour
             straight.isOn = true;
         if (railGroup.railType == Enums.RAIL_TYPE.ROTATION)
             rotation.isOn = true;
-        railinfo.text = "현재 레일 모드 : " + railGroup.railType;
+        railinfo.text = "현재 레일 모드 : " + railGroup.railType + "\n현재 레일 그룹 : " + MapManager.Instance.currentMap.railManager.railGroups.IndexOf(MapManager.Instance.railMode.selectTileSet.railGroup);
         //straight.isOn = railGroup.railType == Enums.RAIL_TYPE.STRIGHT;
         //rotation.isOn = railGroup.railType == Enums.RAIL_TYPE.ROTATION;
     }

@@ -110,6 +110,7 @@ public class RailGroup : MonoBehaviour
 
     public void DeleteRailGroup() // 버튼 액션
     {
+        UIManager.Instance.railEditManager.SetActiveRailSelectPopup(false, MapManager.Instance.railMode.selectTileSet);
         for (int i = tileSets.Count - 1; i > -1; --i)
         {
             tileSets[i].railGroup = null;
