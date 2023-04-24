@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +24,7 @@ public class MapEditManager : MonoBehaviour
         HideModifyMapPopup();
         HideSandWichInfoPopup();
         HideSandWichChangePopup();
+        UIManager.Instance.railEditManager.SetActiveRailSelectPopup(false, null);
     }
 
     private void Start()
@@ -43,7 +43,7 @@ public class MapEditManager : MonoBehaviour
     /// <param name="active"></param>
     public void ActiveManager(GameObject[] gameobj, bool[] active)
     {
-        for(int i = 0; i < gameobj.Length; i++)
+        for (int i = 0; i < gameobj.Length; i++)
         {
             gameobj[i].SetActive(active[i]);
         }
@@ -54,15 +54,15 @@ public class MapEditManager : MonoBehaviour
 
         specialList.GetComponent<SpecialList>().SelectEmtpy();
         // 맵 모드가 바뀔때마다 UI 끄고 켜기
-        GameObject[] objArray = { 
+        GameObject[] objArray = {
             characterList, // 0몬스터 1장애물 2로드버튼 3세이브버튼
             specialList,  // 4맵 수정버튼 5맵 생성버튼 6장애물 옵션버튼
             stageLoadButton.gameObject, // 7버전 업데이트 버튼 8리셋 버튼
             jsonSaveButton.gameObject,
-            modifyMapButton.gameObject, 
-            createMapButton.gameObject, 
-            obstacleButton.gameObject, 
-            versionupdateButton.gameObject, 
+            modifyMapButton.gameObject,
+            createMapButton.gameObject,
+            obstacleButton.gameObject,
+            versionupdateButton.gameObject,
             resetButton.gameObject };
 
         bool[] activeArray = { false, false, true, true, true, true, true, true, true };
@@ -86,7 +86,6 @@ public class MapEditManager : MonoBehaviour
         HideWoodenFenceColliders();
         characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
         MapManager.Instance.railMode.selectTileSet = null;
-        UIManager.Instance.railEditManager.railSelectPopup.railinfo.text = "";
     }
 
     public void HideWoodenFenceColliders()
@@ -128,7 +127,7 @@ public class MapEditManager : MonoBehaviour
     {
         tileSetVisiblePopup.gameObject.SetActive(isActive);
 
-        if(isActive == false)
+        if (isActive == false)
         {
             MapManager.Instance.SetNullToSelectTileSet();
         }
@@ -139,7 +138,6 @@ public class MapEditManager : MonoBehaviour
         tileSetVisiblePopup.SetTileSetData(tileSet);
     }
 
-         
     public void OnChangeSelectMapNumberOfModifyMapPopup()
     {
         MapManager.Instance.SelectMap(modifyMapDropDown.value);
@@ -183,7 +181,7 @@ public class MapEditManager : MonoBehaviour
         modifyMapDropDown.options = options;
     }
 
-    public void OnClickModifyMap() 
+    public void OnClickModifyMap()
     {
         Width.text = modifyMapPopup.transform.Find("Width").Find("Text").GetComponent<Text>().text;
         Height.text = modifyMapPopup.transform.Find("Height").Find("Text").GetComponent<Text>().text;
@@ -224,7 +222,7 @@ public class MapEditManager : MonoBehaviour
 
     public void OnClickCenterMap()
     {
-        if(MapManager.Instance.Maps.Count > 0)
+        if (MapManager.Instance.Maps.Count > 0)
         {
             Vector2 newPosition = MapManager.Instance.currentMap.container.transform.localPosition;
             newPosition = MapManager.Instance.currentMap.MotifyCoordinateMap();
@@ -238,7 +236,7 @@ public class MapEditManager : MonoBehaviour
 
     public void OnClickReset() // 모두 초기화
     {
-        for(int i = MapManager.Instance.Maps.Count - 1; i >= 0; i--) // 맵 지우기
+        for (int i = MapManager.Instance.Maps.Count - 1; i >= 0; i--) // 맵 지우기
         {
             MapManager.Instance.DeleteMap(i);
         }
