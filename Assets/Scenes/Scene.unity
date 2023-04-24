@@ -14054,7 +14054,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 1
   m_Text: "\uD604\uC7AC \uB808\uC77C \uBAA8\uB4DC : "
 --- !u!222 &565383947
 CanvasRenderer:

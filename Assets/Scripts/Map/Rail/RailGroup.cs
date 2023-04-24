@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class RailGroup : MonoBehaviour
@@ -30,9 +29,9 @@ public class RailGroup : MonoBehaviour
 
     public void PushTileSet(TileSet tileSet)
     {
-        for(int i = 0; i < tileSets.Count; ++i)
+        for (int i = 0; i < tileSets.Count; ++i)
         {
-            if(tileSets[i] == tileSet)
+            if (tileSets[i] == tileSet)
             {
                 return;
             }
@@ -56,9 +55,9 @@ public class RailGroup : MonoBehaviour
 
     public void RemoveTileSet(TileSet tileSet)
     {
-        for(int i = tileSets.Count - 1; i >-1; --i)
+        for (int i = tileSets.Count - 1; i > -1; --i)
         {
-            if(tileSets[i] == tileSet)
+            if (tileSets[i] == tileSet)
             {
                 tileSets.RemoveAt(i);
                 tileSet.railGroup = null;
@@ -73,7 +72,7 @@ public class RailGroup : MonoBehaviour
 
     public void SetActiveGroupLine(bool isActive)
     {
-        if(isActive)
+        if (isActive)
         {
             for (int i = tileSets.Count - 1; i > -1; --i)
             {

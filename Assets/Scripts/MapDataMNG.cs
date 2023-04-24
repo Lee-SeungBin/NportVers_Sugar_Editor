@@ -1,12 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using HtmlAgilityPack;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using System.Text.RegularExpressions;
-using HtmlAgilityPack;
 
 public class MapDataMNG : MonoBehaviour
 {
@@ -15,7 +12,7 @@ public class MapDataMNG : MonoBehaviour
     public GameObject loadingPopup, versionUpPopup;
 
     public GameObject stageList, content;
-    public Text currentVersionText , currentMapTypeText, currentTotalStageText;
+    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText;
     public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
     public Dropdown currentMapType;
     public ScrollRect sr;
@@ -38,7 +35,7 @@ public class MapDataMNG : MonoBehaviour
     /// <summary>
     /// 버전, 맵 타입에 따른 스테이지 리스트를 가져옴
     /// </summary>
-    public void DownloadStageData() 
+    public void DownloadStageData()
 
     {
         NetworkMNG.instance.StartNetworking(true, "user_info/map_check", null, (result) =>
@@ -134,7 +131,7 @@ public class MapDataMNG : MonoBehaviour
         NetworkMNG.instance.LoadMapList(mapUrl, mapFolder, check);
 
         SetVisibleLoading(false);
-    }    
+    }
     /// <summary>
     /// 가져온 맵 데이터를 html 파싱하는 함수
     /// </summary>
@@ -145,7 +142,7 @@ public class MapDataMNG : MonoBehaviour
         doc.LoadHtml(htmldata);
         int totalMapCnt = 0;
         bool flag = false;
- 
+
         // tr 태그를 찾아서 반복문 실행
         foreach (HtmlNode tr in doc.DocumentNode.SelectNodes("//tr"))
         {
@@ -250,10 +247,25 @@ public class MapDataMNG : MonoBehaviour
     }
     public void CloseStageList()
     {
-        for(int i = 0; i < content.transform.childCount; i++)
+        for (int i = 0; i < content.transform.childCount; i++)
         {
             Destroy(content.transform.GetChild(i).gameObject);
         }
         sr.content.localPosition = new Vector3(0, 1, 0); // 스크롤바 초기화
+    }
+    public void OnClickChangeDev()
+    {
+        if (iSDev)
+        {
+            iSDev = false;
+            DevButtonText.text = "현재 : 본 서버";
+            NetworkMNG.SettingUrlPass();
+        }
+        else
+        {
+            iSDev = true;
+            DevButtonText.text = "현재 : 테스트 서버";
+            NetworkMNG.SettingUrlPass();
+        }
     }
 }

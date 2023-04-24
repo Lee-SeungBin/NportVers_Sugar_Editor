@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class RailMode : MonoBehaviour
@@ -86,7 +84,7 @@ public class RailMode : MonoBehaviour
         if (selectTileSet != null)
         {
             selectTileSet.railGroup?.SelectGroup();
-            selectTileSet = selectTileSet.railGroup.GetLastTileSet();
+            //selectTileSet = selectTileSet.railGroup.GetLastTileSet();
             UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
         }
         else
@@ -120,13 +118,13 @@ public class RailMode : MonoBehaviour
 
     private void SelectableFenceActivation(Map map, int w, int h, bool isActive)
     {
-        if(w < 0 || h < 0 || w >= map.width || h >= map.height)
+        if (w < 0 || h < 0 || w >= map.width || h >= map.height)
         {
             return;
         }
 
         TileSet tileSet = map.tileSets[w][h];
-        if(isActive && (tileSet.railGroup == null || tileSet.railGroup == selectTileSet.railGroup))
+        if (isActive && (tileSet.railGroup == null || tileSet.railGroup == selectTileSet.railGroup))
         {
             tileSet.SetVisibleAllTilesForRailMode(true);
         }
@@ -138,7 +136,7 @@ public class RailMode : MonoBehaviour
 
     public void SetSelectTileSetNull()
     {
-        if(selectTileSet != null)
+        if (selectTileSet != null)
         {
             selectTileSet.railGroup.UnselectGroup();
             selectTileSet = null;
@@ -161,7 +159,7 @@ public class RailMode : MonoBehaviour
             if (!((w > 0 && lastTile.map.tileSets[w - 1][h].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (w < lastTile.map.width - 1 && lastTile.map.tileSets[w + 1][h].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
                   (h > 0 && lastTile.map.tileSets[w][h - 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex) ||
-                  (h < lastTile.map.height - 1 && lastTile.map.tileSets[w][h + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) || 
+                  (h < lastTile.map.height - 1 && lastTile.map.tileSets[w][h + 1].tileSetIndex == tileSet.railGroup.tileSets[0].tileSetIndex)) ||
                   (tileSet.railGroup.tileSets.Count <= 2)) // 마지막 레일의 인덱스를 통해 4방향에서 첫번째 타일과 인접한지 체크 및 2개 이하 인지 체크
             {
                 UIManager.Instance.errorPopup.SetMessage("!!주의!!\n\n회전 레일은 두 개 일수 없으며 맨 끝과 맨 처음의 타일이 맞닿아 있어야 합니다.");
