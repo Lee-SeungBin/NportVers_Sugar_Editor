@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static MissionManager;
 
 public class MissionPopup : MonoBehaviour
 {
@@ -30,7 +28,7 @@ public class MissionPopup : MonoBehaviour
 
         for (int i = 0; i < stageData.missions.Length; ++i)
         {
-            switch(stageData.missions[i].type)
+            switch (stageData.missions[i].type)
             {
                 case 0: creamScoreText.text = stageData.missions[i].qty.ToString(); break;
                 case 1: strawberryScoreText.text = stageData.missions[i].qty.ToString(); break;
@@ -74,10 +72,10 @@ public class MissionPopup : MonoBehaviour
         PushMissionData(missions, 5, breakIceText.text);
         PushMissionData(missions, 6, jellyText.text);
 
-        if(frogSoup.isOn)
+        if (frogSoup.isOn)
         {
             int frog = 0;
-            for(int i = MapManager.Instance.Maps.Count - 1; i > -1; --i)
+            for (int i = MapManager.Instance.Maps.Count - 1; i > -1; --i)
             {
                 frog += MapManager.Instance.Maps[i].frogSoups.Count;
             }
@@ -90,7 +88,7 @@ public class MissionPopup : MonoBehaviour
     {
         if (qty == "0") return;
 
-        if(int.Parse(qty) > 0)
+        if (int.Parse(qty) > 0)
         {
             Mission mission = new Mission();
             mission.type = type;
@@ -101,11 +99,11 @@ public class MissionPopup : MonoBehaviour
 
     public void OnChangeValue()
     {
-        if (string.IsNullOrEmpty(creamScoreText.text) || 
+        if (string.IsNullOrEmpty(creamScoreText.text) ||
             string.IsNullOrEmpty(chocolateScoreText.text) ||
             string.IsNullOrEmpty(strawberryScoreText.text) ||
             string.IsNullOrEmpty(eggScoreText.text) ||
-            string.IsNullOrEmpty(breadScoreText.text) || 
+            string.IsNullOrEmpty(breadScoreText.text) ||
             string.IsNullOrEmpty(jellyText.text)
             )
         {

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SpecialList : MonoBehaviour
@@ -52,12 +50,12 @@ public class SpecialList : MonoBehaviour
     }
     public void SelectBox(int boxLayer)
     {
-            if (boxLayer == 1)
-                UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX]);
-            else if (boxLayer == 3)
-                UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[4]);
-            else if (boxLayer == 5)
-                UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[5]); // 추후 수정 예정 specialSprites[]
+        if (boxLayer == 1)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX]);
+        else if (boxLayer == 3)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[4]);
+        else if (boxLayer == 5)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[5]); // 추후 수정 예정 specialSprites[]
         boxlayer = boxLayer;
     }
     public void SelectBoxtype(int boxType)

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterListBar : MonoBehaviour
@@ -9,9 +7,9 @@ public class CharacterListBar : MonoBehaviour
 
     public void SetSelectCharacter(int index)
     {
-        for(int i = 0; i < characters.Length; ++i)
+        for (int i = 0; i < characters.Length; ++i)
         {
-            if(i == index)
+            if (i == index)
             {
                 characters[i].color = Color.cyan;
             }

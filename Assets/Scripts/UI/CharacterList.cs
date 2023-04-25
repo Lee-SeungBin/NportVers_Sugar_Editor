@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -11,7 +9,7 @@ public class CharacterList : MonoBehaviour
 
     [SerializeField]
     private CharacterListBar[] types;
-    
+
     private void Start()
     {
         OnChangeSelectMonsterType();
@@ -20,7 +18,7 @@ public class CharacterList : MonoBehaviour
 
     public void OnChangeSelectMonsterType()
     {
-        for(int i = 0; i < types.Length; ++i)
+        for (int i = 0; i < types.Length; ++i)
         {
             types[i].gameObject.SetActive(false);
         }

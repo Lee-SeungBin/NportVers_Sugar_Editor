@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class SelectTileSetMode : MonoBehaviour
@@ -16,7 +14,7 @@ public class SelectTileSetMode : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
-             OnMouseUpForTileSet();
+            OnMouseUpForTileSet();
         }
     }
 
@@ -66,7 +64,7 @@ public class SelectTileSetMode : MonoBehaviour
                     selectTileSet.tiles[i].box != null)
                     flag = true;
             }
-            if (selectTileSet.character != null || 
+            if (selectTileSet.character != null ||
                 selectTileSet.vine != null ||
                 flag)
             {
@@ -90,7 +88,7 @@ public class SelectTileSetMode : MonoBehaviour
                 selectTileSet.tiles[index].jelly != null ||
                 selectTileSet.tiles[index].frogSoup != null ||
                 selectTileSet.tiles[index].box != null ||
-                selectTileSet.vine != null || 
+                selectTileSet.vine != null ||
                 selectTileSet.railGroup)
             {
                 UIManager.Instance.errorPopup.SetMessage("캐릭터 또는 장애물이 있는 타일은 변경할 수 없습니다. 또, 레일이 있는 타일은 타일셋만 변경 가능합니다.");

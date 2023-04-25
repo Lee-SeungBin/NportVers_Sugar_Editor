@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -152,7 +150,7 @@ public class SpecialMode : MonoBehaviour
             RemoveFrogSoup(selectTile.frogSoup);
         else
             if (selectTile.isVisible)
-                SetFrogSoup(selectTile.transform.parent, selectTile);
+            SetFrogSoup(selectTile.transform.parent, selectTile);
     }
 
     public void SetFrogSoup(Transform parent, Tile tile)
@@ -193,13 +191,13 @@ public class SpecialMode : MonoBehaviour
             RemoveBox(selectTile.box);
         else
             if (selectTile.isVisible && selectTile.box == null)
-                SetBox(selectTile.transform.parent, selectTile);
+            SetBox(selectTile.transform.parent, selectTile);
     }
 
     public void SetBox(Transform parent, Tile tile)
     {
-        if (tile.character != null || 
-            tile.jelly != null || 
+        if (tile.character != null ||
+            tile.jelly != null ||
             tile.frogSoup != null) return;
 
         Box box = Instantiate(boxPrefab, parent);
@@ -237,7 +235,7 @@ public class SpecialMode : MonoBehaviour
         Destroy(box.gameObject);
     }
 
-    public void ChangeSpriteBox(Box box,int layer,int types)
+    public void ChangeSpriteBox(Box box, int layer, int types)
     {
         Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
         if (types == 0)
@@ -339,7 +337,7 @@ public class SpecialMode : MonoBehaviour
 
     public void DeleteTasteLayerOfBox(int SelectTier)
     {
-        if(selectTile.box.boxLayer != 0)
+        if (selectTile.box.boxLayer != 0)
         {
             for (int i = SelectTier + 1; i <= selectTile.box.boxLayer; i++) // 샌드위치 레이어 재구성
             {
@@ -369,7 +367,7 @@ public class SpecialMode : MonoBehaviour
         }
     }
 
-    public void ActiveAlphaLayerOfBox(Box box ,bool isActive)
+    public void ActiveAlphaLayerOfBox(Box box, bool isActive)
     {
         box.transform.GetChild(0).gameObject.SetActive(isActive);
     }
@@ -484,7 +482,7 @@ public class SpecialMode : MonoBehaviour
 
     }
 
-    public void SetVine(Transform parent,TileSet tileSet)
+    public void SetVine(Transform parent, TileSet tileSet)
     {
         if (tileSet.vine != null) return;
 

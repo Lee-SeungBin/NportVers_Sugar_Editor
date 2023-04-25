@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DragItem : MonoBehaviour
@@ -12,7 +10,7 @@ public class DragItem : MonoBehaviour
 
     private void Update()
     {
-        if(gameObject.activeSelf)
+        if (gameObject.activeSelf)
         {
             transform.position = Input.mousePosition;
         }

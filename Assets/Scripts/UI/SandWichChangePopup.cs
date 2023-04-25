@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,7 +41,7 @@ public class SandWichChangePopup : MonoBehaviour
     {
         MapManager.Instance.ChangeTasteOfBox(TasteLayerDropdown.value);
     }
-    
+
     public void OnDeleteTaste()
     {
         MapManager.Instance.DeleteTasteLayerOfBox(TasteLayerDropdown.value);

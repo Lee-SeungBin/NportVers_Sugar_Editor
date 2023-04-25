@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Tile : MonoBehaviour
     {
         get
         {
-            if(GetComponentInParent<TileSet>().character != null && GetComponentInParent<TileSet>().character.tileIndex == tileIndex)
+            if (GetComponentInParent<TileSet>().character != null && GetComponentInParent<TileSet>().character.tileIndex == tileIndex)
             {
                 return GetComponentInParent<TileSet>().character;
             }

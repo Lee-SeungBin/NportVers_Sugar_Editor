@@ -1,10 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using LitJson;
-using System.IO;
 using UnityEngine.UI;
-using System;
 
 public class JsonFileMaker : MonoBehaviour
 {
@@ -101,7 +98,7 @@ public class JsonFileMaker : MonoBehaviour
 
                     tileSet = new TileSetData();
                     tileSet.fenceVisibleState = maps[i].tileSets[w][h].isVisible == true ? 1 : 0;
-                    if(charactor != null)
+                    if (charactor != null)
                     {
                         tileSet.code = charactor.name;//.Replace("0","100");
                         tileSet.startStar = charactor.isStar ? 1 : 0;
@@ -123,7 +120,7 @@ public class JsonFileMaker : MonoBehaviour
                     tileSet.woodenFences = maps[i].tileSets[w][h].GetWoodenFencesForJsonSaving();
                     tileSet.isVisibleTiles = maps[i].tileSets[w][h].GetTileVisibleState();
                     int cnt = 0;
-                    for(int j = 0; j < 4; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         if (tileSet.isVisibleTiles[j] == false)
                             cnt++;
@@ -159,7 +156,7 @@ public class JsonFileMaker : MonoBehaviour
                     rails = new List<int>();
                     for (ri = 0; ri < railGroups[r].tileSets.Count; ++ri)
                     {
-                        if(railGroups[r].tileSets[ri].isVisible)
+                        if (railGroups[r].tileSets[ri].isVisible)
                         {
                             ++visibleFenceCount;
                         }
@@ -198,7 +195,7 @@ public class JsonFileMaker : MonoBehaviour
                     railGroupDatas.Add(railGroupData);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 UIManager.Instance.errorPopup.SetMessage(e.Message);
                 return null;
@@ -215,7 +212,7 @@ public class JsonFileMaker : MonoBehaviour
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
         string jellyCount = uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text;
-        if ( int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0 ) // 현재 젤리만 사용중 젤리 타입 0
+        if (int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0) // 현재 젤리만 사용중 젤리 타입 0
         {
             data.obstacles.Add(new Obstacle
             {
@@ -259,7 +256,7 @@ public class JsonFileMaker : MonoBehaviour
         //        options = new string[] { }
         //    });
         //}
-        
+
         data.mapDatas = mapDatas;
 
         string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(data);
@@ -280,7 +277,7 @@ public class JsonFileMaker : MonoBehaviour
 
         int jellyCount = jellysOfMap.Count;
 
-        for(int i = 0; i < jellyCount; ++i)
+        for (int i = 0; i < jellyCount; ++i)
         {
             jellyData = new JellyData();
             jellyData.fenceIndex = jellysOfMap[i].fenceIndex;
@@ -310,7 +307,7 @@ public class JsonFileMaker : MonoBehaviour
 
         return frogSoupDatas;
     }
-    
+
     private List<BoxData> GetBoxData(Map map)
     {
         BoxData boxData;
@@ -327,7 +324,7 @@ public class JsonFileMaker : MonoBehaviour
             boxData.tileIndex = boxOfMap[i].tileIndex.ToString();
             boxData.boxLayer = boxOfMap[i].boxLayer.ToString();
             boxData.boxTypes = boxOfMap[i].boxTypes.ToString();
-            if(boxOfMap[i].boxTier != null)
+            if (boxOfMap[i].boxTier != null)
             {
                 boxData.boxTier = boxOfMap[i].boxTier.ConvertAll(i => i.ToString());
             }
@@ -336,7 +333,7 @@ public class JsonFileMaker : MonoBehaviour
 
         return boxDatas;
     }
-    
+
     private List<VineData> GetVineData(Map map)
     {
         VineData vineData;
@@ -346,7 +343,7 @@ public class JsonFileMaker : MonoBehaviour
 
         int count = vineOfMap.Count;
 
-        for(int i = 0; i < count; ++i)
+        for (int i = 0; i < count; ++i)
         {
             vineData = new VineData();
             vineData.fenceIndex = vineOfMap[i].fenceIndex.ToString();
@@ -397,8 +394,8 @@ public class StageData
 [Serializable]
 public class Mission
 {
-     public int type;
-     public int qty;
+    public int type;
+    public int qty;
 }
 
 [Serializable]

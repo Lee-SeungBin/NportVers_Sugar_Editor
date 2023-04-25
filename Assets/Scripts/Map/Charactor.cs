@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Charactor : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class Charactor : MonoBehaviour
     public int tileIndex;
 
     public Enums.CHARCTER_TYPE characterType;
-    
+
     public GameObject star;
     private bool _isStar;
     public bool isStar
@@ -37,7 +35,7 @@ public class Charactor : MonoBehaviour
         set
         {
             _iceStep = value;
-            if(_iceStep == 0)
+            if (_iceStep == 0)
             {
                 ice.gameObject.SetActive(false);
             }
@@ -89,7 +87,7 @@ public class Charactor : MonoBehaviour
             _isUser = value;
             particle.SetActive(value);
 
-            if(value)
+            if (value)
             {
 
             }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MapcountManager : MonoBehaviour
@@ -33,7 +31,7 @@ public class MapcountManager : MonoBehaviour
         {
             UIManager.Instance.mapEditManager.popups.nextMap.SetData(MapManager.Instance.Maps[mapCurrentNumber - 1].nextStageDatas);
         }
-        
+
     }
     public void MapMoveButtonClick(bool isNextClick = true)
     {

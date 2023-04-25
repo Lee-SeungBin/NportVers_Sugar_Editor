@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class MonsterSetMode : MonoBehaviour
@@ -11,7 +9,7 @@ public class MonsterSetMode : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-             OnMouseDownForSetMonster();
+            OnMouseDownForSetMonster();
         }
         else if (Input.GetMouseButtonUp(0))
         {

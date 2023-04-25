@@ -14,8 +14,8 @@ public class TileSetVisibleToggle : MonoBehaviour, IPointerClickHandler
         onClick?.Invoke();
     }
 
-    public bool isOn 
-    { 
+    public bool isOn
+    {
         get
         {
             return ok.activeSelf;

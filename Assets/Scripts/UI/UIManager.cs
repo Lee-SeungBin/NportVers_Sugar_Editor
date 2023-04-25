@@ -1,11 +1,5 @@
-﻿using System.Collections;
-using System.Linq;
-using System.Text.RegularExpressions;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -64,7 +58,7 @@ public class UIManager : MonoBehaviour
 
         container.SetActive(isUIOn);
 
-        if(isUIOn)
+        if (isUIOn)
         {
             uiOnOffButton.transform.Find("Text").GetComponent<Text>().text = "UI ON";
 
@@ -116,7 +110,7 @@ public class UIManager : MonoBehaviour
         mapPositionX.text = mapPositionValue.x.ToString();
         mapPositionY.text = mapPositionValue.y.ToString();
         mapSize.text = "Width :  " + map.width + "\nHeight : " + map.height;
-     }
+    }
 
     public void OnClickLoadStageButton()
     {
@@ -138,7 +132,7 @@ public class UIManager : MonoBehaviour
         string jsonData = cryptoMNG.DecrStage(Decrjson);
         StageInfo.data = JsonUtility.FromJson<StageData>(jsonData);
 
-        if(string.IsNullOrEmpty(jsonData))
+        if (string.IsNullOrEmpty(jsonData))
         {
             errorPopup.SetMessage("맵의 정보가 잘못되어있습니다.");
             return;
@@ -168,9 +162,9 @@ public class UIManager : MonoBehaviour
         starPercent.text = StageInfo.data.starPercent.ToString();
         stageNumber.text = StageInfo.data.stageNumber.ToString();
 
-        for(int i = 0; i < StageInfo.data.obstacles.Count; ++i)
+        for (int i = 0; i < StageInfo.data.obstacles.Count; ++i)
         {
-            if(StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY)
+            if (StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY)
             {
                 obstacleOptionPopup.jellyTerm.text = StageInfo.data.obstacles[i].options[0].ToString();
                 obstacleOptionPopup.jellyCount.text = StageInfo.data.obstacles[i].options[1].ToString();

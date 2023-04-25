@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class TileSetVisiblePopup : MonoBehaviour
 {
@@ -14,7 +11,7 @@ public class TileSetVisiblePopup : MonoBehaviour
     {
         fence.isOn = !tileSet.isVisible;
 
-        for(int i = 0; i < 4; ++i)
+        for (int i = 0; i < 4; ++i)
         {
             tiles[i].isOn = !tileSet.tiles[i].isVisible;
         }
@@ -44,10 +41,10 @@ public class TileSetVisiblePopup : MonoBehaviour
     }
     public void OnChangeTileSet()
     {
-        if(MapManager.Instance.SetTileSetVisible(fence.isOn))
+        if (MapManager.Instance.SetTileSetVisible(fence.isOn))
         {
             fence.isOn = !fence.isOn;
-            for(int i = 0; i < 4; ++i)
+            for (int i = 0; i < 4; ++i)
             {
                 tiles[i].isOn = fence.isOn;
             }

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,7 +14,7 @@ public class MapMoveMode : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-           OnMouseDownForMapMoving();
+            OnMouseDownForMapMoving();
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -37,7 +36,7 @@ public class MapMoveMode : MonoBehaviour
 
     public void SetNullSelectMap()
     {
-        if(selectMapContainer != null)
+        if (selectMapContainer != null)
         {
             selectMapContainer = null;
         }
@@ -86,13 +85,13 @@ public class MapMoveMode : MonoBehaviour
 
     private IEnumerator DoubleTapTimeChecker()
     {
-        while(doubleTapTimer > -1)
+        while (doubleTapTimer > -1)
         {
             yield return new WaitForFixedUpdate();
 
             doubleTapTimer += Time.fixedDeltaTime;
 
-            if(doubleTapTimer > 1f)
+            if (doubleTapTimer > 1f)
             {
                 doubleTapTimer = -1;
                 StopCoroutine(DoubleTapTimeChecker());

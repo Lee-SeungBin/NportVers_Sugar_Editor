@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class RailManager : MonoBehaviour
@@ -34,9 +33,9 @@ public class RailManager : MonoBehaviour
     {
         int i;
 
-        if(isActive)
+        if (isActive)
         {
-            for(i = railGroups.Count - 1; i > -1; --i)
+            for (i = railGroups.Count - 1; i > -1; --i)
             {
                 railGroups[i].SetActiveGroupLine(true);
             }
@@ -53,14 +52,14 @@ public class RailManager : MonoBehaviour
 
     public void SetLoadedData(List<List<TileSet>> tileSets, MapData mapData)
     {
-        for(int i = 0; i < mapData.railGroupDatas.Count; ++i)
+        for (int i = 0; i < mapData.railGroupDatas.Count; ++i)
         {
             RailGroup railGroup = Instantiate(railGroupPrefab).GetComponent<RailGroup>();
             railGroup.Init(this);
 
             railGroup.railType = (Enums.RAIL_TYPE)int.Parse(mapData.railGroupDatas[i].straightMode);
 
-            for(int j = 0; j < mapData.railGroupDatas[i].rails.Count; ++j)
+            for (int j = 0; j < mapData.railGroupDatas[i].rails.Count; ++j)
             {
                 int fenceIndex = mapData.railGroupDatas[i].rails[j];
                 railGroup.PushTileSet(tileSets[fenceIndex / mapData.height][fenceIndex % mapData.height]);

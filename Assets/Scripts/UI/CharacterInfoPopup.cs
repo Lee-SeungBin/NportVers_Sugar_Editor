@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterInfoPopup : MonoBehaviour
@@ -41,7 +39,7 @@ public class CharacterInfoPopup : MonoBehaviour
     {
         MapManager.Instance.ChangeStarOfCharactor(starToggle.isOn);
     }
-    
+
     public void OnChangeDirection()
     {
         MapManager.Instance.ChangeDirectionOfCharactor(directionToggle.isOn);

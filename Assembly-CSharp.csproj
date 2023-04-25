@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\Map\Rail\RailManager.cs" />
     <Compile Include="Assets\Scripts\Map\Vine.cs" />
     <Compile Include="Assets\Scripts\UI\RailEditManager.cs" />
-    <Compile Include="Assets\Scripts\UI\RailCreateView.cs" />
     <Compile Include="Assets\Scripts\Map\SpecialMode.cs" />
     <Compile Include="Assets\Scripts\UI\BGDropDown.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />

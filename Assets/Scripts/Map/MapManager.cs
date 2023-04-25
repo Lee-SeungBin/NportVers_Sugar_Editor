@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -42,7 +39,7 @@ public class MapManager : MonoBehaviour
     private bool isTouchScreen;
     private Vector2 prevMousePosition;
     private Vector2 moveMousePosition;
-   
+
     private MapMoveMode mapMoveMode;
     private SelectTileSetMode selectTileSetMode;
     private MonsterSetMode monsterSetMode;
@@ -133,7 +130,7 @@ public class MapManager : MonoBehaviour
 
         MapcountManager.Instance.Init(Maps.Count, Maps.Count);
 
-        CameraSetting(Maps[Maps.Count-1].transform.position);
+        CameraSetting(Maps[Maps.Count - 1].transform.position);
 
         isCreatingMap = false;
 
@@ -215,7 +212,7 @@ public class MapManager : MonoBehaviour
             CameraSetting(Maps[mapIndex].transform.position);
         }
 
-        if(Maps.Count > 0)
+        if (Maps.Count > 0)
             MapcountManager.Instance.Init(Maps.Count, mapIndex + 1);
         else
             MapcountManager.Instance.Init(Maps.Count, mapIndex);
@@ -326,7 +323,7 @@ public class MapManager : MonoBehaviour
             count += Maps[i].GetUserFenceCount();
         }
 
-        if(count == 5)
+        if (count == 5)
         {
             return false;
         }
@@ -341,7 +338,7 @@ public class MapManager : MonoBehaviour
 
     public void SetActiveRailGroups(bool isActive)
     {
-        for(int i = Maps.Count - 1; i > -1; --i)
+        for (int i = Maps.Count - 1; i > -1; --i)
         {
             Maps[i].railManager.SetActiveRailGroups(isActive);
         }
@@ -349,7 +346,7 @@ public class MapManager : MonoBehaviour
 
     public void CreateLoadedMap(StageData stageData)
     {
-        if(Maps.Count > 0)
+        if (Maps.Count > 0)
         {
             for (int j = Maps.Count - 1; j > -1; --j)
             {
@@ -366,7 +363,7 @@ public class MapManager : MonoBehaviour
             Maps = new List<Map>();
         }
 
-        for(int i = 0; i < stageData.mapDatas.Length; ++i)
+        for (int i = 0; i < stageData.mapDatas.Length; ++i)
         {
             Map tempMap = Instantiate(map);
             tempMap.SetLoadMap(this, stageData.mapDatas[i], i);
@@ -429,11 +426,11 @@ public class MapManager : MonoBehaviour
 
     public void ChangeTheme(int index)
     {
-        for(int m = Maps.Count - 1; m > -1; --m)
+        for (int m = Maps.Count - 1; m > -1; --m)
         {
-            for(int t = Maps[m].tileSets.Count - 1; t > -1; --t)
+            for (int t = Maps[m].tileSets.Count - 1; t > -1; --t)
             {
-                for(int t2 = Maps[m].tileSets[t].Count - 1; t2 > -1; --t2)
+                for (int t2 = Maps[m].tileSets[t].Count - 1; t2 > -1; --t2)
                 {
                     Maps[m].tileSets[t][t2].SetTheme();
                 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +26,7 @@ public class Map : MonoBehaviour
     public List<Vine> vines = new List<Vine>();
 
     public List<NextStageData> nextStageDatas;
-    
+
     private Dictionary<string, List<Vector2>> mapCoords = new Dictionary<string, List<Vector2>>() // 맵 정보 딕셔너리 리스트
 {
     { "3x3", new List<Vector2>() { new Vector2(0f, 1.9f) } },
@@ -103,7 +102,7 @@ public class Map : MonoBehaviour
 
         Vector3 newPos = Vector3.zero;
 
-        newPos.x = mapManager.Maps.Count  * 50;
+        newPos.x = mapManager.Maps.Count * 50;
 
         transform.position = newPos;
 
@@ -116,7 +115,7 @@ public class Map : MonoBehaviour
     public void ModifyMap(MapManager mapManager, int modifyWidth, int modifyHeight, int index)
     {
         int w, h;
-        
+
         this.index = index;
 
         TileSet tileSet;
@@ -184,9 +183,9 @@ public class Map : MonoBehaviour
         {
             for (w = tileSets.Count - 1; w > -1; --w)
             {
-                if(tileSets[w].Count > modifyHeight)
+                if (tileSets[w].Count > modifyHeight)
                 {
-                    for(h = tileSets[w].Count - 1; h > modifyHeight - 1; --h)
+                    for (h = tileSets[w].Count - 1; h > modifyHeight - 1; --h)
                     {
                         if (tileSets[w][h].vine != null)
                         {
@@ -221,9 +220,9 @@ public class Map : MonoBehaviour
         {
             for (w = 0; w < modifyWidth; ++w)
             {
-                for(h = tileSets[w].Count; h < modifyHeight; ++h)
+                for (h = tileSets[w].Count; h < modifyHeight; ++h)
                 {
-                    tileSet = Instantiate(mapManager.tileSet).GetComponent< TileSet>();
+                    tileSet = Instantiate(mapManager.tileSet).GetComponent<TileSet>();
                     tileSet.map = this;
                     tileSet.transform.SetParent(container.transform);
                     tileSets[w].Add(tileSet);
@@ -325,11 +324,11 @@ public class Map : MonoBehaviour
                 tileSet.isVisible = tileSetDatas[count].fenceVisibleState == 1;
 
                 bool[] woodenFences = tileSetDatas[count].woodenFences;
-                if(woodenFences != null)
+                if (woodenFences != null)
                 {
                     for (int wf = 0; wf < 12; ++wf)
                     {
-                        if(woodenFences[wf])
+                        if (woodenFences[wf])
                         {
                             MapManager.Instance.specialMode.SetWoodenFence(tileSet, wf);
                         }
@@ -355,7 +354,7 @@ public class Map : MonoBehaviour
                     tileSet.character.transform.localPosition = tileSet.tiles[tileSet.character.tileIndex].transform.localPosition;
                     tileSet.character.iceStep = tileSetDatas[count].iceStep;
                     tileSet.character.isStar = tileSetDatas[count].startStar == 1;
-                    tileSet.character.isHeightDirection= tileSetDatas[count].heightDirection == "1";
+                    tileSet.character.isHeightDirection = tileSetDatas[count].heightDirection == "1";
                     tileSet.character.isUser = tileSetDatas[count].userFence == 1;
                 }
 
@@ -376,7 +375,7 @@ public class Map : MonoBehaviour
         railManager.SetLoadedData(tileSets, data);
 
         Tile tile;
-        for(w = 0; w < data.jellyDatas.Count; ++w)
+        for (w = 0; w < data.jellyDatas.Count; ++w)
         {
             tile = tileSets[data.jellyDatas[w].fenceIndex / height][data.jellyDatas[w].fenceIndex % height].tiles[int.Parse(data.jellyDatas[w].tileIndex)].GetComponent<Tile>();
             MapManager.Instance.specialMode.SetJelly(tile.transform.parent, tile);
@@ -392,16 +391,16 @@ public class Map : MonoBehaviour
         {
             tile = tileSets[int.Parse(data.boxDatas[w].fenceIndex) / height][int.Parse(data.boxDatas[w].fenceIndex) % height].tiles[int.Parse(data.boxDatas[w].tileIndex)].GetComponent<Tile>();
             MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
-            if(data.boxDatas[w].boxTypes != null)
+            if (data.boxDatas[w].boxTypes != null)
                 tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
-            if(data.boxDatas[w].boxLayer != null)
+            if (data.boxDatas[w].boxLayer != null)
                 tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
             if (data.boxDatas[w].boxTier != null)
                 tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
             MapManager.Instance.specialMode.ChangeSpriteBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
         }
 
-        for(w = 0; w < data.vineDatas.Count; ++w)
+        for (w = 0; w < data.vineDatas.Count; ++w)
         {
             tileSet = tileSets[int.Parse(data.vineDatas[w].fenceIndex) / height][int.Parse(data.vineDatas[w].fenceIndex) % height].GetComponent<TileSet>();
             MapManager.Instance.specialMode.SetVine(tileSet.transform, tileSet);
@@ -478,7 +477,7 @@ public class Map : MonoBehaviour
     {
         frogSoups.Remove(frogSoup);
     }
-    
+
     public void SetBox(Box box)
     {
         boxs.Add(box);
