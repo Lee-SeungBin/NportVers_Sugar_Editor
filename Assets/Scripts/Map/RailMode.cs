@@ -108,7 +108,7 @@ public class RailMode : MonoBehaviour
             else
             {
                 selectedRailGroup.DeleteRailGroup();
-                //selectTileSet = null;
+                selectTileSet = null;
             }
         }
     }

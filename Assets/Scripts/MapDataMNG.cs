@@ -135,7 +135,8 @@ public class MapDataMNG : MonoBehaviour
     /// <summary>
     /// 가져온 맵 데이터를 html 파싱하는 함수
     /// </summary>
-    /// <param name="str"></param>
+    /// <param name="htmldata"> html 데이터 </param>
+    /// <param name="check"> 저장인지 로드인지 인스펙터 창에서 정의 </param>
     public void SetStageList(string htmldata, string check)
     {
         HtmlDocument doc = new HtmlDocument();
