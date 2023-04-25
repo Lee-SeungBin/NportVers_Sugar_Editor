@@ -313,4 +313,15 @@ public class MapEditManager : MonoBehaviour
     {
         sandwichChangePopup.Hide();
     }
+    public void OnClickSaveButton()
+    {
+        if (!MapDataMNG.iSDev)
+        {
+            popups.transform.Find("StageSaveWarnningPopup").Find("DevText").GetComponent<Text>().text = "현재 본 서버 입니다.";
+        }
+        else
+        {
+            popups.transform.Find("StageSaveWarnningPopup").Find("DevText").GetComponent<Text>().text = "현재 테스트 서버 입니다.";
+        }
+    }
 }

@@ -12,7 +12,7 @@ public class MapDataMNG : MonoBehaviour
     public GameObject loadingPopup, versionUpPopup;
 
     public GameObject stageList, content;
-    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText;
+    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText, DevText;
     public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
     public Dropdown currentMapType;
     public ScrollRect sr;
