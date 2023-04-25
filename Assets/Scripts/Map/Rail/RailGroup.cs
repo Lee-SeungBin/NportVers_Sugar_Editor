@@ -148,4 +148,12 @@ public class RailGroup : MonoBehaviour
         railMoveNumbers[railMoveNumbers.Count - 1].Unselect();
         MapManager.Instance.railMode.UnselectGroup(tileSets[tileSets.Count - 1]);
     }
+    public void UndoGroup(TileSet tileSet)
+    {
+        tileSets[tileSets.Count - 1].railGroup = null;
+        tileSets[tileSets.Count - 1].SetActiveStateRailLine(false);
+        Destroy(railMoveNumbers[tileSets.Count - 1].gameObject);
+        railMoveNumbers.RemoveAt(tileSets.Count - 1);
+        tileSets.RemoveAt(tileSets.Count - 1);
+    }
 }
