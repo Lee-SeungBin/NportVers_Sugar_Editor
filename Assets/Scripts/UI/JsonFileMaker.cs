@@ -44,7 +44,6 @@ public class JsonFileMaker : MonoBehaviour
             data.moveCount == 0 ||
             data.fenceCount == 0 ||
             data.stageNumber == 0 ||
-            data.starPercent == 0 ||
             string.IsNullOrEmpty(moveText.text) ||
             string.IsNullOrEmpty(jumpText.text) ||
             string.IsNullOrEmpty(starPercent.text) ||
