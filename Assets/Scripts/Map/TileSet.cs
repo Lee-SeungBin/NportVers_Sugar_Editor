@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TileSet : MonoBehaviour
 {
@@ -71,7 +69,7 @@ public class TileSet : MonoBehaviour
         {
             _isVisible = value;
 
-            for(int i = 0; i < 4; ++i)
+            for (int i = 0; i < 4; ++i)
             {
                 tiles[i].isVisible = value;
             }
@@ -92,9 +90,9 @@ public class TileSet : MonoBehaviour
     public bool[] GetWoodenFencesForJsonSaving()
     {
         bool[] values = new bool[12];
-        for(int i = 0; i < 12; ++i)
+        for (int i = 0; i < 12; ++i)
         {
-            if(woodenFences[i] != null)
+            if (woodenFences[i] != null)
             {
                 values[i] = true;
             }
@@ -121,7 +119,7 @@ public class TileSet : MonoBehaviour
     {
         Sprite sp = normalThemes[UIManager.Instance.bgDropdown.value];
 
-        if(railGroup != null)
+        if (railGroup != null)
         {
             sp = railTheme[UIManager.Instance.bgDropdown.value];
             if (character != null && character.isUser)
@@ -131,13 +129,13 @@ public class TileSet : MonoBehaviour
         }
         else
         {
-            if(character != null && character.isUser)
+            if (character != null && character.isUser)
             {
                 sp = myThemes[UIManager.Instance.bgDropdown.value];
             }
         }
 
-        for(int i = 0; i < 4; ++i)
+        for (int i = 0; i < 4; ++i)
         {
             tiles[i].GetComponent<SpriteRenderer>().sprite = sp;
         }

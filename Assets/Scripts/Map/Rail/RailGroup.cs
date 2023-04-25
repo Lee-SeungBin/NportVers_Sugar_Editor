@@ -150,10 +150,13 @@ public class RailGroup : MonoBehaviour
     }
     public void UndoGroup(TileSet tileSet)
     {
-        tileSets[tileSets.Count - 1].railGroup = null;
-        tileSets[tileSets.Count - 1].SetActiveStateRailLine(false);
-        Destroy(railMoveNumbers[tileSets.Count - 1].gameObject);
-        railMoveNumbers.RemoveAt(tileSets.Count - 1);
-        tileSets.RemoveAt(tileSets.Count - 1);
+        if (tileSets.Count > 0)
+        {
+            tileSets[tileSets.Count - 1].railGroup = null;
+            tileSets[tileSets.Count - 1].SetActiveStateRailLine(false);
+            Destroy(railMoveNumbers[tileSets.Count - 1].gameObject);
+            railMoveNumbers.RemoveAt(tileSets.Count - 1);
+            tileSets.RemoveAt(tileSets.Count - 1);
+        }
     }
 }

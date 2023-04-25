@@ -13,8 +13,7 @@ public class RailMode : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            //if (selectTileSet.railGroup != null)
-            //    selectTileSet.railGroup.UnselectGroup();
+            OnMouseDownUndo();
         }
     }
 
@@ -52,9 +51,9 @@ public class RailMode : MonoBehaviour
                 railGroup.PushTileSet(selectTileSet);
             }
         }
-        else if (selectTileSet == clickedTileSet)
+        else if (selectTileSet == clickedTileSet || clickedTileSet.railGroup != null)
         {
-            if (selectTileSet.railGroup != null && CheckErrorRail(selectTileSet) == false) // 레일 그룹을 만들고 선택 해제하려는 순간 현재 레일 체크
+            if (selectTileSet.railGroup != null && !CheckErrorRail(selectTileSet)) // 레일 그룹을 만들고 선택 해제하려는 순간 현재 레일 체크
                 return;
             selectTileSet.railGroup?.UnselectGroup();
             selectTileSet = null;
@@ -62,9 +61,9 @@ public class RailMode : MonoBehaviour
         else
         {
             bool isVisibleTiles = clickedTileSet.isVisibleTiles;
-            if (isVisibleTiles == false)
+            if (!isVisibleTiles)
             {
-                if (selectTileSet.railGroup != null && CheckErrorRail(selectTileSet) == false) // 다른 레일 그룹을 만들기 전에 현재 레일 체크
+                if (selectTileSet.railGroup != null && !CheckErrorRail(selectTileSet)) // 다른 레일 그룹을 만들기 전에 현재 레일 체크
                     return;
                 selectTileSet.railGroup?.UnselectGroup();
                 selectTileSet = clickedTileSet;
@@ -84,7 +83,7 @@ public class RailMode : MonoBehaviour
         if (selectTileSet != null)
         {
             selectTileSet.railGroup?.SelectGroup();
-            //selectTileSet = selectTileSet.railGroup.GetLastTileSet();
+            selectTileSet = selectTileSet.railGroup.GetLastTileSet();
             UIManager.Instance.railEditManager.SetActiveRailSelectPopup(true, selectTileSet);
         }
         else
@@ -93,7 +92,26 @@ public class RailMode : MonoBehaviour
         }
 
     }
+    private void OnMouseDownUndo()
+    {
+        if (selectTileSet != null && selectTileSet.railGroup != null)
+        {
+            RailGroup selectedRailGroup = selectTileSet.railGroup;
 
+            selectedRailGroup.UndoGroup(selectTileSet);
+            if (selectedRailGroup.tileSets.Count > 0)
+            {
+                UnselectGroup(selectTileSet);
+                selectTileSet = selectedRailGroup.GetLastTileSet();
+                selectedRailGroup?.SelectGroup();
+            }
+            else
+            {
+                selectedRailGroup.DeleteRailGroup();
+                //selectTileSet = null;
+            }
+        }
+    }
     public void SelectGroup(TileSet tileSet)
     {
         int w = tileSet.tileSetIndex / tileSet.map.height;
@@ -176,5 +194,4 @@ public class RailMode : MonoBehaviour
         }
         return true;
     }
-
 }
