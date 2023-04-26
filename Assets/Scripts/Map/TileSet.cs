@@ -140,4 +140,15 @@ public class TileSet : MonoBehaviour
             tiles[i].GetComponent<SpriteRenderer>().sprite = sp;
         }
     }
+    public int GetIndexOfFence(WoodenFence fence)
+    {
+        for (int i = 0; i < woodenFences.Length; i++)
+        {
+            if (woodenFences[i] == fence)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

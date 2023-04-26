@@ -36,10 +36,9 @@ public class SpecialMode : MonoBehaviour
         {
             OnMouseUpForSetSpecial();
         }
-        else if (Input.GetMouseButton(1))
+        else if (Input.GetMouseButtonDown(1))
         {
-            var specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
-            specialList.SelectEmtpy();
+            OnMouseDownDeleteSpecial();
             MapManager.Instance.HideWoodenFence();
         }
     }
@@ -96,7 +95,49 @@ public class SpecialMode : MonoBehaviour
             }
         }
     }
+    private void OnMouseDownDeleteSpecial()
+    {
+        var specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
+        UIManager.Instance.mapEditManager.HideSandWichInfoPopup();
+        UIManager.Instance.mapEditManager.HideSandWichChangePopup();
+        if (UIManager.Instance.dragItem.specialType != Enums.SPECIAL_TYPE.NONE)
+        {
+            specialList.SelectEmtpy();
+        }
+        else
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10 | 1 << 0);
+            if (hit.collider != null)
+            {
+                selectTile = hit.collider.transform.GetComponent<Tile>();
+                TileSet selectTileSet = selectTile?.GetComponentInParent<TileSet>();
 
+                if (selectTile?.jelly != null)
+                {
+                    RemoveJelly(selectTile.jelly);
+                }
+                else if (selectTile?.box != null)
+                {
+                    RemoveBox(selectTile.box);
+                }
+                else if (selectTile?.frogSoup != null)
+                {
+                    RemoveFrogSoup(selectTile.frogSoup);
+                }
+                else if (selectTileSet?.vine != null)
+                {
+                    RemoveVine(selectTileSet.vine);
+                }
+                else if (hit.collider.transform.tag == "WoodenFence")
+                {
+                    TileSet woodTileSet = hit.collider.transform.gameObject.GetComponentInParent<TileSet>();
+                    int index = woodTileSet.GetIndexOfFence(hit.collider.transform.GetComponent<WoodenFence>());
+                    if (index == -1) return;
+                    RemoveWoodenFence(woodTileSet, index);
+                }
+            }
+        }
+    }
     #region Jelly
     private void OnClickJelly()
     {
@@ -143,14 +184,14 @@ public class SpecialMode : MonoBehaviour
     #region FrogSoup
     private void OnClickFrogSoup()
     {
-        if (selectTile == null)
-            return;
-
-        if (selectTile.frogSoup != null)
+        if (selectTile?.frogSoup != null)
+        {
             RemoveFrogSoup(selectTile.frogSoup);
-        else
-            if (selectTile.isVisible)
+        }
+        else if (selectTile?.isVisible == true)
+        {
             SetFrogSoup(selectTile.transform.parent, selectTile);
+        }
     }
 
     public void SetFrogSoup(Transform parent, Tile tile)
@@ -184,14 +225,14 @@ public class SpecialMode : MonoBehaviour
     #region Box
     private void OnClickBox()
     {
-        if (selectTile == null)
-            return;
-
-        if (selectTile.box != null && selectTile.box.boxTypes != 2)
+        if (selectTile?.box != null)
+        {
             RemoveBox(selectTile.box);
-        else
-            if (selectTile.isVisible && selectTile.box == null)
+        }
+        else if (selectTile?.isVisible == true)
+        {
             SetBox(selectTile.transform.parent, selectTile);
+        }
     }
 
     public void SetBox(Transform parent, Tile tile)
@@ -456,30 +497,31 @@ public class SpecialMode : MonoBehaviour
     #region Vine
     private void OnClickVine()
     {
-        Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
+        //Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
+        //RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
 
-        if (hit.collider == null) return;
+        //if (hit.collider == null) return;
 
-        TileSet tileSet = hit.collider.GetComponent<TileSet>();
-        if (tileSet == null) return;
+        //TileSet tileSet = hit.collider.GetComponent<TileSet>();
+        //if (selectTile == null) return;
 
-        if (tileSet.isVisible)
+        TileSet tileSet = selectTile?.GetComponentInParent<TileSet>();
+
+        if (tileSet != null && !tileSet.isVisible)
+        {
+            if (tileSet.vine != null)
+            {
+                RemoveVine(tileSet.vine);
+            }
+            else
+            {
+                SetVine(tileSet.transform, tileSet);
+            }
+        }
+        else if (selectTile != null)
         {
             UIManager.Instance.errorPopup.SetMessage("타일이 전부 비어있어야 설치 가능합니다.");
-            return;
         }
-
-        if (tileSet.vine != null)
-        {
-            RemoveVine(tileSet.vine);
-        }
-        else
-        {
-            SetVine(tileSet.transform, tileSet);
-        }
-
-
     }
 
     public void SetVine(Transform parent, TileSet tileSet)

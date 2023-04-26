@@ -54065,6 +54065,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2513383190936961107, guid: 9c17ec8ef83cb4841850c617298048fe,
+        type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9001821159593112314, guid: 9c17ec8ef83cb4841850c617298048fe,
         type: 3}
       propertyPath: missionPopup
