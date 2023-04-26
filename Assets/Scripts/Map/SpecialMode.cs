@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class SpecialMode : MonoBehaviour
@@ -19,8 +18,6 @@ public class SpecialMode : MonoBehaviour
 
     [SerializeField]
     private WoodenFence woodenFencePrefab;
-    private List<WoodenFence> activeWoodenFences = new List<WoodenFence>();
-    private List<WoodenFence> inactiveWoodenFences = new List<WoodenFence>();
 
     [SerializeField]
     private Vine vinePrefab;
@@ -83,16 +80,13 @@ public class SpecialMode : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10 | 1 << 0);
 
-        foreach (RaycastHit2D hit in hits)
+        Tile tile = hit.collider?.GetComponent<Tile>();
+
+        if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 2)
         {
-            Tile tile = hit.collider?.GetComponent<Tile>();
-            if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 2)
-            {
-                UIManager.Instance.mapEditManager.ShowSandWichInfoPopup(selectTile.box);
-                break;
-            }
+            UIManager.Instance.mapEditManager.ShowSandWichInfoPopup(selectTile.box);
         }
     }
     private void OnMouseDownDeleteSpecial()
@@ -444,12 +438,9 @@ public class SpecialMode : MonoBehaviour
         }
         else
         {
-            hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
+            TileSet tileSet = selectTile?.GetComponentInParent<TileSet>();
 
-            if (hit.collider == null) return;
-
-            TileSet tileSet = hit.collider.transform.GetComponent<TileSet>();
-            if (tileSet != null)
+            if (tileSet != null && tileSet.isVisible)
             {
                 tileSet.woodenFenceColliders.SetActive(!tileSet.woodenFenceColliders.activeSelf);
             }
@@ -459,25 +450,14 @@ public class SpecialMode : MonoBehaviour
     public void SetWoodenFence(TileSet tileSet, int woodenFenceIndex)
     {
         WoodenFence woodenFence;
-        if (inactiveWoodenFences.Count > 0)
-        {
-            woodenFence = inactiveWoodenFences[0];
-            inactiveWoodenFences.RemoveAt(0);
-        }
-        else
-        {
-            woodenFence = Instantiate(woodenFencePrefab);
-        }
-
-        activeWoodenFences.Add(woodenFence);
+        woodenFence = Instantiate(woodenFencePrefab, tileSet.transform);
 
         tileSet.woodenFenceShadows[woodenFenceIndex].image.enabled = false;
 
         WoodenFence shadow = tileSet.woodenFenceShadows[woodenFenceIndex];
 
         tileSet.woodenFences[woodenFenceIndex] = woodenFence;
-        woodenFence.gameObject.SetActive(true);
-        woodenFence.transform.SetParent(tileSet.transform);
+
         woodenFence.transform.localScale = shadow.transform.localScale;
         woodenFence.transform.position = shadow.transform.position;
     }
@@ -488,23 +468,13 @@ public class SpecialMode : MonoBehaviour
         tileSet.woodenFences[woodenFenceIndex] = null;
         tileSet.woodenFenceShadows[woodenFenceIndex].image.enabled = true;
 
-        woodenFence.gameObject.SetActive(false);
-        activeWoodenFences.Remove(woodenFence.GetComponent<WoodenFence>());
-        inactiveWoodenFences.Add(woodenFence.GetComponent<WoodenFence>());
+        Destroy(woodenFence.gameObject);
     }
     #endregion
 
     #region Vine
     private void OnClickVine()
     {
-        //Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
-        //RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 9);
-
-        //if (hit.collider == null) return;
-
-        //TileSet tileSet = hit.collider.GetComponent<TileSet>();
-        //if (selectTile == null) return;
-
         TileSet tileSet = selectTile?.GetComponentInParent<TileSet>();
 
         if (tileSet != null && !tileSet.isVisible)
