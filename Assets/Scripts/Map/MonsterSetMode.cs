@@ -19,7 +19,7 @@ public class MonsterSetMode : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            UIManager.Instance.mapEditManager.characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
+            OnMouseDownDeleteMonster();
         }
     }
 
@@ -68,6 +68,28 @@ public class MonsterSetMode : MonoBehaviour
         }
     }
 
+    private void OnMouseDownDeleteMonster()
+    {
+        if (selectedCharacterFromList != null)
+        {
+            UIManager.Instance.mapEditManager.characterList.GetComponent<CharacterList>().OnClickRemoveCharacterInList();
+        }
+        else
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
+
+            if (hit.collider != null)
+            {
+                selectTileSet = hit.collider.transform.GetComponentInParent<TileSet>();
+                if (selectTileSet.character != null)
+                {
+                    DeleteCharacterOnSelectFence();
+                    UIManager.Instance.mapEditManager.HideCharactorInfoPopup();
+                    SetNullToSelectTileSet();
+                }
+            }
+        }
+    }
 
     public void SetNullToSelectTileSet()
     {
