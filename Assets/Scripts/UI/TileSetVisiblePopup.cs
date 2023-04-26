@@ -57,5 +57,25 @@ public class TileSetVisiblePopup : MonoBehaviour
         {
             tiles[index].isOn = !tiles[index].isOn;
         }
+        if (fence.isOn)
+        {
+            MapManager.Instance.SetTileSetVisible(fence.isOn);
+            for (int i = 0; i < 4; i++)
+            {
+                MapManager.Instance.SetTileVisible(i, !tiles[i].isOn);
+            }
+            fence.isOn = false;
+        }
+        int cnt = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if (tiles[i].isOn)
+                cnt++;
+        }
+        if (cnt == 4)
+        {
+            MapManager.Instance.SetTileSetVisible(fence.isOn);
+            fence.isOn = true;
+        }
     }
 }
