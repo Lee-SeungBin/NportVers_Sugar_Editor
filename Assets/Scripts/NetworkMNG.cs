@@ -221,6 +221,7 @@ public class NetworkMNG : MonoBehaviour
             {
                 UIManager.Instance.mapdataMNG.SetVisibleLoading(false);
                 UIManager.Instance.errorPopup.SetMessage("최신 버전입니다.");
+                UIManager.Instance.updateListPopup.SetActive(true);
             }
         }
         request.Dispose();

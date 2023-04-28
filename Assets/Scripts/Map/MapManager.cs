@@ -101,7 +101,8 @@ public class MapManager : MonoBehaviour
                     specialMode.TouchControll();
                     break;
             }
-            if (!UIManager.Instance.loadStagePopup.activeSelf)
+            if (!UIManager.Instance.loadStagePopup.activeSelf &&
+                !UIManager.Instance.updateListPopup.activeSelf)
             {
                 Vector2 wheelInput2 = Input.mouseScrollDelta;
                 if (wheelInput2.y != 0)
