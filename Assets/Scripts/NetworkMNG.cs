@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class NetworkMNG : MonoBehaviour
 {
@@ -159,6 +161,67 @@ public class NetworkMNG : MonoBehaviour
         else
         {
             UIManager.Instance.errorPopup.SetMessage("통신 오류 또는 해당 스테이지는 존재하지 않습니다.");
+        }
+        request.Dispose();
+    }
+
+    public void MapEditDown(string url) => StartCoroutine("MapEditFileDown", url);
+    /// <summary>
+    /// 맵 에디터 폴더에서 파일을 불러와 버전을 체크하고 다운로드 하는 함수
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
+    IEnumerator MapEditFileDown(string url)
+    {
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();
+
+        if (!request.isDone && request.error != null)
+        {
+            UIManager.Instance.errorPopup.SetMessage("통신 오류가 발생하였습니다.");
+        }
+        else
+        {
+            string data = request.downloadHandler.text;
+
+            List<string> filelist = UIManager.Instance.mapdataMNG.SetMapEditorFileList(data);
+            string currentVersion = MapDataMNG.mapEditVersion;
+            string[] latestVersion = null;
+            foreach (string str in filelist)
+            {
+                UnityWebRequest downrequest = UnityWebRequest.Get(url + str);
+                yield return downrequest.SendWebRequest();
+
+                if (!downrequest.isDone && request.error != null)
+                {
+                    UIManager.Instance.errorPopup.SetMessage("통신 오류가 발생하였습니다.");
+                }
+                else
+                {
+                    if (str.Equals("Patch Note.txt"))
+                    {
+                        string patchNote = System.Text.Encoding.UTF8.GetString(downrequest.downloadHandler.data);
+                        latestVersion = patchNote.Split('>');
+                        UIManager.Instance.updateListPopup.transform.Find("Viewport").Find("Content").Find("UpdateList").GetComponent<Text>().text = patchNote;
+                    }
+                    if (latestVersion[0] != currentVersion)
+                    {
+                        File.WriteAllBytes(Application.dataPath + "/" + str, downrequest.downloadHandler.data);
+                    }
+                }
+                downrequest.Dispose();
+            }
+            if (latestVersion[0] != currentVersion)
+            {
+                UIManager.Instance.mapdataMNG.SetVisibleLoading(false);
+                UIManager.Instance.errorPopup.SetMessage("최신 버전이 있습니다.\n" + Application.dataPath + " 폴더에 \n" + latestVersion[0] + "\n버전이 다운로드 되었습니다. 알집을 풀고 새로운 버전을 이용해 주세요.");
+                UIManager.Instance.updateListPopup.SetActive(true);
+            }
+            else
+            {
+                UIManager.Instance.mapdataMNG.SetVisibleLoading(false);
+                UIManager.Instance.errorPopup.SetMessage("최신 버전입니다.");
+            }
         }
         request.Dispose();
     }

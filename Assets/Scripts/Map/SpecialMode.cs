@@ -100,13 +100,20 @@ public class SpecialMode : MonoBehaviour
         }
         else
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10 | 1 << 0);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 0 | 1 << 10);
             if (hit.collider != null)
             {
                 selectTile = hit.collider.transform.GetComponent<Tile>();
                 TileSet selectTileSet = selectTile?.GetComponentInParent<TileSet>();
 
-                if (selectTile?.jelly != null)
+                if (hit.collider.transform.tag == "WoodenFence")
+                {
+                    TileSet woodTileSet = hit.collider.transform.gameObject.GetComponentInParent<TileSet>();
+                    int index = woodTileSet.GetIndexOfFence(hit.collider.transform.GetComponent<WoodenFence>());
+                    if (index == -1) return;
+                    RemoveWoodenFence(woodTileSet, index);
+                }
+                else if (selectTile?.jelly != null)
                 {
                     RemoveJelly(selectTile.jelly);
                 }
@@ -121,13 +128,6 @@ public class SpecialMode : MonoBehaviour
                 else if (selectTileSet?.vine != null)
                 {
                     RemoveVine(selectTileSet.vine);
-                }
-                else if (hit.collider.transform.tag == "WoodenFence")
-                {
-                    TileSet woodTileSet = hit.collider.transform.gameObject.GetComponentInParent<TileSet>();
-                    int index = woodTileSet.GetIndexOfFence(hit.collider.transform.GetComponent<WoodenFence>());
-                    if (index == -1) return;
-                    RemoveWoodenFence(woodTileSet, index);
                 }
             }
         }

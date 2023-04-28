@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     private bool isUIOn;
 
     public GameObject container, stagePosition, mapPosition;
-    public GameObject saveStageWarnningPopup, loadStageWarnningPopup, loadStagePopup;
+    public GameObject saveStageWarnningPopup, loadStageWarnningPopup, loadStagePopup, updateListPopup;
 
     public Dropdown selectModeDropDown, stageType;
 

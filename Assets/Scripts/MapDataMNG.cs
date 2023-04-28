@@ -12,13 +12,17 @@ public class MapDataMNG : MonoBehaviour
     public GameObject loadingPopup, versionUpPopup;
 
     public GameObject stageList, content;
-    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText, DevText;
+    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText, DevText, editVersionText;
     public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
     public Dropdown currentMapType;
     public ScrollRect sr;
 
     public static bool iSDev = false;
-
+    public static string mapEditVersion { get; private set; } = "v1.0.5";
+    private void Awake()
+    {
+        editVersionText.text = "에디터 버전 : " + mapEditVersion;
+    }
     public int mapDataVersion
     {
         get
@@ -230,6 +234,36 @@ public class MapDataMNG : MonoBehaviour
         });
 
         SetVisibleLoading(false);
+    }
+    /// <summary>
+    /// 맵 에디터 다운로드 실행 함수
+    /// </summary>
+    public void MapEditorDownload()
+    {
+        string mapeditUrl = NetworkMNG.instance.ServerMapDataURL + "map_editer/";
+
+        NetworkMNG.instance.MapEditDown(mapeditUrl);
+    }
+    /// <summary>
+    /// html 파싱을 통하여 맵 에디터 폴더에 있는 파일 이름을 리스트에 넣고 반환하는 함수
+    /// </summary>
+    /// <param name="htmldata"> html 데이터 </param>
+    /// <returns> 파일 이름 리스트 </returns>
+    public List<string> SetMapEditorFileList(string htmldata)
+    {
+        HtmlDocument doc = new HtmlDocument();
+        doc.LoadHtml(htmldata);
+
+        List<string> fileList = new List<string>();
+        foreach (HtmlNode tr in doc.DocumentNode.SelectNodes("//table/tr[position() > 3]"))
+        {
+            if (tr.ChildNodes.Count < 4) continue;
+
+            HtmlNode td = tr.ChildNodes[1];
+            string fileName = td.InnerText.Trim();
+            fileList.Add(fileName); // 파일 이름을 리스트에 추가
+        }
+        return fileList;
     }
     public void SetVisibleLoading(bool isActive)
     {
