@@ -18,7 +18,7 @@ public class MapDataMNG : MonoBehaviour
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.0.5";
+    public static string mapEditVersion { get; private set; } = "v1.0.6";
     private void Awake()
     {
         editVersionText.text = "에디터 버전 : " + mapEditVersion;

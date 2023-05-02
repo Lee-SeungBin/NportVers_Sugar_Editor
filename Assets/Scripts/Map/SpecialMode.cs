@@ -501,7 +501,7 @@ public class SpecialMode : MonoBehaviour
         Vine vine = Instantiate(vinePrefab, parent);
 
         vine.transform.localScale = Vector3.one;
-        vine.transform.position = tileSet.transform.position;
+        vine.transform.position = tileSet.transform.position + Vector3.up * 0.223f;
 
         int getvinelayer = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().vinelayer; // 덩굴 레이어 가져오기
 
