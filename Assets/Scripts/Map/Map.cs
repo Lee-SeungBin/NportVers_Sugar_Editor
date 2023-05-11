@@ -347,6 +347,23 @@ public class Map : MonoBehaviour
 
                 if (tileSetDatas[count].code != "x" && !string.IsNullOrEmpty(tileSetDatas[count].code))
                 {
+                    switch (tileSetDatas[count].code) // 예전 맵은 스페셜 몬스터 코드가 달랐음
+                    {
+                        case "SP0001":
+                            tileSetDatas[count].code = "SP1001";
+                            break;
+                        case "SP0002":
+                            tileSetDatas[count].code = "SP1002";
+                            break;
+                        case "SP0003":
+                            tileSetDatas[count].code = "SP1003";
+                            break;
+                        case "SP0004":
+                            tileSetDatas[count].code = "SP1004";
+                            break;
+                        default:
+                            break;
+                    }
                     tileSet.character = Instantiate(mapManager.GetCharacter(tileSetDatas[count].code)).GetComponent<Charactor>();
                     tileSet.character.name = tileSetDatas[count].code;
                     tileSet.character.tileIndex = tileSetDatas[count].position;
