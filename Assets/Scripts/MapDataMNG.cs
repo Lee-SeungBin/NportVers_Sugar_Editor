@@ -12,13 +12,13 @@ public class MapDataMNG : MonoBehaviour
     public GameObject loadingPopup, versionUpPopup;
 
     public GameObject stageList, content;
-    public Text currentVersionText, currentMapTypeText, currentTotalStageText, DevButtonText, DevText, editVersionText;
+    public Text currentVersionText, currentTotalStageText, DevButtonText, DevText, editVersionText;
     public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
-    public Dropdown currentMapType;
+    public Dropdown currentMapType, currentChapter;
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.0.7";
+    public static string mapEditVersion { get; private set; } = "v1.0.8";
     private void Awake()
     {
         editVersionText.text = "에디터 버전 : " + mapEditVersion;

@@ -71,11 +71,11 @@ public class JsonFileMaker : MonoBehaviour
         int tileCount;
         int i, w, h, r, ri;
 
-        //bool isRail = false;
-        //bool isJelly = false;
-        //bool isFrogSoup = false;
-        //bool isBox = false;
-        //bool isVine = false;
+        bool isRail = false;
+        bool isJelly = false;
+        bool isFrogSoup = false;
+        bool isBox = false;
+        bool isVine = false;
 
         for (i = 0; i < mapCount; ++i)
         {
@@ -206,12 +206,18 @@ public class JsonFileMaker : MonoBehaviour
             mapData.vineDatas = GetVineData(maps[i]);
             mapData.nextStageDatas = maps[i].nextStageDatas;
 
+            isRail = mapData.railGroupDatas.Count > 0;
+            isJelly = mapData.jellyDatas.Count > 0;
+            isFrogSoup = mapData.frogSoupDatas.Count > 0;
+            isBox = mapData.boxDatas.Count > 0;
+            isVine = mapData.vineDatas.Count > 0;
+
             mapDatas[i] = mapData;
         }
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
         string jellyCount = uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text;
-        if (int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0) // 현재 젤리만 사용중 젤리 타입 0
+        if (int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0)
         {
             data.obstacles.Add(new Obstacle
             {
@@ -219,42 +225,42 @@ public class JsonFileMaker : MonoBehaviour
                 options = new string[] { jellyTerm, jellyCount }
             });
         }
-        // 아직 사용하지 않는 기능 장애물 옵션 기능 json 저장 형태 obstacles
-        //if (isRail)
-        //{
-        //    data.obstacles.Add(new Obstacle
-        //    {
-        //        type = (int)Enums.OBSTACLE_TYPE.RAIL,
-        //        options = new string[]{ }
-        //    });
-        //}
+        // 클라이언트에서 각 장애물 컨트롤러를 작동 시키려면 반드시 필요한 부분
+        if (isRail)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.RAIL,
+                options = new string[] { }
+            });
+        }
 
-        //if(isFrogSoup)
-        //{
-        //    data.obstacles.Add(new Obstacle
-        //    {
-        //        type = (int)Enums.OBSTACLE_TYPE.FROG_SOUP,
-        //        options = new string[] { }
-        //    });
-        //}
+        if (isFrogSoup)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.FROG_SOUP,
+                options = new string[] { }
+            });
+        }
 
-        //if(isBox)
-        //{
-        //    data.obstacles.Add(new Obstacle
-        //    {
-        //        type = (int)Enums.OBSTACLE_TYPE.BOX,
-        //        options = new string[] { }
-        //    });
-        //}
+        if (isBox)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.BOX,
+                options = new string[] { }
+            });
+        }
 
-        //if(isVine)
-        //{
-        //    data.obstacles.Add(new Obstacle
-        //    {
-        //        type = (int)Enums.OBSTACLE_TYPE.VINE,
-        //        options = new string[] { }
-        //    });
-        //}
+        if (isVine)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.VINE,
+                options = new string[] { }
+            });
+        }
 
         data.mapDatas = mapDatas;
 
