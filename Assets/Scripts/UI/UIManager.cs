@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject container, stagePosition, mapPosition;
     public GameObject saveStageWarnningPopup, loadStageWarnningPopup, loadStagePopup, updateListPopup;
 
-    public Dropdown selectModeDropDown, stageType;
+    public Dropdown selectModeDropDown, stageType, currentChapter;
 
     public Text mapCount, stagePositionText, mapSize;
 

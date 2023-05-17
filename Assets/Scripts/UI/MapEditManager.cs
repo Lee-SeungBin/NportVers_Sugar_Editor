@@ -262,6 +262,7 @@ public class MapEditManager : MonoBehaviour
         gameDataUI.jumpText.text = "0";
         gameDataUI.stageNumber.text = "0";
         gameDataUI.stageType.value = 0;
+        gameDataUI.currentChapter.value = 0;
         gameDataUI.bgDropdown.value = 0;
         gameDataUI.bgmDropdown.value = 0;
         gameDataUI.mapPositionX.text = "0";
@@ -323,5 +324,10 @@ public class MapEditManager : MonoBehaviour
         {
             popups.transform.Find("StageSaveWarnningPopup").Find("DevText").GetComponent<Text>().text = "현재 테스트 서버 입니다.";
         }
+    }
+
+    public void CheckSaveMapType()
+    {
+        UIManager.Instance.currentChapter.gameObject.SetActive(UIManager.Instance.stageType.captionText.text == "mushroom");
     }
 }

@@ -14,7 +14,17 @@ public class LoadStageList : MonoBehaviour
         string StageNumber = loadListText.text;
 
         string mapFolder = mapType + "/";
-        string mapName = "stage_" + StageNumber + "_1.json";
+        string mapName;
+        if (mapType == "mushroom" && UIManager.Instance.mapdataMNG.currentChapter.gameObject.activeSelf)
+        {
+            mapName = "stage_" + StageNumber + "_" + (UIManager.Instance.mapdataMNG.currentChapter.value + 1).ToString() + ".json";
+        }
+        else
+        {
+            mapName = "stage_" + StageNumber + "_1.json";
+        }
+
+
 
         mapUrl += mapFolder + mapName;
 

@@ -13,12 +13,12 @@ public class MapDataMNG : MonoBehaviour
 
     public GameObject stageList, content;
     public Text currentVersionText, currentTotalStageText, DevButtonText, DevText, editVersionText;
-    public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageVersionText;
+    public Text updateStageList_normal_Text, updateStageList_ranking_Text, updateStageList_tutorial_Text, updateStageList_mushroom_Text, updateStageVersionText;
     public Dropdown currentMapType, currentChapter;
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.0.8";
+    public static string mapEditVersion { get; private set; } = "v1.0.9";
     private void Awake()
     {
         editVersionText.text = "에디터 버전 : " + mapEditVersion;
@@ -44,11 +44,10 @@ public class MapDataMNG : MonoBehaviour
     {
         NetworkMNG.instance.StartNetworking(true, "user_info/map_check", null, (result) =>
         {
-            //Debug.Log(JObject.Parse(result));
+
             JObject jo = JObject.Parse(result);
 
             currentVersionText.text = jo["latest_version"].ToString();
-            currentMapTypeText.text = currentMapType.captionText.text;
             ShowStageList("Load");
         });
 
@@ -70,7 +69,17 @@ public class MapDataMNG : MonoBehaviour
         }
 
         string mapFolder = mapType.ToString() + "/";
-        string mapName = "stage_" + StageNumber + "_1.json";
+        string mapName = "";
+        if (currentChapter.gameObject.activeSelf)
+        {
+            mapName = "stage_" + StageNumber + "_" + (currentChapter.value + 1).ToString() + ".json";
+        }
+        else
+        {
+            mapName = "stage_" + StageNumber + "_1.json";
+        }
+
+
 
         mapUrl += mapFolder + mapName;
 
@@ -90,23 +99,31 @@ public class MapDataMNG : MonoBehaviour
             SetVisibleLoading(false);
             return;
         }
-
+        int chapter = UIManager.Instance.currentChapter.gameObject.activeSelf ? UIManager.Instance.currentChapter.value + 1 : 1;
         List<IMultipartFormSection> form = new List<IMultipartFormSection>();
 
         form.Add(new MultipartFormDataSection("stage_number", jsonFileMaker.stageNumber.text));
         form.Add(new MultipartFormDataSection("map_data", jsonData));
         form.Add(new MultipartFormDataSection("mode", UIManager.Instance.stageType.value.ToString()));
-
+        form.Add(new MultipartFormDataSection("chapter", chapter.ToString()));
         NetworkMNG.instance.StartNetworking(true, "map_edit/map_upload", form, (result) =>
         {
             //Debug.Log(JObject.Parse(result));
             JObject jo = JObject.Parse(result);
-
+            Debug.Log(result);
             string result_code = jo["result"].ToString();
-
+            string stagenumber = jo["stage_number"].ToString();
+            string chapter = jo["chapter"].ToString();
+            string mode = jo["mode"].ToString();
             if (result_code == "r8001") // 업로드 성공
             {
-                UIManager.Instance.errorPopup.SetMessage("맵 업로드에 성공했습니다. 해당 맵의 스테이지는 " + jsonFileMaker.stageNumber.text + "입니다. 버전 업데이트를 꼭 눌러주세요.");
+                string message = "맵 업로드에 성공했습니다. 해당 맵은 " + UIManager.Instance.stageType.captionText.text + "타입";
+                if (UIManager.Instance.stageType.value == 3)
+                {
+                    message += " " + UIManager.Instance.currentChapter.captionText.text;
+                }
+                message += "의 " + jsonFileMaker.stageNumber.text + "스테이지 입니다. 버전 업데이트를 꼭 눌러주세요.";
+                UIManager.Instance.errorPopup.SetMessage(message);
             }
             else if (result_code == "r8002") // 업로드 실패
             {
@@ -127,6 +144,8 @@ public class MapDataMNG : MonoBehaviour
     {
         string mapUrl = NetworkMNG.instance.ServerMapDataURL;
         string mapType = currentMapType.captionText.text;
+
+        currentChapter.gameObject.SetActive(mapType == "mushroom");
 
         string mapFolder = mapType.ToString() + "/";
 
@@ -172,23 +191,47 @@ public class MapDataMNG : MonoBehaviour
             // 파일명에서 스테이지 번호를 추출
             string[] splitName = fileName.Split('_');
             string stageNumber = splitName[1];
+            string fileExtension = ".json";
+            string chapter = splitName[2].Replace(fileExtension, "");
 
             if (check == "Load")
             {
-                GameObject newList = Instantiate(stageList, content.transform);
-                newList.GetComponent<LoadStageList>().loadListText.text = stageNumber;
-                totalMapCnt++;
-                currentTotalStageText.text = totalMapCnt.ToString();
+                if (currentChapter.gameObject.activeSelf && int.Parse(chapter) == currentChapter.value + 1)
+                {
+                    GameObject newList = Instantiate(stageList, content.transform);
+                    newList.GetComponent<LoadStageList>().loadListText.text = stageNumber;
+                    totalMapCnt++;
+                    currentTotalStageText.text = totalMapCnt.ToString();
+                }
+                else if (!currentChapter.gameObject.activeSelf)
+                {
+                    GameObject newList = Instantiate(stageList, content.transform);
+                    newList.GetComponent<LoadStageList>().loadListText.text = stageNumber;
+                    totalMapCnt++;
+                    currentTotalStageText.text = totalMapCnt.ToString();
+                }
             }
             if (check == "Save")
             {
                 if (UIManager.Instance.mapEditManager.jsonSaveButton.GetComponent<JsonFileMaker>().stageNumber.text == stageNumber)
                 {
-                    UIManager.Instance.saveStageWarnningPopup.SetActive(true);
-                    UIManager.Instance.saveStageWarnningPopup.transform.Find("duplicateStage").GetComponent<Text>().text = stageNumber;
-                    UIManager.Instance.saveStageWarnningPopup.transform.Find("lastModified").GetComponent<Text>().text = lastModified;
-                    flag = true;
-                    break;
+                    Debug.Log(chapter);
+                    if (UIManager.Instance.currentChapter.gameObject.activeSelf && (UIManager.Instance.currentChapter.value + 1) == int.Parse(chapter))
+                    {
+                        UIManager.Instance.saveStageWarnningPopup.SetActive(true);
+                        UIManager.Instance.saveStageWarnningPopup.transform.Find("duplicateStage").GetComponent<Text>().text = stageNumber;
+                        UIManager.Instance.saveStageWarnningPopup.transform.Find("lastModified").GetComponent<Text>().text = lastModified;
+                        flag = true;
+                        break;
+                    }
+                    else if (!UIManager.Instance.currentChapter.gameObject.activeSelf)
+                    {
+                        UIManager.Instance.saveStageWarnningPopup.SetActive(true);
+                        UIManager.Instance.saveStageWarnningPopup.transform.Find("duplicateStage").GetComponent<Text>().text = stageNumber;
+                        UIManager.Instance.saveStageWarnningPopup.transform.Find("lastModified").GetComponent<Text>().text = lastModified;
+                        flag = true;
+                        break;
+                    }
                 }
             }
         }
@@ -210,6 +253,7 @@ public class MapDataMNG : MonoBehaviour
             string normalStage = jo["stage_normal"].ToString();
             string rankingStage = jo["stage_ranking"].ToString();
             string tutorialStage = jo["stage_tutorial"].ToString();
+            string mushroomStage = jo["stage_mushroom"].ToString();
 
             if (result_code == "r8011") // 업로드 성공
             {
@@ -218,6 +262,7 @@ public class MapDataMNG : MonoBehaviour
                 updateStageList_normal_Text.text = normalStage;
                 updateStageList_ranking_Text.text = rankingStage;
                 updateStageList_tutorial_Text.text = tutorialStage;
+                updateStageList_mushroom_Text.text = mushroomStage;
             }
             else if (result_code == "r8012") // 업로드 실패
             {
@@ -278,6 +323,7 @@ public class MapDataMNG : MonoBehaviour
         updateStageList_normal_Text.text = "";
         updateStageList_ranking_Text.text = "";
         updateStageList_tutorial_Text.text = "";
+        updateStageList_mushroom_Text.text = "";
         updateStageVersionText.text = "";
     }
     public void CloseStageList()
