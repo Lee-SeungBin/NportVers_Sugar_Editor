@@ -70,8 +70,8 @@ public class NetworkMNG : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-
         SettingUrlPass();
+        UIManager.Instance.mapdataMNG.MapEditorDownload();
     }
 
     public static void SettingUrlPass()

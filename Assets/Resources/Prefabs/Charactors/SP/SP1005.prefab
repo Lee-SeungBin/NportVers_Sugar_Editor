@@ -78,7 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: -1175901501
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 234980757, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -2508346363120972071, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,6 +207,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2119832843067809760}
     m_Modifications:
+    - target: {fileID: 245355112539240579, guid: 9649c04d553f1954f844bdb25d6b4f5d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1027406319542974351, guid: 9649c04d553f1954f844bdb25d6b4f5d,
         type: 3}
       propertyPath: m_Name

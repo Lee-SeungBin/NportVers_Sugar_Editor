@@ -4654,7 +4654,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -545923228, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -8632937563918824392, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32348,7 +32349,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -431894510, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -3742085573835528133, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41349,7 +41351,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 219605947, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: 2322408143909122245, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41853,7 +41856,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -575067822, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -7908778448617406841, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -49756,7 +49760,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 234980757, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -2508346363120972071, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -53188,7 +53193,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -952162032, guid: 8b1be23d60ff50c47a801f7f18ca2487, type: 3}
+  m_Sprite: {fileID: -6922894933509854462, guid: 6356ddc62f3cd424fb4127157a41acb2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -58483,16 +58489,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 526759748}
-    - target: {fileID: 2223040023044927204, guid: 9c17ec8ef83cb4841850c617298048fe,
-        type: 3}
-      propertyPath: m_Text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2513383190936961107, guid: 9c17ec8ef83cb4841850c617298048fe,
-        type: 3}
-      propertyPath: m_Text
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9001821159593112314, guid: 9c17ec8ef83cb4841850c617298048fe,
         type: 3}
       propertyPath: missionPopup
