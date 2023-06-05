@@ -118,6 +118,7 @@
     <None Include="Assets\Resources\Sprites\Sheet\Game\Main_tutorial.xml" />
     <None Include="Assets\Resources\Sprites\tutorial.xml" />
     <None Include="Assets\Resources\Sprites\Sheet\Game\game_effect.xml" />
+    <None Include="Assets\Resources\Sprites\Character\Character_Production.xml" />
     <None Include="Assets\Resources\Sprites\Sheet\Game\game.xml" />
     <None Include="Assets\Resources\Sprites\GameBGs.xml" />
     <None Include="Assets\Plugin\LitJson.dll" />

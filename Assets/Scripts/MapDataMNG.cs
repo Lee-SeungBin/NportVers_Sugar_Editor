@@ -286,7 +286,8 @@ public class MapDataMNG : MonoBehaviour
     public void MapEditorDownload()
     {
         string mapeditUrl = NetworkMNG.instance.ServerMapDataURL + "map_editer/";
-
+        if (iSDev)
+            mapeditUrl = "http://puzzle-sugar-flavor.com:80/sugarmonster/public_html/map_data/" + "map_editer/";
         NetworkMNG.instance.MapEditDown(mapeditUrl);
     }
     /// <summary>
