@@ -217,6 +217,14 @@ public class JsonFileMaker : MonoBehaviour
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
         string jellyCount = uIManager.mapEditManager.obstacleOptionPopup.jellyCount.text;
+        if (isJelly)
+        {
+            data.obstacles.Add(new Obstacle
+            {
+                type = (int)Enums.OBSTACLE_TYPE.JELLY,
+                options = new string[] { }
+            });
+        }
         if (int.Parse(jellyTerm) > 0 && int.Parse(jellyCount) > 0)
         {
             data.obstacles.Add(new Obstacle
@@ -225,6 +233,7 @@ public class JsonFileMaker : MonoBehaviour
                 options = new string[] { jellyTerm, jellyCount }
             });
         }
+
         // 클라이언트에서 각 장애물 컨트롤러를 작동 시키려면 반드시 필요한 부분
         if (isRail)
         {

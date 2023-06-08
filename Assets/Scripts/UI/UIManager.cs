@@ -164,7 +164,7 @@ public class UIManager : MonoBehaviour
 
         for (int i = 0; i < StageInfo.data.obstacles.Count; ++i)
         {
-            if (StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY)
+            if ((StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY) && StageInfo.data.obstacles[i].options.Length != 0)
             {
                 obstacleOptionPopup.jellyTerm.text = StageInfo.data.obstacles[i].options[0].ToString();
                 obstacleOptionPopup.jellyCount.text = StageInfo.data.obstacles[i].options[1].ToString();

@@ -71,6 +71,7 @@ public class NetworkMNG : MonoBehaviour
     {
         _instance = this;
         SettingUrlPass();
+        UIManager.Instance.mapdataMNG.SetVisibleLoading(true);
         UIManager.Instance.mapdataMNG.MapEditorDownload();
     }
 
