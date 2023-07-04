@@ -190,8 +190,6 @@ public class SpecialMode : MonoBehaviour
 
     public void SetFrogSoup(Transform parent, Tile tile)
     {
-        if (tile.box != null) return;
-
         FrogSoup frogSoup = Instantiate(frogSoupPrefab, parent);
         frogSoup.transform.position = tile.transform.position + Vector3.up * 0.119f;
 
@@ -232,8 +230,7 @@ public class SpecialMode : MonoBehaviour
     public void SetBox(Transform parent, Tile tile)
     {
         if (tile.character != null ||
-            tile.jelly != null ||
-            tile.frogSoup != null) return;
+            tile.jelly != null) return;
 
         Box box = Instantiate(boxPrefab, parent);
         box.transform.position = tile.transform.position;
