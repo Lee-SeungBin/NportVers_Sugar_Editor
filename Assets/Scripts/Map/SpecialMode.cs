@@ -287,7 +287,7 @@ public class SpecialMode : MonoBehaviour
 
     public void ChangeBox(Box box, int layer, int types)
     {
-        //Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
+        Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
         //if (types == 0)
         //{
         //    switch (layer)
@@ -305,7 +305,7 @@ public class SpecialMode : MonoBehaviour
         //}
         if (types == 1)
         {
-            box.GetComponentInChildren<SpriteRenderer>().sprite = box.boxsprite[8];
+            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[8];
         }
         else if (types == 2)
         {
