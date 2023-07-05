@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5862251554700968119}
   - component: {fileID: 5862251554700968122}
   - component: {fileID: 5509152289939485534}
+  - component: {fileID: 3012076725805485119}
   m_Layer: 0
   m_Name: WoodenFence
   m_TagString: WoodenFence
@@ -76,6 +77,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 5831759651552892704}
+--- !u!210 &3012076725805485119
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862251554700968116}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1 &7430394294550358066
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,9 +158,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -639866871
-  m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2542998166704662451, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -17,6 +17,12 @@ public class SpecialMode : MonoBehaviour
     private Box boxPrefab;
 
     [SerializeField]
+    private Box box3Prefab;
+
+    [SerializeField]
+    private Box box5Prefab;
+
+    [SerializeField]
     private WoodenFence woodenFencePrefab;
 
     [SerializeField]
@@ -153,7 +159,7 @@ public class SpecialMode : MonoBehaviour
 
         jelly.transform.SetParent(parent);
         jelly.transform.localScale = Vector3.one;
-        jelly.transform.position = tile.transform.position;
+        jelly.transform.position = tile.transform.position + (Vector3.up * 0.119f);
 
         jelly.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
         jelly.tileIndex = tile.tileIndex;
@@ -232,10 +238,22 @@ public class SpecialMode : MonoBehaviour
         if (tile.character != null ||
             tile.jelly != null) return;
 
-        Box box = Instantiate(boxPrefab, parent);
-        box.transform.position = tile.transform.position;
+        Box box;
 
         var specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
+        if (specialList.boxlayer == 3 && specialList.boxtype == 0)
+        {
+            box = Instantiate(box3Prefab, parent);
+        }
+        else if (specialList.boxlayer == 5 && specialList.boxtype == 0)
+        {
+            box = Instantiate(box5Prefab, parent);
+        }
+        else
+        {
+            box = Instantiate(boxPrefab, parent);
+        }
+        box.transform.position = tile.transform.position + Vector3.up * 0.119f;
         box.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
         box.tileIndex = tile.tileIndex;
         box.boxLayer = specialList.boxlayer;
@@ -250,7 +268,7 @@ public class SpecialMode : MonoBehaviour
             specialList.SelectEmtpy();
         }
 
-        ChangeSpriteBox(box, box.boxLayer, box.boxTypes);
+        ChangeBox(box, box.boxLayer, box.boxTypes);
 
         tile.box = box;
         box.tile = tile;
@@ -267,27 +285,27 @@ public class SpecialMode : MonoBehaviour
         Destroy(box.gameObject);
     }
 
-    public void ChangeSpriteBox(Box box, int layer, int types)
+    public void ChangeBox(Box box, int layer, int types)
     {
-        Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
-        if (types == 0)
+        //Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
+        //if (types == 0)
+        //{
+        //    switch (layer)
+        //    {
+        //        case 1:
+        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[2];
+        //            break;
+        //        case 3:
+        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[4];
+        //            break;
+        //        case 5:
+        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[5];
+        //            break;
+        //    }
+        //}
+        if (types == 1)
         {
-            switch (layer)
-            {
-                case 1:
-                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[2];
-                    break;
-                case 3:
-                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[4];
-                    break;
-                case 5:
-                    box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[5];
-                    break;
-            }
-        }
-        else if (types == 1)
-        {
-            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[8];
+            box.GetComponentInChildren<SpriteRenderer>().sprite = box.boxsprite[8];
         }
         else if (types == 2)
         {

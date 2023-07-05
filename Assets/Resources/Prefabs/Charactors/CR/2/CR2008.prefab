@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1425102317352566586}
   - component: {fileID: 2720807809992250605}
   - component: {fileID: 832438437394617536}
+  - component: {fileID: -5135119276655694687}
   m_Layer: 9
   m_Name: CR2008
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -332554992449463402, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 7
   star: {fileID: 5566637708778546542}
   ice: {fileID: 5459946636655603180}
   particle: {fileID: 749530233933855671}
-  characterType: 7
+--- !u!210 &-5135119276655694687
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054309302933498627}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &298584873937095736
 PrefabInstance:
   m_ObjectHideFlags: 0

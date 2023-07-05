@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3104945067233310722}
   - component: {fileID: 3335524677424453785}
   - component: {fileID: 6123597069139576292}
+  - component: {fileID: -129101646540267799}
   m_Layer: 9
   m_Name: BR1007
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1329456851764401532, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 6
   star: {fileID: 8728095143573831114}
   ice: {fileID: 1141241340684698993}
   particle: {fileID: 7998494512976010088}
-  characterType: 6
+--- !u!210 &-129101646540267799
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964895225984459741}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &4277327178844216189
 PrefabInstance:
   m_ObjectHideFlags: 0

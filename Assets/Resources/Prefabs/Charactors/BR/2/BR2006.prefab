@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2434014353420463738}
   - component: {fileID: 6635135633653170449}
   - component: {fileID: 6878551891523148337}
+  - component: {fileID: -8107490460942026236}
   m_Layer: 9
   m_Name: BR2006
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -7589393223492023068, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 5
   star: {fileID: 3807811409965129339}
   ice: {fileID: 9078952915109178980}
   particle: {fileID: 5581022373246327057}
-  characterType: 5
+--- !u!210 &-8107490460942026236
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756471746242373752}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &4414627944013512905
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 483951901918517100}
   - component: {fileID: 483951901918517089}
   - component: {fileID: 483951901918517102}
+  - component: {fileID: 4542193438580412782}
   m_Layer: 9
   m_Name: FrogSoup
   m_TagString: FrogSoup
@@ -78,6 +79,17 @@ MonoBehaviour:
   fenceIndex: 0
   tileIndex: 0
   tile: {fileID: 0}
+--- !u!210 &4542193438580412782
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483951901918517103}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: -2
 --- !u!1 &6315471721748842773
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,8 +160,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -639866871
-  m_SortingLayer: 3
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: -4250112069009366260, guid: 43abcda8deb963e4cbffcfb4cea349e5,
     type: 3}

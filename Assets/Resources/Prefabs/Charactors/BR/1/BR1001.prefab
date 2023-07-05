@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5976283617293912365}
   - component: {fileID: 3046884504444277543}
   - component: {fileID: 2542857761903628000}
+  - component: {fileID: -3399272395527615043}
   m_Layer: 9
   m_Name: BR1001
   m_TagString: Untagged
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 0
   star: {fileID: 4739994239970312625}
   ice: {fileID: 633073578129150614}
   particle: {fileID: 2084341121581511303}
-  characterType: 0
+--- !u!210 &-3399272395527615043
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161244068095592054}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &268990605276849926
 PrefabInstance:
   m_ObjectHideFlags: 0

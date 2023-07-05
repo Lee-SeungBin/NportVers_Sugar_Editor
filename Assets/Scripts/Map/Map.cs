@@ -291,7 +291,8 @@ public class Map : MonoBehaviour
     }
     public void SetLoadMap(MapManager mapManager, MapData data, int mapIndex)
     {
-        UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype = 0;
+        SpecialList specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
+        specialList.boxtype = 0;
         this.width = data.width;
         this.height = data.height;
         this.index = mapIndex;
@@ -407,6 +408,8 @@ public class Map : MonoBehaviour
         for (w = 0; w < data.boxDatas.Count; ++w)
         {
             tile = tileSets[int.Parse(data.boxDatas[w].fenceIndex) / height][int.Parse(data.boxDatas[w].fenceIndex) % height].tiles[int.Parse(data.boxDatas[w].tileIndex)].GetComponent<Tile>();
+            specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
+            specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
             MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
             if (data.boxDatas[w].boxTypes != null)
                 tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
@@ -414,7 +417,7 @@ public class Map : MonoBehaviour
                 tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
             if (data.boxDatas[w].boxTier != null)
                 tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
-            MapManager.Instance.specialMode.ChangeSpriteBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
+            MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
         }
 
         for (w = 0; w < data.vineDatas.Count; ++w)

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3565091372051738193}
   - component: {fileID: 5314542984727196763}
   - component: {fileID: 4666769725611714972}
+  - component: {fileID: -63549769573296637}
   m_Layer: 9
   m_Name: CH1001
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 2962319721904649747, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 0
   star: {fileID: 2472034579874735821}
   ice: {fileID: 7728345113875494378}
   particle: {fileID: 2356205499592634323}
-  characterType: 0
+--- !u!210 &-63549769573296637
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65408255316746506}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &3169860980495129415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,7 +184,7 @@ PrefabInstance:
     - target: {fileID: 3222229139052715389, guid: 635272c33f645b741a811ac527134934,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3569563875851583360, guid: 635272c33f645b741a811ac527134934,
         type: 3}
@@ -209,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 245355112539240579, guid: 9649c04d553f1954f844bdb25d6b4f5d,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1027406319542974351, guid: 9649c04d553f1954f844bdb25d6b4f5d,
         type: 3}
@@ -295,7 +307,7 @@ PrefabInstance:
     - target: {fileID: 153722747029204203, guid: d1da513360d0a6d47bb7224c3d12fb4c,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1276668274740734267, guid: d1da513360d0a6d47bb7224c3d12fb4c,
         type: 3}

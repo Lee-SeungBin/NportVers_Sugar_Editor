@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4138074269248614007}
   - component: {fileID: 4953540690555715868}
   - component: {fileID: 5179061743552256572}
+  - component: {fileID: 3976088635879320731}
   m_Layer: 9
   m_Name: CH2006
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3858457931492261620, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 5
   star: {fileID: 3202675037812153974}
   ice: {fileID: 7301694155095223913}
   particle: {fileID: 8186658417768710646}
-  characterType: 5
+--- !u!210 &3976088635879320731
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290768757208000629}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &2731951107245539524
 PrefabInstance:
   m_ObjectHideFlags: 0

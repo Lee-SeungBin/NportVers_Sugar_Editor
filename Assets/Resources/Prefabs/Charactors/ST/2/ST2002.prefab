@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8279248339094062798}
   - component: {fileID: 3447599333224807361}
   - component: {fileID: 2867500951981697570}
+  - component: {fileID: -4948760540517920783}
   m_Layer: 9
   m_Name: ST2002
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -723827351739088994, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 1
   star: {fileID: 2168678875497589007}
   ice: {fileID: 8011584434898137104}
   particle: {fileID: 3799649377839296524}
-  characterType: 1
+--- !u!210 &-4948760540517920783
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757374889249983781}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &3428328605862780605
 PrefabInstance:
   m_ObjectHideFlags: 0

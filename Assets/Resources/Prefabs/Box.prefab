@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5250304265338699114}
-  - component: {fileID: 5250304265338699111}
   - component: {fileID: 2719923360436713887}
+  - component: {fileID: 5250304265338699111}
+  - component: {fileID: -5780609064088756919}
   m_Layer: 9
   m_Name: Box
   m_TagString: Box
@@ -34,6 +35,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2719923360436713887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250304265338699113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a37b3f4a7aac14892df73dca010174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fenceIndex: 0
+  tileIndex: 0
+  boxLayer: 1
+  boxTypes: 0
+  boxTier: 
+  boxsprite:
+  - {fileID: -674415033804269254, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: 5940932675678284840, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -2526321687524810148, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -5025544016754360798, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: 2880729775690283345, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  - {fileID: -6193577111578046878, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  tile: {fileID: 0}
 --- !u!60 &5250304265338699111
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -63,31 +89,17 @@ PolygonCollider2D:
       - {x: -0.50386906, y: 0.054167073}
       - {x: 0, y: -0.25357097}
       - {x: 0.50773823, y: 0.058036316}
---- !u!114 &2719923360436713887
-MonoBehaviour:
+--- !u!210 &-5780609064088756919
+SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5250304265338699113}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a37b3f4a7aac14892df73dca010174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fenceIndex: 0
-  tileIndex: 0
-  boxLayer: 0
-  boxTypes: 0
-  boxTier: 
-  boxsprite:
-  - {fileID: -674415033804269254, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  - {fileID: 5940932675678284840, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  - {fileID: -2526321687524810148, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  - {fileID: -5025544016754360798, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  - {fileID: 2880729775690283345, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  - {fileID: -6193577111578046878, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
-  tile: {fileID: 0}
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1 &9122082199415723503
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,9 +170,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -639866871
-  m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5150363793092239320, guid: 43abcda8deb963e4cbffcfb4cea349e5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

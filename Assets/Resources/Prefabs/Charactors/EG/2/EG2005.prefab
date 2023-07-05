@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2874209758541012197}
   - component: {fileID: 1791517188479505396}
   - component: {fileID: 2192238942484487631}
+  - component: {fileID: 3510251414550567782}
   m_Layer: 9
   m_Name: EG2005
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1175901501
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1941122782179662323, guid: 7b32ae9fd7dc2634da7d6ef35cc05909,
     type: 3}
@@ -103,10 +104,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSetIndex: 0
   tileIndex: 0
+  characterType: 4
   star: {fileID: 31840246043535856}
   ice: {fileID: 2065801100200962509}
   particle: {fileID: 1410947460318725526}
-  characterType: 4
+--- !u!210 &3510251414550567782
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8178679305104340585}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &2150088012909785625
 PrefabInstance:
   m_ObjectHideFlags: 0

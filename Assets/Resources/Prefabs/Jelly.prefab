@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3058563785062136159}
   - component: {fileID: 7305893308567686902}
   - component: {fileID: 2087806916074644534}
+  - component: {fileID: -382892088717641703}
   m_Layer: 0
   m_Name: Jelly
   m_TagString: Jelly
@@ -75,6 +76,17 @@ MonoBehaviour:
   fenceIndex: 0
   tileIndex: 0
   tile: {fileID: 0}
+--- !u!210 &-382892088717641703
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058563785062136156}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1 &8890233412232128294
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: -1175901501
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300196, guid: 86bcf1c8b2d865a4d915869e738ef0ec, type: 3}
+  m_Sprite: {fileID: 21301424, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
