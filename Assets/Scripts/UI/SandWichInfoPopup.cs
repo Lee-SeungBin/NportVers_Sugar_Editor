@@ -33,7 +33,7 @@ public class SandWichInfoPopup : MonoBehaviour
 
     public void OnCreateTaste()
     {
-        MapManager.Instance.CrateTasteOfBox();
+        MapManager.Instance.CreateTasteOfBox();
     }
     public void OnChangeTastePopup()
     {

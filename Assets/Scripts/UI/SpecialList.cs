@@ -53,23 +53,27 @@ public class SpecialList : MonoBehaviour
         if (boxLayer == 1)
             UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX]);
         else if (boxLayer == 3)
-            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[4]);
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX3]);
         else if (boxLayer == 5)
-            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[5]); // 추후 수정 예정 specialSprites[]
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.BOX5]);
         boxlayer = boxLayer;
     }
     public void SelectBoxtype(int boxType)
     {
         if (boxType == 1)
-            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[8]);
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.HAMBURGER]);
         else if (boxType == 2)
-            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[7]);
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.SANDWICH]);
+        else if (boxType == 3)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.GIFTBOX]);
+        else if (boxType == 4)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.CHURROS]);
         boxtype = boxType;
     }
 
     public void SelectVine(int vineLayer)
     {
-        UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.VINE, specialSprites[6]);
+        UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.VINE, specialSprites[(int)Enums.SPECIAL_TYPE.VINE]);
         vinelayer = vineLayer;
     }
 }

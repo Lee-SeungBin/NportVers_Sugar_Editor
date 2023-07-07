@@ -296,7 +296,7 @@ public class MapManager : MonoBehaviour
     {
         monsterSetMode.ChangeDirectionOfCharactor(isRightDirection);
     }
-    public void CrateTasteOfBox()
+    public void CreateTasteOfBox()
     {
         specialMode.CreateTasteOfBox();
     }
@@ -315,6 +315,18 @@ public class MapManager : MonoBehaviour
     public void DestroyTasteOfBox()
     {
         specialMode.DestroyTasteOfBox();
+    }
+    public void CreateChurros()
+    {
+        specialMode.CreateChurros();
+    }
+    public void DeleteChurros()
+    {
+        specialMode.DeleteChurros();
+    }
+    public void ChangeDirectionChurros(bool isRightDirection)
+    {
+        specialMode.ChangeDirectionChurros(isRightDirection);
     }
     public bool IsAbleToChangeToUserFence()
     {

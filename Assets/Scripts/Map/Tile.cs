@@ -3,7 +3,8 @@
 public class Tile : MonoBehaviour
 {
     public int tileIndex;
-
+    public int tileW;
+    public int tileH;
     public Charactor character
     {
         get
@@ -30,5 +31,11 @@ public class Tile : MonoBehaviour
             _isVisible = value;
             GetComponent<SpriteRenderer>().color = value ? Color.white : new Color(1, 1, 1, 0.3f);
         }
+    }
+
+    public void SetTileText(int w, int h)
+    {
+        tileW = w;
+        tileH = h;
     }
 }

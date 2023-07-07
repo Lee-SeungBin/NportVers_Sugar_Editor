@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="test.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="심볼 1 복사본 40 인스턴스 10000" x="0" y="0" width="113" height="94" pivotX="0" pivotY="0"/>
+	<SubTexture name="심볼 1 복사본 40 인스턴스 10001" x="115" y="0" width="113" height="94"/>
+	<SubTexture name="심볼 1 복사본 40 인스턴스 10002" x="230" y="0" width="113" height="94"/>
+	<SubTexture name="심볼 1 복사본 40 인스턴스 10003" x="345" y="0" width="113" height="94"/>
+</TextureAtlas>

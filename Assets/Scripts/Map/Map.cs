@@ -17,7 +17,7 @@ public class Map : MonoBehaviour
     public int height;
 
     public List<List<TileSet>> tileSets;
-
+    public List<List<Tile>> Tiles { get; protected set; }
     public RailManager railManager;
 
     public List<Jelly> jellys = new List<Jelly>();
@@ -71,7 +71,8 @@ public class Map : MonoBehaviour
         this.index = index;
 
         tileSets = new List<List<TileSet>>();
-
+        Tiles = new List<List<Tile>>();
+        int tileWIndex, tileWIndex2, tileIndex;
         int w, h;
 
         TileSet tileSet;
@@ -85,6 +86,12 @@ public class Map : MonoBehaviour
         {
             tileSets.Add(new List<TileSet>());
 
+            Tiles.Add(new List<Tile>());
+            Tiles.Add(new List<Tile>());
+
+            tileWIndex = w * 2;
+            tileWIndex2 = tileWIndex + 1;
+            tileIndex = 0;
             for (h = 0; h < height; ++h)
             {
                 tileSet = Instantiate(mapManager.tileSet).GetComponent<TileSet>();
@@ -94,6 +101,34 @@ public class Map : MonoBehaviour
                 tileSet.transform.localPosition = new Vector2((h - w) * TileSetW, ((w + h) * -TileSetH));
                 tileSet.SetTheme();
                 tileSets[w].Add(tileSet);
+
+                if (tileSet.tiles[1] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[1]);
+                    tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[0] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[0]);
+                    tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
+
+                if (tileSet.tiles[2] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[2]);
+                    tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[3] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[3]);
+                    tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
                 ++count;
             }
         }
@@ -111,6 +146,55 @@ public class Map : MonoBehaviour
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
 
+    public void TileWHCreate(MapManager mapManager, int width, int height)
+    {
+
+        tileSets = new List<List<TileSet>>();
+        int tileWIndex, tileWIndex2, tileIndex;
+        int w, h;
+
+        TileSet tileSet;
+
+
+        for (w = 0; w < width; ++w)
+        {
+            tileSets.Add(new List<TileSet>());
+
+            tileWIndex = w * 2;
+            tileWIndex2 = tileWIndex + 1;
+            tileIndex = 0;
+            for (h = 0; h < height; ++h)
+            {
+                tileSet = mapManager.tileSet.GetComponent<TileSet>();
+                tileSets[w].Add(tileSet);
+
+                if (tileSet.tiles[1] != null)
+                {
+                    tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[0] != null)
+                {
+                    tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
+
+                if (tileSet.tiles[2] != null)
+                {
+                    tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[3] != null)
+                {
+                    tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
+
+            }
+        }
+    }
 
     public void ModifyMap(MapManager mapManager, int modifyWidth, int modifyHeight, int index)
     {
@@ -298,7 +382,8 @@ public class Map : MonoBehaviour
         this.index = mapIndex;
 
         tileSets = new List<List<TileSet>>();
-
+        Tiles = new List<List<Tile>>();
+        int tileWIndex, tileWIndex2, tileIndex;
         int w, h;
 
         TileSet tileSet;
@@ -314,7 +399,11 @@ public class Map : MonoBehaviour
         for (w = 0; w < width; ++w)
         {
             tileSets.Add(new List<TileSet>());
-
+            Tiles.Add(new List<Tile>());
+            Tiles.Add(new List<Tile>());
+            tileWIndex = w * 2;
+            tileWIndex2 = tileWIndex + 1;
+            tileIndex = 0;
             for (h = 0; h < height; ++h)
             {
                 tileSet = Instantiate(mapManager.tileSet).GetComponent<TileSet>();
@@ -380,6 +469,33 @@ public class Map : MonoBehaviour
 
                 tileSets[w].Add(tileSet);
 
+                if (tileSet.tiles[1] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[1]);
+                    tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[0] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[0]);
+                    tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
+
+                if (tileSet.tiles[2] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[2]);
+                    tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[3] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[3]);
+                    tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
                 ++count;
             }
         }
@@ -409,7 +525,8 @@ public class Map : MonoBehaviour
         {
             tile = tileSets[int.Parse(data.boxDatas[w].fenceIndex) / height][int.Parse(data.boxDatas[w].fenceIndex) % height].tiles[int.Parse(data.boxDatas[w].tileIndex)].GetComponent<Tile>();
             specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
-            specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
+            if (data.boxDatas[w].boxTypes != null)
+                specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
             MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
             if (data.boxDatas[w].boxTypes != null)
                 tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
@@ -431,7 +548,15 @@ public class Map : MonoBehaviour
         nextStageDatas = data.nextStageDatas;
     }
 
+    public bool CheckMapSize(int w, int h)
+    {
+        return (w >= 0 && w < width * 2 && h >= 0 && h < height * 2) && GetTileWH(w, h).isVisible;
+    }
 
+    public Tile GetTileWH(int w, int h)
+    {
+        return Tiles[w][h];
+    }
 
     public int GetTotalIceCount()
     {

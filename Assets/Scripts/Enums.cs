@@ -75,6 +75,12 @@ public class Enums : MonoBehaviour
         FROG_SOUP = 1,
         BOX = 2,
         WOODEN_FENCE = 3,
-        VINE = 4,
+        BOX3 = 4,
+        BOX5 = 5,
+        VINE = 6,
+        SANDWICH = 7,
+        HAMBURGER = 8,
+        GIFTBOX = 9,
+        CHURROS = 10
     }
 }

@@ -16,6 +16,7 @@ public class MapEditManager : MonoBehaviour
     public SandWichInfoPopup sandwichInfoPopup;
     public SandWichChangePopup sandwichChangePopup;
     public MapEditorPopups popups;
+    public ChurrosInfoPopup churrosInfoPopup;
 
     private void HidePopups()
     {
@@ -24,6 +25,7 @@ public class MapEditManager : MonoBehaviour
         HideModifyMapPopup();
         HideSandWichInfoPopup();
         HideSandWichChangePopup();
+        HideChurrosInfoPopup();
         UIManager.Instance.railEditManager.SetActiveRailSelectPopup(false, null);
     }
 
@@ -298,6 +300,16 @@ public class MapEditManager : MonoBehaviour
     public void ShowSandWichInfoPopup(Box box)
     {
         sandwichInfoPopup.Show(box);
+    }
+
+    public void ShowChurrosInfoPopup(Box box)
+    {
+        churrosInfoPopup.gameObject.SetActive(true);
+    }
+
+    public void HideChurrosInfoPopup()
+    {
+        churrosInfoPopup.gameObject.SetActive(false);
     }
 
     public void HideSandWichInfoPopup()
