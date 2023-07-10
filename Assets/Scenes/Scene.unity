@@ -9537,6 +9537,7 @@ GameObject:
   - component: {fileID: 309967465}
   - component: {fileID: 309967463}
   - component: {fileID: 309967461}
+  - component: {fileID: 309967466}
   m_Layer: 5
   m_Name: SpecialTileObjectList
   m_TagString: Untagged
@@ -9669,6 +9670,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &309967466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309967459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899af4bab8b46b04eaf6f8a25304dbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxGroupPrefab: {fileID: 7206587452310722527, guid: 4f02ffea2a9d92f489253ae7e450212f,
+    type: 3}
+  boxGroups: []
 --- !u!1 &310087474
 GameObject:
   m_ObjectHideFlags: 0
@@ -24122,6 +24138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionToggle: {fileID: 923747911}
+  boxGroup: {fileID: 0}
 --- !u!1 &873716354
 GameObject:
   m_ObjectHideFlags: 0

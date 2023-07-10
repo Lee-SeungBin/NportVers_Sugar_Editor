@@ -67,6 +67,10 @@ public class JsonFileMaker : MonoBehaviour
         List<RailGroupData> railGroupDatas;
         List<RailGroup> railGroups;
 
+        BoxGroupData boxGroupData;
+        List<BoxGroupData> boxGroupDatas;
+        List<BoxGroup> boxGroups;
+
         Charactor charactor;
         int tileCount;
         int i, w, h, r, ri;
@@ -199,7 +203,41 @@ public class JsonFileMaker : MonoBehaviour
                 UIManager.Instance.errorPopup.SetMessage(e.Message);
                 return null;
             }
+
+            boxGroupDatas = new List<BoxGroupData>();
+            boxGroups = maps[i].boxManager.boxGroups;
+            List<int> FenceIndex;
+            List<int> TileIndex;
+
+            try
+            {
+                for (r = 0; r < boxGroups.Count; ++r)
+                {
+                    boxGroupData = new BoxGroupData();
+                    boxGroupData.direction = boxGroups[r].Direction;
+
+                    FenceIndex = new List<int>();
+                    TileIndex = new List<int>();
+                    for (ri = 0; ri < boxGroups[r].fenceindex.Count; ++ri)
+                    {
+                        FenceIndex.Add(boxGroups[r].fenceindex[ri]);
+                        TileIndex.Add(boxGroups[r].tileindex[ri]);
+                    }
+
+                    boxGroupData.fenceIndex = FenceIndex;
+                    boxGroupData.tileIndex = TileIndex;
+                    boxGroupDatas.Add(boxGroupData);
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+
+
+
             mapData.railGroupDatas = railGroupDatas;
+            mapData.boxGroupDatas = boxGroupDatas;
             mapData.jellyDatas = GetJellyDatas(maps[i]);
             mapData.frogSoupDatas = GetFrogSoupDatas(maps[i]);
             mapData.boxDatas = GetBoxData(maps[i]);
@@ -213,6 +251,7 @@ public class JsonFileMaker : MonoBehaviour
             isVine = mapData.vineDatas.Count > 0;
 
             mapDatas[i] = mapData;
+            Debug.Log(mapData.boxGroupDatas);
         }
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;
@@ -338,6 +377,7 @@ public class JsonFileMaker : MonoBehaviour
             boxData.tileIndex = boxOfMap[i].tileIndex.ToString();
             boxData.boxLayer = boxOfMap[i].boxLayer.ToString();
             boxData.boxTypes = boxOfMap[i].boxTypes.ToString();
+            boxData.boxDirecion = boxOfMap[i].boxDirection.ToString();
             if (boxOfMap[i].boxTier != null)
             {
                 boxData.boxTier = boxOfMap[i].boxTier.ConvertAll(i => i.ToString());
@@ -431,6 +471,7 @@ public class MapData
     public float centerY;
     public List<TileSetData> tileSetDatas;
     public List<RailGroupData> railGroupDatas;
+    public List<BoxGroupData> boxGroupDatas;
     public List<JellyData> jellyDatas;
     public List<FrogSoupData> frogSoupDatas;
     public List<BoxData> boxDatas;
@@ -478,6 +519,7 @@ public class BoxData
     public string tileIndex;
     public string boxLayer;
     public string boxTypes;
+    public string boxDirecion;
     public List<string> boxTier;
 }
 [Serializable]
@@ -491,4 +533,11 @@ public class NextStageData
 {
     public int type;
     public int qty;
+}
+[Serializable]
+public class BoxGroupData
+{
+    public int direction;
+    public List<int> fenceIndex;
+    public List<int> tileIndex;
 }

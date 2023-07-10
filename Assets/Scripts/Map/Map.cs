@@ -19,6 +19,7 @@ public class Map : MonoBehaviour
     public List<List<TileSet>> tileSets;
     public List<List<Tile>> Tiles { get; protected set; }
     public RailManager railManager;
+    public BoxManager boxManager;
 
     public List<Jelly> jellys = new List<Jelly>();
     public List<FrogSoup> frogSoups = new List<FrogSoup>();
@@ -55,6 +56,7 @@ public class Map : MonoBehaviour
     private void Awake()
     {
         railManager = GetComponent<RailManager>();
+        boxManager = GetComponent<BoxManager>();
     }
 
     private void SetBGSize(int width, int height)
@@ -100,6 +102,7 @@ public class Map : MonoBehaviour
                 tileSet.transform.SetParent(container.transform);
                 tileSet.transform.localPosition = new Vector2((h - w) * TileSetW, ((w + h) * -TileSetH));
                 tileSet.SetTheme();
+
                 tileSets[w].Add(tileSet);
 
                 if (tileSet.tiles[1] != null)
@@ -146,7 +149,7 @@ public class Map : MonoBehaviour
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
 
-    public void TileWHCreate(MapManager mapManager, int width, int height)
+    public void TileWHCreate(int width, int height)
     {
 
         tileSets = new List<List<TileSet>>();
@@ -160,21 +163,26 @@ public class Map : MonoBehaviour
         {
             tileSets.Add(new List<TileSet>());
 
+            Tiles.Add(new List<Tile>());
+            Tiles.Add(new List<Tile>());
+
             tileWIndex = w * 2;
             tileWIndex2 = tileWIndex + 1;
             tileIndex = 0;
             for (h = 0; h < height; ++h)
             {
-                tileSet = mapManager.tileSet.GetComponent<TileSet>();
+                tileSet = MapManager.Instance.tileSet.GetComponent<TileSet>();
                 tileSets[w].Add(tileSet);
 
                 if (tileSet.tiles[1] != null)
                 {
+                    Tiles[tileWIndex].Add(tileSet.tiles[1]);
                     tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
                 }
 
                 if (tileSet.tiles[0] != null)
                 {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[0]);
                     tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
                 }
 
@@ -182,11 +190,13 @@ public class Map : MonoBehaviour
 
                 if (tileSet.tiles[2] != null)
                 {
+                    Tiles[tileWIndex].Add(tileSet.tiles[2]);
                     tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
                 }
 
                 if (tileSet.tiles[3] != null)
                 {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[3]);
                     tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
                 }
 
@@ -389,7 +399,6 @@ public class Map : MonoBehaviour
         TileSet tileSet;
 
         List<TileSetData> tileSetDatas = data.tileSetDatas;
-
         transform.SetParent(mapManager.transform);
 
         SetBGSize(width, height);
@@ -507,6 +516,7 @@ public class Map : MonoBehaviour
         transform.localPosition = new Vector2(data.x, data.y);
 
         railManager.SetLoadedData(tileSets, data);
+        boxManager.SetLoadedData(tileSets, data);
 
         Tile tile;
         for (w = 0; w < data.jellyDatas.Count; ++w)
@@ -527,14 +537,16 @@ public class Map : MonoBehaviour
             specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
             if (data.boxDatas[w].boxTypes != null)
                 specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
-            MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
-            if (data.boxDatas[w].boxTypes != null)
-                tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
-            if (data.boxDatas[w].boxLayer != null)
-                tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
-            if (data.boxDatas[w].boxTier != null)
-                tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
-            MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
+            if (specialList.boxtype != 4)
+                MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
+            //if (data.boxDatas[w].boxTypes != null)
+            //    tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
+            //if (data.boxDatas[w].boxLayer != null)
+            //    tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
+            //if (data.boxDatas[w].boxTier != null)
+            //tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
+            if (specialList.boxtype != 4)
+                MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
         }
 
         for (w = 0; w < data.vineDatas.Count; ++w)

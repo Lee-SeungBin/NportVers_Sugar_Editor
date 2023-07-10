@@ -98,6 +98,7 @@ public class SpecialMode : MonoBehaviour
         if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 4)
         {
             UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(selectTile.box); //젤 마지막 을 selectTile로 바꿔야함
+            selectTile = MapManager.Instance.currentMap.GetTile(selectTile.boxGroup.LastFenceIndex(), selectTile.boxGroup.LastTileIndex());
         }
     }
     private void OnMouseDownDeleteSpecial()
@@ -129,7 +130,7 @@ public class SpecialMode : MonoBehaviour
                 {
                     RemoveJelly(selectTile.jelly);
                 }
-                else if (selectTile?.box != null)
+                else if (selectTile?.box != null && selectTile?.box.boxTypes != 4)
                 {
                     RemoveBox(selectTile.box);
                 }
@@ -229,11 +230,11 @@ public class SpecialMode : MonoBehaviour
     #region Box
     private void OnClickBox()
     {
-        if (selectTile?.box != null)
+        if (selectTile?.box != null && selectTile?.box.boxTypes != 4)
         {
             RemoveBox(selectTile.box);
         }
-        else if (selectTile?.isVisible == true)
+        else if (selectTile?.isVisible == true && selectTile?.box == null)
         {
             SetBox(selectTile.transform.parent, selectTile);
         }
@@ -282,9 +283,12 @@ public class SpecialMode : MonoBehaviour
         }
         else if (box.boxTypes == 4)
         {
-            UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(box);
             specialList.SelectEmtpy();
             ChangeBox(box, box.boxLayer, box.boxTypes);
+            BoxGroup boxGroup = selectTile.transform.parent.GetComponent<TileSet>().map.boxManager.CreateBoxGroup();
+            boxGroup.Push(selectTile, selectTile.fenceIndex, selectTile.tileIndex);
+
+            UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(box);
         }
 
         //ChangeBox(box, box.boxLayer, box.boxTypes);
@@ -292,6 +296,10 @@ public class SpecialMode : MonoBehaviour
         tile.box = box;
         box.tile = tile;
         tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
+        if (UIManager.Instance.mapEditManager.churrosInfoPopup.gameObject.activeSelf)
+        {
+            UIManager.Instance.mapEditManager.churrosInfoPopup.SetData(tile);
+        }
     }
 
     public void RemoveBox(Box box)
@@ -307,21 +315,7 @@ public class SpecialMode : MonoBehaviour
     public void ChangeBox(Box box, int layer, int types)
     {
         Sprite[] getboxsprite = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().specialSprites;
-        //if (types == 0)
-        //{
-        //    switch (layer)
-        //    {
-        //        case 1:
-        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[2];
-        //            break;
-        //        case 3:
-        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[4];
-        //            break;
-        //        case 5:
-        //            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[5];
-        //            break;
-        //    }
-        //}
+
         if (types == 1)
         {
             box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.HAMBURGER];
@@ -336,7 +330,16 @@ public class SpecialMode : MonoBehaviour
         }
         else if (types == 4)
         {
+
             box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.CHURROS];
+            if (selectTile.boxGroup?.fenceindex.Count % 2 == 0 && selectTile.boxGroup?.fenceindex.Count != 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+            }
+            else if (selectTile.boxGroup?.fenceindex.Count % 2 == 1 && selectTile.boxGroup?.fenceindex.Count != 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+            }
         }
     }
     #region SandWich
@@ -460,12 +463,87 @@ public class SpecialMode : MonoBehaviour
     #region Churros
     public void CreateChurros()
     {
+        UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype = 4;
+        BoxGroup boxGroup = selectTile.boxGroup;
         if (selectTile.box.boxDirection == 0)
         {
+
             if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW - 1, selectTile.tileH))
             {
                 Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW - 1, selectTile.tileH);
-                SetBox(nextTile.transform.parent, nextTile);
+                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null)
+                {
+                    boxGroup.Push(nextTile, nextTile.fenceIndex, nextTile.tileIndex);
+                    SetChurros(nextTile.transform.parent, nextTile, selectTile.box.boxDirection);
+                    selectTile = nextTile;
+                }
+            }
+            else
+            {
+                UIManager.Instance.errorPopup.SetMessage("츄러스를 더이상 설치할 수 없는 상태입니다.");
+            }
+        }
+
+        else if (selectTile.box.boxDirection == 1)
+        {
+            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW, selectTile.tileH - 1))
+            {
+                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW, selectTile.tileH - 1);
+                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null)
+                {
+                    boxGroup.Push(nextTile, nextTile.fenceIndex, nextTile.tileIndex);
+                    SetChurros(nextTile.transform.parent, nextTile, selectTile.box.boxDirection);
+
+                    selectTile = nextTile;
+                    ChangeDirection(nextTile.box.boxDirection);
+                }
+            }
+            else
+            {
+                UIManager.Instance.errorPopup.SetMessage("츄러스를 더이상 설치할 수 없는 상태입니다.");
+            }
+        }
+
+    }
+
+    public void SetChurros(Transform parent, Tile tile, int Direction)
+    {
+        Box box;
+
+        box = Instantiate(boxPrefab, parent);
+        box.transform.position = tile.transform.position + Vector3.up * 0.119f;
+        box.fenceIndex = tile.fenceIndex;
+        box.tileIndex = tile.tileIndex;
+        box.boxLayer = 1;
+        box.boxTypes = 4;
+        ChangeBox(box, box.boxLayer, box.boxTypes);
+
+        tile.box = box;
+        box.tile = tile;
+        tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
+        if (Direction == 1)
+        {
+            tile.box.boxDirection = 1;
+            ChangeDirection(Direction);
+        }
+    }
+
+    public void DeleteChurros()
+    {
+        if (selectTile.boxGroup.fenceindex.Count == 1)
+        {
+            Destroy(selectTile.boxGroup.gameObject);
+            UIManager.Instance.mapEditManager.HideChurrosInfoPopup();
+            RemoveBox(selectTile.box);
+        }
+        else if (selectTile.box.boxDirection == 0)
+        {
+            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW + 1, selectTile.tileH))
+            {
+                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW + 1, selectTile.tileH);
+
+                RemoveBox(selectTile.box);
+                selectTile.boxGroup.Pop(selectTile);
                 selectTile = nextTile;
             }
             else
@@ -479,67 +557,49 @@ public class SpecialMode : MonoBehaviour
             if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW, selectTile.tileH + 1))
             {
                 Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW, selectTile.tileH + 1);
-                SetBox(nextTile.transform.parent, nextTile);
-                nextTile.box.boxDirection = 1;
+
+                RemoveBox(selectTile.box);
+                selectTile.boxGroup.Pop(selectTile);
                 selectTile = nextTile;
-                ChangeDirection();
             }
             else
             {
                 UIManager.Instance.errorPopup.SetMessage("츄러스가 타일을 벗어 납니다.");
             }
         }
-
     }
 
-    public void DeleteChurros()
+    public void ChangeDirectionChurros(bool isRightDirection)
     {
-        if (selectTile.box.boxDirection == 0)
+        if (selectTile.boxGroup.fenceindex.Count <= 1 && selectTile.box != null)
         {
-            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW + 1, selectTile.tileH))
-            {
-                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW + 1, selectTile.tileH);
-                RemoveBox(selectTile.box);
-                selectTile = nextTile;
-            }
+            selectTile.box.boxDirection = isRightDirection ? 1 : 0;
+            if (!isRightDirection)
+                selectTile.box.transform.localScale = widthDirection;
             else
-            {
-                UIManager.Instance.errorPopup.SetMessage("츄러스가 타일을 벗어 납니다.");
-            }
+                selectTile.box.transform.localScale = heightDirection;
+            selectTile.boxGroup.Direction = selectTile.box.boxDirection;
+        }
+        else
+        {
+            UIManager.Instance.mapEditManager.churrosInfoPopup.directionToggle.isOn = (selectTile.box?.boxDirection != 0);
         }
 
-        else if (selectTile.box.boxDirection == 1)
-        {
-            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW, selectTile.tileH - 1))
-            {
-                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW, selectTile.tileH - 1);
-
-                RemoveBox(selectTile.box);
-                selectTile = nextTile;
-            }
-            else
-            {
-                UIManager.Instance.errorPopup.SetMessage("츄러스가 타일을 벗어 납니다.");
-            }
-        }
     }
     private Vector2 widthDirection = new Vector2(1, 1);
     private Vector2 heightDirection = new Vector2(-1, 1);
-    public void ChangeDirectionChurros(bool isRightDirection)
+    public void ChangeDirection(int Direction)
     {
-        selectTile.box.boxDirection = isRightDirection ? 1 : 0;
-        if (!isRightDirection)
+        if (Direction != 1)
+        {
             selectTile.box.transform.localScale = widthDirection;
-        else
-            selectTile.box.transform.localScale = heightDirection;
-    }
+        }
 
-    public void ChangeDirection()
-    {
-        if (selectTile.box.boxDirection != 1)
-            selectTile.box.transform.localScale = widthDirection;
         else
+        {
             selectTile.box.transform.localScale = heightDirection;
+        }
+
     }
 
     #endregion

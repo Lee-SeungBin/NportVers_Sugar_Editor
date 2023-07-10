@@ -5,6 +5,22 @@ public class Tile : MonoBehaviour
     public int tileIndex;
     public int tileW;
     public int tileH;
+
+    private BoxGroup _boxGroup;
+    [HideInInspector]
+    public BoxGroup boxGroup
+    {
+        get
+        {
+            return _boxGroup;
+        }
+
+        set
+        {
+            _boxGroup = value;
+        }
+    }
+
     public Charactor character
     {
         get
@@ -15,6 +31,14 @@ public class Tile : MonoBehaviour
             }
 
             return null;
+        }
+    }
+
+    public int fenceIndex
+    {
+        get
+        {
+            return GetComponentInParent<TileSet>().tileSetIndex;
         }
     }
 

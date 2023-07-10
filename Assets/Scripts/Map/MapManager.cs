@@ -376,6 +376,24 @@ public class MapManager : MonoBehaviour
             Maps = new List<Map>();
         }
 
+        if (Maps.Count > 0)
+        {
+            for (int j = Maps.Count - 1; j > -1; --j)
+            {
+                if (Maps[j].boxManager.boxGroups != null)
+                {
+                    for (int i = 0; i < Maps[j].boxManager.boxGroups.Count; i++)
+                    {
+                        Destroy(Maps[j].boxManager.boxGroups[i].gameObject);
+                    }
+                }
+                DeleteMap(j);
+            }
+
+            Maps = new List<Map>();
+        }
+
+
         for (int i = 0; i < stageData.mapDatas.Length; ++i)
         {
             Map tempMap = Instantiate(map);

@@ -51,6 +51,7 @@ MonoBehaviour:
   tileIndex: 0
   boxLayer: 1
   boxTypes: 0
+  boxDirection: 0
   boxTier: 
   boxsprite:
   - {fileID: -674415033804269254, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
@@ -59,6 +60,11 @@ MonoBehaviour:
   - {fileID: -5025544016754360798, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
   - {fileID: 2880729775690283345, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
   - {fileID: -6193577111578046878, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}
+  ChurrosSprite:
+  - {fileID: 3261179663578225624, guid: bc4e811f912803a43ad97f94b1ac3d41, type: 3}
+  - {fileID: 6243565367788388413, guid: bc4e811f912803a43ad97f94b1ac3d41, type: 3}
+  - {fileID: 972695204026842075, guid: bc4e811f912803a43ad97f94b1ac3d41, type: 3}
+  - {fileID: 4921654370326440009, guid: bc4e811f912803a43ad97f94b1ac3d41, type: 3}
   tile: {fileID: 0}
 --- !u!60 &5250304265338699111
 PolygonCollider2D:

@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Map\SpriteChanger.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterListBar.cs" />
     <Compile Include="Assets\Scripts\UI\Goal\MissionPopup.cs" />
+    <Compile Include="Assets\Scripts\UI\ChurrosInfoPopup.cs" />
     <Compile Include="Assets\Scripts\Map\Rail\RailGroup.cs" />
     <Compile Include="Assets\Scripts\UI\Goal\MissionUIBase.cs" />
     <Compile Include="Assets\Scripts\Map\MonsterSetMode.cs" />
@@ -108,7 +109,8 @@
     <Compile Include="Assets\Scripts\UI\Goal\NextMapMissionUI.cs" />
     <Compile Include="Assets\Scripts\Map\Map.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
-    <Compile Include="Assets\Scripts\UI\ChurrosInfoPopup.cs" />
+    <Compile Include="Assets\Scripts\Map\BoxGroup.cs" />
+    <Compile Include="Assets\Scripts\Map\BoxManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll" />
