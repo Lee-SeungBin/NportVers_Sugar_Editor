@@ -149,63 +149,6 @@ public class Map : MonoBehaviour
         UIManager.Instance.SetMapPositionText(container.transform.localPosition, this);
     }
 
-    public void TileWHCreate(int width, int height)
-    {
-
-        tileSets = new List<List<TileSet>>();
-        int tileWIndex, tileWIndex2, tileIndex;
-        int w, h;
-
-        TileSet tileSet;
-
-
-        for (w = 0; w < width; ++w)
-        {
-            tileSets.Add(new List<TileSet>());
-
-            Tiles.Add(new List<Tile>());
-            Tiles.Add(new List<Tile>());
-
-            tileWIndex = w * 2;
-            tileWIndex2 = tileWIndex + 1;
-            tileIndex = 0;
-            for (h = 0; h < height; ++h)
-            {
-                tileSet = MapManager.Instance.tileSet.GetComponent<TileSet>();
-                tileSets[w].Add(tileSet);
-
-                if (tileSet.tiles[1] != null)
-                {
-                    Tiles[tileWIndex].Add(tileSet.tiles[1]);
-                    tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
-                }
-
-                if (tileSet.tiles[0] != null)
-                {
-                    Tiles[tileWIndex2].Add(tileSet.tiles[0]);
-                    tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
-                }
-
-                ++tileIndex;
-
-                if (tileSet.tiles[2] != null)
-                {
-                    Tiles[tileWIndex].Add(tileSet.tiles[2]);
-                    tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
-                }
-
-                if (tileSet.tiles[3] != null)
-                {
-                    Tiles[tileWIndex2].Add(tileSet.tiles[3]);
-                    tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
-                }
-
-                ++tileIndex;
-
-            }
-        }
-    }
-
     public void ModifyMap(MapManager mapManager, int modifyWidth, int modifyHeight, int index)
     {
         int w, h;
@@ -219,7 +162,6 @@ public class Map : MonoBehaviour
         SpecialMode specialMode = MapManager.Instance.specialMode;
         if (width > modifyWidth)
         {
-
             for (w = tileSets.Count - 1; w > modifyWidth - 1; --w)
             {
                 if (tileSets.Count > modifyWidth)
@@ -252,7 +194,6 @@ public class Map : MonoBehaviour
                         Destroy(tileSets[w][h].gameObject);
                         tileSets[w].RemoveAt(h);
                     }
-
                     tileSets.RemoveAt(w);
                 }
             }
@@ -326,15 +267,54 @@ public class Map : MonoBehaviour
 
         width = modifyWidth;
         height = modifyHeight;
+        int tileWIndex, tileWIndex2, tileIndex;
+        Tiles.Clear();
 
         int count = 0;
         for (w = 0; w < width; ++w)
         {
+            Tiles.Add(new List<Tile>());
+            Tiles.Add(new List<Tile>());
+
+            tileWIndex = w * 2;
+            tileWIndex2 = tileWIndex + 1;
+            tileIndex = 0;
+
             for (h = 0; h < height; ++h)
             {
                 tileSets[w][h].GetComponent<TileSet>().tileSetIndex = count;
                 tileSets[w][h].transform.localPosition = new Vector2((h - w) * TileSetW, ((w + h) * -TileSetH));
                 tileSets[w][h].SetTheme();
+
+                tileSet = tileSets[w][h];
+
+                if (tileSet.tiles[1] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[1]);
+                    tileSet.tiles[1].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[0] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[0]);
+                    tileSet.tiles[0].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
+
+                if (tileSet.tiles[2] != null)
+                {
+                    Tiles[tileWIndex].Add(tileSet.tiles[2]);
+                    tileSet.tiles[2].SetTileText(tileWIndex, tileIndex);
+                }
+
+                if (tileSet.tiles[3] != null)
+                {
+                    Tiles[tileWIndex2].Add(tileSet.tiles[3]);
+                    tileSet.tiles[3].SetTileText(tileWIndex2, tileIndex);
+                }
+
+                ++tileIndex;
                 ++count;
             }
         }

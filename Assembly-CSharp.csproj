@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\Map\Rail\RailManager.cs" />
     <Compile Include="Assets\Scripts\Map\Vine.cs" />
     <Compile Include="Assets\Scripts\UI\RailEditManager.cs" />
+    <Compile Include="Assets\Scripts\Map\BoxManager.cs" />
     <Compile Include="Assets\Scripts\Map\SpecialMode.cs" />
+    <Compile Include="Assets\Scripts\Map\BoxGroup.cs" />
     <Compile Include="Assets\Scripts\UI\BGDropDown.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\NetworkMNG.cs" />
@@ -109,8 +111,6 @@
     <Compile Include="Assets\Scripts\UI\Goal\NextMapMissionUI.cs" />
     <Compile Include="Assets\Scripts\Map\Map.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
-    <Compile Include="Assets\Scripts\Map\BoxGroup.cs" />
-    <Compile Include="Assets\Scripts\Map\BoxManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll" />
