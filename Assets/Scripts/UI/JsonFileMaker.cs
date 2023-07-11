@@ -251,7 +251,6 @@ public class JsonFileMaker : MonoBehaviour
             isVine = mapData.vineDatas.Count > 0;
 
             mapDatas[i] = mapData;
-            Debug.Log(mapData.boxGroupDatas);
         }
 
         string jellyTerm = uIManager.mapEditManager.obstacleOptionPopup.jellyTerm.text;

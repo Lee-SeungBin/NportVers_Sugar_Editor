@@ -532,7 +532,7 @@ public class SpecialMode : MonoBehaviour
     {
         if (selectTile.boxGroup.fenceindex.Count == 1)
         {
-            Destroy(selectTile.boxGroup.gameObject);
+            MapManager.Instance.currentMap.boxManager.DeleteBoxGroup(selectTile.boxGroup);
             UIManager.Instance.mapEditManager.HideChurrosInfoPopup();
             RemoveBox(selectTile.box);
         }

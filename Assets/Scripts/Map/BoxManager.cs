@@ -16,7 +16,7 @@ public class BoxManager : MonoBehaviour
         return boxGroup;
     }
 
-    public void DeleteRailGroup(BoxGroup boxGroup)
+    public void DeleteBoxGroup(BoxGroup boxGroup)
     {
         boxGroups.Remove(boxGroup);
         Destroy(boxGroup.gameObject);

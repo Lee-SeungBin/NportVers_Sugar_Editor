@@ -196,6 +196,11 @@ public class MapEditManager : MonoBehaviour
             UIManager.Instance.errorPopup.SetMessage("맵의 크기는 1이상 이여야 합니다.");
             return;
         }
+        else if (MapManager.Instance.currentMap.boxManager.boxGroups.Count > 0)
+        {
+            UIManager.Instance.errorPopup.SetMessage("츄러스가 있으면 맵 크기를 수정할 수 없습니다.");
+            return;
+        }
         int w = int.Parse(Width.text);
         int h = int.Parse(Height.text);
 
