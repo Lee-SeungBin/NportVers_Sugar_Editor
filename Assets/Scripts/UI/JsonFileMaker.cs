@@ -213,11 +213,16 @@ public class JsonFileMaker : MonoBehaviour
             {
                 for (r = 0; r < boxGroups.Count; ++r)
                 {
+                    if (boxGroups[r].fenceindex.Count < 3)
+                    {
+                        throw new Exception("츄러스의 길이는 최소 3 이상이여야 합니다.");
+                    }
                     boxGroupData = new BoxGroupData();
                     boxGroupData.direction = boxGroups[r].Direction;
 
                     FenceIndex = new List<int>();
                     TileIndex = new List<int>();
+
                     for (ri = 0; ri < boxGroups[r].fenceindex.Count; ++ri)
                     {
                         FenceIndex.Add(boxGroups[r].fenceindex[ri]);
@@ -231,6 +236,7 @@ public class JsonFileMaker : MonoBehaviour
             }
             catch (Exception e)
             {
+                UIManager.Instance.errorPopup.SetMessage(e.Message);
                 return null;
             }
 
@@ -376,7 +382,7 @@ public class JsonFileMaker : MonoBehaviour
             boxData.tileIndex = boxOfMap[i].tileIndex.ToString();
             boxData.boxLayer = boxOfMap[i].boxLayer.ToString();
             boxData.boxTypes = boxOfMap[i].boxTypes.ToString();
-            boxData.boxDirecion = boxOfMap[i].boxDirection.ToString();
+            //boxData.boxDirecion = boxOfMap[i].boxDirection.ToString();
             if (boxOfMap[i].boxTier != null)
             {
                 boxData.boxTier = boxOfMap[i].boxTier.ConvertAll(i => i.ToString());

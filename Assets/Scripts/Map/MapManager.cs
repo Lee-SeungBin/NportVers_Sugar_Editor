@@ -185,7 +185,26 @@ public class MapManager : MonoBehaviour
         }
 
         int mapIndex = index;
-
+        for (int i = mapIndex; i >= 0; i--) // 맵 지우기
+        {
+            for (int j = mapIndex; j > -1; --j)
+            {
+                if (Maps[j].railManager.railGroups != null)
+                {
+                    for (int k = 0; k < Maps[j].railManager.railGroups.Count; k++)
+                    {
+                        Destroy(Maps[j].railManager.railGroups[k].gameObject);
+                    }
+                }
+                if (Maps[j].boxManager.boxGroups != null)
+                {
+                    for (int k = 0; k < Maps[j].boxManager.boxGroups.Count; k++)
+                    {
+                        Destroy(Maps[j].boxManager.boxGroups[k].gameObject);
+                    }
+                }
+            }
+        }
         Map map = Maps[mapIndex];
         Destroy(map.gameObject);
 
@@ -363,20 +382,6 @@ public class MapManager : MonoBehaviour
         {
             for (int j = Maps.Count - 1; j > -1; --j)
             {
-                if (Maps[j].railManager.railGroups != null)
-                {
-                    for (int i = 0; i < Maps[j].railManager.railGroups.Count; i++)
-                    {
-                        Destroy(Maps[j].railManager.railGroups[i].gameObject);
-                    }
-                }
-                if (Maps[j].boxManager.boxGroups != null)
-                {
-                    for (int i = 0; i < Maps[j].boxManager.boxGroups.Count; i++)
-                    {
-                        Destroy(Maps[j].boxManager.boxGroups[i].gameObject);
-                    }
-                }
                 DeleteMap(j);
             }
 

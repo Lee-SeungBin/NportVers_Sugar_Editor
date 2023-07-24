@@ -547,7 +547,365 @@ public class Map : MonoBehaviour
 
     public Tile GetTileWH(int w, int h)
     {
+        if (w < 0 || w >= width * 2 || h < 0 || h >= height * 2)
+        {
+            return null;
+        }
         return Tiles[w][h];
+    }
+
+    public TileSet GetTileSet(int fenceindex)
+    {
+        int w = fenceindex / height;
+        int h = fenceindex % height;
+
+        if (w < 0 || w >= width || h < 0 || h >= height)
+        {
+            return null;
+        }
+
+        return tileSets[w][h];
+    }
+
+    public TileSet GetTileSet(int w, int h)
+    {
+        if (w < 0 || w >= width || h < 0 || h >= height)
+        {
+            return null;
+        }
+        return tileSets[w][h];
+    }
+
+    public bool IsExistWoodenFence(int fromTileW, int fromTileH, int toTileW, int toTileH, bool isEmptyMoveActive = false)
+    {
+        if (fromTileW < 0 || fromTileW >= Tiles.Count || fromTileH < 0 || fromTileH >= Tiles[fromTileW].Count
+            || toTileW < 0 || toTileW >= Tiles.Count || toTileH < 0 || toTileH >= Tiles[toTileW].Count)
+        {
+            return true;
+        }
+
+        Tile fromTile = Tiles[fromTileW][fromTileH];
+        Tile toTile = Tiles[toTileW][toTileH];
+
+        if (fromTile == null && toTile == null)
+        {
+            return false;
+        }
+
+        TileSet fromTileSet = null;
+        int fromTileIndex = 0;
+        TileSet toTileSet = null;
+        int toTileIndex = 0;
+
+        int VectorW = toTileW - fromTileW;
+        int VectorH = toTileH - fromTileH;
+
+        if (fromTile != null)
+        {
+            fromTileSet = fromTile.tileSet;
+            fromTileIndex = fromTile.tileIndex;
+        }
+
+        if (toTile != null)
+        {
+            toTileSet = toTile.tileSet;
+            toTileIndex = toTile.tileIndex;
+        }
+
+        return IsExistWoodenFence(fromTileSet, fromTileIndex, toTileSet, toTileIndex, VectorW, VectorH, isEmptyMoveActive);
+    }
+
+    public bool IsExistWoodenFence(TileSet fromTileSet, int fromTileIndex, TileSet toTileSet, int toTileIndex, int VectorW = 0, int VectorH = 0, bool isEmptyMoveActive = false)
+    {
+        bool isExist = false;
+
+        if (isEmptyMoveActive)
+        {
+            if (fromTileSet == null && toTileSet == null)
+                return isExist;
+
+            if (fromTileSet != null)
+            {
+
+                if (fromTileIndex == 0)
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[5] != null) || (toTileSet?.woodenFences[10] != null);
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[3] != null;
+                    }
+
+                    if (VectorW < 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[0] != null;
+                    }
+                    else if (VectorW > 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[4] != null) || (toTileSet?.woodenFences[7] != null);
+                    }
+                }
+                else if (fromTileIndex == 1)
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[6] != null) || (toTileSet?.woodenFences[9] != null);
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[1] != null;
+                    }
+
+                    if (VectorW < 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[7] != null) || (toTileSet?.woodenFences[4] != null);
+                    }
+                    else if (VectorW > 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[0] != null;
+                    }
+                }
+                else if (fromTileIndex == 2)
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[1] != null;
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[9] != null) || (toTileSet?.woodenFences[6] != null);
+                    }
+
+                    if (VectorW < 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[8] != null) || (toTileSet?.woodenFences[11] != null);
+                    }
+                    else if (VectorW > 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[2] != null;
+                    }
+                }
+                else
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[3] != null;
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[10] != null) || (toTileSet?.woodenFences[5] != null);
+                    }
+
+                    if (VectorW < 0)
+                    {
+                        isExist = fromTileSet?.woodenFences[2] != null;
+                    }
+                    else if (VectorW > 0)
+                    {
+                        isExist = (fromTileSet?.woodenFences[11] != null) || (toTileSet?.woodenFences[8] != null);
+                    }
+                }
+            }
+            else //fromTileSet == null && toTileSet != null
+            {
+                if (toTileIndex == 0)
+                {
+                    if (VectorH > 0) // 왼쪽이 빈 타일
+                    {
+                        isExist = toTileSet?.woodenFences[5] != null;
+                    }
+                    else if (VectorH < 0) // 오른쪽이 빈 타일
+                    {
+                        isExist = toTileSet?.woodenFences[3] != null;
+                    }
+
+                    if (VectorW < 0) // 아래쪽이 빈 타일
+                    {
+                        isExist = toTileSet?.woodenFences[4] != null;
+                    }
+                    else if (VectorW > 0) // 위쪽이 빈 타일
+                    {
+                        isExist = toTileSet?.woodenFences[0] != null;
+                    }
+                }
+                else if (toTileIndex == 1)
+                {
+                    if (VectorH > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[6] != null;
+                    }
+                    else if (VectorH < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[1] != null;
+                    }
+
+                    if (VectorW > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[7] != null;
+                    }
+                    else if (VectorW < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[0] != null;
+                    }
+                }
+                else if (toTileIndex == 2)
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[9] != null;
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[1] != null;
+                    }
+
+                    if (VectorW > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[8] != null;
+                    }
+                    else if (VectorW < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[2] != null;
+                    }
+                }
+                else if (toTileIndex == 3)
+                {
+                    if (VectorH < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[10] != null;
+                    }
+                    else if (VectorH > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[3] != null;
+                    }
+
+                    if (VectorW < 0)
+                    {
+                        isExist = toTileSet?.woodenFences[11] != null;
+                    }
+                    else if (VectorW > 0)
+                    {
+                        isExist = toTileSet?.woodenFences[2] != null;
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (fromTileIndex == 0)
+            {
+                if (fromTileSet == toTileSet)
+                {
+                    if (toTileIndex == 1)
+                    {
+                        isExist = fromTileSet.woodenFences[0] != null;
+                    }
+                    else if (toTileIndex == 3)
+                    {
+                        isExist = fromTileSet.woodenFences[3] != null;
+                    }
+                }
+                else
+                {
+                    if (toTileIndex == 3)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[5] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[10] != null);
+                    }
+                    else if (toTileIndex == 1)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[4] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[7] != null);
+                    }
+                }
+            }
+            else if (fromTileIndex == 1)
+            {
+                if (fromTileSet == toTileSet)
+                {
+                    if (toTileIndex == 2)
+                    {
+                        isExist = fromTileSet.woodenFences[1] != null;
+                    }
+                    else if (toTileIndex == 0)
+                    {
+                        isExist = fromTileSet.woodenFences[0] != null;
+                    }
+                }
+                else
+                {
+                    if (toTileIndex == 2)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[6] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[9] != null);
+                    }
+                    else if (toTileIndex == 0)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[7] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[4] != null);
+                    }
+                }
+            }
+            else if (fromTileIndex == 2)
+            {
+                if (fromTileSet == toTileSet)
+                {
+                    if (toTileIndex == 1)
+                    {
+                        isExist = fromTileSet.woodenFences[1] != null;
+                    }
+                    else if (toTileIndex == 3)
+                    {
+                        isExist = fromTileSet.woodenFences[2] != null;
+                    }
+                }
+                else
+                {
+                    if (toTileIndex == 3)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[8] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[11] != null);
+                    }
+                    else if (toTileIndex == 1)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[9] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[6] != null);
+                    }
+                }
+            }
+            else
+            {
+                if (fromTileSet == toTileSet)
+                {
+                    if (toTileIndex == 0)
+                    {
+                        isExist = fromTileSet.woodenFences[3] != null;
+                    }
+                    else if (toTileIndex == 2)
+                    {
+                        isExist = fromTileSet.woodenFences[2] != null;
+                    }
+                }
+                else
+                {
+
+                    if (toTileIndex == 0)
+                    {
+                        isExist = (fromTileSet != null && fromTileSet.woodenFences[10] != null)
+                            || (toTileSet != null && toTileSet.woodenFences[5] != null);
+                    }
+                    else if (toTileIndex == 2)
+                    {
+                        isExist = (fromTileSet?.woodenFences[11] != null) || (toTileSet?.woodenFences[8] != null);
+                    }
+
+                }
+            }
+        }
+
+        return isExist;
     }
 
     public int GetTotalIceCount()

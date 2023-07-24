@@ -45,6 +45,13 @@ public class Tile : MonoBehaviour
     public Jelly jelly;
     public FrogSoup frogSoup;
     public Box box;
+    public TileSet tileSet
+    {
+        get
+        {
+            return GetComponentInParent<TileSet>();
+        }
+    }
 
     private bool _isVisible;
     public bool isVisible

@@ -14,7 +14,7 @@ public class ChurrosInfoPopup : MonoBehaviour
     }
     public void SetData(Tile tile)
     {
-        directionToggle.isOn = (tile.box?.boxDirection != 0);
+        directionToggle.isOn = (tile.boxGroup?.Direction != 0);
     }
     public void OnClickAddChurros()
     {

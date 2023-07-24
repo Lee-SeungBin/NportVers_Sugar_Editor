@@ -1712,6 +1712,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenFence_0
       objectReference: {fileID: 0}
+    - target: {fileID: 229660501575080415, guid: a069702d989952341b707bda6a18e44d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 229660501575080415, guid: a069702d989952341b707bda6a18e44d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229660501575080415, guid: a069702d989952341b707bda6a18e44d,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1175901501
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a069702d989952341b707bda6a18e44d, type: 3}
 --- !u!114 &4625409738830358724 stripped
@@ -1720,7 +1735,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6883128556505060709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6709897035982314286}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3107786d17d77a4ab8031e915a8d3bb, type: 3}
@@ -1732,6 +1747,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6883128556505060709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6709897035982314286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 187918879127293515, guid: a069702d989952341b707bda6a18e44d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6883128556505060709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!210 &31633414044555946
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709897035982314286}
+  m_Enabled: 1
+  m_SortingLayerID: -1175901501
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!1001 &7503905347407405751
 PrefabInstance:
   m_ObjectHideFlags: 0

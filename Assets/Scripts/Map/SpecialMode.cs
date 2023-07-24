@@ -97,7 +97,7 @@ public class SpecialMode : MonoBehaviour
         }
         if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 4)
         {
-            UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(selectTile.box); //젤 마지막 을 selectTile로 바꿔야함
+            UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(selectTile.box);
             selectTile = MapManager.Instance.currentMap.GetTile(selectTile.boxGroup.LastFenceIndex(), selectTile.boxGroup.LastTileIndex());
         }
     }
@@ -265,6 +265,9 @@ public class SpecialMode : MonoBehaviour
         box.tileIndex = tile.tileIndex;
         box.boxLayer = specialList.boxlayer;
         box.boxTypes = specialList.boxtype;
+
+        tile.box = box;
+        box.tile = tile;
         if (box.boxTypes == 1)
         {
             ChangeBox(box, box.boxLayer, box.boxTypes);
@@ -283,6 +286,11 @@ public class SpecialMode : MonoBehaviour
         }
         else if (box.boxTypes == 4)
         {
+            if (MapManager.Instance.currentMap.GetTileSet(box.fenceIndex).railGroup != null)
+            {
+                RemoveBox(selectTile.box);
+                return;
+            }
             specialList.SelectEmtpy();
             ChangeBox(box, box.boxLayer, box.boxTypes);
             BoxGroup boxGroup = selectTile.transform.parent.GetComponent<TileSet>().map.boxManager.CreateBoxGroup();
@@ -292,10 +300,8 @@ public class SpecialMode : MonoBehaviour
         }
 
         //ChangeBox(box, box.boxLayer, box.boxTypes);
-
-        tile.box = box;
-        box.tile = tile;
         tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
+
         if (UIManager.Instance.mapEditManager.churrosInfoPopup.gameObject.activeSelf)
         {
             UIManager.Instance.mapEditManager.churrosInfoPopup.SetData(tile);
@@ -465,16 +471,17 @@ public class SpecialMode : MonoBehaviour
     {
         UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>().boxtype = 4;
         BoxGroup boxGroup = selectTile.boxGroup;
-        if (selectTile.box.boxDirection == 0)
+        Map map = MapManager.Instance.currentMap;
+        if (boxGroup.Direction == 0)
         {
-
-            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW - 1, selectTile.tileH))
+            if (map.CheckMapSize(selectTile.tileW - 1, selectTile.tileH))
             {
-                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW - 1, selectTile.tileH);
-                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null)
+                Tile nextTile = map.GetTileWH(selectTile.tileW - 1, selectTile.tileH);
+                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null && map.GetTileSet(nextTile.fenceIndex).railGroup == null &&
+                    !map.IsExistWoodenFence(selectTile.tileW, selectTile.tileH, selectTile.tileW - 1, selectTile.tileH))
                 {
                     boxGroup.Push(nextTile, nextTile.fenceIndex, nextTile.tileIndex);
-                    SetChurros(nextTile.transform.parent, nextTile, selectTile.box.boxDirection);
+                    SetChurros(nextTile.transform.parent, nextTile, boxGroup.Direction);
                     selectTile = nextTile;
                 }
             }
@@ -484,18 +491,18 @@ public class SpecialMode : MonoBehaviour
             }
         }
 
-        else if (selectTile.box.boxDirection == 1)
+        else if (boxGroup.Direction == 1)
         {
-            if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW, selectTile.tileH - 1))
+            if (map.CheckMapSize(selectTile.tileW, selectTile.tileH - 1))
             {
-                Tile nextTile = MapManager.Instance.currentMap.GetTileWH(selectTile.tileW, selectTile.tileH - 1);
-                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null)
+                Tile nextTile = map.GetTileWH(selectTile.tileW, selectTile.tileH - 1);
+                if (nextTile.box == null && nextTile.jelly == null && nextTile.character == null && map.GetTileSet(nextTile.fenceIndex).railGroup == null &&
+                    !map.IsExistWoodenFence(selectTile.tileW, selectTile.tileH, selectTile.tileW, selectTile.tileH - 1))
                 {
                     boxGroup.Push(nextTile, nextTile.fenceIndex, nextTile.tileIndex);
-                    SetChurros(nextTile.transform.parent, nextTile, selectTile.box.boxDirection);
-
+                    SetChurros(nextTile.transform.parent, nextTile, boxGroup.Direction);
                     selectTile = nextTile;
-                    ChangeDirection(nextTile.box.boxDirection);
+                    ChangeDirection(boxGroup.Direction);
                 }
             }
             else
@@ -523,7 +530,6 @@ public class SpecialMode : MonoBehaviour
         tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
         if (Direction == 1)
         {
-            tile.box.boxDirection = 1;
             ChangeDirection(Direction);
         }
     }
@@ -536,7 +542,7 @@ public class SpecialMode : MonoBehaviour
             UIManager.Instance.mapEditManager.HideChurrosInfoPopup();
             RemoveBox(selectTile.box);
         }
-        else if (selectTile.box.boxDirection == 0)
+        else if (selectTile.boxGroup.Direction == 0)
         {
             if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW + 1, selectTile.tileH))
             {
@@ -552,7 +558,7 @@ public class SpecialMode : MonoBehaviour
             }
         }
 
-        else if (selectTile.box.boxDirection == 1)
+        else if (selectTile.boxGroup.Direction == 1)
         {
             if (MapManager.Instance.currentMap.CheckMapSize(selectTile.tileW, selectTile.tileH + 1))
             {
@@ -573,16 +579,15 @@ public class SpecialMode : MonoBehaviour
     {
         if (selectTile.boxGroup.fenceindex.Count <= 1 && selectTile.box != null)
         {
-            selectTile.box.boxDirection = isRightDirection ? 1 : 0;
+            selectTile.boxGroup.Direction = isRightDirection ? 1 : 0;
             if (!isRightDirection)
                 selectTile.box.transform.localScale = widthDirection;
             else
                 selectTile.box.transform.localScale = heightDirection;
-            selectTile.boxGroup.Direction = selectTile.box.boxDirection;
         }
         else
         {
-            UIManager.Instance.mapEditManager.churrosInfoPopup.directionToggle.isOn = (selectTile.box?.boxDirection != 0);
+            UIManager.Instance.mapEditManager.churrosInfoPopup.directionToggle.isOn = (selectTile.boxGroup?.Direction != 0);
         }
 
     }
@@ -611,12 +616,30 @@ public class SpecialMode : MonoBehaviour
     {
         Ray ray = new Ray(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, 1 << 12);
-
+        Map map = MapManager.Instance.currentMap;
         if (hit.collider != null)
         {
             GameObject shadowFence = hit.collider.gameObject;
             int index = int.Parse(shadowFence.name.Split('_')[1]);
             TileSet tileSet = shadowFence.transform.parent.parent.GetComponent<TileSet>();
+
+            if (index == 0 && tileSet.tiles[0].box?.boxTypes == 4 && tileSet.tiles[1].box?.boxTypes == 4) return;
+            else if (index == 1 && tileSet.tiles[1].box?.boxTypes == 4 && tileSet.tiles[2].box?.boxTypes == 4) return;
+            else if (index == 2 && tileSet.tiles[2].box?.boxTypes == 4 && tileSet.tiles[3].box?.boxTypes == 4) return;
+            else if (index == 3 && tileSet.tiles[0].box?.boxTypes == 4 && tileSet.tiles[3].box?.boxTypes == 4) return;
+
+            else if (index == 4 && map.GetTileWH(tileSet.tiles[0].tileW + 1, tileSet.tiles[0].tileH)?.box?.boxTypes == 4 && tileSet.tiles[0].box?.boxTypes == 4) return;
+            else if (index == 5 && map.GetTileWH(tileSet.tiles[0].tileW, tileSet.tiles[0].tileH - 1)?.box?.boxTypes == 4 && tileSet.tiles[0].box?.boxTypes == 4) return;
+
+            else if (index == 6 && map.GetTileWH(tileSet.tiles[1].tileW, tileSet.tiles[1].tileH - 1)?.box?.boxTypes == 4 && tileSet.tiles[1].box?.boxTypes == 4) return;
+            else if (index == 7 && map.GetTileWH(tileSet.tiles[1].tileW - 1, tileSet.tiles[1].tileH)?.box?.boxTypes == 4 && tileSet.tiles[1].box?.boxTypes == 4) return;
+
+            else if (index == 8 && map.GetTileWH(tileSet.tiles[2].tileW - 1, tileSet.tiles[2].tileH)?.box?.boxTypes == 4 && tileSet.tiles[2].box?.boxTypes == 4) return;
+            else if (index == 9 && map.GetTileWH(tileSet.tiles[2].tileW, tileSet.tiles[2].tileH + 1)?.box?.boxTypes == 4 && tileSet.tiles[2].box?.boxTypes == 4) return;
+
+            else if (index == 10 && map.GetTileWH(tileSet.tiles[3].tileW, tileSet.tiles[2].tileH + 1)?.box?.boxTypes == 4 && tileSet.tiles[3].box?.boxTypes == 4) return;
+            else if (index == 11 && map.GetTileWH(tileSet.tiles[3].tileW + 1, tileSet.tiles[2].tileH)?.box?.boxTypes == 4 && tileSet.tiles[3].box?.boxTypes == 4) return;
+
 
             if (tileSet.woodenFences[index] == null)
             {
