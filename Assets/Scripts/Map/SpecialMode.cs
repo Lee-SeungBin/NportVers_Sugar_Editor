@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class SpecialMode : MonoBehaviour
@@ -21,6 +22,12 @@ public class SpecialMode : MonoBehaviour
 
     [SerializeField]
     private Box box5Prefab;
+
+    [SerializeField]
+    private RandomBox randombox_itemPrefab;
+
+    [SerializeField]
+    private RandomBox randombox_characterPrefab;
 
     [SerializeField]
     private WoodenFence woodenFencePrefab;
@@ -59,6 +66,8 @@ public class SpecialMode : MonoBehaviour
         UIManager.Instance.mapEditManager.HideSandWichInfoPopup();
         UIManager.Instance.mapEditManager.HideSandWichChangePopup();
         UIManager.Instance.mapEditManager.HideChurrosInfoPopup();
+        UIManager.Instance.mapEditManager.HideRandomBoxPopup_Item();
+        UIManager.Instance.mapEditManager.HideRandomBoxPopup_Character();
 
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, 1 << 10);
         if (hit.collider != null)
@@ -100,6 +109,18 @@ public class SpecialMode : MonoBehaviour
             UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(selectTile.box);
             selectTile = MapManager.Instance.currentMap.GetTile(selectTile.boxGroup.LastFenceIndex(), selectTile.boxGroup.LastTileIndex());
         }
+        if (tile != null && tile == selectTile && selectTile.box != null && selectTile.box.boxTypes == 3)
+        {
+            RandomBox randomBox = selectTile.box.GetComponent<RandomBox>();
+            if (randomBox.isflavone)
+            {
+                UIManager.Instance.mapEditManager.ShowRandomBoxPopup_Character(selectTile.box.GetComponent<RandomBox>());
+            }
+            else
+            {
+                UIManager.Instance.mapEditManager.ShowRandomBoxPopup_Item(selectTile.box.GetComponent<RandomBox>());
+            }
+        }
     }
     private void OnMouseDownDeleteSpecial()
     {
@@ -107,6 +128,8 @@ public class SpecialMode : MonoBehaviour
         UIManager.Instance.mapEditManager.HideSandWichInfoPopup();
         UIManager.Instance.mapEditManager.HideSandWichChangePopup();
         UIManager.Instance.mapEditManager.HideChurrosInfoPopup();
+        UIManager.Instance.mapEditManager.HideRandomBoxPopup_Item();
+        UIManager.Instance.mapEditManager.HideRandomBoxPopup_Character();
         if (UIManager.Instance.dragItem.specialType != Enums.SPECIAL_TYPE.NONE)
         {
             specialList.SelectEmtpy();
@@ -256,6 +279,18 @@ public class SpecialMode : MonoBehaviour
         {
             box = Instantiate(box5Prefab, parent);
         }
+        else if (specialList.boxtype == 3 && specialList.boxlayer == 1)
+        {
+            box = Instantiate(randombox_itemPrefab, parent);
+            UIManager.Instance.mapEditManager.ShowRandomBoxPopup_Item(box.GetComponent<RandomBox>());
+        }
+        else if (specialList.boxtype == 3 && specialList.boxlayer == 0) //구분 하기 위해서 layer 0으로 하고 changebox에서 1로 만들기
+        {
+            box = Instantiate(randombox_characterPrefab, parent);
+            RandomBox randomBox = box.GetComponent<RandomBox>();
+            UIManager.Instance.mapEditManager.ShowRandomBoxPopup_Character(randomBox);
+            randomBox.isflavone = true;
+        }
         else
         {
             box = Instantiate(boxPrefab, parent);
@@ -332,7 +367,7 @@ public class SpecialMode : MonoBehaviour
         }
         else if (types == 3)
         {
-            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.GIFTBOX];
+            box.boxLayer = 1;
         }
         else if (types == 4)
         {
@@ -608,6 +643,73 @@ public class SpecialMode : MonoBehaviour
     }
 
     #endregion
+
+    public void SetMagicHat(List<List<TileSet>> tileSets, MapData mapData)
+    {
+        if (mapData.boxRandomDatas == null)
+            return;
+        Box box;
+
+        for (int i = 0; i < mapData.boxRandomDatas.Count; i++)
+        {
+            int tileIndex = mapData.boxRandomDatas[i].tileindex;
+            int fenceIndex = mapData.boxRandomDatas[i].fenceindex;
+            Tile tile = tileSets[fenceIndex / mapData.height][fenceIndex % mapData.height].tiles[tileIndex];
+            if (mapData.boxRandomDatas[i].isflavone)
+            {
+                box = Instantiate(randombox_characterPrefab, tile.transform.parent);
+            }
+            else
+            {
+                box = Instantiate(randombox_itemPrefab, tile.transform.parent);
+            }
+            box.transform.position = tile.transform.position + Vector3.up * 0.119f;
+            box.fenceIndex = tile.GetComponentInParent<TileSet>().tileSetIndex;
+            box.tileIndex = tile.tileIndex;
+            box.boxLayer = 1;
+            box.boxTypes = 3;
+
+            tile.box = box;
+            box.tile = tile;
+
+            tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
+
+            RandomBox randombox = tile.box.GetComponent<RandomBox>();
+
+            randombox.isflavone = mapData.boxRandomDatas[i].isflavone;
+            randombox.fenceIndex = mapData.boxRandomDatas[i].fenceindex;
+            randombox.tileIndex = mapData.boxRandomDatas[i].tileindex;
+
+            for (int j = 0; j < mapData.boxRandomDatas[i].DataSet.Count; j++)
+            {
+                for (int k = 0; k < randombox.DataSet[j].itemlist.Count; k++) // 비어있는 데이터 0으로 만들기
+                {
+                    randombox.DataSet[j].percentage[k] = 0;
+                }
+                for (int k = 0; k < mapData.boxRandomDatas[i].DataSet[j].itemlist.Count; k++)
+                {
+                    int index = randombox.DataSet[j].itemlist.FindIndex(data => data.Contains(
+                        mapData.boxRandomDatas[i].DataSet[j].itemlist[k]));
+
+                    randombox.DataSet[j].percentage[index] = mapData.boxRandomDatas[i].DataSet[j].percentage[k];
+                    randombox.boxpercent += mapData.boxRandomDatas[i].DataSet[j].percentage[k];
+                }
+
+            }
+
+
+        }
+        //foreach (var boxData in mapData.boxRandomDatas)
+        //{
+        //    Debug.Log("isflavone: " + boxData.isflavone);
+        //    foreach (var dataa in boxData.DataSet)
+        //    {
+        //        Debug.Log("DataSet - percentage: " + string.Join(", ", dataa.percentage));
+        //        Debug.Log("DataSet - itemlist: " + string.Join(", ", dataa.itemlist));
+        //    }
+        //}
+    }
+
 
     #endregion
 

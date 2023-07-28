@@ -28,6 +28,12 @@ public class MissionManager : MonoBehaviour
         {
             CreateMission(Enums.MISSION_TYPE.FROG_SOUP, "1");
         }
+
+        AddMisions(Enums.MISSION_TYPE.BOX, missionPopup.BoxText.text);
+        AddMisions(Enums.MISSION_TYPE.BOX3, missionPopup.Box3Text.text);
+        AddMisions(Enums.MISSION_TYPE.BOX5, missionPopup.Box5Text.text);
+        AddMisions(Enums.MISSION_TYPE.CHURROS, missionPopup.ChurrosText.text);
+
     }
 
     private void DestroyMissions()

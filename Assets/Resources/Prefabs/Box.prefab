@@ -51,7 +51,6 @@ MonoBehaviour:
   tileIndex: 0
   boxLayer: 1
   boxTypes: 0
-  boxDirection: 0
   boxTier: 
   boxsprite:
   - {fileID: -674415033804269254, guid: 7b32ae9fd7dc2634da7d6ef35cc05909, type: 3}

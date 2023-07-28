@@ -10,7 +10,6 @@ public class ChurrosInfoPopup : MonoBehaviour
     private void OnEnable()
     {
         SetData(MapManager.Instance.specialMode?.selectTile);
-        //MapManager.Instance.specialMode.selectTile.box.boxDirection
     }
     public void SetData(Tile tile)
     {

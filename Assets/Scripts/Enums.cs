@@ -66,7 +66,12 @@ public class Enums : MonoBehaviour
         BREAD = 4,
         ICE = 5,
         JELLY = 6,
-        FROG_SOUP = 7
+        FROG_SOUP = 7,
+        BOX = 8,
+        BOX3 = 9,
+        BOX5 = 10,
+        CHURROS = 11,
+
     }
     public enum SPECIAL_TYPE
     {
@@ -82,5 +87,24 @@ public class Enums : MonoBehaviour
         HAMBURGER = 8,
         GIFTBOX = 9,
         CHURROS = 10
+    }
+
+    public enum RANDOMLIST_ITEM
+    {
+        MOVE = 1,
+        JUMP = 2,
+        DOPPELGANGER = 3,
+        CHANGER = 4,
+        HAMMER = 5,
+        WHISLTE = 6
+    }
+
+    public enum RANDOMLIST_OBJECT
+    {
+        JELLY = 0,
+        FROG_SOUP = 1,
+        BOX = 2,
+        BOX3 = 3,
+        BOX5 = 4,
     }
 }

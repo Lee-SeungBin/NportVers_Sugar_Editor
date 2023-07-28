@@ -497,7 +497,7 @@ public class Map : MonoBehaviour
 
         railManager.SetLoadedData(tileSets, data);
         boxManager.SetLoadedData(tileSets, data);
-
+        MapManager.Instance.specialMode.SetMagicHat(tileSets, data);
         Tile tile;
         for (w = 0; w < data.jellyDatas.Count; ++w)
         {
@@ -517,7 +517,9 @@ public class Map : MonoBehaviour
             specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
             if (data.boxDatas[w].boxTypes != null)
                 specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
-            if (specialList.boxtype != 4)
+            if (specialList.boxtype == 4 || specialList.boxtype == 3)
+                continue;
+            else
                 MapManager.Instance.specialMode.SetBox(tile.transform.parent, tile);
             //if (data.boxDatas[w].boxTypes != null)
             //    tile.box.boxTypes = int.Parse(data.boxDatas[w].boxTypes); // 박스 타입 불러오기
@@ -525,8 +527,8 @@ public class Map : MonoBehaviour
             //    tile.box.boxLayer = int.Parse(data.boxDatas[w].boxLayer); // 박스 레이어 불러오기
             //if (data.boxDatas[w].boxTier != null)
             //tile.box.boxTier = data.boxDatas[w].boxTier.ConvertAll(i => int.Parse(i)); // 샌드위치 층 불러오기
-            if (specialList.boxtype != 4)
-                MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
+            //if (specialList.boxtype != 4)
+            //    MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
         }
 
         for (w = 0; w < data.vineDatas.Count; ++w)

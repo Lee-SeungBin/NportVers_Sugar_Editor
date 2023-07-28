@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Newtonsoft.Json;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -130,14 +131,14 @@ public class UIManager : MonoBehaviour
     public void LoadJsonForAndroid(string Decrjson)
     {
         string jsonData = cryptoMNG.DecrStage(Decrjson);
-        StageInfo.data = JsonUtility.FromJson<StageData>(jsonData);
+        StageInfo.data = JsonConvert.DeserializeObject<StageData>(jsonData);
 
         if (string.IsNullOrEmpty(jsonData))
         {
             errorPopup.SetMessage("맵의 정보가 잘못되어있습니다.");
             return;
         }
-        Debug.Log("Load - " + jsonData);
+        Debug.Log("Load - \n" + jsonData);
 
         MapManager.Instance.CreateLoadedMap(StageInfo.data);
 
@@ -161,7 +162,6 @@ public class UIManager : MonoBehaviour
 
         starPercent.text = StageInfo.data.starPercent.ToString();
         stageNumber.text = StageInfo.data.stageNumber.ToString();
-
         for (int i = 0; i < StageInfo.data.obstacles.Count; ++i)
         {
             if ((StageInfo.data.obstacles[i].type == (int)Enums.OBSTACLE_TYPE.JELLY) && StageInfo.data.obstacles[i].options.Length != 0)

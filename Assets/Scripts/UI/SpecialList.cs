@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class SpecialList : MonoBehaviour
 {
     public Sprite[] specialSprites;
 
     [SerializeField]
-    private GameObject[] BoxTypes;
+    private List<GameObject> objLists;
 
     public int boxlayer;
     public int vinelayer;
     public int boxtype;
-
+    private int currentIndex;
     public void SelectEmtpy()
     {
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.NONE, null);
@@ -27,22 +27,10 @@ public class SpecialList : MonoBehaviour
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.FROG_SOUP, specialSprites[(int)Enums.SPECIAL_TYPE.FROG_SOUP]);
     }
 
-    public void SelectBoxList(Toggle toggle)
+    public void SelectBoxList()
     {
-        for (int i = 0; i < BoxTypes.Length; i++)
-        {
-            if (!BoxTypes[i].activeSelf)
-            {
-                BoxTypes[i].SetActive(toggle.isOn);
-                toggle.interactable = !toggle.isOn;
-            }
-            else
-            {
-                BoxTypes[i].SetActive(false);
-                toggle.interactable = toggle.isOn;
-                toggle.isOn = false;
-            }
-        }
+        objLists[0].SetActive(false);
+        objLists[1].SetActive(true);
     }
     public void SelectWoodenFence()
     {
@@ -75,5 +63,20 @@ public class SpecialList : MonoBehaviour
     {
         UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.VINE, specialSprites[(int)Enums.SPECIAL_TYPE.VINE]);
         vinelayer = vineLayer;
+    }
+
+    public void OnClickChange()
+    {
+        for (int i = 0; i < objLists.Count; i++)
+        {
+            if (i == currentIndex)
+                objLists[i].SetActive(true);
+            else
+                objLists[i].SetActive(false);
+        }
+
+        currentIndex++;
+        if (currentIndex >= objLists.Count)
+            currentIndex = 0;
     }
 }

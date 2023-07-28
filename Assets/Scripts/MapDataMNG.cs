@@ -18,7 +18,7 @@ public class MapDataMNG : MonoBehaviour
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.1.2";
+    public static string mapEditVersion { get; private set; } = "v1.1.4";
     private void Awake()
     {
         editVersionText.text = "에디터 버전 : " + mapEditVersion;
@@ -215,7 +215,6 @@ public class MapDataMNG : MonoBehaviour
             {
                 if (UIManager.Instance.mapEditManager.jsonSaveButton.GetComponent<JsonFileMaker>().stageNumber.text == stageNumber)
                 {
-                    Debug.Log(chapter);
                     if (UIManager.Instance.currentChapter.gameObject.activeSelf && (UIManager.Instance.currentChapter.value + 1) == int.Parse(chapter))
                     {
                         UIManager.Instance.saveStageWarnningPopup.SetActive(true);

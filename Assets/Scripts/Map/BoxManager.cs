@@ -24,17 +24,19 @@ public class BoxManager : MonoBehaviour
 
     public void SetLoadedData(List<List<TileSet>> tileSets, MapData mapData)
     {
+        if (mapData.boxGroupDatas == null)
+            return;
         SpecialList specialList = UIManager.Instance.mapEditManager.specialList.GetComponent<SpecialList>();
         SpecialMode specialMode = MapManager.Instance.specialMode;
         specialList.boxtype = 4;
-        for (int i = 0; i < mapData.boxGroupDatas.Count; ++i)
+        for (int i = 0; i < mapData.boxGroupDatas.Count; i++)
         {
             BoxGroup boxGroup = Instantiate(boxGroupPrefab).GetComponent<BoxGroup>();
             boxGroup.Init(this);
 
             boxGroup.Direction = mapData.boxGroupDatas[i].direction;
 
-            for (int j = 0; j < mapData.boxGroupDatas[i].fenceIndex.Count; ++j)
+            for (int j = 0; j < mapData.boxGroupDatas[i].fenceIndex.Count; j++)
             {
                 int tileIndex = mapData.boxGroupDatas[i].tileIndex[j];
                 int fenceIndex = mapData.boxGroupDatas[i].fenceIndex[j];
@@ -51,7 +53,6 @@ public class BoxManager : MonoBehaviour
                     //Tile nextTile = MapManager.Instance.currentMap.GetTileWH(currentTile.tileW, currentTile.tileH - 1);
 
                     specialMode.SetChurros(currentTile.transform.parent, currentTile, boxGroup.Direction);
-                    //currentTile.box.boxDirection = 1;
                 }
 
 
@@ -59,5 +60,6 @@ public class BoxManager : MonoBehaviour
 
             boxGroups.Add(boxGroup);
         }
+
     }
 }

@@ -71,6 +71,8 @@ public class JsonFileMaker : MonoBehaviour
         List<BoxGroupData> boxGroupDatas;
         List<BoxGroup> boxGroups;
 
+        BoxRandomData boxRandomData;
+
         Charactor charactor;
         int tileCount;
         int i, w, h, r, ri;
@@ -141,6 +143,55 @@ public class JsonFileMaker : MonoBehaviour
             mapData.tileSetDatas = tileSets;
 
 
+            List<BoxRandomData> randomBoxDataList = new List<BoxRandomData>();
+            for (r = 0; r < maps[i].boxs.Count; ++r)
+            {
+                if (maps[i].boxs[r].boxTypes == 3)
+                {
+                    RandomBox randomBox = maps[i].boxs[r].GetComponent<RandomBox>();
+
+                    boxRandomData = new BoxRandomData();
+                    boxRandomData.isflavone = randomBox.isflavone;
+                    boxRandomData.fenceindex = randomBox.fenceIndex;
+                    boxRandomData.tileindex = randomBox.tileIndex;
+                    boxRandomData.DataSet = new List<BoxRandomData.RandomData>();
+
+                    for (int k = 0; k < randomBox.DataSet.Count; k++)
+                    {
+                        BoxRandomData.RandomData randomData = new BoxRandomData.RandomData();
+                        randomData.percentage = new List<int>();
+                        randomData.itemlist = new List<string>();
+                        for (int q = 0; q < randomBox.DataSet[k].percentage.Count; q++)
+                        {
+                            if (randomBox.DataSet[k].percentage[q] != 0)
+                            {
+                                randomData.percentage.Add(randomBox.DataSet[k].percentage[q]);
+                                randomData.itemlist.Add(randomBox.DataSet[k].itemlist[q]);
+                            }
+                        }
+                        boxRandomData.DataSet.Add(randomData);
+
+                    }
+                    //foreach (var datas in randomBox.DataSet)
+                    //{
+                    //    BoxRandomData.RandomData randomData = new BoxRandomData.RandomData();
+                    //    randomData.percentage = new List<int>();
+                    //    randomData.itemlist = new List<string>();
+                    //    boxRandomData.DataSet.Add(randomData);
+                    //}
+
+                    randomBoxDataList.Add(boxRandomData);
+                }
+            }
+            //foreach (var boxData in randomBoxDataList)
+            //{
+            //    Debug.Log("isflavone: " + boxData.isflavone);
+            //    foreach (var dataa in boxData.DataSet)
+            //    {
+            //        Debug.Log("DataSet - percentage: " + string.Join(", ", dataa.percentage));
+            //        Debug.Log("DataSet - itemlist: " + string.Join(", ", dataa.itemlist));
+            //    }
+            //}
             railGroupDatas = new List<RailGroupData>();
             railGroups = maps[i].railManager.railGroups;
             List<int> rails;
@@ -244,6 +295,7 @@ public class JsonFileMaker : MonoBehaviour
 
             mapData.railGroupDatas = railGroupDatas;
             mapData.boxGroupDatas = boxGroupDatas;
+            mapData.boxRandomDatas = randomBoxDataList;
             mapData.jellyDatas = GetJellyDatas(maps[i]);
             mapData.frogSoupDatas = GetFrogSoupDatas(maps[i]);
             mapData.boxDatas = GetBoxData(maps[i]);
@@ -382,7 +434,6 @@ public class JsonFileMaker : MonoBehaviour
             boxData.tileIndex = boxOfMap[i].tileIndex.ToString();
             boxData.boxLayer = boxOfMap[i].boxLayer.ToString();
             boxData.boxTypes = boxOfMap[i].boxTypes.ToString();
-            //boxData.boxDirecion = boxOfMap[i].boxDirection.ToString();
             if (boxOfMap[i].boxTier != null)
             {
                 boxData.boxTier = boxOfMap[i].boxTier.ConvertAll(i => i.ToString());
@@ -477,6 +528,7 @@ public class MapData
     public List<TileSetData> tileSetDatas;
     public List<RailGroupData> railGroupDatas;
     public List<BoxGroupData> boxGroupDatas;
+    public List<BoxRandomData> boxRandomDatas;
     public List<JellyData> jellyDatas;
     public List<FrogSoupData> frogSoupDatas;
     public List<BoxData> boxDatas;
@@ -524,7 +576,6 @@ public class BoxData
     public string tileIndex;
     public string boxLayer;
     public string boxTypes;
-    public string boxDirecion;
     public List<string> boxTier;
 }
 [Serializable]
@@ -545,4 +596,17 @@ public class BoxGroupData
     public int direction;
     public List<int> fenceIndex;
     public List<int> tileIndex;
+}
+[Serializable]
+public class BoxRandomData
+{
+    public bool isflavone;
+    public int fenceindex;
+    public int tileindex;
+    public struct RandomData
+    {
+        public List<string> itemlist;
+        public List<int> percentage;
+    }
+    public List<RandomData> DataSet;
 }
