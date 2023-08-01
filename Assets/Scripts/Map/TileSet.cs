@@ -114,6 +114,17 @@ public class TileSet : MonoBehaviour
         return values;
     }
 
+    public bool GetFlavoneBox()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (tiles[i]?.box?.boxTypes == 3)
+            {
+                return tiles[i].box.GetComponent<RandomBox>().isflavone;
+            }
+        }
+        return false;
+    }
 
     public void SetTheme()
     {

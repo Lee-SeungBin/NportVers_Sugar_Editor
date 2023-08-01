@@ -124,15 +124,16 @@ public class JsonFileMaker : MonoBehaviour
 
                     tileSet.woodenFences = maps[i].tileSets[w][h].GetWoodenFencesForJsonSaving();
                     tileSet.isVisibleTiles = maps[i].tileSets[w][h].GetTileVisibleState();
+                    bool isflavone = maps[i].tileSets[w][h].GetFlavoneBox();
                     int cnt = 0;
                     for (int j = 0; j < 4; j++)
                     {
                         if (tileSet.isVisibleTiles[j] == false)
                             cnt++;
                     }
-                    if (tileSet.code == "x" && cnt != 4)
+                    if ((tileSet.code == "x" && !isflavone) && cnt != 4)
                     {
-                        UIManager.Instance.errorPopup.SetMessage("저장이 불가능합니다. 활성화된 타일에는 플라본이 꼭 있어야합니다.");
+                        UIManager.Instance.errorPopup.SetMessage("저장이 불가능합니다. 활성화된 타일에는 플라본이나 플라본 모자가 꼭 있어야합니다.");
                         return null;
                     }
                     tileSets.Add(tileSet);
