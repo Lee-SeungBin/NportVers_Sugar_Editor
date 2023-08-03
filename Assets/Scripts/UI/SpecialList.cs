@@ -56,6 +56,8 @@ public class SpecialList : MonoBehaviour
             UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.GIFTBOX]);
         else if (boxType == 4)
             UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.CHURROS]);
+        else if (boxType == 5)
+            UIManager.Instance.dragItem.SetSpecial(Enums.SPECIAL_TYPE.BOX, specialSprites[(int)Enums.SPECIAL_TYPE.TEACUP]);
         boxtype = boxType;
     }
 

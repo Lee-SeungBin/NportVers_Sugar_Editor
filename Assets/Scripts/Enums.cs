@@ -86,7 +86,8 @@ public class Enums : MonoBehaviour
         SANDWICH = 7,
         HAMBURGER = 8,
         GIFTBOX = 9,
-        CHURROS = 10
+        CHURROS = 10,
+        TEACUP = 11
     }
 
     public enum RANDOMLIST_ITEM

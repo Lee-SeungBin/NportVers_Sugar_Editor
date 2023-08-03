@@ -514,7 +514,8 @@ public class Map : MonoBehaviour
         for (w = 0; w < data.boxDatas.Count; ++w)
         {
             tile = tileSets[int.Parse(data.boxDatas[w].fenceIndex) / height][int.Parse(data.boxDatas[w].fenceIndex) % height].tiles[int.Parse(data.boxDatas[w].tileIndex)].GetComponent<Tile>();
-            specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
+            if (data.boxDatas[w].boxLayer != null)
+                specialList.boxlayer = int.Parse(data.boxDatas[w].boxLayer);
             if (data.boxDatas[w].boxTypes != null)
                 specialList.boxtype = int.Parse(data.boxDatas[w].boxTypes);
             if (specialList.boxtype == 4 || specialList.boxtype == 3)
@@ -531,13 +532,17 @@ public class Map : MonoBehaviour
             //    MapManager.Instance.specialMode.ChangeBox(tile.box, tile.box.boxLayer, tile.box.boxTypes);
         }
 
-        for (w = 0; w < data.vineDatas.Count; ++w)
+        if (data.vineDatas != null)
         {
-            tileSet = tileSets[int.Parse(data.vineDatas[w].fenceIndex) / height][int.Parse(data.vineDatas[w].fenceIndex) % height].GetComponent<TileSet>();
-            MapManager.Instance.specialMode.SetVine(tileSet.transform, tileSet);
+            for (w = 0; w < data.vineDatas.Count; ++w)
+            {
+                tileSet = tileSets[int.Parse(data.vineDatas[w].fenceIndex) / height][int.Parse(data.vineDatas[w].fenceIndex) % height].GetComponent<TileSet>();
+                MapManager.Instance.specialMode.SetVine(tileSet.transform, tileSet);
 
-            tileSet.vine.layer = int.Parse(data.vineDatas[w].layer);
+                tileSet.vine.layer = int.Parse(data.vineDatas[w].layer);
+            }
         }
+
 
         nextStageDatas = data.nextStageDatas;
     }

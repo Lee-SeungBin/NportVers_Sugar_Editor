@@ -333,7 +333,10 @@ public class SpecialMode : MonoBehaviour
 
             UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(box);
         }
-
+        else if (box.boxTypes == 5)
+        {
+            ChangeBox(box, box.boxLayer, box.boxTypes);
+        }
         //ChangeBox(box, box.boxLayer, box.boxTypes);
         tile.transform.parent.GetComponent<TileSet>().map.SetBox(box);
 
@@ -381,6 +384,10 @@ public class SpecialMode : MonoBehaviour
             {
                 box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
             }
+        }
+        else if (types == 5)
+        {
+            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.TEACUP];
         }
     }
     #region SandWich
