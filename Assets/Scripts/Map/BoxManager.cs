@@ -35,7 +35,7 @@ public class BoxManager : MonoBehaviour
             boxGroup.Init(this);
 
             boxGroup.Direction = mapData.boxGroupDatas[i].direction;
-
+            boxGroup.startidx = mapData.boxGroupDatas[i].tileIndex[0];
             for (int j = 0; j < mapData.boxGroupDatas[i].fenceIndex.Count; j++)
             {
                 int tileIndex = mapData.boxGroupDatas[i].tileIndex[j];

@@ -6,6 +6,7 @@ public class BoxGroup : MonoBehaviour
     private BoxManager boxManager;
 
     public int Direction;
+    public int startidx;
     public List<int> fenceindex;
     public List<int> tileindex;
 

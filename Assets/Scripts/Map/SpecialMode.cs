@@ -330,6 +330,7 @@ public class SpecialMode : MonoBehaviour
             ChangeBox(box, box.boxLayer, box.boxTypes);
             BoxGroup boxGroup = selectTile.transform.parent.GetComponent<TileSet>().map.boxManager.CreateBoxGroup();
             boxGroup.Push(selectTile, selectTile.fenceIndex, selectTile.tileIndex);
+            boxGroup.startidx = selectTile.tileIndex;
 
             UIManager.Instance.mapEditManager.ShowChurrosInfoPopup(box);
         }
@@ -376,13 +377,25 @@ public class SpecialMode : MonoBehaviour
         {
 
             box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.CHURROS];
-            if (selectTile.boxGroup?.fenceindex.Count % 2 == 0 && selectTile.boxGroup?.fenceindex.Count != 1)
+            if ((selectTile.boxGroup?.startidx == 0 || selectTile.boxGroup?.startidx == 1) && selectTile.boxGroup?.Direction == 1
+                && selectTile.boxGroup?.fenceindex.Count != 1)
             {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+                ChurrosImgSet(box, selectTile.boxGroup.fenceindex.Count % 2, true);
             }
-            else if (selectTile.boxGroup?.fenceindex.Count % 2 == 1 && selectTile.boxGroup?.fenceindex.Count != 1)
+            else if ((selectTile.boxGroup?.startidx == 1 || selectTile.boxGroup?.startidx == 2) && selectTile.boxGroup?.Direction == 0
+                && selectTile.boxGroup?.fenceindex.Count != 1)
             {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+                ChurrosImgSet(box, selectTile.boxGroup.fenceindex.Count % 2, true);
+            }
+            else if ((selectTile.boxGroup?.startidx == 0 || selectTile.boxGroup?.startidx == 3) && selectTile.boxGroup?.Direction == 0
+                && selectTile.boxGroup?.fenceindex.Count != 1)
+            {
+                ChurrosImgSet(box, selectTile.boxGroup.fenceindex.Count % 2, false);
+            }
+            else if ((selectTile.boxGroup?.startidx == 3 || selectTile.boxGroup?.startidx == 2) && selectTile.boxGroup?.Direction == 1
+                && selectTile.boxGroup?.fenceindex.Count != 1)
+            {
+                ChurrosImgSet(box, selectTile.boxGroup.fenceindex.Count % 2, false);
             }
         }
         else if (types == 5)
@@ -390,6 +403,33 @@ public class SpecialMode : MonoBehaviour
             box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.TEACUP];
         }
     }
+
+    public void ChurrosImgSet(Box box, int idx, bool flag) // false = 2 -> 1, true = 1 -> 2
+    {
+        if (flag)
+        {
+            if (idx == 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+            }
+            else if (idx == 0)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+            }
+        }
+        else
+        {
+            if (idx == 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+            }
+            else if (idx == 0)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+            }
+        }
+    }
+
     #region SandWich
     public void LoadTasteOfBox(Box box)
     {
