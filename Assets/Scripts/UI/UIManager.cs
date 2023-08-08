@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -131,8 +132,17 @@ public class UIManager : MonoBehaviour
     public void LoadJsonForAndroid(string Decrjson)
     {
         string jsonData = cryptoMNG.DecrStage(Decrjson);
-        StageInfo.data = JsonConvert.DeserializeObject<StageData>(jsonData);
-
+        var errors = new List<string>();
+        StageInfo.data = JsonConvert.DeserializeObject<StageData>(jsonData,
+                new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Include,
+                    Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs earg)
+                    {
+                        errors.Add(earg.ErrorContext.Member.ToString());
+                        earg.ErrorContext.Handled = true;
+                    }
+                });
         if (string.IsNullOrEmpty(jsonData))
         {
             errorPopup.SetMessage("맵의 정보가 잘못되어있습니다.");

@@ -18,7 +18,7 @@ public class MapDataMNG : MonoBehaviour
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.1.7";
+    public static string mapEditVersion { get; private set; } = "v1.1.8";
     private void Awake()
     {
         editVersionText.text = "에디터 버전 : " + mapEditVersion;
@@ -104,11 +104,11 @@ public class MapDataMNG : MonoBehaviour
 
         form.Add(new MultipartFormDataSection("stage_number", jsonFileMaker.stageNumber.text));
         form.Add(new MultipartFormDataSection("map_data", jsonData));
-        form.Add(new MultipartFormDataSection("mode", UIManager.Instance.stageType.value.ToString()));
         form.Add(new MultipartFormDataSection("chapter", chapter.ToString()));
+        form.Add(new MultipartFormDataSection("mode", UIManager.Instance.stageType.value.ToString()));
         NetworkMNG.instance.StartNetworking(true, "map_edit/map_upload", form, (result) =>
         {
-            //Debug.Log(JObject.Parse(result));
+            Debug.Log(result);
             JObject jo = JObject.Parse(result);
             Debug.Log(result);
             string result_code = jo["result"].ToString();
