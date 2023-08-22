@@ -22,14 +22,14 @@ public class NetworkMNG : MonoBehaviour
     private static string _serverURL = "";
 
     private static string _releaseServerURL = "http://puzzle-sugar-flavor.com:80/sugarmonster/public_html/index.php/";
-    private static string _devServerURL = "http://114.108.130.129:80/sugarmonster/public_html/index.php/";
+    private static string _devServerURL = "http://114.108.130.127:80/sugarmonster/public_html/index.php/";
 
 
 
     private static string _serverMapDataURL = "";
 
     private static string _releaseServerMapDataURL = "http://puzzle-sugar-flavor.com:80/sugarmonster/public_html/map_data/";
-    private static string _devServerMapDataURL = "http://114.108.130.129:80/sugarmonster/public_html/map_data/";
+    private static string _devServerMapDataURL = "http://114.108.130.127:80/sugarmonster/public_html/map_data/";
 
 
 
@@ -54,13 +54,13 @@ public class NetworkMNG : MonoBehaviour
 
 #if UNITY_EDITOR || UNITY_ANDROID
     public static string resourceBundleReleaseUrl = "http://puzzle-sugar-flavor.com/sugarmonster/public_html/app_assets/android/";
-    public static string resourceBundleDevUrl = "http://114.108.130.129/sugarmonster/public_html/app_assets/android/";
+    public static string resourceBundleDevUrl = "http://114.108.130.127/sugarmonster/public_html/app_assets/android/";
 #else
     public static string resourceBundleReleaseUrl   = "http://puzzle-sugar-flavor.com/sugarmonster/public_html/app_assets/ios/";
-    public static string resourceBundleDevUrl       = "http://114.108.130.129/sugarmonster/public_html/app_assets/ios/";
+    public static string resourceBundleDevUrl       = "http://114.108.130.127/sugarmonster/public_html/app_assets/ios/";
 #endif
     public static string rankingBundleReleaseUrl = "http://puzzle-sugar-flavor.com/sugarmonster/public_html/app_assets/ranking/";
-    public static string rankingBundleDevUrl = "http://114.108.130.129/sugarmonster/public_html/app_assets/ranking/";
+    public static string rankingBundleDevUrl = "http://114.108.130.127/sugarmonster/public_html/app_assets/ranking/";
 
     public delegate void NetworkResultCallback(string result);
     public delegate void ImageCallback(Texture texture);

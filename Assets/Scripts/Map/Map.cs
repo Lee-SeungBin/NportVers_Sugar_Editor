@@ -30,7 +30,7 @@ public class Map : MonoBehaviour
 
     private Dictionary<string, List<Vector2>> mapCoords = new Dictionary<string, List<Vector2>>() // 맵 정보 딕셔너리 리스트
 {
-    { "3x3", new List<Vector2>() { new Vector2(0f, 1.9f) } },
+    { "3x3", new List<Vector2>() { new Vector2(0f, 1.1f) } },
     { "4x3", new List<Vector2>() { new Vector2(0.58f, 1.4f) } },
     { "4x4", new List<Vector2>() { new Vector2(0f, 1.9f) } },
     { "4x5", new List<Vector2>() { new Vector2(-0.58f, 2f) } },

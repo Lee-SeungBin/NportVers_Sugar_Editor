@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\SpecialList.cs" />
-    <Compile Include="Assets\Scripts\UI\RandomBoxPopup_Item.cs" />
+    <Compile Include="Assets\Scripts\UI\RandomBoxPopup.cs" />
     <Compile Include="Assets\Scripts\Map\TileSet.cs" />
     <Compile Include="Assets\Scripts\Map\Charactor.cs" />
     <Compile Include="Assets\Scripts\Map\MapMoveMode.cs" />
@@ -106,7 +106,6 @@
     <Compile Include="Assets\Scripts\UI\TileSetVisiblePopup.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterList.cs" />
     <Compile Include="Assets\Scripts\MapcountManager.cs" />
-    <Compile Include="Assets\Scripts\UI\RandomBoxPopup_Character.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterInfoPopup.cs" />
     <Compile Include="Assets\Scripts\MapDataMNG.cs" />
     <Compile Include="Assets\Scripts\UI\Goal\NextMapPopup.cs" />
@@ -114,6 +113,7 @@
     <Compile Include="Assets\Scripts\UI\Goal\NextMapMissionUI.cs" />
     <Compile Include="Assets\Scripts\Map\Map.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
+    <Compile Include="Assets\Scripts\UI\MoveUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll" />

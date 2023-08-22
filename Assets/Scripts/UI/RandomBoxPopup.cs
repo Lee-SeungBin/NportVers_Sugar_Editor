@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RandomBoxPopup_Item : MonoBehaviour
+public class RandomBoxPopup : MonoBehaviour
 {
     [Serializable]
     public struct RandomData
@@ -23,6 +23,9 @@ public class RandomBoxPopup_Item : MonoBehaviour
 
     [SerializeField]
     private Text percentInfo;
+
+    private Vector3 prevMousePosition;
+    private float doubleTapTimer = -1;
     public void Show(RandomBox box)
     {
         gameObject.SetActive(true);
@@ -38,6 +41,7 @@ public class RandomBoxPopup_Item : MonoBehaviour
     public void SetData(RandomBox box)
     {
         selectBox = box;
+        selectBox.GetComponentInChildren<SpriteRenderer>().color = new Color(255f, 0f, 0f);
         List<RandomBox.RandomData> data = box.DataSet;
         for (int i = 0; i < data.Count; i++)
         {
@@ -85,6 +89,7 @@ public class RandomBoxPopup_Item : MonoBehaviour
                 selectBox.DataSet[i].percentage[j] = int.Parse(DataSet[i].percentage[j].text);
             }
         }
+        selectBox.GetComponentInChildren<SpriteRenderer>().color = new Color(255f, 255f, 255f);
         selectBox = null;
     }
     public void OnChangePercentInfo()
@@ -106,5 +111,4 @@ public class RandomBoxPopup_Item : MonoBehaviour
 
         types[typeDropdown.value].gameObject.SetActive(true);
     }
-
 }

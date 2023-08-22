@@ -18,9 +18,14 @@ public class MapDataMNG : MonoBehaviour
     public ScrollRect sr;
 
     public static bool iSDev = false;
-    public static string mapEditVersion { get; private set; } = "v1.1.8";
+    public static string mapEditVersion { get; private set; } = "v1.2.0";
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Instance = this;
+        }
+
         editVersionText.text = "에디터 버전 : " + mapEditVersion;
     }
     public int mapDataVersion
@@ -52,6 +57,9 @@ public class MapDataMNG : MonoBehaviour
         });
 
         SetVisibleLoading(false);
+
+        UIManager.Instance.stageType.value = currentMapType.value; // 로드한 맵 수정후 저장시 다른 타입의 맵으로 저장하는 경우가 많아서 편의성 추가
+        UIManager.Instance.currentChapter.value = currentChapter.value;
     }
     /// <summary>
     /// 맵을 로드하는 함수

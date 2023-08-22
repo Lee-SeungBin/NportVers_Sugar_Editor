@@ -17,7 +17,7 @@ public class MapEditManager : MonoBehaviour
     public SandWichChangePopup sandwichChangePopup;
     public MapEditorPopups popups;
     public ChurrosInfoPopup churrosInfoPopup;
-    public RandomBoxPopup_Item Random_itemboxPopup, Random_characterboxPopup;
+    public RandomBoxPopup Random_itemboxPopup, Random_characterboxPopup;
 
     private void HidePopups()
     {
