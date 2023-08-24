@@ -376,7 +376,7 @@ public class SpecialMode : MonoBehaviour
         else if (types == 4)
         {
 
-            box.GetComponentInChildren<SpriteRenderer>().sprite = getboxsprite[(int)Enums.SPECIAL_TYPE.CHURROS];
+            box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[0];
             if ((selectTile.boxGroup?.startidx == 0 || selectTile.boxGroup?.startidx == 1) && selectTile.boxGroup?.Direction == 1
                 && selectTile.boxGroup?.fenceindex.Count != 1)
             {

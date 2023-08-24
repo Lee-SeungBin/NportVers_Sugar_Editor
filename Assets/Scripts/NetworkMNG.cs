@@ -24,14 +24,13 @@ public class NetworkMNG : MonoBehaviour
     private static string _releaseServerURL = "http://puzzle-sugar-flavor.com:80/sugarmonster/public_html/index.php/";
     private static string _devServerURL = "http://114.108.130.127:80/sugarmonster/public_html/index.php/";
 
-
-
     private static string _serverMapDataURL = "";
 
     private static string _releaseServerMapDataURL = "http://puzzle-sugar-flavor.com:80/sugarmonster/public_html/map_data/";
     private static string _devServerMapDataURL = "http://114.108.130.127:80/sugarmonster/public_html/map_data/";
 
 
+    public static string mapediterURL = "http://puzzle-sugar-flavor.com/sugarmonster/public_html/map_data/map_editer/";
 
     public string gachaRateUrl = "https://puzzle-sugar-flavor.com/sugarmonster_admin/public_html/index.php/admin/gacha_rate";
     public string gachaSpecialRateUrl = "https://puzzle-sugar-flavor.com/sugarmonster_admin/public_html/index.php/admin/gacha_special_rate";

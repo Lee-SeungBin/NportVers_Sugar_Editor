@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\UI\MapEditorPopups.cs" />
     <Compile Include="Assets\Scripts\UI\Goal\ToggleMissionUI.cs" />
     <Compile Include="Assets\Scripts\UI\SandWichInfoPopup.cs" />
+    <Compile Include="Assets\Scripts\UI\MoveUI.cs" />
     <Compile Include="Assets\Scripts\UI\Goal\MissionManager.cs" />
     <Compile Include="Assets\Scripts\Map\MapManager.cs" />
     <Compile Include="Assets\Scripts\UI\JsonFileMaker.cs" />
@@ -113,7 +114,6 @@
     <Compile Include="Assets\Scripts\UI\Goal\NextMapMissionUI.cs" />
     <Compile Include="Assets\Scripts\Map\Map.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
-    <Compile Include="Assets\Scripts\UI\MoveUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll" />
