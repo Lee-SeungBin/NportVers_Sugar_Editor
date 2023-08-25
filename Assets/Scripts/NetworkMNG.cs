@@ -185,7 +185,7 @@ public class NetworkMNG : MonoBehaviour
             string data = request.downloadHandler.text;
 
             List<string> filelist = UIManager.Instance.mapdataMNG.SetMapEditorFileList(data);
-            string currentVersion = MapDataMNG.mapEditVersion;
+            string currentVersion = Application.version;
             string[] latestVersion = null;
             foreach (string str in filelist)
             {
