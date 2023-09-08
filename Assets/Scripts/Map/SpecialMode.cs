@@ -404,31 +404,7 @@ public class SpecialMode : MonoBehaviour
         }
     }
 
-    public void ChurrosImgSet(Box box, int idx, bool flag) // false = 2 -> 1, true = 1 -> 2
-    {
-        if (flag)
-        {
-            if (idx == 1)
-            {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
-            }
-            else if (idx == 0)
-            {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
-            }
-        }
-        else
-        {
-            if (idx == 1)
-            {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
-            }
-            else if (idx == 0)
-            {
-                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
-            }
-        }
-    }
+
 
     #region SandWich
     public void LoadTasteOfBox(Box box)
@@ -689,6 +665,31 @@ public class SpecialMode : MonoBehaviour
 
     }
 
+    public void ChurrosImgSet(Box box, int idx, bool flag) // false = 2 -> 1, true = 1 -> 2
+    {
+        if (flag)
+        {
+            if (idx == 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+            }
+            else if (idx == 0)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+            }
+        }
+        else
+        {
+            if (idx == 1)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[2];
+            }
+            else if (idx == 0)
+            {
+                box.GetComponentInChildren<SpriteRenderer>().sprite = box.ChurrosSprite[1];
+            }
+        }
+    }
     #endregion
 
     public void SetMagicHat(List<List<TileSet>> tileSets, MapData mapData)
