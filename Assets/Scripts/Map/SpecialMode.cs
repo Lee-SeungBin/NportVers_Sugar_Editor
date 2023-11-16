@@ -747,15 +747,6 @@ public class SpecialMode : MonoBehaviour
 
 
         }
-        //foreach (var boxData in mapData.boxRandomDatas)
-        //{
-        //    Debug.Log("isflavone: " + boxData.isflavone);
-        //    foreach (var dataa in boxData.DataSet)
-        //    {
-        //        Debug.Log("DataSet - percentage: " + string.Join(", ", dataa.percentage));
-        //        Debug.Log("DataSet - itemlist: " + string.Join(", ", dataa.itemlist));
-        //    }
-        //}
     }
 
 

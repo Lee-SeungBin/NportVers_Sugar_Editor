@@ -24,10 +24,18 @@ public class NetworkMNG : MonoBehaviour
     private static string _releaseServerURL = "http://114.108.130.128/sugarmonster/public_html/index.php/";
     private static string _devServerURL = "http://114.108.130.127:80/sugarmonster/public_html/index.php/";
 
+    // 해당 서버는 map_edit/map_upload, map_edit/map_version_up가 구현이 안되어 있음, 구현이 되면 사용
+    //private static string _releaseServerURL = "https://sugarflavor.com/";
+    //private static string _devServerURL = "https://npstest.nplayspace.com/game_restapi_node/";
+
     private static string _serverMapDataURL = "";
 
     private static string _releaseServerMapDataURL = "http://114.108.130.128/sugarmonster/public_html/map_data/";
     private static string _devServerMapDataURL = "http://114.108.130.127:80/sugarmonster/public_html/map_data/";
+
+    // 해당 서버는 map_edit/map_upload, map_edit/map_version_up가 구현이 안되어 있음, 구현이 되면 사용
+    //private static string _releaseServerMapDataURL = "https://asset.sugarflavor.com/public_html/map_data/";
+    //private static string _devServerMapDataURL = "https://npstest.nplayspace.com/sugarmonster/public_html/map_data/";
 
     public static string mapediterURL = "http://114.108.130.127:80/sugarmonster/public_html/map_data/map_editer/";
 

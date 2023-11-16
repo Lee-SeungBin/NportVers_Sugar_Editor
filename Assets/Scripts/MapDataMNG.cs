@@ -243,6 +243,79 @@ public class MapDataMNG : MonoBehaviour
         }
         if (!flag && check == "Save")
             MapDataSave();
+
+
+
+        // // 해당 주석 부분은     https://sugarflavor.com/ , https://npstest.nplayspace.com/game_restapi_node/ 서버로된 부분에서 node api를 파싱하는 부분
+        //HtmlDocument doc = new HtmlDocument();
+        //doc.LoadHtml(htmldata);
+        //int totalMapCnt = 0;
+        //bool flag = false;
+
+        //foreach (HtmlNode linkNode in doc.DocumentNode.SelectNodes("//pre"))
+        //{
+        //    string preText = linkNode.InnerText;
+        //    string[] lines = preText.Split('\n', (char)StringSplitOptions.RemoveEmptyEntries);
+
+        //    foreach (string line in lines)
+        //    {
+        //        if (!line.Contains("stage_")) continue;
+
+        //        string[] elements = line.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+        //        if (elements.Length >= 3)
+        //        {
+        //            string fileName = elements[0];
+        //            string lastModified = elements[1];
+        //            // 파일명에서 스테이지 번호를 추출
+        //            string[] splitName = fileName.Split('_');
+        //            string stageNumber = splitName[1];
+        //            string fileExtension = ".json";
+        //            string chapter = splitName[2].Replace(fileExtension, "");
+
+        //            if (check == "Load")
+        //            {
+        //                if (currentChapter.gameObject.activeSelf && int.Parse(chapter) == currentChapter.value + 1)
+        //                {
+        //                    GameObject newList = Instantiate(stageList, content.transform);
+        //                    newList.GetComponent<LoadStageList>().loadListText.text = stageNumber;
+        //                    totalMapCnt++;
+        //                    currentTotalStageText.text = totalMapCnt.ToString();
+        //                }
+        //                else if (!currentChapter.gameObject.activeSelf)
+        //                {
+        //                    GameObject newList = Instantiate(stageList, content.transform);
+        //                    newList.GetComponent<LoadStageList>().loadListText.text = stageNumber;
+        //                    totalMapCnt++;
+        //                    currentTotalStageText.text = totalMapCnt.ToString();
+        //                }
+        //            }
+        //            if (check == "Save")
+        //            {
+        //                if (UIManager.Instance.mapEditManager.jsonSaveButton.GetComponent<JsonFileMaker>().stageNumber.text == stageNumber)
+        //                {
+        //                    if (UIManager.Instance.currentChapter.gameObject.activeSelf && (UIManager.Instance.currentChapter.value + 1) == int.Parse(chapter))
+        //                    {
+        //                        UIManager.Instance.saveStageWarnningPopup.SetActive(true);
+        //                        UIManager.Instance.saveStageWarnningPopup.transform.Find("duplicateStage").GetComponent<Text>().text = stageNumber;
+        //                        UIManager.Instance.saveStageWarnningPopup.transform.Find("lastModified").GetComponent<Text>().text = lastModified;
+        //                        flag = true;
+        //                        break;
+        //                    }
+        //                    else if (!UIManager.Instance.currentChapter.gameObject.activeSelf)
+        //                    {
+        //                        UIManager.Instance.saveStageWarnningPopup.SetActive(true);
+        //                        UIManager.Instance.saveStageWarnningPopup.transform.Find("duplicateStage").GetComponent<Text>().text = stageNumber;
+        //                        UIManager.Instance.saveStageWarnningPopup.transform.Find("lastModified").GetComponent<Text>().text = lastModified;
+        //                        flag = true;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        //if (!flag && check == "Save")
+        //    MapDataSave();
     }
     /// <summary>
     /// 저장된 맵들의 버전을 업데이트 하는 함수
